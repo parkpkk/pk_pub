@@ -1,5 +1,0 @@
-CONFIG_NODE router eigrp (1-65535) [vrf NAME] EIGRP_NODE quit
-CONFIG_NODE router eigrp (1-65535) [vrf NAME] EIGRP_NODE no distribute-list [prefix] ACCESSLIST_NAME <in|out> [WORD]
-CONFIG_NODE router eigrp (1-65535) [vrf NAME] EIGRP_NODE exit
-CONFIG_NODE router eigrp (1-65535) [vrf NAME] EIGRP_NODE end
-CONFIG_NODE router eigrp (1-65535) [vrf NAME] EIGRP_NODE distribute-list [prefix] ACCESSLIST_NAME <in|out> [WORD]

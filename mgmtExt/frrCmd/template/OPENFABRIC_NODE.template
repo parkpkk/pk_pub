@@ -1,7 +1,0 @@
-CONFIG_NODE router openfabric WORD OPENFABRIC_NODE output file FILE
-CONFIG_NODE router openfabric WORD OPENFABRIC_NODE no output file [FILE]
-CONFIG_NODE router openfabric WORD OPENFABRIC_NODE list [permutations]
-CONFIG_NODE router openfabric WORD OPENFABRIC_NODE find REGEX...
-CONFIG_NODE router openfabric WORD OPENFABRIC_NODE quit
-CONFIG_NODE router openfabric WORD OPENFABRIC_NODE exit
-CONFIG_NODE router openfabric WORD OPENFABRIC_NODE end

@@ -1,8 +1,0 @@
-CONFIG_NODE nexthop-group NHGNAME NH_GROUP_NODE resilient buckets (1-256) idle-timer (1-4294967295) unbalanced-timer (1-4294967295)
-CONFIG_NODE nexthop-group NHGNAME NH_GROUP_NODE quit
-CONFIG_NODE nexthop-group NHGNAME NH_GROUP_NODE no resilient [buckets (1-256) idle-timer (1-4294967295) unbalanced-timer (1-4294967295)]
-CONFIG_NODE nexthop-group NHGNAME NH_GROUP_NODE no backup-group [WORD]
-CONFIG_NODE nexthop-group NHGNAME NH_GROUP_NODE exit
-CONFIG_NODE nexthop-group NHGNAME NH_GROUP_NODE end
-CONFIG_NODE nexthop-group NHGNAME NH_GROUP_NODE backup-group WORD
-CONFIG_NODE nexthop-group NHGNAME NH_GROUP_NODE [no] nexthop <<A.B.C.D|X:X::X:X> [INTERFACE [onlink]]|INTERFACE> [{nexthop-vrf NAME|label WORD|weight (1-255)|backup-idx WORD}]

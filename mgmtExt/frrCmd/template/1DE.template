@@ -1,4 +1,0 @@
-ENABLE_NODE configure [terminal] 1DE output file FILE
-ENABLE_NODE configure [terminal] 1DE no output file [FILE]
-ENABLE_NODE configure [terminal] 1DE list [permutations]
-ENABLE_NODE configure [terminal] 1DE find REGEX...

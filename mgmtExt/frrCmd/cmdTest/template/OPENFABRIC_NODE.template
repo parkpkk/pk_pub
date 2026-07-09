@@ -1,3 +1,0 @@
-CONFIG_NODE router openfabric WORD OPENFABRIC_NODE quit
-CONFIG_NODE router openfabric WORD OPENFABRIC_NODE exit
-CONFIG_NODE router openfabric WORD OPENFABRIC_NODE end

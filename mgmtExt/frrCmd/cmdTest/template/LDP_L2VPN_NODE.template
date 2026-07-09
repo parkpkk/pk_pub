@@ -1,9 +1,0 @@
-CONFIG_NODE l2vpn WORD type vpls LDP_L2VPN_NODE quit
-CONFIG_NODE l2vpn WORD type vpls LDP_L2VPN_NODE no member pseudowire IFNAME
-CONFIG_NODE l2vpn WORD type vpls LDP_L2VPN_NODE member pseudowire IFNAME
-CONFIG_NODE l2vpn WORD type vpls LDP_L2VPN_NODE exit
-CONFIG_NODE l2vpn WORD type vpls LDP_L2VPN_NODE end
-CONFIG_NODE l2vpn WORD type vpls LDP_L2VPN_NODE [no] vc type <ethernet|ethernet-tagged>
-CONFIG_NODE l2vpn WORD type vpls LDP_L2VPN_NODE [no] mtu (1500-9180)
-CONFIG_NODE l2vpn WORD type vpls LDP_L2VPN_NODE [no] member interface IFNAME
-CONFIG_NODE l2vpn WORD type vpls LDP_L2VPN_NODE [no] bridge IFNAME

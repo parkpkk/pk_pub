@@ -1,9 +1,0 @@
-CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE bmp targets BMP BMP_NODE quit
-CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE bmp targets BMP BMP_NODE no bmp listener <X:X::X:X|A.B.C.D> port (1-65535)
-CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE bmp targets BMP BMP_NODE exit
-CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE bmp targets BMP BMP_NODE end
-CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE bmp targets BMP BMP_NODE bmp listener <X:X::X:X|A.B.C.D> port (1-65535)
-CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE bmp targets BMP BMP_NODE [no] bmp stats [interval (100-86400000)]
-CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE bmp targets BMP BMP_NODE [no] bmp monitor <ipv4|ipv6|l2vpn> <unicast|multicast|evpn|vpn> <pre-policy|post-policy>
-CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE bmp targets BMP BMP_NODE [no] bmp mirror
-CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE bmp targets BMP BMP_NODE [no] <ip|ipv6> access-list ACCESSLIST_NAME

@@ -1,4 +1,0 @@
-ENABLE_NODE output file FILE
-ENABLE_NODE no output file [FILE]
-ENABLE_NODE list [permutations]
-ENABLE_NODE find REGEX...

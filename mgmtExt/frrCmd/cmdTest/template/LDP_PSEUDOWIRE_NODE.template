@@ -1,8 +1,0 @@
-CONFIG_NODE l2vpn WORD type vpls LDP_L2VPN_NODE member pseudowire IFNAME LDP_PSEUDOWIRE_NODE quit
-CONFIG_NODE l2vpn WORD type vpls LDP_L2VPN_NODE member pseudowire IFNAME LDP_PSEUDOWIRE_NODE exit
-CONFIG_NODE l2vpn WORD type vpls LDP_L2VPN_NODE member pseudowire IFNAME LDP_PSEUDOWIRE_NODE end
-CONFIG_NODE l2vpn WORD type vpls LDP_L2VPN_NODE member pseudowire IFNAME LDP_PSEUDOWIRE_NODE [no] pw-status disable
-CONFIG_NODE l2vpn WORD type vpls LDP_L2VPN_NODE member pseudowire IFNAME LDP_PSEUDOWIRE_NODE [no] pw-id (1-4294967295)
-CONFIG_NODE l2vpn WORD type vpls LDP_L2VPN_NODE member pseudowire IFNAME LDP_PSEUDOWIRE_NODE [no] neighbor lsr-id A.B.C.D
-CONFIG_NODE l2vpn WORD type vpls LDP_L2VPN_NODE member pseudowire IFNAME LDP_PSEUDOWIRE_NODE [no] neighbor address <A.B.C.D|X:X::X:X>
-CONFIG_NODE l2vpn WORD type vpls LDP_L2VPN_NODE member pseudowire IFNAME LDP_PSEUDOWIRE_NODE [no] control-word <exclude|include>
