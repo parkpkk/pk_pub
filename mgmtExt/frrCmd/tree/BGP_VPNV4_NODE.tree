@@ -1,0 +1,1427 @@
+{
+    "BGP_VPNV4_NODE": {
+        "desc": [
+            "BGP_VPNV4_NODE node related command"
+        ],
+        "output": {
+            "desc": [
+                "Direct vtysh output to file"
+            ],
+            "file": {
+                "desc": [
+                    "Direct vtysh output to file"
+                ],
+                "FILE": {
+                    "desc": [
+                        "Path to dump output to"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            }
+        },
+        "no": {
+            "desc": [
+                "Negate a command or set its defaults"
+            ],
+            "network": {
+                "desc": [
+                    "Specify a network to announce via BGP"
+                ],
+                "A.B.C.D/M": {
+                    "desc": [
+                        "IPv4 prefix"
+                    ],
+                    "rd": {
+                        "desc": [
+                            "Specify Route Distinguisher"
+                        ],
+                        "ASN:NN_OR_IP-ADDRESS:NN": {
+                            "desc": [
+                                "VPN Route Distinguisher"
+                            ],
+                            "<tag|label>": {
+                                "desc": [
+                                    "VPN 1 label (tag)",
+                                    "VPN 1 label (tag)"
+                                ],
+                                "(0-1048575)": {
+                                    "desc": [
+                                        "Label value"
+                                    ],
+                                    "<cr>": {
+                                        "desc": [
+                                            "end_cmd"
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "neighbor": {
+                "desc": [
+                    "Specify neighbor router"
+                ],
+                "<A.B.C.D|X:X::X:X|WORD>": {
+                    "desc": [
+                        "Neighbor address",
+                        "Neighbor IPv6 address",
+                        "Interface name or neighbor tag"
+                    ],
+                    "weight": {
+                        "desc": [
+                            "Set default weight for routes from this neighbor"
+                        ],
+                        "(0-65535)": {
+                            "desc": [
+                                "default weight"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        },
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "unsuppress-map": {
+                        "desc": [
+                            "Route-map to selectively unsuppress suppressed routes"
+                        ],
+                        "WORD": {
+                            "desc": [
+                                "Name of route map"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        }
+                    },
+                    "soo": {
+                        "desc": [
+                            "Set the Site-of-Origin (SoO) extended community"
+                        ],
+                        "ASN:NN_OR_IP-ADDRESS:NN": {
+                            "desc": [
+                                "VPN extended community"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        },
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "soft-reconfiguration": {
+                        "desc": [
+                            "Per neighbor soft reconfiguration"
+                        ],
+                        "inbound": {
+                            "desc": [
+                                "Allow inbound soft reconfiguration for this neighbor"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        }
+                    },
+                    "send-community": {
+                        "desc": [
+                            "Send Community attribute to this neighbor"
+                        ],
+                        "<both|all|extended|standard|large>": {
+                            "desc": [
+                                "Send Standard and Extended Community attributes",
+                                "Send Standard, Large and Extended Community attributes",
+                                "Send Extended Community attributes",
+                                "Send Standard Community attributes",
+                                "Send Large Community attributes"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        },
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "route-server-client": {
+                        "desc": [
+                            "Configure a neighbor as Route Server client"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "route-reflector-client": {
+                        "desc": [
+                            "Configure a neighbor as Route Reflector client"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "route-map": {
+                        "desc": [
+                            "Apply route map to neighbor"
+                        ],
+                        "RMAP_NAME": {
+                            "desc": [
+                                "Name of route map"
+                            ],
+                            "<in|out>": {
+                                "desc": [
+                                    "Apply map to incoming routes",
+                                    "Apply map to outbound routes"
+                                ],
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "remove-private-AS": {
+                        "desc": [
+                            "Remove private ASNs in outbound updates"
+                        ],
+                        "replace-AS": {
+                            "desc": [
+                                "Replace private ASNs with our ASN in outbound updates"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        },
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "prefix-list": {
+                        "desc": [
+                            "Filter updates to/from this neighbor"
+                        ],
+                        "WORD": {
+                            "desc": [
+                                "Name of a prefix list"
+                            ],
+                            "<in|out>": {
+                                "desc": [
+                                    "Filter incoming updates",
+                                    "Filter outgoing updates"
+                                ],
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "next-hop-self": {
+                        "desc": [
+                            "Disable the next hop calculation for this neighbor"
+                        ],
+                        "force": {
+                            "desc": [
+                                "Set the next hop to self for reflected routes"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        },
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "maximum-prefix-out": {
+                        "desc": [
+                            "Maximum number of prefixes to be sent to this peer"
+                        ],
+                        "(1-4294967295)": {
+                            "desc": [
+                                "Maximum no. of prefix limit"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        },
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "maximum-prefix": {
+                        "desc": [
+                            "Maximum number of prefixes to accept from this peer"
+                        ],
+                        "(1-4294967295)": {
+                            "desc": [
+                                "maximum no. of prefix limit"
+                            ],
+                            "(1-100)": {
+                                "desc": [
+                                    "Threshold value (%) at which to generate a warning msg"
+                                ],
+                                "restart": {
+                                    "desc": [
+                                        "Restart bgp connection after limit is exceeded"
+                                    ],
+                                    "(1-65535)": {
+                                        "desc": [
+                                            "Restart interval in minutes"
+                                        ],
+                                        "warning-only": {
+                                            "desc": [
+                                                "Only give warning message when limit is exceeded"
+                                            ],
+                                            "force": {
+                                                "desc": [
+                                                    "Force checking all received routes not only accepted"
+                                                ],
+                                                "<cr>": {
+                                                    "desc": [
+                                                        "end_cmd"
+                                                    ]
+                                                }
+                                            },
+                                            "<cr>": {
+                                                "desc": [
+                                                    "end_cmd"
+                                                ]
+                                            }
+                                        },
+                                        "force": {
+                                            "desc": [
+                                                "Force checking all received routes not only accepted"
+                                            ],
+                                            "<cr>": {
+                                                "desc": [
+                                                    "end_cmd"
+                                                ]
+                                            }
+                                        },
+                                        "<cr>": {
+                                            "desc": [
+                                                "end_cmd"
+                                            ]
+                                        }
+                                    }
+                                },
+                                "warning-only": {
+                                    "desc": [
+                                        "Only give warning message when limit is exceeded"
+                                    ],
+                                    "force": {
+                                        "desc": [
+                                            "Force checking all received routes not only accepted"
+                                        ],
+                                        "<cr>": {
+                                            "desc": [
+                                                "end_cmd"
+                                            ]
+                                        }
+                                    },
+                                    "<cr>": {
+                                        "desc": [
+                                            "end_cmd"
+                                        ]
+                                    }
+                                },
+                                "force": {
+                                    "desc": [
+                                        "Force checking all received routes not only accepted"
+                                    ],
+                                    "<cr>": {
+                                        "desc": [
+                                            "end_cmd"
+                                        ]
+                                    }
+                                },
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            },
+                            "restart": {
+                                "desc": [
+                                    "Restart bgp connection after limit is exceeded"
+                                ],
+                                "(1-65535)": {
+                                    "desc": [
+                                        "Restart interval in minutes"
+                                    ],
+                                    "warning-only": {
+                                        "desc": [
+                                            "Only give warning message when limit is exceeded"
+                                        ],
+                                        "force": {
+                                            "desc": [
+                                                "Force checking all received routes not only accepted"
+                                            ],
+                                            "<cr>": {
+                                                "desc": [
+                                                    "end_cmd"
+                                                ]
+                                            }
+                                        },
+                                        "<cr>": {
+                                            "desc": [
+                                                "end_cmd"
+                                            ]
+                                        }
+                                    },
+                                    "force": {
+                                        "desc": [
+                                            "Force checking all received routes not only accepted"
+                                        ],
+                                        "<cr>": {
+                                            "desc": [
+                                                "end_cmd"
+                                            ]
+                                        }
+                                    },
+                                    "<cr>": {
+                                        "desc": [
+                                            "end_cmd"
+                                        ]
+                                    }
+                                }
+                            },
+                            "warning-only": {
+                                "desc": [
+                                    "Only give warning message when limit is exceeded"
+                                ],
+                                "force": {
+                                    "desc": [
+                                        "Force checking all received routes not only accepted"
+                                    ],
+                                    "<cr>": {
+                                        "desc": [
+                                            "end_cmd"
+                                        ]
+                                    }
+                                },
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            },
+                            "force": {
+                                "desc": [
+                                    "Force checking all received routes not only accepted"
+                                ],
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            },
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        },
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "filter-list": {
+                        "desc": [
+                            "Establish BGP filters"
+                        ],
+                        "AS_PATH_FILTER_NAME": {
+                            "desc": [
+                                "AS path access-list name"
+                            ],
+                            "<in|out>": {
+                                "desc": [
+                                    "Filter incoming routes",
+                                    "Filter outgoing routes"
+                                ],
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "distribute-list": {
+                        "desc": [
+                            "Filter updates to/from this neighbor"
+                        ],
+                        "ACCESSLIST_NAME": {
+                            "desc": [
+                                "IP Access-list name"
+                            ],
+                            "<in|out>": {
+                                "desc": [
+                                    "Filter incoming updates",
+                                    "Filter outgoing updates"
+                                ],
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "disable-addpath-rx": {
+                        "desc": [
+                            "Do not accept additional paths"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "attribute-unchanged": {
+                        "desc": [
+                            "BGP attribute is propagated unchanged to this neighbor"
+                        ],
+                        "as-path": {
+                            "desc": [
+                                "As-path attribute"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        },
+                        "next-hop": {
+                            "desc": [
+                                "Nexthop attribute"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        },
+                        "med": {
+                            "desc": [
+                                "Med attribute"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        },
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "as-override": {
+                        "desc": [
+                            "Override ASNs in outbound updates if aspath equals remote-as"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "allowas-in": {
+                        "desc": [
+                            "allow local ASN appears in aspath attribute"
+                        ],
+                        "<(1-10)|origin>": {
+                            "desc": [
+                                "Number of occurrences of AS number",
+                                "Only accept my AS in the as-path if the route was originated in my AS"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        },
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "addpath-tx-bestpath-per-AS": {
+                        "desc": [
+                            "Use addpath to advertise the bestpath per each neighboring AS"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "addpath-tx-all-paths": {
+                        "desc": [
+                            "Use addpath to advertise all paths to a neighbor"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "activate": {
+                        "desc": [
+                            "Enable the Address Family for this Neighbor"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "advertise-map": {
+                        "desc": [
+                            "Route-map to conditionally advertise routes"
+                        ],
+                        "RMAP_NAME": {
+                            "desc": [
+                                "Name of advertise map"
+                            ],
+                            "<exist-map|non-exist-map>": {
+                                "desc": [
+                                    "Advertise routes only if prefixes in exist-map are installed in BGP table",
+                                    "Advertise routes only if prefixes in non-exist-map are not installed in BGP table"
+                                ],
+                                "RMAP_NAME": {
+                                    "desc": [
+                                        "Name of the exist or non exist map"
+                                    ],
+                                    "<cr>": {
+                                        "desc": [
+                                            "end_cmd"
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "accept-own": {
+                        "desc": [
+                            "Enable handling of self-originated VPN routes containing ACCEPT_OWN community"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "remove-private-AS_all": {
+                        "desc": [
+                            "Remove private ASNs in outbound updates",
+                            "Apply to all AS numbers"
+                        ],
+                        "replace-AS": {
+                            "desc": [
+                                "Replace private ASNs with our ASN in outbound updates"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        },
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "list": {
+            "desc": [
+                "Print command list"
+            ],
+            "permutations": {
+                "desc": [
+                    "Print all possible command permutations"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "find": {
+            "desc": [
+                "Find CLI command matching a regular expression"
+            ],
+            "REGEX...": {
+                "desc": [
+                    "Search pattern (POSIX regex)"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "quit": {
+            "desc": [
+                "Exit current mode and down to previous mode"
+            ],
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "network": {
+            "desc": [
+                "Specify a network to announce via BGP"
+            ],
+            "A.B.C.D/M": {
+                "desc": [
+                    "IPv4 prefix"
+                ],
+                "rd": {
+                    "desc": [
+                        "Specify Route Distinguisher"
+                    ],
+                    "ASN:NN_OR_IP-ADDRESS:NN": {
+                        "desc": [
+                            "VPN Route Distinguisher"
+                        ],
+                        "<tag|label>": {
+                            "desc": [
+                                "VPN 1 label (tag)",
+                                "VPN 1 label (tag)"
+                            ],
+                            "(0-1048575)": {
+                                "desc": [
+                                    "Label value"
+                                ],
+                                "route-map": {
+                                    "desc": [
+                                        "route map"
+                                    ],
+                                    "RMAP_NAME": {
+                                        "desc": [
+                                            "route map name"
+                                        ],
+                                        "<cr>": {
+                                            "desc": [
+                                                "end_cmd"
+                                            ]
+                                        }
+                                    }
+                                },
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "neighbor": {
+            "desc": [
+                "Specify neighbor router"
+            ],
+            "<A.B.C.D|X:X::X:X|WORD>": {
+                "desc": [
+                    "Neighbor address",
+                    "Neighbor IPv6 address",
+                    "Interface name or neighbor tag"
+                ],
+                "weight": {
+                    "desc": [
+                        "Set default weight for routes from this neighbor"
+                    ],
+                    "(0-65535)": {
+                        "desc": [
+                            "default weight"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    }
+                },
+                "unsuppress-map": {
+                    "desc": [
+                        "Route-map to selectively unsuppress suppressed routes"
+                    ],
+                    "WORD": {
+                        "desc": [
+                            "Name of route map"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    }
+                },
+                "soo": {
+                    "desc": [
+                        "Set the Site-of-Origin (SoO) extended community"
+                    ],
+                    "ASN:NN_OR_IP-ADDRESS:NN": {
+                        "desc": [
+                            "VPN extended community"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    }
+                },
+                "soft-reconfiguration": {
+                    "desc": [
+                        "Per neighbor soft reconfiguration"
+                    ],
+                    "inbound": {
+                        "desc": [
+                            "Allow inbound soft reconfiguration for this neighbor"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    }
+                },
+                "send-community": {
+                    "desc": [
+                        "Send Community attribute to this neighbor"
+                    ],
+                    "<both|all|extended|standard|large>": {
+                        "desc": [
+                            "Send Standard and Extended Community attributes",
+                            "Send Standard, Large and Extended Community attributes",
+                            "Send Extended Community attributes",
+                            "Send Standard Community attributes",
+                            "Send Large Community attributes"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                },
+                "route-server-client": {
+                    "desc": [
+                        "Configure a neighbor as Route Server client"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                },
+                "route-reflector-client": {
+                    "desc": [
+                        "Configure a neighbor as Route Reflector client"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                },
+                "route-map": {
+                    "desc": [
+                        "Apply route map to neighbor"
+                    ],
+                    "RMAP_NAME": {
+                        "desc": [
+                            "Name of route map"
+                        ],
+                        "<in|out>": {
+                            "desc": [
+                                "Apply map to incoming routes",
+                                "Apply map to outbound routes"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "remove-private-AS": {
+                    "desc": [
+                        "Remove private ASNs in outbound updates"
+                    ],
+                    "replace-AS": {
+                        "desc": [
+                            "Replace private ASNs with our ASN in outbound updates"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                },
+                "prefix-list": {
+                    "desc": [
+                        "Filter updates to/from this neighbor"
+                    ],
+                    "WORD": {
+                        "desc": [
+                            "Name of a prefix list"
+                        ],
+                        "<in|out>": {
+                            "desc": [
+                                "Filter incoming updates",
+                                "Filter outgoing updates"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "next-hop-self": {
+                    "desc": [
+                        "Disable the next hop calculation for this neighbor"
+                    ],
+                    "force": {
+                        "desc": [
+                            "Set the next hop to self for reflected routes"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                },
+                "maximum-prefix-out": {
+                    "desc": [
+                        "Maximum number of prefixes to be sent to this peer"
+                    ],
+                    "(1-4294967295)": {
+                        "desc": [
+                            "Maximum no. of prefix limit"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    }
+                },
+                "maximum-prefix": {
+                    "desc": [
+                        "Maximum number of prefix accept from this peer"
+                    ],
+                    "(1-4294967295)": {
+                        "desc": [
+                            "maximum no. of prefix limit"
+                        ],
+                        "warning-only": {
+                            "desc": [
+                                "Only give warning message when limit is exceeded"
+                            ],
+                            "force": {
+                                "desc": [
+                                    "Force checking all received routes not only accepted"
+                                ],
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            },
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        },
+                        "restart": {
+                            "desc": [
+                                "Restart bgp connection after limit is exceeded"
+                            ],
+                            "(1-65535)": {
+                                "desc": [
+                                    "Restart interval in minutes"
+                                ],
+                                "force": {
+                                    "desc": [
+                                        "Force checking all received routes not only accepted"
+                                    ],
+                                    "<cr>": {
+                                        "desc": [
+                                            "end_cmd"
+                                        ]
+                                    }
+                                },
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            }
+                        },
+                        "force": {
+                            "desc": [
+                                "Force checking all received routes not only accepted"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        },
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        },
+                        "(1-100)": {
+                            "desc": [
+                                "Threshold value (%) at which to generate a warning msg"
+                            ],
+                            "warning-only": {
+                                "desc": [
+                                    "Only give warning message when limit is exceeded"
+                                ],
+                                "force": {
+                                    "desc": [
+                                        "Force checking all received routes not only accepted"
+                                    ],
+                                    "<cr>": {
+                                        "desc": [
+                                            "end_cmd"
+                                        ]
+                                    }
+                                },
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            },
+                            "restart": {
+                                "desc": [
+                                    "Restart bgp connection after limit is exceeded"
+                                ],
+                                "(1-65535)": {
+                                    "desc": [
+                                        "Restart interval in minutes"
+                                    ],
+                                    "force": {
+                                        "desc": [
+                                            "Force checking all received routes not only accepted"
+                                        ],
+                                        "<cr>": {
+                                            "desc": [
+                                                "end_cmd"
+                                            ]
+                                        }
+                                    },
+                                    "<cr>": {
+                                        "desc": [
+                                            "end_cmd"
+                                        ]
+                                    }
+                                }
+                            },
+                            "force": {
+                                "desc": [
+                                    "Force checking all received routes not only accepted"
+                                ],
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            },
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "filter-list": {
+                    "desc": [
+                        "Establish BGP filters"
+                    ],
+                    "AS_PATH_FILTER_NAME": {
+                        "desc": [
+                            "AS path access-list name"
+                        ],
+                        "<in|out>": {
+                            "desc": [
+                                "Filter incoming routes",
+                                "Filter outgoing routes"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "distribute-list": {
+                    "desc": [
+                        "Filter updates to/from this neighbor"
+                    ],
+                    "ACCESSLIST_NAME": {
+                        "desc": [
+                            "IP Access-list name"
+                        ],
+                        "<in|out>": {
+                            "desc": [
+                                "Filter incoming updates",
+                                "Filter outgoing updates"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "disable-addpath-rx": {
+                    "desc": [
+                        "Do not accept additional paths"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                },
+                "attribute-unchanged": {
+                    "desc": [
+                        "BGP attribute is propagated unchanged to this neighbor"
+                    ],
+                    "as-path": {
+                        "desc": [
+                            "As-path attribute"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "next-hop": {
+                        "desc": [
+                            "Nexthop attribute"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "med": {
+                        "desc": [
+                            "Med attribute"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                },
+                "as-override": {
+                    "desc": [
+                        "Override ASNs in outbound updates if aspath equals remote-as"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                },
+                "allowas-in": {
+                    "desc": [
+                        "Accept as-path with my AS present in it"
+                    ],
+                    "<(1-10)|origin>": {
+                        "desc": [
+                            "Number of occurrences of AS number",
+                            "Only accept my AS in the as-path if the route was originated in my AS"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                },
+                "addpath-tx-bestpath-per-AS": {
+                    "desc": [
+                        "Use addpath to advertise the bestpath per each neighboring AS"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                },
+                "addpath-tx-all-paths": {
+                    "desc": [
+                        "Use addpath to advertise all paths to a neighbor"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                },
+                "activate": {
+                    "desc": [
+                        "Enable the Address Family for this Neighbor"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                },
+                "advertise-map": {
+                    "desc": [
+                        "Route-map to conditionally advertise routes"
+                    ],
+                    "RMAP_NAME": {
+                        "desc": [
+                            "Name of advertise map"
+                        ],
+                        "<exist-map|non-exist-map>": {
+                            "desc": [
+                                "Advertise routes only if prefixes in exist-map are installed in BGP table",
+                                "Advertise routes only if prefixes in non-exist-map are not installed in BGP table"
+                            ],
+                            "RMAP_NAME": {
+                                "desc": [
+                                    "Name of the exist or non exist map"
+                                ],
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                },
+                "accept-own": {
+                    "desc": [
+                        "Enable handling of self-originated VPN routes containing ACCEPT_OWN community"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                },
+                "remove-private-AS_all": {
+                    "desc": [
+                        "Remove private ASNs in outbound updates",
+                        "Apply to all AS numbers"
+                    ],
+                    "replace-AS": {
+                        "desc": [
+                            "Replace private ASNs with our ASN in outbound updates"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            }
+        },
+        "exit-address-family": {
+            "desc": [
+                "Exit from Address Family configuration mode"
+            ],
+            "<cr>": {
+                "desc": [
+                    "change_node BGP_NODE"
+                ]
+            }
+        },
+        "exit": {
+            "desc": [
+                "Exit current mode and down to previous mode"
+            ],
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "end": {
+            "desc": [
+                "End current mode and change to enable mode"
+            ],
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_output_file": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Direct vtysh output to file",
+                "Direct vtysh output to file"
+            ],
+            "FILE": {
+                "desc": [
+                    "Path to dump output to"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "bgp_retain_route-target": {
+            "desc": [
+                "BGP information",
+                "Retain BGP updates",
+                "Retain BGP updates based on route-target values"
+            ],
+            "all": {
+                "desc": [
+                    "Retain all BGP updates"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "no_bgp_retain_route-target": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "BGP information",
+                "Retain BGP updates",
+                "Retain BGP updates based on route-target values"
+            ],
+            "all": {
+                "desc": [
+                    "Retain all BGP updates"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        }
+    }
+}

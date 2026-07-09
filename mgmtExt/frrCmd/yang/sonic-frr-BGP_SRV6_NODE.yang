@@ -1,0 +1,113 @@
+
+module sonic-frr-BGP_SRV6_NODE {
+    namespace "http://github.com/sonic-net/frr/sonic-frr-BGP_SRV6_NODE";
+    prefix frr-BGP_SRV6_NODE;
+    yang-version 1.1;
+
+    import ietf-inet-types {
+        prefix inet;
+    }
+
+    organization
+        "SONiC";
+
+    contact
+        "SONiC";
+
+    description
+        "SONIC frr-BGP_SRV6_NODE FRR YANG";
+
+    revision 2024-12-23 {
+        description
+            "Initial revision.";
+    }
+    container sonic-frr-BGP_SRV6_NODE {
+        container BGP_SRV6_NODE {
+            list OUTPUT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf file {
+                    type enumeration {
+                        enum file;
+                    }
+                }                  //file
+                leaf PATH_TO_DUMP_OUTPUT {
+                    type string;
+                }                  //FILE
+            }
+            list NO {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf locator {
+                    type enumeration {
+                        enum locator;
+                    }
+                }                  //locator
+                leaf SPECIFY_SRV6_LOCATOR {
+                    type string;
+                }                  //NAME
+            }
+            list LIST {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf permutations {
+                    type enumeration {
+                        enum permutations;
+                    }
+                }                  //permutations
+            }
+            list FIND {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf-list SEARCH_PATTERN {
+                    type string;
+                }                  //REGEX...
+            }
+            list QUIT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list LOCATOR {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf SPECIFY_SRV6_LOCATOR {
+                    type string;
+                }                  //NAME
+            }
+            list EXIT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list END {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list NO_OUTPUT_FILE {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf PATH_TO_DUMP_OUTPUT {
+                    type string;
+                }                  //FILE
+            }
+        }
+
+    }
+}

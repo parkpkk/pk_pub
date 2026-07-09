@@ -1,0 +1,208 @@
+
+module sonic-frr-LDP_PSEUDOWIRE_NODE {
+    namespace "http://github.com/sonic-net/frr/sonic-frr-LDP_PSEUDOWIRE_NODE";
+    prefix frr-LDP_PSEUDOWIRE_NODE;
+    yang-version 1.1;
+
+    import ietf-inet-types {
+        prefix inet;
+    }
+
+    organization
+        "SONiC";
+
+    contact
+        "SONiC";
+
+    description
+        "SONIC frr-LDP_PSEUDOWIRE_NODE FRR YANG";
+
+    revision 2024-12-23 {
+        description
+            "Initial revision.";
+    }
+    container sonic-frr-LDP_PSEUDOWIRE_NODE {
+        container LDP_PSEUDOWIRE_NODE {
+            list OUTPUT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf file {
+                    type enumeration {
+                        enum file;
+                    }
+                }                  //file
+                leaf PATH_TO_DUMP_OUTPUT {
+                    type string;
+                }                  //FILE
+            }
+            list NO {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf pw-id {
+                    type enumeration {
+                        enum pw-id;
+                    }
+                }                  //pw-id
+                leaf VIRTUAL_CIRCUIT_ID_VALUE {
+                    type int32;
+                }                  //(1-4294967295)
+                leaf control-word {
+                    type enumeration {
+                        enum control-word;
+                    }
+                }                  //control-word
+                leaf CONTROL-WORD_CHOICE_CASE {
+                    type enumeration {
+                        enum exclude;
+                        enum include;
+                    }
+                }                  //<exclude|include> ['Exclude control-word in pseudowire packets', 'Include control-word in pseudowire packets']
+            }
+            list LIST {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf permutations {
+                    type enumeration {
+                        enum permutations;
+                    }
+                }                  //permutations
+            }
+            list FIND {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf-list SEARCH_PATTERN {
+                    type string;
+                }                  //REGEX...
+            }
+            list QUIT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list EXIT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list END {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list PW-STATUS {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf disable {
+                    type enumeration {
+                        enum disable;
+                    }
+                }                  //disable
+            }
+            list PW-ID {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf VIRTUAL_CIRCUIT_ID_VALUE {
+                    type int32;
+                }                  //(1-4294967295)
+            }
+            list NEIGHBOR {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf lsr-id {
+                    type enumeration {
+                        enum lsr-id;
+                    }
+                }                  //lsr-id
+                leaf IPV4_ADDRESS {
+                    type inet:ipv4-address;
+                }                  //A.B.C.D
+                leaf address {
+                    type enumeration {
+                        enum address;
+                    }
+                }                  //address
+                leaf ADDRESS_IP_ADDRESS {
+                    type union {
+                        type inet:ipv4-address;
+                        type inet:ipv6-address;
+                    }
+                }                  //<A.B.C.D|X:X::X:X> ['IPv4 address', 'IPv6 address']
+            }
+            list CONTROL-WORD {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf CONTROL-WORD_CHOICE_CASE {
+                    type enumeration {
+                        enum exclude;
+                        enum include;
+                    }
+                }                  //<exclude|include> ['Exclude control-word in pseudowire packets', 'Include control-word in pseudowire packets']
+            }
+            list NO_PW-STATUS {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf disable {
+                    type enumeration {
+                        enum disable;
+                    }
+                }                  //disable
+            }
+            list NO_NEIGHBOR {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf lsr-id {
+                    type enumeration {
+                        enum lsr-id;
+                    }
+                }                  //lsr-id
+                leaf IPV4_ADDRESS {
+                    type inet:ipv4-address;
+                }                  //A.B.C.D
+                leaf address {
+                    type enumeration {
+                        enum address;
+                    }
+                }                  //address
+                leaf ADDRESS_IP_ADDRESS {
+                    type union {
+                        type inet:ipv4-address;
+                        type inet:ipv6-address;
+                    }
+                }                  //<A.B.C.D|X:X::X:X> ['IPv4 address', 'IPv6 address']
+            }
+            list NO_OUTPUT_FILE {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf PATH_TO_DUMP_OUTPUT {
+                    type string;
+                }                  //FILE
+            }
+        }
+
+    }
+}

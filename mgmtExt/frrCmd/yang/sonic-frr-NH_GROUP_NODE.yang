@@ -1,0 +1,306 @@
+
+module sonic-frr-NH_GROUP_NODE {
+    namespace "http://github.com/sonic-net/frr/sonic-frr-NH_GROUP_NODE";
+    prefix frr-NH_GROUP_NODE;
+    yang-version 1.1;
+
+    import ietf-inet-types {
+        prefix inet;
+    }
+
+    organization
+        "SONiC";
+
+    contact
+        "SONiC";
+
+    description
+        "SONIC frr-NH_GROUP_NODE FRR YANG";
+
+    revision 2024-12-23 {
+        description
+            "Initial revision.";
+    }
+    container sonic-frr-NH_GROUP_NODE {
+        container NH_GROUP_NODE {
+            list OUTPUT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf file {
+                    type enumeration {
+                        enum file;
+                    }
+                }                  //file
+                leaf PATH_TO_DUMP_OUTPUT {
+                    type string;
+                }                  //FILE
+            }
+            list LIST {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf permutations {
+                    type enumeration {
+                        enum permutations;
+                    }
+                }                  //permutations
+            }
+            list FIND {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf-list SEARCH_PATTERN {
+                    type string;
+                }                  //REGEX...
+            }
+            list RESILIENT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf buckets {
+                    type enumeration {
+                        enum buckets;
+                    }
+                }                  //buckets
+                leaf NUMBER_OF_BUCKETS {
+                    type int32;
+                }                  //(1-256)
+                leaf idle-timer {
+                    type enumeration {
+                        enum idle-timer;
+                    }
+                }                  //idle-timer
+                leaf NUMBER_OF_SECONDS_OF {
+                    type int32;
+                }                  //(1-4294967295)
+                leaf unbalanced-timer {
+                    type enumeration {
+                        enum unbalanced-timer;
+                    }
+                }                  //unbalanced-timer
+            }
+            list QUIT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list EXIT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list END {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list BACKUP-GROUP {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf THE_NAME_OF_THE {
+                    type string;
+                }                  //WORD
+            }
+            list NEXTHOP {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf IP_ADDRESS {
+                    type union {
+                        type inet:ipv4-address;
+                        type inet:ipv6-address;
+                    }
+                }                  //<A.B.C.D|X:X::X:X> ['v4 Address', 'v6 Address']
+                leaf INTERFACE_TO_USE {
+                    type string;
+                }                  //INTERFACE
+                leaf onlink {
+                    type enumeration {
+                        enum onlink;
+                    }
+                }                  //onlink
+                leaf onlink_nexthop-vrf {
+                    type enumeration {
+                        enum onlink_nexthop-vrf;
+                    }
+                }                  //nexthop-vrf
+                leaf THE_NEXTHOP-VRF_NAME {
+                    type string;
+                }                  //NAME
+                leaf onlink_label {
+                    type enumeration {
+                        enum onlink_label;
+                    }
+                }                  //label
+                leaf ONE_OR_MORE_LABELS {
+                    type string;
+                }                  //WORD
+                leaf onlink_weight {
+                    type enumeration {
+                        enum onlink_weight;
+                    }
+                }                  //weight
+                leaf WEIGHT_VALUE_TO_BE {
+                    type int32;
+                }                  //(1-255)
+                leaf onlink_backup-idx {
+                    type enumeration {
+                        enum onlink_backup-idx;
+                    }
+                }                  //backup-idx
+                leaf ONE_OR_MORE_INDEXES {
+                    type string;
+                }                  //WORD
+                leaf nexthop-vrf {
+                    type enumeration {
+                        enum nexthop-vrf;
+                    }
+                }                  //nexthop-vrf
+                leaf label {
+                    type enumeration {
+                        enum label;
+                    }
+                }                  //label
+                leaf weight {
+                    type enumeration {
+                        enum weight;
+                    }
+                }                  //weight
+                leaf backup-idx {
+                    type enumeration {
+                        enum backup-idx;
+                    }
+                }                  //backup-idx
+            }
+            list NO_RESILIENT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf buckets {
+                    type enumeration {
+                        enum buckets;
+                    }
+                }                  //buckets
+                leaf NUMBER_OF_BUCKETS {
+                    type int32;
+                }                  //(1-256)
+                leaf idle-timer {
+                    type enumeration {
+                        enum idle-timer;
+                    }
+                }                  //idle-timer
+                leaf NUMBER_OF_SECONDS_OF {
+                    type int32;
+                }                  //(1-4294967295)
+                leaf unbalanced-timer {
+                    type enumeration {
+                        enum unbalanced-timer;
+                    }
+                }                  //unbalanced-timer
+            }
+            list NO_BACKUP-GROUP {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf THE_NAME_OF_THE {
+                    type string;
+                }                  //WORD
+            }
+            list NO_NEXTHOP {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf IP_ADDRESS {
+                    type union {
+                        type inet:ipv4-address;
+                        type inet:ipv6-address;
+                    }
+                }                  //<A.B.C.D|X:X::X:X> ['v4 Address', 'v6 Address']
+                leaf INTERFACE_TO_USE {
+                    type string;
+                }                  //INTERFACE
+                leaf onlink {
+                    type enumeration {
+                        enum onlink;
+                    }
+                }                  //onlink
+                leaf onlink_nexthop-vrf {
+                    type enumeration {
+                        enum onlink_nexthop-vrf;
+                    }
+                }                  //nexthop-vrf
+                leaf THE_NEXTHOP-VRF_NAME {
+                    type string;
+                }                  //NAME
+                leaf onlink_label {
+                    type enumeration {
+                        enum onlink_label;
+                    }
+                }                  //label
+                leaf ONE_OR_MORE_LABELS {
+                    type string;
+                }                  //WORD
+                leaf onlink_weight {
+                    type enumeration {
+                        enum onlink_weight;
+                    }
+                }                  //weight
+                leaf WEIGHT_VALUE_TO_BE {
+                    type int32;
+                }                  //(1-255)
+                leaf onlink_backup-idx {
+                    type enumeration {
+                        enum onlink_backup-idx;
+                    }
+                }                  //backup-idx
+                leaf ONE_OR_MORE_INDEXES {
+                    type string;
+                }                  //WORD
+                leaf nexthop-vrf {
+                    type enumeration {
+                        enum nexthop-vrf;
+                    }
+                }                  //nexthop-vrf
+                leaf label {
+                    type enumeration {
+                        enum label;
+                    }
+                }                  //label
+                leaf weight {
+                    type enumeration {
+                        enum weight;
+                    }
+                }                  //weight
+                leaf backup-idx {
+                    type enumeration {
+                        enum backup-idx;
+                    }
+                }                  //backup-idx
+            }
+            list NO_OUTPUT_FILE {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf PATH_TO_DUMP_OUTPUT {
+                    type string;
+                }                  //FILE
+            }
+        }
+
+    }
+}

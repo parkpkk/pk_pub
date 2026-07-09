@@ -1,0 +1,689 @@
+{
+    "EIGRP_NODE": {
+        "desc": [
+            "EIGRP_NODE node related command"
+        ],
+        "output": {
+            "desc": [
+                "Direct vtysh output to file"
+            ],
+            "file": {
+                "desc": [
+                    "Direct vtysh output to file"
+                ],
+                "FILE": {
+                    "desc": [
+                        "Path to dump output to"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            }
+        },
+        "no": {
+            "desc": [
+                "Negate a command or set its defaults"
+            ],
+            "redistribute": {
+                "desc": [
+                    "REDIST_STR"
+                ],
+                "FRR_REDIST_STR_EIGRPD": {
+                    "desc": [
+                        "FRR_REDIST_HELP_STR_EIGRPD"
+                    ],
+                    "metric": {
+                        "desc": [
+                            "Metric for redistributed routes"
+                        ],
+                        "(1-4294967295)": {
+                            "desc": [
+                                "Bandwidth metric in Kbits per second"
+                            ],
+                            "(0-4294967295)": {
+                                "desc": [
+                                    "EIGRP delay metric, in 10 microsecond units"
+                                ],
+                                "(0-255)": {
+                                    "desc": [
+                                        "EIGRP reliability metric where 255 is 100% reliable2 ?"
+                                    ],
+                                    "(1-255)": {
+                                        "desc": [
+                                            "EIGRP Effective bandwidth metric (Loading) where 255 is 100% loaded"
+                                        ],
+                                        "(1-65535)": {
+                                            "desc": [
+                                                "EIGRP MTU of the path"
+                                            ],
+                                            "<cr>": {
+                                                "desc": [
+                                                    "end_cmd"
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "passive-interface": {
+                "desc": [
+                    "Suppress routing updates on an interface"
+                ],
+                "IFNAME": {
+                    "desc": [
+                        "Interface to suppress on"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "network": {
+                "desc": [
+                    "Enable routing on an IP network"
+                ],
+                "A.B.C.D/M": {
+                    "desc": [
+                        "EIGRP network prefix"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "neighbor": {
+                "desc": [
+                    "Specify a neighbor router"
+                ],
+                "A.B.C.D": {
+                    "desc": [
+                        "Neighbor address"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            }
+        },
+        "list": {
+            "desc": [
+                "Print command list"
+            ],
+            "permutations": {
+                "desc": [
+                    "Print all possible command permutations"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "find": {
+            "desc": [
+                "Find CLI command matching a regular expression"
+            ],
+            "REGEX...": {
+                "desc": [
+                    "Search pattern (POSIX regex)"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "variance": {
+            "desc": [
+                "Control load balancing variance"
+            ],
+            "(1-128)": {
+                "desc": [
+                    "Metric variance multiplier"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "timers": {
+            "desc": [
+                "Adjust routing timers"
+            ],
+            "active-time": {
+                "desc": [
+                    "Time limit for active state"
+                ],
+                "<(1-65535)|disabled>": {
+                    "desc": [
+                        "Active state time limit in seconds",
+                        "Disable time limit for active state"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            }
+        },
+        "quit": {
+            "desc": [
+                "Exit current mode and down to previous mode"
+            ],
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "metric": {
+            "desc": [
+                "Modify metrics and parameters for advertisement"
+            ],
+            "weights": {
+                "desc": [
+                    "Modify metric coefficients"
+                ],
+                "(0-255)": {
+                    "desc": [
+                        "K1"
+                    ],
+                    "(0-255)": {
+                        "desc": [
+                            "K2"
+                        ],
+                        "(0-255)": {
+                            "desc": [
+                                "K3"
+                            ],
+                            "(0-255)": {
+                                "desc": [
+                                    "K4"
+                                ],
+                                "(0-255)": {
+                                    "desc": [
+                                        "K5"
+                                    ],
+                                    "(0-255)": {
+                                        "desc": [
+                                            "K6"
+                                        ],
+                                        "<cr>": {
+                                            "desc": [
+                                                "end_cmd"
+                                            ]
+                                        }
+                                    },
+                                    "<cr>": {
+                                        "desc": [
+                                            "end_cmd"
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "maximum-paths": {
+            "desc": [
+                "Forward packets over multiple paths"
+            ],
+            "(1-32)": {
+                "desc": [
+                    "Number of paths"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "exit": {
+            "desc": [
+                "Exit current mode and down to previous mode"
+            ],
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "end": {
+            "desc": [
+                "End current mode and change to enable mode"
+            ],
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "eigrp": {
+            "desc": [
+                "P information"
+            ],
+            "router-id": {
+                "desc": [
+                    "Router ID for this EIGRP process"
+                ],
+                "A.B.C.D": {
+                    "desc": [
+                        "EIGRP Router-ID in IP address format"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            }
+        },
+        "distribute-list": {
+            "desc": [
+                "Filter networks in routing updates"
+            ],
+            "prefix": {
+                "desc": [
+                    "Specify a prefix"
+                ],
+                "ACCESSLIST_NAME": {
+                    "desc": [
+                        "Access-list name"
+                    ],
+                    "<in|out>": {
+                        "desc": [
+                            "Filter incoming routing updates",
+                            "Filter outgoing routing updates"
+                        ],
+                        "WORD": {
+                            "desc": [
+                                "Interface name"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        },
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    }
+                }
+            },
+            "ACCESSLIST_NAME": {
+                "desc": [
+                    "Access-list name"
+                ],
+                "<in|out>": {
+                    "desc": [
+                        "Filter incoming routing updates",
+                        "Filter outgoing routing updates"
+                    ],
+                    "WORD": {
+                        "desc": [
+                            "Interface name"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            }
+        },
+        "redistribute": {
+            "desc": [
+                "REDIST_STR"
+            ],
+            "FRR_REDIST_STR_EIGRPD": {
+                "desc": [
+                    "FRR_REDIST_HELP_STR_EIGRPD"
+                ],
+                "metric": {
+                    "desc": [
+                        "Metric for redistributed routes"
+                    ],
+                    "(1-4294967295)": {
+                        "desc": [
+                            "Bandwidth metric in Kbits per second"
+                        ],
+                        "(0-4294967295)": {
+                            "desc": [
+                                "EIGRP delay metric, in 10 microsecond units"
+                            ],
+                            "(0-255)": {
+                                "desc": [
+                                    "EIGRP reliability metric where 255 is 100% reliable2 ?"
+                                ],
+                                "(1-255)": {
+                                    "desc": [
+                                        "EIGRP Effective bandwidth metric (Loading) where 255 is 100% loaded"
+                                    ],
+                                    "(1-65535)": {
+                                        "desc": [
+                                            "EIGRP MTU of the path"
+                                        ],
+                                        "<cr>": {
+                                            "desc": [
+                                                "end_cmd"
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "passive-interface": {
+            "desc": [
+                "Suppress routing updates on an interface"
+            ],
+            "IFNAME": {
+                "desc": [
+                    "Interface to suppress on"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "network": {
+            "desc": [
+                "Enable routing on an IP network"
+            ],
+            "A.B.C.D/M": {
+                "desc": [
+                    "EIGRP network prefix"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "neighbor": {
+            "desc": [
+                "Specify a neighbor router"
+            ],
+            "A.B.C.D": {
+                "desc": [
+                    "Neighbor address"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "no_variance": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Control load balancing variance"
+            ],
+            "(1-128)": {
+                "desc": [
+                    "Metric variance multiplier"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_maximum-paths": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Forward packets over multiple paths"
+            ],
+            "(1-32)": {
+                "desc": [
+                    "Number of paths"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_distribute-list": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Filter networks in routing updates"
+            ],
+            "prefix": {
+                "desc": [
+                    "Specify a prefix"
+                ],
+                "ACCESSLIST_NAME": {
+                    "desc": [
+                        "Access-list name"
+                    ],
+                    "<in|out>": {
+                        "desc": [
+                            "Filter incoming routing updates",
+                            "Filter outgoing routing updates"
+                        ],
+                        "WORD": {
+                            "desc": [
+                                "Interface name"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        },
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    }
+                }
+            },
+            "ACCESSLIST_NAME": {
+                "desc": [
+                    "Access-list name"
+                ],
+                "<in|out>": {
+                    "desc": [
+                        "Filter incoming routing updates",
+                        "Filter outgoing routing updates"
+                    ],
+                    "WORD": {
+                        "desc": [
+                            "Interface name"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            }
+        },
+        "no_output_file": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Direct vtysh output to file",
+                "Direct vtysh output to file"
+            ],
+            "FILE": {
+                "desc": [
+                    "Path to dump output to"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_timers_active-time": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Adjust routing timers",
+                "Time limit for active state"
+            ],
+            "<(1-65535)|disabled>": {
+                "desc": [
+                    "Active state time limit in seconds",
+                    "Disable time limit for active state"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_metric_weights": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Modify metrics and parameters for advertisement",
+                "Modify metric coefficients"
+            ],
+            "(0-255)": {
+                "desc": [
+                    "K1"
+                ],
+                "(0-255)": {
+                    "desc": [
+                        "K2"
+                    ],
+                    "(0-255)": {
+                        "desc": [
+                            "K3"
+                        ],
+                        "(0-255)": {
+                            "desc": [
+                                "K4"
+                            ],
+                            "(0-255)": {
+                                "desc": [
+                                    "K5"
+                                ],
+                                "(0-255)": {
+                                    "desc": [
+                                        "K6"
+                                    ],
+                                    "<cr>": {
+                                        "desc": [
+                                            "end_cmd"
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_eigrp_router-id": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "P information",
+                "Router ID for this EIGRP process"
+            ],
+            "A.B.C.D": {
+                "desc": [
+                    "EIGRP Router-ID in IP address format"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        }
+    }
+}

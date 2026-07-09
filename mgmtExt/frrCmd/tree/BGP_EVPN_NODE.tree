@@ -1,0 +1,1369 @@
+{
+    "BGP_EVPN_NODE": {
+        "desc": [
+            "BGP_EVPN_NODE node related command"
+        ],
+        "output": {
+            "desc": [
+                "Direct vtysh output to file"
+            ],
+            "file": {
+                "desc": [
+                    "Direct vtysh output to file"
+                ],
+                "FILE": {
+                    "desc": [
+                        "Path to dump output to"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            }
+        },
+        "no": {
+            "desc": [
+                "Negate a command or set its defaults"
+            ],
+            "vni": {
+                "desc": [
+                    "VXLAN Network Identifier"
+                ],
+                "(1-16777215)": {
+                    "desc": [
+                        "VNI number"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "route-target": {
+                "desc": [
+                    "Route Target"
+                ],
+                "<both|import|export>": {
+                    "desc": [
+                        "import and export",
+                        "import",
+                        "export"
+                    ],
+                    "auto": {
+                        "desc": [
+                            "Automatically derive route target"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "RTLIST...": {
+                        "desc": [
+                            "Space separated route target list (A.B.C.D:MN|EF:OPQR|GHJK:MN)"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    }
+                }
+            },
+            "rd": {
+                "desc": [
+                    "Route Distinguisher"
+                ],
+                "ASN:NN_OR_IP-ADDRESS:NN": {
+                    "desc": [
+                        "ASN:XX or A.B.C.D:XX"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "network": {
+                "desc": [
+                    "Specify a network to announce via BGP"
+                ],
+                "<A.B.C.D/M|X:X::X:X/M>": {
+                    "desc": [
+                        "IP prefix",
+                        "IPv6 prefix"
+                    ],
+                    "rd": {
+                        "desc": [
+                            "Specify Route Distinguisher"
+                        ],
+                        "ASN:NN_OR_IP-ADDRESS:NN": {
+                            "desc": [
+                                "VPN Route Distinguisher"
+                            ],
+                            "ethtag": {
+                                "desc": [
+                                    "Ethernet Tag"
+                                ],
+                                "WORD": {
+                                    "desc": [
+                                        "Ethernet Tag Value"
+                                    ],
+                                    "label": {
+                                        "desc": [
+                                            "BGP label"
+                                        ],
+                                        "WORD": {
+                                            "desc": [
+                                                "label value"
+                                            ],
+                                            "esi": {
+                                                "desc": [
+                                                    "Ethernet Segment Identifier"
+                                                ],
+                                                "WORD": {
+                                                    "desc": [
+                                                        "ESI value ( 00:11:22:33:44:55:66:77:88:99 format)"
+                                                    ],
+                                                    "gwip": {
+                                                        "desc": [
+                                                            "Gateway IP"
+                                                        ],
+                                                        "<A.B.C.D|X:X::X:X>": {
+                                                            "desc": [
+                                                                "Gateway IP ( A.B.C.D )",
+                                                                "Gateway IPv6 ( X:X::X:X )"
+                                                            ],
+                                                            "<cr>": {
+                                                                "desc": [
+                                                                    "end_cmd"
+                                                                ]
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "neighbor": {
+                "desc": [
+                    "Specify neighbor router"
+                ],
+                "<A.B.C.D|X:X::X:X|WORD>": {
+                    "desc": [
+                        "Neighbor address",
+                        "Neighbor IPv6 address",
+                        "Interface name or neighbor tag"
+                    ],
+                    "soo": {
+                        "desc": [
+                            "Set the Site-of-Origin (SoO) extended community"
+                        ],
+                        "ASN:NN_OR_IP-ADDRESS:NN": {
+                            "desc": [
+                                "VPN extended community"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        },
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "soft-reconfiguration": {
+                        "desc": [
+                            "Per neighbor soft reconfiguration"
+                        ],
+                        "inbound": {
+                            "desc": [
+                                "Allow inbound soft reconfiguration for this neighbor"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        }
+                    },
+                    "route-server-client": {
+                        "desc": [
+                            "Configure a neighbor as Route Server client"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "route-reflector-client": {
+                        "desc": [
+                            "Configure a neighbor as Route Reflector client"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "route-map": {
+                        "desc": [
+                            "Apply route map to neighbor"
+                        ],
+                        "RMAP_NAME": {
+                            "desc": [
+                                "Name of route map"
+                            ],
+                            "<in|out>": {
+                                "desc": [
+                                    "Apply map to incoming routes",
+                                    "Apply map to outbound routes"
+                                ],
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "next-hop-self": {
+                        "desc": [
+                            "Disable the next hop calculation for this neighbor"
+                        ],
+                        "force": {
+                            "desc": [
+                                "Set the next hop to self for reflected routes"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        },
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "attribute-unchanged": {
+                        "desc": [
+                            "BGP attribute is propagated unchanged to this neighbor"
+                        ],
+                        "as-path": {
+                            "desc": [
+                                "As-path attribute"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        },
+                        "next-hop": {
+                            "desc": [
+                                "Nexthop attribute"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        },
+                        "med": {
+                            "desc": [
+                                "Med attribute"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        },
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "allowas-in": {
+                        "desc": [
+                            "allow local ASN appears in aspath attribute"
+                        ],
+                        "<(1-10)|origin>": {
+                            "desc": [
+                                "Number of occurrences of AS number",
+                                "Only accept my AS in the as-path if the route was originated in my AS"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        },
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "activate": {
+                        "desc": [
+                            "Enable the Address Family for this Neighbor"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    }
+                }
+            },
+            "default-originate": {
+                "desc": [
+                    "withdraw a default route"
+                ],
+                "<ipv4|ipv6>": {
+                    "desc": [
+                        "ipv4 address family",
+                        "ipv6 address family"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "advertise-default-gw": {
+                "desc": [
+                    "Withdraw All default g/w mac-ip routes from EVPN"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "advertise-all-vni": {
+                "desc": [
+                    "Advertise All local VNIs"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "advertise": {
+                "desc": [
+                    "Advertise prefix routes"
+                ],
+                "<ipv4|ipv6>": {
+                    "desc": [
+                        "Address Family",
+                        "Address Family"
+                    ],
+                    "<unicast|multicast|vpn>": {
+                        "desc": [
+                            "Address Family modifier",
+                            "Address Family modifier",
+                            "Address Family modifier"
+                        ],
+                        "route-map": {
+                            "desc": [
+                                "route-map for filtering specific routes"
+                            ],
+                            "WORD": {
+                                "desc": [
+                                    "Name of the route map"
+                                ],
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            }
+                        },
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    }
+                }
+            },
+            "use-es-l3nhg": {
+                "desc": [
+                    "use L3 nexthop group for host routes with ES destination"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "flooding": {
+                "desc": [
+                    "Specify handling for BUM packets"
+                ],
+                "<disable|head-end-replication>": {
+                    "desc": [
+                        "Do not flood any BUM packets",
+                        "Flood BUM packets using head-end replication"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "enable-resolve-overlay-index": {
+                "desc": [
+                    "Enable Recursive Resolution of type-5 route overlay index"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "disable-ead-evi-tx": {
+                "desc": [
+                    "Don't advertise EAD-EVI for local ESs"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "disable-ead-evi-rx": {
+                "desc": [
+                    "Activate PE on EAD-ES even if EAD-EVI is not received"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "advertise-svi-ip": {
+                "desc": [
+                    "Advertise svi mac-ip routes in EVPN"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "list": {
+            "desc": [
+                "Print command list"
+            ],
+            "permutations": {
+                "desc": [
+                    "Print all possible command permutations"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "find": {
+            "desc": [
+                "Find CLI command matching a regular expression"
+            ],
+            "REGEX...": {
+                "desc": [
+                    "Search pattern (POSIX regex)"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "vni": {
+            "desc": [
+                "VXLAN Network Identifier"
+            ],
+            "(1-16777215)": {
+                "desc": [
+                    "VNI number"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "change_node BGP_EVPN_VNI_NODE"
+                    ]
+                }
+            }
+        },
+        "route-target": {
+            "desc": [
+                "Route Target"
+            ],
+            "<both|import|export>": {
+                "desc": [
+                    "import and export",
+                    "import",
+                    "export"
+                ],
+                "auto": {
+                    "desc": [
+                        "Automatically derive route target"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                },
+                "RTLIST...": {
+                    "desc": [
+                        "Space separated route target list (A.B.C.D:MN|EF:OPQR|GHJK:MN|*:OPQR|*:MN)"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            }
+        },
+        "rd": {
+            "desc": [
+                "Route Distinguisher"
+            ],
+            "ASN:NN_OR_IP-ADDRESS:NN": {
+                "desc": [
+                    "ASN:XX or A.B.C.D:XX"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "quit": {
+            "desc": [
+                "Exit current mode and down to previous mode"
+            ],
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "network": {
+            "desc": [
+                "Specify a network to announce via BGP"
+            ],
+            "<A.B.C.D/M|X:X::X:X/M>": {
+                "desc": [
+                    "IP prefix",
+                    "IPv6 prefix"
+                ],
+                "rd": {
+                    "desc": [
+                        "Specify Route Distinguisher"
+                    ],
+                    "ASN:NN_OR_IP-ADDRESS:NN": {
+                        "desc": [
+                            "VPN Route Distinguisher"
+                        ],
+                        "ethtag": {
+                            "desc": [
+                                "Ethernet Tag"
+                            ],
+                            "WORD": {
+                                "desc": [
+                                    "Ethernet Tag Value"
+                                ],
+                                "label": {
+                                    "desc": [
+                                        "BGP label"
+                                    ],
+                                    "WORD": {
+                                        "desc": [
+                                            "label value"
+                                        ],
+                                        "esi": {
+                                            "desc": [
+                                                "Ethernet Segment Identifier"
+                                            ],
+                                            "WORD": {
+                                                "desc": [
+                                                    "ESI value ( 00:11:22:33:44:55:66:77:88:99 format)"
+                                                ],
+                                                "gwip": {
+                                                    "desc": [
+                                                        "Gateway IP"
+                                                    ],
+                                                    "<A.B.C.D|X:X::X:X>": {
+                                                        "desc": [
+                                                            "Gateway IP ( A.B.C.D )",
+                                                            "Gateway IPv6 ( X:X::X:X )"
+                                                        ],
+                                                        "routermac": {
+                                                            "desc": [
+                                                                "Router Mac Ext Comm"
+                                                            ],
+                                                            "WORD": {
+                                                                "desc": [
+                                                                    "Router Mac address Value ( aa:bb:cc:dd:ee:ff format)"
+                                                                ],
+                                                                "route-map": {
+                                                                    "desc": [
+                                                                        "Route-map to modify the attributes"
+                                                                    ],
+                                                                    "RMAP_NAME": {
+                                                                        "desc": [
+                                                                            "Name of the route map"
+                                                                        ],
+                                                                        "<cr>": {
+                                                                            "desc": [
+                                                                                "end_cmd"
+                                                                            ]
+                                                                        }
+                                                                    }
+                                                                },
+                                                                "<cr>": {
+                                                                    "desc": [
+                                                                        "end_cmd"
+                                                                    ]
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "neighbor": {
+            "desc": [
+                "Specify neighbor router"
+            ],
+            "<A.B.C.D|X:X::X:X|WORD>": {
+                "desc": [
+                    "Neighbor address",
+                    "Neighbor IPv6 address",
+                    "Interface name or neighbor tag"
+                ],
+                "soo": {
+                    "desc": [
+                        "Set the Site-of-Origin (SoO) extended community"
+                    ],
+                    "ASN:NN_OR_IP-ADDRESS:NN": {
+                        "desc": [
+                            "VPN extended community"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    }
+                },
+                "soft-reconfiguration": {
+                    "desc": [
+                        "Per neighbor soft reconfiguration"
+                    ],
+                    "inbound": {
+                        "desc": [
+                            "Allow inbound soft reconfiguration for this neighbor"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    }
+                },
+                "route-server-client": {
+                    "desc": [
+                        "Configure a neighbor as Route Server client"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                },
+                "route-reflector-client": {
+                    "desc": [
+                        "Configure a neighbor as Route Reflector client"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                },
+                "route-map": {
+                    "desc": [
+                        "Apply route map to neighbor"
+                    ],
+                    "RMAP_NAME": {
+                        "desc": [
+                            "Name of route map"
+                        ],
+                        "<in|out>": {
+                            "desc": [
+                                "Apply map to incoming routes",
+                                "Apply map to outbound routes"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "next-hop-self": {
+                    "desc": [
+                        "Disable the next hop calculation for this neighbor"
+                    ],
+                    "force": {
+                        "desc": [
+                            "Set the next hop to self for reflected routes"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                },
+                "attribute-unchanged": {
+                    "desc": [
+                        "BGP attribute is propagated unchanged to this neighbor"
+                    ],
+                    "as-path": {
+                        "desc": [
+                            "As-path attribute"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "next-hop": {
+                        "desc": [
+                            "Nexthop attribute"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "med": {
+                        "desc": [
+                            "Med attribute"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                },
+                "allowas-in": {
+                    "desc": [
+                        "Accept as-path with my AS present in it"
+                    ],
+                    "<(1-10)|origin>": {
+                        "desc": [
+                            "Number of occurrences of AS number",
+                            "Only accept my AS in the as-path if the route was originated in my AS"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                },
+                "activate": {
+                    "desc": [
+                        "Enable the Address Family for this Neighbor"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            }
+        },
+        "exit-address-family": {
+            "desc": [
+                "Exit from Address Family configuration mode"
+            ],
+            "<cr>": {
+                "desc": [
+                    "change_node BGP_NODE"
+                ]
+            }
+        },
+        "exit": {
+            "desc": [
+                "Exit current mode and down to previous mode"
+            ],
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "end": {
+            "desc": [
+                "End current mode and change to enable mode"
+            ],
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "ead-es-route-target": {
+            "desc": [
+                "EAD ES Route Target"
+            ],
+            "export": {
+                "desc": [
+                    "export"
+                ],
+                "RT": {
+                    "desc": [
+                        "Route target (A.B.C.D:MN|EF:OPQR|GHJK:MN)"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            }
+        },
+        "dup-addr-detection": {
+            "desc": [
+                "Duplicate address detection"
+            ],
+            "freeze": {
+                "desc": [
+                    "Duplicate address detection freeze"
+                ],
+                "<permanent|(30-3600)>": {
+                    "desc": [
+                        "Duplicate address detection permanent freeze",
+                        "Duplicate address detection freeze time (30-3600)"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "max-moves": {
+                "desc": [
+                    "Max allowed moves before address detected as duplicate"
+                ],
+                "(2-1000)": {
+                    "desc": [
+                        "Num of max allowed moves (2-1000) default 5"
+                    ],
+                    "time": {
+                        "desc": [
+                            "Duplicate address detection time"
+                        ],
+                        "(2-1800)": {
+                            "desc": [
+                                "Time in seconds (2-1800) default 180"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "default-originate": {
+            "desc": [
+                "originate a default route"
+            ],
+            "<ipv4|ipv6>": {
+                "desc": [
+                    "ipv4 address family",
+                    "ipv6 address family"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "autort": {
+            "desc": [
+                "Auto-derivation of RT"
+            ],
+            "rfc8365-compatible": {
+                "desc": [
+                    "Auto-derivation of RT using RFC8365"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "advertise-default-gw": {
+            "desc": [
+                "Advertise All default g/w mac-ip routes in EVPN"
+            ],
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "advertise-all-vni": {
+            "desc": [
+                "Advertise All local VNIs"
+            ],
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "advertise": {
+            "desc": [
+                "Advertise prefix routes"
+            ],
+            "<ipv4|ipv6>": {
+                "desc": [
+                    "Address Family",
+                    "Address Family"
+                ],
+                "<unicast|multicast|vpn>": {
+                    "desc": [
+                        "Address Family modifier",
+                        "Address Family modifier",
+                        "Address Family modifier"
+                    ],
+                    "gateway-ip": {
+                        "desc": [
+                            "advertise gateway IP overlay index"
+                        ],
+                        "route-map": {
+                            "desc": [
+                                "route-map for filtering specific routes"
+                            ],
+                            "RMAP_NAME": {
+                                "desc": [
+                                    "Name of the route map"
+                                ],
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            }
+                        },
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "route-map": {
+                        "desc": [
+                            "route-map for filtering specific routes"
+                        ],
+                        "RMAP_NAME": {
+                            "desc": [
+                                "Name of the route map"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        }
+                    },
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            }
+        },
+        "use-es-l3nhg": {
+            "desc": [
+                "use L3 nexthop group for host routes with ES destination"
+            ],
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "flooding": {
+            "desc": [
+                "Specify handling for BUM packets"
+            ],
+            "<disable|head-end-replication>": {
+                "desc": [
+                    "Do not flood any BUM packets",
+                    "Flood BUM packets using head-end replication"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "enable-resolve-overlay-index": {
+            "desc": [
+                "Enable Recursive Resolution of type-5 route overlay index"
+            ],
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "ead-es-frag": {
+            "desc": [
+                "EAD ES fragment config"
+            ],
+            "evi-limit": {
+                "desc": [
+                    "EVIs per-fragment"
+                ],
+                "(1-1000)": {
+                    "desc": [
+                        "limit"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            }
+        },
+        "disable-ead-evi-tx": {
+            "desc": [
+                "Don't advertise EAD-EVI for local ESs"
+            ],
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "disable-ead-evi-rx": {
+            "desc": [
+                "Activate PE on EAD-ES even if EAD-EVI is not received"
+            ],
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "advertise-svi-ip": {
+            "desc": [
+                "Advertise svi mac-ip routes in EVPN"
+            ],
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "advertise-pip": {
+            "desc": [
+                "evpn system primary IP"
+            ],
+            "ip": {
+                "desc": [
+                    "IP information"
+                ],
+                "A.B.C.D": {
+                    "desc": [
+                        "ip address"
+                    ],
+                    "mac": {
+                        "desc": [
+                            "MAC address"
+                        ],
+                        "X:X:X:X:X:X": {
+                            "desc": [
+                                "MAC address",
+                                "MAC address"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        }
+                    },
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_ead-es-route-target": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "EAD ES Route Target"
+            ],
+            "export": {
+                "desc": [
+                    "export"
+                ],
+                "RT": {
+                    "desc": [
+                        "ASN:XX or A.B.C.D:XX"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            }
+        },
+        "no_dup-addr-detection": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Duplicate address detection"
+            ],
+            "max-moves": {
+                "desc": [
+                    "Max allowed moves before address detected as duplicate"
+                ],
+                "(2-1000)": {
+                    "desc": [
+                        "Num of max allowed moves (2-1000) default 5"
+                    ],
+                    "time": {
+                        "desc": [
+                            "Duplicate address detection time"
+                        ],
+                        "(2-1800)": {
+                            "desc": [
+                                "Time in seconds (2-1800) default 180"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "freeze": {
+                "desc": [
+                    "Duplicate address detection freeze"
+                ],
+                "<permanent|(30-3600)>": {
+                    "desc": [
+                        "Duplicate address detection permanent freeze",
+                        "Duplicate address detection freeze time (30-3600)"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_autort": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Auto-derivation of RT"
+            ],
+            "rfc8365-compatible": {
+                "desc": [
+                    "Auto-derivation of RT using RFC8365"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "no_ead-es-frag": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "EAD ES fragment config"
+            ],
+            "evi-limit": {
+                "desc": [
+                    "EVIs per-fragment"
+                ],
+                "(1-1000)": {
+                    "desc": [
+                        "limit"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            }
+        },
+        "no_advertise-pip": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "evpn system primary IP"
+            ],
+            "ip": {
+                "desc": [
+                    "IP information"
+                ],
+                "A.B.C.D": {
+                    "desc": [
+                        "ip address"
+                    ],
+                    "mac": {
+                        "desc": [
+                            "MAC address"
+                        ],
+                        "X:X:X:X:X:X": {
+                            "desc": [
+                                "MAC address",
+                                "MAC address"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        }
+                    },
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_output_file": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Direct vtysh output to file",
+                "Direct vtysh output to file"
+            ],
+            "FILE": {
+                "desc": [
+                    "Path to dump output to"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        }
+    }
+}

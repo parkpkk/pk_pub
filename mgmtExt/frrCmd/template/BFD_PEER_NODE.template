@@ -1,0 +1,19 @@
+CONFIG_NODE bfd BFD_NODE peer <A.B.C.D|X:X::X:X> [{multihop|local-address <A.B.C.D|X:X::X:X>|interface IFNAME|vrf NAME}] BFD_PEER_NODE output file FILE
+CONFIG_NODE bfd BFD_NODE peer <A.B.C.D|X:X::X:X> [{multihop|local-address <A.B.C.D|X:X::X:X>|interface IFNAME|vrf NAME}] BFD_PEER_NODE no output file [FILE]
+CONFIG_NODE bfd BFD_NODE peer <A.B.C.D|X:X::X:X> [{multihop|local-address <A.B.C.D|X:X::X:X>|interface IFNAME|vrf NAME}] BFD_PEER_NODE list [permutations]
+CONFIG_NODE bfd BFD_NODE peer <A.B.C.D|X:X::X:X> [{multihop|local-address <A.B.C.D|X:X::X:X>|interface IFNAME|vrf NAME}] BFD_PEER_NODE find REGEX...
+CONFIG_NODE bfd BFD_NODE peer <A.B.C.D|X:X::X:X> [{multihop|local-address <A.B.C.D|X:X::X:X>|interface IFNAME|vrf NAME}] BFD_PEER_NODE transmit-interval (10-60000)
+CONFIG_NODE bfd BFD_NODE peer <A.B.C.D|X:X::X:X> [{multihop|local-address <A.B.C.D|X:X::X:X>|interface IFNAME|vrf NAME}] BFD_PEER_NODE receive-interval (10-60000)
+CONFIG_NODE bfd BFD_NODE peer <A.B.C.D|X:X::X:X> [{multihop|local-address <A.B.C.D|X:X::X:X>|interface IFNAME|vrf NAME}] BFD_PEER_NODE quit
+CONFIG_NODE bfd BFD_NODE peer <A.B.C.D|X:X::X:X> [{multihop|local-address <A.B.C.D|X:X::X:X>|interface IFNAME|vrf NAME}] BFD_PEER_NODE no minimum-ttl
+CONFIG_NODE bfd BFD_NODE peer <A.B.C.D|X:X::X:X> [{multihop|local-address <A.B.C.D|X:X::X:X>|interface IFNAME|vrf NAME}] BFD_PEER_NODE exit
+CONFIG_NODE bfd BFD_NODE peer <A.B.C.D|X:X::X:X> [{multihop|local-address <A.B.C.D|X:X::X:X>|interface IFNAME|vrf NAME}] BFD_PEER_NODE end
+CONFIG_NODE bfd BFD_NODE peer <A.B.C.D|X:X::X:X> [{multihop|local-address <A.B.C.D|X:X::X:X>|interface IFNAME|vrf NAME}] BFD_PEER_NODE echo-interval (10-60000)
+CONFIG_NODE bfd BFD_NODE peer <A.B.C.D|X:X::X:X> [{multihop|local-address <A.B.C.D|X:X::X:X>|interface IFNAME|vrf NAME}] BFD_PEER_NODE echo transmit-interval (10-60000)
+CONFIG_NODE bfd BFD_NODE peer <A.B.C.D|X:X::X:X> [{multihop|local-address <A.B.C.D|X:X::X:X>|interface IFNAME|vrf NAME}] BFD_PEER_NODE echo receive-interval <disabled|(10-60000)>
+CONFIG_NODE bfd BFD_NODE peer <A.B.C.D|X:X::X:X> [{multihop|local-address <A.B.C.D|X:X::X:X>|interface IFNAME|vrf NAME}] BFD_PEER_NODE detect-multiplier (2-255)
+CONFIG_NODE bfd BFD_NODE peer <A.B.C.D|X:X::X:X> [{multihop|local-address <A.B.C.D|X:X::X:X>|interface IFNAME|vrf NAME}] BFD_PEER_NODE [no] shutdown
+CONFIG_NODE bfd BFD_NODE peer <A.B.C.D|X:X::X:X> [{multihop|local-address <A.B.C.D|X:X::X:X>|interface IFNAME|vrf NAME}] BFD_PEER_NODE [no] profile BFDPROF
+CONFIG_NODE bfd BFD_NODE peer <A.B.C.D|X:X::X:X> [{multihop|local-address <A.B.C.D|X:X::X:X>|interface IFNAME|vrf NAME}] BFD_PEER_NODE [no] passive-mode
+CONFIG_NODE bfd BFD_NODE peer <A.B.C.D|X:X::X:X> [{multihop|local-address <A.B.C.D|X:X::X:X>|interface IFNAME|vrf NAME}] BFD_PEER_NODE [no] minimum-ttl (1-254)
+CONFIG_NODE bfd BFD_NODE peer <A.B.C.D|X:X::X:X> [{multihop|local-address <A.B.C.D|X:X::X:X>|interface IFNAME|vrf NAME}] BFD_PEER_NODE [no] echo-mode

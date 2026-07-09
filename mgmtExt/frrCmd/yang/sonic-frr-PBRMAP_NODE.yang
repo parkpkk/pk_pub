@@ -1,0 +1,418 @@
+
+module sonic-frr-PBRMAP_NODE {
+    namespace "http://github.com/sonic-net/frr/sonic-frr-PBRMAP_NODE";
+    prefix frr-PBRMAP_NODE;
+    yang-version 1.1;
+
+    import ietf-inet-types {
+        prefix inet;
+    }
+
+    organization
+        "SONiC";
+
+    contact
+        "SONiC";
+
+    description
+        "SONIC frr-PBRMAP_NODE FRR YANG";
+
+    revision 2024-12-23 {
+        description
+            "Initial revision.";
+    }
+    container sonic-frr-PBRMAP_NODE {
+        container PBRMAP_NODE {
+            list OUTPUT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf file {
+                    type enumeration {
+                        enum file;
+                    }
+                }                  //file
+                leaf PATH_TO_DUMP_OUTPUT {
+                    type string;
+                }                  //FILE
+            }
+            list LIST {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf permutations {
+                    type enumeration {
+                        enum permutations;
+                    }
+                }                  //permutations
+            }
+            list FIND {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf-list SEARCH_PATTERN {
+                    type string;
+                }                  //REGEX...
+            }
+            list SET {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf vrf {
+                    type enumeration {
+                        enum vrf;
+                    }
+                }                  //vrf
+                leaf VRF_CHOICE_CASE {
+                    type union {
+                        type string;
+                        type enumeration {
+                        enum unchanged;
+                        }
+                    }
+                }                  //<NAME|unchanged> ['The VRF Name', "Use the interface's VRF for lookup"]
+                leaf nexthop-group {
+                    type enumeration {
+                        enum nexthop-group;
+                    }
+                }                  //nexthop-group
+                leaf THE_NAME_OF_THE {
+                    type string;
+                }                  //NHGNAME
+                leaf vlan {
+                    type enumeration {
+                        enum vlan;
+                    }
+                }                  //vlan
+                leaf A_VALID_VALUE_IN {
+                    type int32;
+                }                  //(1-4094)
+                leaf queue-id {
+                    type enumeration {
+                        enum queue-id;
+                    }
+                }                  //queue-id
+                leaf pcp {
+                    type enumeration {
+                        enum pcp;
+                    }
+                }                  //pcp
+            }
+            list QUIT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list EXIT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list END {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list STRIP {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf vlan {
+                    type enumeration {
+                        enum vlan;
+                    }
+                }                  //vlan
+            }
+            list MATCH {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf src-port {
+                    type enumeration {
+                        enum src-port;
+                    }
+                }                  //src-port
+                leaf THE_SOURCE_PORT {
+                    type int32;
+                }                  //(1-65535)
+                leaf src-ip {
+                    type enumeration {
+                        enum src-ip;
+                    }
+                }                  //src-ip
+                leaf SRC-IP_IP_PREFIX {
+                    type union {
+                        type inet:ipv4-prefix;
+                        type inet:ipv6-prefix;
+                    }
+                }                  //<A.B.C.D/M|X:X::X:X/M> ['v4 Prefix', 'v6 Prefix']
+                leaf mark {
+                    type enumeration {
+                        enum mark;
+                    }
+                }                  //mark
+                leaf MARK {
+                    type int32;
+                }                  //(1-4294967295)
+                leaf ecn {
+                    type enumeration {
+                        enum ecn;
+                    }
+                }                  //ecn
+                leaf EXPLICIT_CONGESTION_NOTIFICATION {
+                    type int32;
+                }                  //(0-3)
+                leaf dst-port {
+                    type enumeration {
+                        enum dst-port;
+                    }
+                }                  //dst-port
+                leaf THE_DESTINATION_PORT {
+                    type int32;
+                }                  //(1-65535)
+                leaf dst-ip {
+                    type enumeration {
+                        enum dst-ip;
+                    }
+                }                  //dst-ip
+                leaf DST-IP_IP_PREFIX {
+                    type union {
+                        type inet:ipv4-prefix;
+                        type inet:ipv6-prefix;
+                    }
+                }                  //<A.B.C.D/M|X:X::X:X/M> ['v4 Prefix', 'v6 Prefix']
+                leaf dscp {
+                    type enumeration {
+                        enum dscp;
+                    }
+                }                  //dscp
+                leaf DSCP_VALUE_OR_STANDARD {
+                    type string;
+                }                  //DSCP
+            }
+            list NO_SET {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf vlan {
+                    type enumeration {
+                        enum vlan;
+                    }
+                }                  //vlan
+                leaf A_VALID_VALUE_IN {
+                    type int32;
+                }                  //(1-4094)
+                leaf queue-id {
+                    type enumeration {
+                        enum queue-id;
+                    }
+                }                  //queue-id
+                leaf pcp {
+                    type enumeration {
+                        enum pcp;
+                    }
+                }                  //pcp
+            }
+            list NO_STRIP {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf vlan {
+                    type enumeration {
+                        enum vlan;
+                    }
+                }                  //vlan
+            }
+            list NO_MATCH {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf src-port {
+                    type enumeration {
+                        enum src-port;
+                    }
+                }                  //src-port
+                leaf THE_SOURCE_PORT {
+                    type int32;
+                }                  //(1-65535)
+                leaf src-ip {
+                    type enumeration {
+                        enum src-ip;
+                    }
+                }                  //src-ip
+                leaf SRC-IP_IP_PREFIX {
+                    type union {
+                        type inet:ipv4-prefix;
+                        type inet:ipv6-prefix;
+                    }
+                }                  //<A.B.C.D/M|X:X::X:X/M> ['v4 Prefix', 'v6 Prefix']
+                leaf mark {
+                    type enumeration {
+                        enum mark;
+                    }
+                }                  //mark
+                leaf MARK {
+                    type int32;
+                }                  //(1-4294967295)
+                leaf ecn {
+                    type enumeration {
+                        enum ecn;
+                    }
+                }                  //ecn
+                leaf EXPLICIT_CONGESTION_NOTIFICATION {
+                    type int32;
+                }                  //(0-3)
+                leaf dst-port {
+                    type enumeration {
+                        enum dst-port;
+                    }
+                }                  //dst-port
+                leaf THE_DESTINATION_PORT {
+                    type int32;
+                }                  //(1-65535)
+                leaf dst-ip {
+                    type enumeration {
+                        enum dst-ip;
+                    }
+                }                  //dst-ip
+                leaf DST-IP_IP_PREFIX {
+                    type union {
+                        type inet:ipv4-prefix;
+                        type inet:ipv6-prefix;
+                    }
+                }                  //<A.B.C.D/M|X:X::X:X/M> ['v4 Prefix', 'v6 Prefix']
+                leaf dscp {
+                    type enumeration {
+                        enum dscp;
+                    }
+                }                  //dscp
+                leaf DSCP_VALUE_OR_STANDARD {
+                    type string;
+                }                  //DSCP
+            }
+            list SET_NEXTHOP {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf IP_ADDRESS {
+                    type union {
+                        type inet:ipv4-address;
+                        type inet:ipv6-address;
+                    }
+                }                  //<A.B.C.D|X:X::X:X> ['v4 Address', 'v6 Address']
+                leaf INTERFACE_TO_USE {
+                    type string;
+                }                  //INTERFACE
+                leaf nexthop-vrf {
+                    type enumeration {
+                        enum nexthop-vrf;
+                    }
+                }                  //nexthop-vrf
+                leaf THE_NEXTHOP-VRF_NAME {
+                    type string;
+                }                  //NAME
+            }
+            list MATCH_IP-PROTOCOL {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf tcp {
+                    type enumeration {
+                        enum tcp;
+                    }
+                }                  //tcp
+                leaf udp {
+                    type enumeration {
+                        enum udp;
+                    }
+                }                  //udp
+            }
+            list NO_OUTPUT_FILE {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf PATH_TO_DUMP_OUTPUT {
+                    type string;
+                }                  //FILE
+            }
+            list NO_SET_VRF {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf CHOICE_CASE {
+                    type union {
+                        type string;
+                        type enumeration {
+                        enum unchanged;
+                        }
+                    }
+                }                  //<NAME|unchanged> ['The VRF Name', "Use the interface's VRF for lookup"]
+            }
+            list NO_SET_NEXTHOP-GROUP {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf THE_NAME_OF_THE {
+                    type string;
+                }                  //NHGNAME
+            }
+            list NO_SET_NEXTHOP {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf IP_ADDRESS {
+                    type union {
+                        type inet:ipv4-address;
+                        type inet:ipv6-address;
+                    }
+                }                  //<A.B.C.D|X:X::X:X> ['v4 Address', 'v6 Address']
+                leaf INTERFACE_TO_USE {
+                    type string;
+                }                  //INTERFACE
+                leaf nexthop-vrf {
+                    type enumeration {
+                        enum nexthop-vrf;
+                    }
+                }                  //nexthop-vrf
+                leaf THE_NEXTHOP-VRF_NAME {
+                    type string;
+                }                  //NAME
+            }
+            list NO_MATCH_IP-PROTOCOL {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf tcp {
+                    type enumeration {
+                        enum tcp;
+                    }
+                }                  //tcp
+                leaf udp {
+                    type enumeration {
+                        enum udp;
+                    }
+                }                  //udp
+            }
+        }
+
+    }
+}

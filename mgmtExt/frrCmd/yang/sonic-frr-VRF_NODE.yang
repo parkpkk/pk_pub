@@ -1,0 +1,1401 @@
+
+module sonic-frr-VRF_NODE {
+    namespace "http://github.com/sonic-net/frr/sonic-frr-VRF_NODE";
+    prefix frr-VRF_NODE;
+    yang-version 1.1;
+
+    import ietf-inet-types {
+        prefix inet;
+    }
+
+    organization
+        "SONiC";
+
+    contact
+        "SONiC";
+
+    description
+        "SONIC frr-VRF_NODE FRR YANG";
+
+    revision 2024-12-23 {
+        description
+            "Initial revision.";
+    }
+    container sonic-frr-VRF_NODE {
+        container VRF_NODE {
+            list VNI {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf VNI-ID {
+                    type int32;
+                }                  //(1-16777215)
+                leaf prefix-routes-only {
+                    type enumeration {
+                        enum prefix-routes-only;
+                    }
+                }                  //prefix-routes-only
+            }
+            list ROUTER-ID {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf IPV6_ADDRESS_TO_USE {
+                    type inet:ipv4-address;
+                }                  //A.B.C.D
+            }
+            list QUIT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list NO {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf vni {
+                    type enumeration {
+                        enum vni;
+                    }
+                }                  //vni
+                leaf VNI-ID {
+                    type int32;
+                }                  //(1-16777215)
+                leaf prefix-routes-only {
+                    type enumeration {
+                        enum prefix-routes-only;
+                    }
+                }                  //prefix-routes-only
+            }
+            list NETNS {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf THE_FILE_NAME_IN {
+                    type string;
+                }                  //NAME
+            }
+            list IPV6 {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf protocol {
+                    type enumeration {
+                        enum protocol;
+                    }
+                }                  //protocol
+                leaf PROTOCOL_FRR_IP6_PROTOCOL {
+                    type enumeration {
+                        enum any;
+                        enum babel;
+                        enum bgp;
+                        enum connected;
+                        enum isis;
+                        enum kernel;
+                        enum nhrp;
+                        enum openfabric;
+                        enum ospf6;
+                        enum ripng;
+                        enum static;
+                        enum table;
+                        enum vnc;
+                    }
+                }                  //<any|babel|bgp|connected|isis|kernel|nhrp|openfabric|ospf6|ripng|static|table|vnc> ['Any of the above protocols', 'Babel routing protocol (Babel)', 'Border Gateway Protocol (BGP)', 'Connected routes (directly attached subnet or host)', 'Intermediate System to Intermediate System (IS-IS)', 'Kernel routes (not installed via the zebra RIB)', 'Next Hop Resolution Protocol (NHRP)', 'OpenFabric Routing Protocol', 'Open Shortest Path First (IPv6) (OSPFv3)', 'Routing Information Protocol (RIP)', 'Statically configured routes', 'Non-main Kernel Routing Table', 'Virtual Network Control (VNC)']
+                leaf route-map {
+                    type enumeration {
+                        enum route-map;
+                    }
+                }                  //route-map
+                leaf ROUTE_MAP_NAME {
+                    type string;
+                }                  //ROUTE-MAP
+                leaf route {
+                    type enumeration {
+                        enum route;
+                    }
+                }                  //route
+                leaf IPV6_DESTINATION_PREFIX_ {
+                    type inet:ipv6-prefix;
+                }                  //X:X::X:X/M
+                leaf from {
+                    type enumeration {
+                        enum from;
+                    }
+                }                  //from
+                leaf IPV6_SOURCE_PREFIX {
+                    type inet:ipv6-prefix;
+                }                  //X:X::X:X/M
+                leaf IPV6_GATEWAY_ADDRESS {
+                    type inet:ipv6-address;
+                }                  //X:X::X:X
+                leaf IFNAME {
+                    type union {
+                        type string;
+                        type enumeration {
+                        enum Null0;
+                        }
+                    }
+                }                  //<INTERFACE|Null0> ['IPv6 gateway interface name', 'Null interface']
+                leaf tag {
+                    type enumeration {
+                        enum tag;
+                    }
+                }                  //tag
+                leaf TAG_VALUE {
+                    type int32;
+                }                  //(1-4294967295)
+                leaf DISTANCE_VALUE_FOR_THIS {
+                    type int32;
+                }                  //(1-255)
+                leaf label {
+                    type enumeration {
+                        enum label;
+                    }
+                }                  //label
+                leaf ONE_OR_MORE_LABELS {
+                    type string;
+                }                  //WORD
+                leaf table {
+                    type enumeration {
+                        enum table;
+                    }
+                }                  //table
+                leaf THE_TABLE_NUMBER_TO {
+                    type int32;
+                }                  //(1-4294967295)
+                leaf nexthop-vrf {
+                    type enumeration {
+                        enum nexthop-vrf;
+                    }
+                }                  //nexthop-vrf
+                leaf THE_VRF_NAME {
+                    type string;
+                }                  //NAME
+                leaf onlink {
+                    type enumeration {
+                        enum onlink;
+                    }
+                }                  //onlink
+                leaf color {
+                    type enumeration {
+                        enum color;
+                    }
+                }                  //color
+                leaf THE_SR-TE_COLOR_TO {
+                    type int32;
+                }                  //(1-4294967295)
+                leaf bfd {
+                    type enumeration {
+                        enum bfd;
+                    }
+                }                  //bfd
+                leaf bfd_multi-hop {
+                    type enumeration {
+                        enum bfd_multi-hop;
+                    }
+                }                  //multi-hop
+                leaf bfd_source {
+                    type enumeration {
+                        enum bfd_source;
+                    }
+                }                  //source
+                leaf USE_IPV4_SOURCE_FOR {
+                    type inet:ipv6-address;
+                }                  //X:X::X:X
+                leaf bfd_profile {
+                    type enumeration {
+                        enum bfd_profile;
+                    }
+                }                  //profile
+                leaf BFD_PROFILE_NAME {
+                    type string;
+                }                  //BFDPROF
+                leaf DROP_ACTION {
+                    type enumeration {
+                        enum reject;
+                        enum blackhole;
+                    }
+                }                  //<reject|blackhole> ['Emit an ICMP unreachable when matched', 'Silently discard pkts when matched']
+            }
+            list IP {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf router-id {
+                    type enumeration {
+                        enum router-id;
+                    }
+                }                  //router-id
+                leaf IP_ADDRESS_TO_USE {
+                    type inet:ipv4-address;
+                }                  //A.B.C.D
+                leaf protocol {
+                    type enumeration {
+                        enum protocol;
+                    }
+                }                  //protocol
+                leaf PROTOCOL_FRR_IP_PROTOCOL {
+                    type enumeration {
+                        enum any;
+                        enum babel;
+                        enum bgp;
+                        enum connected;
+                        enum eigrp;
+                        enum isis;
+                        enum kernel;
+                        enum nhrp;
+                        enum openfabric;
+                        enum ospf;
+                        enum rip;
+                        enum static;
+                        enum table;
+                        enum vnc;
+                    }
+                }                  //<any|babel|bgp|connected|eigrp|isis|kernel|nhrp|openfabric|ospf|rip|static|table|vnc> ['Any of the above protocols', 'Babel routing protocol (Babel)', 'Border Gateway Protocol (BGP)', 'Connected routes (directly attached subnet or host)', 'Enhanced Interior Gateway Routing Protocol (eigrp)', 'Intermediate System to Intermediate System (IS-IS)', 'Kernel routes (not installed via the zebra RIB)', 'Next Hop Resolution Protocol (NHRP)', 'OpenFabric Routing Protocol', 'Open Shortest Path First (OSPFv2)', 'Routing Information Protocol (RIP)', 'Statically configured routes', 'Non-main Kernel Routing Table', 'Virtual Network Control (VNC)']
+                leaf route-map {
+                    type enumeration {
+                        enum route-map;
+                    }
+                }                  //route-map
+                leaf ROUTE_MAP_NAME {
+                    type string;
+                }                  //ROUTE-MAP
+            }
+            list EXIT-VRF {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list EXIT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list END {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list OUTPUT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf file {
+                    type enumeration {
+                        enum file;
+                    }
+                }                  //file
+                leaf PATH_TO_DUMP_OUTPUT {
+                    type string;
+                }                  //FILE
+            }
+            list LIST {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf permutations {
+                    type enumeration {
+                        enum permutations;
+                    }
+                }                  //permutations
+            }
+            list FIND {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf-list SEARCH_PATTERN {
+                    type string;
+                }                  //REGEX...
+            }
+            list NO_ROUTER-ID {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf IPV6_ADDRESS_TO_USE {
+                    type inet:ipv4-address;
+                }                  //A.B.C.D
+            }
+            list NO_NETNS {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf THE_FILE_NAME_IN {
+                    type string;
+                }                  //NAME
+            }
+            list NO_IPV6 {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf protocol {
+                    type enumeration {
+                        enum protocol;
+                    }
+                }                  //protocol
+                leaf PROTOCOL_FRR_IP6_PROTOCOL {
+                    type enumeration {
+                        enum any;
+                        enum babel;
+                        enum bgp;
+                        enum connected;
+                        enum isis;
+                        enum kernel;
+                        enum nhrp;
+                        enum openfabric;
+                        enum ospf6;
+                        enum ripng;
+                        enum static;
+                        enum table;
+                        enum vnc;
+                    }
+                }                  //<any|babel|bgp|connected|isis|kernel|nhrp|openfabric|ospf6|ripng|static|table|vnc> ['Any of the above protocols', 'Babel routing protocol (Babel)', 'Border Gateway Protocol (BGP)', 'Connected routes (directly attached subnet or host)', 'Intermediate System to Intermediate System (IS-IS)', 'Kernel routes (not installed via the zebra RIB)', 'Next Hop Resolution Protocol (NHRP)', 'OpenFabric Routing Protocol', 'Open Shortest Path First (IPv6) (OSPFv3)', 'Routing Information Protocol (RIP)', 'Statically configured routes', 'Non-main Kernel Routing Table', 'Virtual Network Control (VNC)']
+                leaf route-map {
+                    type enumeration {
+                        enum route-map;
+                    }
+                }                  //route-map
+                leaf ROUTE_MAP_NAME {
+                    type string;
+                }                  //ROUTE-MAP
+                leaf route {
+                    type enumeration {
+                        enum route;
+                    }
+                }                  //route
+                leaf IPV6_DESTINATION_PREFIX_ {
+                    type inet:ipv6-prefix;
+                }                  //X:X::X:X/M
+                leaf from {
+                    type enumeration {
+                        enum from;
+                    }
+                }                  //from
+                leaf IPV6_SOURCE_PREFIX {
+                    type inet:ipv6-prefix;
+                }                  //X:X::X:X/M
+                leaf IPV6_GATEWAY_ADDRESS {
+                    type inet:ipv6-address;
+                }                  //X:X::X:X
+                leaf IFNAME {
+                    type union {
+                        type string;
+                        type enumeration {
+                        enum Null0;
+                        }
+                    }
+                }                  //<INTERFACE|Null0> ['IPv6 gateway interface name', 'Null interface']
+                leaf tag {
+                    type enumeration {
+                        enum tag;
+                    }
+                }                  //tag
+                leaf TAG_VALUE {
+                    type int32;
+                }                  //(1-4294967295)
+                leaf DISTANCE_VALUE_FOR_THIS {
+                    type int32;
+                }                  //(1-255)
+                leaf label {
+                    type enumeration {
+                        enum label;
+                    }
+                }                  //label
+                leaf ONE_OR_MORE_LABELS {
+                    type string;
+                }                  //WORD
+                leaf table {
+                    type enumeration {
+                        enum table;
+                    }
+                }                  //table
+                leaf THE_TABLE_NUMBER_TO {
+                    type int32;
+                }                  //(1-4294967295)
+                leaf nexthop-vrf {
+                    type enumeration {
+                        enum nexthop-vrf;
+                    }
+                }                  //nexthop-vrf
+                leaf THE_VRF_NAME {
+                    type string;
+                }                  //NAME
+                leaf onlink {
+                    type enumeration {
+                        enum onlink;
+                    }
+                }                  //onlink
+                leaf color {
+                    type enumeration {
+                        enum color;
+                    }
+                }                  //color
+                leaf THE_SR-TE_COLOR_TO {
+                    type int32;
+                }                  //(1-4294967295)
+                leaf bfd {
+                    type enumeration {
+                        enum bfd;
+                    }
+                }                  //bfd
+                leaf bfd_multi-hop {
+                    type enumeration {
+                        enum bfd_multi-hop;
+                    }
+                }                  //multi-hop
+                leaf bfd_source {
+                    type enumeration {
+                        enum bfd_source;
+                    }
+                }                  //source
+                leaf USE_IPV4_SOURCE_FOR {
+                    type inet:ipv6-address;
+                }                  //X:X::X:X
+                leaf bfd_profile {
+                    type enumeration {
+                        enum bfd_profile;
+                    }
+                }                  //profile
+                leaf BFD_PROFILE_NAME {
+                    type string;
+                }                  //BFDPROF
+                leaf DROP_ACTION {
+                    type enumeration {
+                        enum reject;
+                        enum blackhole;
+                    }
+                }                  //<reject|blackhole> ['Emit an ICMP unreachable when matched', 'Silently discard pkts when matched']
+            }
+            list NO_IP {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf protocol {
+                    type enumeration {
+                        enum protocol;
+                    }
+                }                  //protocol
+                leaf PROTOCOL_FRR_IP_PROTOCOL {
+                    type enumeration {
+                        enum any;
+                        enum babel;
+                        enum bgp;
+                        enum connected;
+                        enum eigrp;
+                        enum isis;
+                        enum kernel;
+                        enum nhrp;
+                        enum openfabric;
+                        enum ospf;
+                        enum rip;
+                        enum static;
+                        enum table;
+                        enum vnc;
+                    }
+                }                  //<any|babel|bgp|connected|eigrp|isis|kernel|nhrp|openfabric|ospf|rip|static|table|vnc> ['Any of the above protocols', 'Babel routing protocol (Babel)', 'Border Gateway Protocol (BGP)', 'Connected routes (directly attached subnet or host)', 'Enhanced Interior Gateway Routing Protocol (eigrp)', 'Intermediate System to Intermediate System (IS-IS)', 'Kernel routes (not installed via the zebra RIB)', 'Next Hop Resolution Protocol (NHRP)', 'OpenFabric Routing Protocol', 'Open Shortest Path First (OSPFv2)', 'Routing Information Protocol (RIP)', 'Statically configured routes', 'Non-main Kernel Routing Table', 'Virtual Network Control (VNC)']
+                leaf route-map {
+                    type enumeration {
+                        enum route-map;
+                    }
+                }                  //route-map
+                leaf ROUTE_MAP_NAME {
+                    type string;
+                }                  //ROUTE-MAP
+            }
+            list IPV6_SSMPINGD {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf SOURCE_ADDRESS {
+                    type inet:ipv6-address;
+                }                  //X:X::X:X
+            }
+            list IPV6_PIM {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf rp {
+                    type enumeration {
+                        enum rp;
+                    }
+                }                  //rp
+                leaf IPV6_ADDRESS_OF_RP {
+                    type inet:ipv6-address;
+                }                  //X:X::X:X
+                leaf prefix-list {
+                    type enumeration {
+                        enum prefix-list;
+                    }
+                }                  //prefix-list
+                leaf NAME_OF_A_PREFIX-LIST {
+                    type string;
+                }                  //WORD
+                leaf GROUP_ADDRESS_RANGE_TO {
+                    type inet:ipv6-prefix;
+                }                  //X:X::X:X/M
+            }
+            list IPV6_NHT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf resolve-via-default {
+                    type enumeration {
+                        enum resolve-via-default;
+                    }
+                }                  //resolve-via-default
+                leaf FRR_IP6_PROTOCOL {
+                    type enumeration {
+                        enum any;
+                        enum babel;
+                        enum bgp;
+                        enum connected;
+                        enum isis;
+                        enum kernel;
+                        enum nhrp;
+                        enum openfabric;
+                        enum ospf6;
+                        enum ripng;
+                        enum static;
+                        enum table;
+                        enum vnc;
+                    }
+                }                  //<any|babel|bgp|connected|isis|kernel|nhrp|openfabric|ospf6|ripng|static|table|vnc> ['Any of the above protocols', 'Babel routing protocol (Babel)', 'Border Gateway Protocol (BGP)', 'Connected routes (directly attached subnet or host)', 'Intermediate System to Intermediate System (IS-IS)', 'Kernel routes (not installed via the zebra RIB)', 'Next Hop Resolution Protocol (NHRP)', 'OpenFabric Routing Protocol', 'Open Shortest Path First (IPv6) (OSPFv3)', 'Routing Information Protocol (RIP)', 'Statically configured routes', 'Non-main Kernel Routing Table', 'Virtual Network Control (VNC)']
+                leaf route-map {
+                    type enumeration {
+                        enum route-map;
+                    }
+                }                  //route-map
+                leaf ROUTE_MAP_NAME {
+                    type string;
+                }                  //ROUTE-MAP
+            }
+            list IPV6_MLD {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf watermark-warn {
+                    type enumeration {
+                        enum watermark-warn;
+                    }
+                }                  //watermark-warn
+                leaf GROUP_COUNT_TO_GENERATE {
+                    type int32;
+                }                  //(1-65535)
+            }
+            list IP_SSMPINGD {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf SOURCE_ADDRESS {
+                    type inet:ipv4-address;
+                }                  //A.B.C.D
+            }
+            list IP_PIM {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf send-v6-secondary {
+                    type enumeration {
+                        enum send-v6-secondary;
+                    }
+                }                  //send-v6-secondary
+                leaf keep-alive-timer {
+                    type enumeration {
+                        enum keep-alive-timer;
+                    }
+                }                  //keep-alive-timer
+                leaf SECONDS {
+                    type int32;
+                }                  //(1-65535)
+                leaf register-accept-list {
+                    type enumeration {
+                        enum register-accept-list;
+                    }
+                }                  //register-accept-list
+                leaf PREFIX-LIST_NAME {
+                    type string;
+                }                  //WORD
+            }
+            list IP_NHT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf resolve-via-default {
+                    type enumeration {
+                        enum resolve-via-default;
+                    }
+                }                  //resolve-via-default
+                leaf FRR_IP_PROTOCOL {
+                    type enumeration {
+                        enum any;
+                        enum babel;
+                        enum bgp;
+                        enum connected;
+                        enum eigrp;
+                        enum isis;
+                        enum kernel;
+                        enum nhrp;
+                        enum openfabric;
+                        enum ospf;
+                        enum rip;
+                        enum static;
+                        enum table;
+                        enum vnc;
+                    }
+                }                  //<any|babel|bgp|connected|eigrp|isis|kernel|nhrp|openfabric|ospf|rip|static|table|vnc> ['Any of the above protocols', 'Babel routing protocol (Babel)', 'Border Gateway Protocol (BGP)', 'Connected routes (directly attached subnet or host)', 'Enhanced Interior Gateway Routing Protocol (eigrp)', 'Intermediate System to Intermediate System (IS-IS)', 'Kernel routes (not installed via the zebra RIB)', 'Next Hop Resolution Protocol (NHRP)', 'OpenFabric Routing Protocol', 'Open Shortest Path First (OSPFv2)', 'Routing Information Protocol (RIP)', 'Statically configured routes', 'Non-main Kernel Routing Table', 'Virtual Network Control (VNC)']
+                leaf route-map {
+                    type enumeration {
+                        enum route-map;
+                    }
+                }                  //route-map
+                leaf ROUTE_MAP_NAME {
+                    type string;
+                }                  //ROUTE-MAP
+            }
+            list IP_MSDP {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf timers {
+                    type enumeration {
+                        enum timers;
+                    }
+                }                  //timers
+                leaf KEEP_ALIVE_PERIOD {
+                    type int32;
+                }                  //(1-65535)
+                leaf HOLD_TIME_PERIOD {
+                    type int32;
+                }                  //(1-65535)
+                leaf CONNECTION_RETRY_PERIOD {
+                    type int32;
+                }                  //(1-65535)
+                leaf peer {
+                    type enumeration {
+                        enum peer;
+                    }
+                }                  //peer
+                leaf PEER_IP_ADDRESS {
+                    type inet:ipv4-address;
+                }                  //A.B.C.D
+                leaf source {
+                    type enumeration {
+                        enum source;
+                    }
+                }                  //source
+                leaf LOCAL_IP_ADDRESS {
+                    type inet:ipv4-address;
+                }                  //A.B.C.D
+                leaf mesh-group {
+                    type enumeration {
+                        enum mesh-group;
+                    }
+                }                  //mesh-group
+                leaf MESH_GROUP_NAME {
+                    type string;
+                }                  //WORD
+                leaf SOURCE_IP_ADDRESS_FOR {
+                    type inet:ipv4-address;
+                }                  //A.B.C.D
+                leaf member {
+                    type enumeration {
+                        enum member;
+                    }
+                }                  //member
+            }
+            list IP_IGMP {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf watermark-warn {
+                    type enumeration {
+                        enum watermark-warn;
+                    }
+                }                  //watermark-warn
+                leaf GROUP_COUNT_TO_GENERATE {
+                    type int32;
+                }                  //(1-65535)
+            }
+            list IP_TABLE {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf range {
+                    type enumeration {
+                        enum range;
+                    }
+                }                  //range
+                leaf START_ROUTING_TABLE {
+                    type int32;
+                }                  //(1-4294967295)
+                leaf END_ROUTING_TABLE {
+                    type int32;
+                }                  //(1-4294967295)
+            }
+            list IP_ROUTE {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf IP_PREFIX {
+                    type inet:ipv4-prefix;
+                }                  //A.B.C.D/M
+                leaf IP_GATEWAY_ADDRESS {
+                    type inet:ipv4-address;
+                }                  //A.B.C.D
+                leaf IFNAME {
+                    type union {
+                        type string;
+                        type enumeration {
+                        enum Null0;
+                        }
+                    }
+                }                  //<INTERFACE|Null0> ['IP gateway interface name', 'Null interface']
+                leaf tag {
+                    type enumeration {
+                        enum tag;
+                    }
+                }                  //tag
+                leaf TAG_VALUE {
+                    type int32;
+                }                  //(1-4294967295)
+                leaf DISTANCE_VALUE_FOR_THIS {
+                    type int32;
+                }                  //(1-255)
+                leaf label {
+                    type enumeration {
+                        enum label;
+                    }
+                }                  //label
+                leaf ONE_OR_MORE_LABELS {
+                    type string;
+                }                  //WORD
+                leaf table {
+                    type enumeration {
+                        enum table;
+                    }
+                }                  //table
+                leaf THE_TABLE_NUMBER_TO {
+                    type int32;
+                }                  //(1-4294967295)
+                leaf nexthop-vrf {
+                    type enumeration {
+                        enum nexthop-vrf;
+                    }
+                }                  //nexthop-vrf
+                leaf THE_VRF_NAME {
+                    type string;
+                }                  //NAME
+                leaf onlink {
+                    type enumeration {
+                        enum onlink;
+                    }
+                }                  //onlink
+                leaf color {
+                    type enumeration {
+                        enum color;
+                    }
+                }                  //color
+                leaf THE_SR-TE_COLOR_TO {
+                    type int32;
+                }                  //(1-4294967295)
+                leaf bfd {
+                    type enumeration {
+                        enum bfd;
+                    }
+                }                  //bfd
+                leaf bfd_multi-hop {
+                    type enumeration {
+                        enum bfd_multi-hop;
+                    }
+                }                  //multi-hop
+                leaf bfd_source {
+                    type enumeration {
+                        enum bfd_source;
+                    }
+                }                  //source
+                leaf USE_IPV4_SOURCE_FOR {
+                    type inet:ipv4-address;
+                }                  //A.B.C.D
+                leaf bfd_profile {
+                    type enumeration {
+                        enum bfd_profile;
+                    }
+                }                  //profile
+                leaf BFD_PROFILE_NAME {
+                    type string;
+                }                  //BFDPROF
+                leaf DROP_ACTION {
+                    type enumeration {
+                        enum reject;
+                        enum blackhole;
+                    }
+                }                  //<reject|blackhole> ['Emit an ICMP unreachable when matched', 'Silently discard pkts when matched']
+                leaf IP_DESTINATION_PREFIX {
+                    type inet:ipv4-address;
+                }                  //A.B.C.D
+                leaf IP_DESTINATION_PREFIX_MASK {
+                    type inet:ipv4-address;
+                }                  //A.B.C.D
+            }
+            list NO_IPV6_SSMPINGD {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf SOURCE_ADDRESS {
+                    type inet:ipv6-address;
+                }                  //X:X::X:X
+            }
+            list NO_IPV6_PIM {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf rp {
+                    type enumeration {
+                        enum rp;
+                    }
+                }                  //rp
+                leaf IPV6_ADDRESS_OF_RP {
+                    type inet:ipv6-address;
+                }                  //X:X::X:X
+                leaf prefix-list {
+                    type enumeration {
+                        enum prefix-list;
+                    }
+                }                  //prefix-list
+                leaf NAME_OF_A_PREFIX-LIST {
+                    type string;
+                }                  //WORD
+                leaf GROUP_ADDRESS_RANGE_TO {
+                    type inet:ipv6-prefix;
+                }                  //X:X::X:X/M
+            }
+            list NO_IPV6_NHT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf resolve-via-default {
+                    type enumeration {
+                        enum resolve-via-default;
+                    }
+                }                  //resolve-via-default
+                leaf FRR_IP6_PROTOCOL {
+                    type enumeration {
+                        enum any;
+                        enum babel;
+                        enum bgp;
+                        enum connected;
+                        enum isis;
+                        enum kernel;
+                        enum nhrp;
+                        enum openfabric;
+                        enum ospf6;
+                        enum ripng;
+                        enum static;
+                        enum table;
+                        enum vnc;
+                    }
+                }                  //<any|babel|bgp|connected|isis|kernel|nhrp|openfabric|ospf6|ripng|static|table|vnc> ['Any of the above protocols', 'Babel routing protocol (Babel)', 'Border Gateway Protocol (BGP)', 'Connected routes (directly attached subnet or host)', 'Intermediate System to Intermediate System (IS-IS)', 'Kernel routes (not installed via the zebra RIB)', 'Next Hop Resolution Protocol (NHRP)', 'OpenFabric Routing Protocol', 'Open Shortest Path First (IPv6) (OSPFv3)', 'Routing Information Protocol (RIP)', 'Statically configured routes', 'Non-main Kernel Routing Table', 'Virtual Network Control (VNC)']
+                leaf route-map {
+                    type enumeration {
+                        enum route-map;
+                    }
+                }                  //route-map
+                leaf ROUTE_MAP_NAME {
+                    type string;
+                }                  //ROUTE-MAP
+            }
+            list NO_IP_SSMPINGD {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf SOURCE_ADDRESS {
+                    type inet:ipv4-address;
+                }                  //A.B.C.D
+            }
+            list NO_IP_ROUTER-ID {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf IP_ADDRESS_TO_USE {
+                    type inet:ipv4-address;
+                }                  //A.B.C.D
+            }
+            list NO_IP_PIM {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf send-v6-secondary {
+                    type enumeration {
+                        enum send-v6-secondary;
+                    }
+                }                  //send-v6-secondary
+                leaf register-accept-list {
+                    type enumeration {
+                        enum register-accept-list;
+                    }
+                }                  //register-accept-list
+                leaf PREFIX-LIST_NAME {
+                    type string;
+                }                  //WORD
+            }
+            list NO_IP_NHT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf resolve-via-default {
+                    type enumeration {
+                        enum resolve-via-default;
+                    }
+                }                  //resolve-via-default
+                leaf FRR_IP_PROTOCOL {
+                    type enumeration {
+                        enum any;
+                        enum babel;
+                        enum bgp;
+                        enum connected;
+                        enum eigrp;
+                        enum isis;
+                        enum kernel;
+                        enum nhrp;
+                        enum openfabric;
+                        enum ospf;
+                        enum rip;
+                        enum static;
+                        enum table;
+                        enum vnc;
+                    }
+                }                  //<any|babel|bgp|connected|eigrp|isis|kernel|nhrp|openfabric|ospf|rip|static|table|vnc> ['Any of the above protocols', 'Babel routing protocol (Babel)', 'Border Gateway Protocol (BGP)', 'Connected routes (directly attached subnet or host)', 'Enhanced Interior Gateway Routing Protocol (eigrp)', 'Intermediate System to Intermediate System (IS-IS)', 'Kernel routes (not installed via the zebra RIB)', 'Next Hop Resolution Protocol (NHRP)', 'OpenFabric Routing Protocol', 'Open Shortest Path First (OSPFv2)', 'Routing Information Protocol (RIP)', 'Statically configured routes', 'Non-main Kernel Routing Table', 'Virtual Network Control (VNC)']
+                leaf route-map {
+                    type enumeration {
+                        enum route-map;
+                    }
+                }                  //route-map
+                leaf ROUTE_MAP_NAME {
+                    type string;
+                }                  //ROUTE-MAP
+            }
+            list NO_IP_MSDP {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf peer {
+                    type enumeration {
+                        enum peer;
+                    }
+                }                  //peer
+                leaf PEER_IP_ADDRESS {
+                    type inet:ipv4-address;
+                }                  //A.B.C.D
+                leaf mesh-group {
+                    type enumeration {
+                        enum mesh-group;
+                    }
+                }                  //mesh-group
+                leaf MESH_GROUP_NAME {
+                    type string;
+                }                  //WORD
+                leaf source {
+                    type enumeration {
+                        enum source;
+                    }
+                }                  //source
+                leaf MESH_GROUP_LOCAL_ADDRESS {
+                    type inet:ipv4-address;
+                }                  //A.B.C.D
+                leaf member {
+                    type enumeration {
+                        enum member;
+                    }
+                }                  //member
+            }
+            list NO_IP_TABLE {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf range {
+                    type enumeration {
+                        enum range;
+                    }
+                }                  //range
+                leaf START_ROUTING_TABLE {
+                    type int32;
+                }                  //(1-4294967295)
+                leaf END_ROUTING_TABLE {
+                    type int32;
+                }                  //(1-4294967295)
+            }
+            list NO_IP_ROUTE {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf IP_PREFIX {
+                    type inet:ipv4-prefix;
+                }                  //A.B.C.D/M
+                leaf IP_GATEWAY_ADDRESS {
+                    type inet:ipv4-address;
+                }                  //A.B.C.D
+                leaf IFNAME {
+                    type union {
+                        type string;
+                        type enumeration {
+                        enum Null0;
+                        }
+                    }
+                }                  //<INTERFACE|Null0> ['IP gateway interface name', 'Null interface']
+                leaf tag {
+                    type enumeration {
+                        enum tag;
+                    }
+                }                  //tag
+                leaf TAG_VALUE {
+                    type int32;
+                }                  //(1-4294967295)
+                leaf DISTANCE_VALUE_FOR_THIS {
+                    type int32;
+                }                  //(1-255)
+                leaf label {
+                    type enumeration {
+                        enum label;
+                    }
+                }                  //label
+                leaf ONE_OR_MORE_LABELS {
+                    type string;
+                }                  //WORD
+                leaf table {
+                    type enumeration {
+                        enum table;
+                    }
+                }                  //table
+                leaf THE_TABLE_NUMBER_TO {
+                    type int32;
+                }                  //(1-4294967295)
+                leaf nexthop-vrf {
+                    type enumeration {
+                        enum nexthop-vrf;
+                    }
+                }                  //nexthop-vrf
+                leaf THE_VRF_NAME {
+                    type string;
+                }                  //NAME
+                leaf onlink {
+                    type enumeration {
+                        enum onlink;
+                    }
+                }                  //onlink
+                leaf color {
+                    type enumeration {
+                        enum color;
+                    }
+                }                  //color
+                leaf THE_SR-TE_COLOR_TO {
+                    type int32;
+                }                  //(1-4294967295)
+                leaf bfd {
+                    type enumeration {
+                        enum bfd;
+                    }
+                }                  //bfd
+                leaf bfd_multi-hop {
+                    type enumeration {
+                        enum bfd_multi-hop;
+                    }
+                }                  //multi-hop
+                leaf bfd_source {
+                    type enumeration {
+                        enum bfd_source;
+                    }
+                }                  //source
+                leaf USE_IPV4_SOURCE_FOR {
+                    type inet:ipv4-address;
+                }                  //A.B.C.D
+                leaf bfd_profile {
+                    type enumeration {
+                        enum bfd_profile;
+                    }
+                }                  //profile
+                leaf BFD_PROFILE_NAME {
+                    type string;
+                }                  //BFDPROF
+                leaf DROP_ACTION {
+                    type enumeration {
+                        enum reject;
+                        enum blackhole;
+                    }
+                }                  //<reject|blackhole> ['Emit an ICMP unreachable when matched', 'Silently discard pkts when matched']
+                leaf IP_DESTINATION_PREFIX {
+                    type inet:ipv4-address;
+                }                  //A.B.C.D
+                leaf IP_DESTINATION_PREFIX_MASK {
+                    type inet:ipv4-address;
+                }                  //A.B.C.D
+            }
+            list NO_OUTPUT_FILE {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf PATH_TO_DUMP_OUTPUT {
+                    type string;
+                }                  //FILE
+            }
+            list IP_PIM_SSM {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf prefix-list {
+                    type enumeration {
+                        enum prefix-list;
+                    }
+                }                  //prefix-list
+                leaf NAME_OF_A_PREFIX-LIST {
+                    type string;
+                }                  //WORD
+            }
+            list IP_PIM_RP {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf keep-alive-timer {
+                    type enumeration {
+                        enum keep-alive-timer;
+                    }
+                }                  //keep-alive-timer
+                leaf SECONDS {
+                    type int32;
+                }                  //(1-65535)
+                leaf IP_ADDRESS_OF_RP {
+                    type inet:ipv4-address;
+                }                  //A.B.C.D
+                leaf prefix-list {
+                    type enumeration {
+                        enum prefix-list;
+                    }
+                }                  //prefix-list
+                leaf NAME_OF_A_PREFIX-LIST {
+                    type string;
+                }                  //WORD
+                leaf IP_PREFIX {
+                    type inet:ipv4-prefix;
+                }                  //A.B.C.D/M
+            }
+            list IP_PIM_ECMP {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf rebalance {
+                    type enumeration {
+                        enum rebalance;
+                    }
+                }                  //rebalance
+            }
+            list IP_ROUTE_BFD {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf multi-hop {
+                    type enumeration {
+                        enum multi-hop;
+                    }
+                }                  //multi-hop
+                leaf source {
+                    type enumeration {
+                        enum source;
+                    }
+                }                  //source
+                leaf USE_IPV4_SOURCE_FOR {
+                    type inet:ipv4-address;
+                }                  //A.B.C.D
+                leaf profile {
+                    type enumeration {
+                        enum profile;
+                    }
+                }                  //profile
+                leaf BFD_PROFILE_NAME {
+                    type string;
+                }                  //BFDPROF
+            }
+            list NO_IPV6_MLD_WATERMARK-WARN {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf IGNORED_VALUE_IN_NO {
+                    type int32;
+                }                  //(1-65535)
+            }
+            list NO_IP_PIM_RP {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf IP_ADDRESS_OF_RP {
+                    type inet:ipv4-address;
+                }                  //A.B.C.D
+                leaf prefix-list {
+                    type enumeration {
+                        enum prefix-list;
+                    }
+                }                  //prefix-list
+                leaf NAME_OF_A_PREFIX-LIST {
+                    type string;
+                }                  //WORD
+                leaf IP_PREFIX {
+                    type inet:ipv4-prefix;
+                }                  //A.B.C.D/M
+            }
+            list NO_IP_PIM_KEEP-ALIVE-TIMER {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf IGNORED_VALUE_IN_NO {
+                    type int32;
+                }                  //(1-65535)
+            }
+            list NO_IP_PIM_ECMP {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf rebalance {
+                    type enumeration {
+                        enum rebalance;
+                    }
+                }                  //rebalance
+            }
+            list NO_IP_MSDP_TIMERS {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf IGNORED_VALUE_IN_NO {
+                    type int32;
+                }                  //(1-65535)
+            }
+            list NO_IP_IGMP_WATERMARK-WARN {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf IGNORED_VALUE_IN_NO {
+                    type int32;
+                }                  //(1-65535)
+            }
+            list NO_IP_ROUTE_BFD {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf multi-hop {
+                    type enumeration {
+                        enum multi-hop;
+                    }
+                }                  //multi-hop
+                leaf source {
+                    type enumeration {
+                        enum source;
+                    }
+                }                  //source
+                leaf USE_IPV4_SOURCE_FOR {
+                    type inet:ipv4-address;
+                }                  //A.B.C.D
+                leaf profile {
+                    type enumeration {
+                        enum profile;
+                    }
+                }                  //profile
+                leaf BFD_PROFILE_NAME {
+                    type string;
+                }                  //BFDPROF
+            }
+            list IP_PIM_SPT-SWITCHOVER_INFINITY-AND-BEYOND {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf prefix-list {
+                    type enumeration {
+                        enum prefix-list;
+                    }
+                }                  //prefix-list
+                leaf PREFIX-LIST_NAME {
+                    type string;
+                }                  //WORD
+            }
+            list NO_IP_PIM_SSM_PREFIX-LIST {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf NAME_OF_A_PREFIX-LIST {
+                    type string;
+                }                  //WORD
+            }
+            list NO_IP_PIM_SPT-SWITCHOVER_INFINITY-AND-BEYOND {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf prefix-list {
+                    type enumeration {
+                        enum prefix-list;
+                    }
+                }                  //prefix-list
+                leaf PREFIX-LIST_NAME {
+                    type string;
+                }                  //WORD
+            }
+            list NO_IP_PIM_RP_KEEP-ALIVE-TIMER {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf IGNORED_VALUE_IN_NO {
+                    type int32;
+                }                  //(1-65535)
+            }
+        }
+
+    }
+}

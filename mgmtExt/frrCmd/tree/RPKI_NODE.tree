@@ -1,0 +1,644 @@
+{
+    "RPKI_NODE": {
+        "desc": [
+            "RPKI_NODE node related command"
+        ],
+        "rpki": {
+            "desc": [
+                "Control rpki specific settings"
+            ],
+            "retry_interval": {
+                "desc": [
+                    "Control rpki specific settings",
+                    "Set retry interval"
+                ],
+                "(1-7200)": {
+                    "desc": [
+                        "retry interval value"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "reset": {
+                "desc": [
+                    "reset rpki"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "polling_period": {
+                "desc": [
+                    "Control rpki specific settings",
+                    "Set polling period"
+                ],
+                "(1-86400)": {
+                    "desc": [
+                        "Polling period value"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "expire_interval": {
+                "desc": [
+                    "Control rpki specific settings",
+                    "Set expire interval"
+                ],
+                "(600-172800)": {
+                    "desc": [
+                        "Expire interval value"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "cache": {
+                "desc": [
+                    "Install a cache server to current group"
+                ],
+                "<A.B.C.D|WORD>": {
+                    "desc": [
+                        "IP address of cache server",
+                        "Hostname of cache server"
+                    ],
+                    "TCPPORT": {
+                        "desc": [
+                            "TCP port number"
+                        ],
+                        "source": {
+                            "desc": [
+                                "Configure source IP address of RPKI connection"
+                            ],
+                            "A.B.C.D": {
+                                "desc": [
+                                    "Define a Source IP Address"
+                                ],
+                                "preference": {
+                                    "desc": [
+                                        "Preference of the cache server"
+                                    ],
+                                    "(1-255)": {
+                                        "desc": [
+                                            "Preference value"
+                                        ],
+                                        "<cr>": {
+                                            "desc": [
+                                                "end_cmd"
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "preference": {
+                            "desc": [
+                                "Preference of the cache server"
+                            ],
+                            "(1-255)": {
+                                "desc": [
+                                    "Preference value"
+                                ],
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "(1-65535)": {
+                        "desc": [
+                            "SSH port number"
+                        ],
+                        "SSH_UNAME": {
+                            "desc": [
+                                "SSH user name"
+                            ],
+                            "SSH_PRIVKEY": {
+                                "desc": [
+                                    "Path to own SSH private key"
+                                ],
+                                "SERVER_PUBKEY": {
+                                    "desc": [
+                                        "Path to Public key of cache server"
+                                    ],
+                                    "source": {
+                                        "desc": [
+                                            "Configure source IP address of RPKI connection"
+                                        ],
+                                        "A.B.C.D": {
+                                            "desc": [
+                                                "Define a Source IP Address"
+                                            ],
+                                            "preference": {
+                                                "desc": [
+                                                    "Preference of the cache server"
+                                                ],
+                                                "(1-255)": {
+                                                    "desc": [
+                                                        "Preference value"
+                                                    ],
+                                                    "<cr>": {
+                                                        "desc": [
+                                                            "end_cmd"
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "preference": {
+                                        "desc": [
+                                            "Preference of the cache server"
+                                        ],
+                                        "(1-255)": {
+                                            "desc": [
+                                                "Preference value"
+                                            ],
+                                            "<cr>": {
+                                                "desc": [
+                                                    "end_cmd"
+                                                ]
+                                            }
+                                        }
+                                    }
+                                },
+                                "source": {
+                                    "desc": [
+                                        "Configure source IP address of RPKI connection"
+                                    ],
+                                    "A.B.C.D": {
+                                        "desc": [
+                                            "Define a Source IP Address"
+                                        ],
+                                        "preference": {
+                                            "desc": [
+                                                "Preference of the cache server"
+                                            ],
+                                            "(1-255)": {
+                                                "desc": [
+                                                    "Preference value"
+                                                ],
+                                                "<cr>": {
+                                                    "desc": [
+                                                        "end_cmd"
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "preference": {
+                                    "desc": [
+                                        "Preference of the cache server"
+                                    ],
+                                    "(1-255)": {
+                                        "desc": [
+                                            "Preference value"
+                                        ],
+                                        "<cr>": {
+                                            "desc": [
+                                                "end_cmd"
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "source": {
+                        "desc": [
+                            "Configure source IP address of RPKI connection"
+                        ],
+                        "A.B.C.D": {
+                            "desc": [
+                                "Define a Source IP Address"
+                            ],
+                            "preference": {
+                                "desc": [
+                                    "Preference of the cache server"
+                                ],
+                                "(1-255)": {
+                                    "desc": [
+                                        "Preference value"
+                                    ],
+                                    "<cr>": {
+                                        "desc": [
+                                            "end_cmd"
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "preference": {
+                        "desc": [
+                            "Preference of the cache server"
+                        ],
+                        "(1-255)": {
+                            "desc": [
+                                "Preference value"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "quit": {
+            "desc": [
+                "Exit current mode and down to previous mode"
+            ],
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "output": {
+            "desc": [
+                "Direct vtysh output to file"
+            ],
+            "file": {
+                "desc": [
+                    "Direct vtysh output to file"
+                ],
+                "FILE": {
+                    "desc": [
+                        "Path to dump output to"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            }
+        },
+        "list": {
+            "desc": [
+                "Print command list"
+            ],
+            "permutations": {
+                "desc": [
+                    "Print all possible command permutations"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "find": {
+            "desc": [
+                "Find CLI command matching a regular expression"
+            ],
+            "REGEX...": {
+                "desc": [
+                    "Search pattern (POSIX regex)"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "exit": {
+            "desc": [
+                "Exit current mode and down to previous mode"
+            ],
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "end": {
+            "desc": [
+                "End current mode and change to enable mode"
+            ],
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_rpki": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Control rpki specific settings"
+            ],
+            "cache": {
+                "desc": [
+                    "Install a cache server to current group"
+                ],
+                "<A.B.C.D|WORD>": {
+                    "desc": [
+                        "IP address of cache server",
+                        "Hostname of cache server"
+                    ],
+                    "TCPPORT": {
+                        "desc": [
+                            "TCP port number"
+                        ],
+                        "source": {
+                            "desc": [
+                                "Configure source IP address of RPKI connection"
+                            ],
+                            "A.B.C.D": {
+                                "desc": [
+                                    "Define a Source IP Address"
+                                ],
+                                "preference": {
+                                    "desc": [
+                                        "Preference of the cache server"
+                                    ],
+                                    "(1-255)": {
+                                        "desc": [
+                                            "Preference value"
+                                        ],
+                                        "<cr>": {
+                                            "desc": [
+                                                "end_cmd"
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "preference": {
+                            "desc": [
+                                "Preference of the cache server"
+                            ],
+                            "(1-255)": {
+                                "desc": [
+                                    "Preference value"
+                                ],
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "(1-65535)": {
+                        "desc": [
+                            "SSH port number"
+                        ],
+                        "SSH_UNAME": {
+                            "desc": [
+                                "SSH user name"
+                            ],
+                            "SSH_PRIVKEY": {
+                                "desc": [
+                                    "Path to own SSH private key"
+                                ],
+                                "SERVER_PUBKEY": {
+                                    "desc": [
+                                        "Path to Public key of cache server"
+                                    ],
+                                    "source": {
+                                        "desc": [
+                                            "Configure source IP address of RPKI connection"
+                                        ],
+                                        "A.B.C.D": {
+                                            "desc": [
+                                                "Define a Source IP Address"
+                                            ],
+                                            "preference": {
+                                                "desc": [
+                                                    "Preference of the cache server"
+                                                ],
+                                                "(1-255)": {
+                                                    "desc": [
+                                                        "Preference value"
+                                                    ],
+                                                    "<cr>": {
+                                                        "desc": [
+                                                            "end_cmd"
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "preference": {
+                                        "desc": [
+                                            "Preference of the cache server"
+                                        ],
+                                        "(1-255)": {
+                                            "desc": [
+                                                "Preference value"
+                                            ],
+                                            "<cr>": {
+                                                "desc": [
+                                                    "end_cmd"
+                                                ]
+                                            }
+                                        }
+                                    }
+                                },
+                                "source": {
+                                    "desc": [
+                                        "Configure source IP address of RPKI connection"
+                                    ],
+                                    "A.B.C.D": {
+                                        "desc": [
+                                            "Define a Source IP Address"
+                                        ],
+                                        "preference": {
+                                            "desc": [
+                                                "Preference of the cache server"
+                                            ],
+                                            "(1-255)": {
+                                                "desc": [
+                                                    "Preference value"
+                                                ],
+                                                "<cr>": {
+                                                    "desc": [
+                                                        "end_cmd"
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "preference": {
+                                    "desc": [
+                                        "Preference of the cache server"
+                                    ],
+                                    "(1-255)": {
+                                        "desc": [
+                                            "Preference value"
+                                        ],
+                                        "<cr>": {
+                                            "desc": [
+                                                "end_cmd"
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "source": {
+                        "desc": [
+                            "Configure source IP address of RPKI connection"
+                        ],
+                        "A.B.C.D": {
+                            "desc": [
+                                "Define a Source IP Address"
+                            ],
+                            "preference": {
+                                "desc": [
+                                    "Preference of the cache server"
+                                ],
+                                "(1-255)": {
+                                    "desc": [
+                                        "Preference value"
+                                    ],
+                                    "<cr>": {
+                                        "desc": [
+                                            "end_cmd"
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "preference": {
+                        "desc": [
+                            "Preference of the cache server"
+                        ],
+                        "(1-255)": {
+                            "desc": [
+                                "Preference value"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "no_rpki_retry_interval": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Control rpki specific settings",
+                "Control rpki specific settings",
+                "Set retry interval back to default"
+            ],
+            "(1-7200)": {
+                "desc": [
+                    "retry interval value"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_rpki_polling_period": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Control rpki specific settings",
+                "Control rpki specific settings",
+                "Set polling period back to default"
+            ],
+            "(1-86400)": {
+                "desc": [
+                    "Polling period value"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_rpki_expire_interval": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Control rpki specific settings",
+                "Control rpki specific settings",
+                "Set expire interval back to default"
+            ],
+            "(600-172800)": {
+                "desc": [
+                    "Expire interval value"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_output_file": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Direct vtysh output to file",
+                "Direct vtysh output to file"
+            ],
+            "FILE": {
+                "desc": [
+                    "Path to dump output to"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        }
+    }
+}

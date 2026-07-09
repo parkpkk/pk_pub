@@ -1,0 +1,165 @@
+
+module sonic-frr-VTY_NODE {
+    namespace "http://github.com/sonic-net/frr/sonic-frr-VTY_NODE";
+    prefix frr-VTY_NODE;
+    yang-version 1.1;
+
+    import ietf-inet-types {
+        prefix inet;
+    }
+
+    organization
+        "SONiC";
+
+    contact
+        "SONiC";
+
+    description
+        "SONIC frr-VTY_NODE FRR YANG";
+
+    revision 2024-12-23 {
+        description
+            "Initial revision.";
+    }
+    container sonic-frr-VTY_NODE {
+        container VTY_NODE {
+            list QUIT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list NO {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf login {
+                    type enumeration {
+                        enum login;
+                    }
+                }                  //login
+                leaf exec-timeout {
+                    type enumeration {
+                        enum exec-timeout;
+                    }
+                }                  //exec-timeout
+            }
+            list LOGIN {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list IPV6 {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf access-class {
+                    type enumeration {
+                        enum access-class;
+                    }
+                }                  //access-class
+                leaf IPV6_ACCESS_LIST {
+                    type string;
+                }                  //WORD
+            }
+            list EXIT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list EXEC-TIMEOUT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf TIMEOUT_IN_MINUTES {
+                    type int32;
+                }                  //(0-35791)
+                leaf TIMEOUT_IN_SECONDS {
+                    type int32;
+                }                  //(0-2147483)
+            }
+            list END {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list ACCESS-CLASS {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf IP_ACCESS_LIST {
+                    type string;
+                }                  //WORD
+            }
+            list OUTPUT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf file {
+                    type enumeration {
+                        enum file;
+                    }
+                }                  //file
+                leaf PATH_TO_DUMP_OUTPUT {
+                    type string;
+                }                  //FILE
+            }
+            list LIST {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf permutations {
+                    type enumeration {
+                        enum permutations;
+                    }
+                }                  //permutations
+            }
+            list FIND {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf-list SEARCH_PATTERN {
+                    type string;
+                }                  //REGEX...
+            }
+            list NO_ACCESS-CLASS {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf IP_ACCESS_LIST {
+                    type string;
+                }                  //WORD
+            }
+            list NO_IPV6_ACCESS-CLASS {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf IPV6_ACCESS_LIST {
+                    type string;
+                }                  //WORD
+            }
+            list NO_OUTPUT_FILE {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf PATH_TO_DUMP_OUTPUT {
+                    type string;
+                }                  //FILE
+            }
+        }
+
+    }
+}

@@ -1,0 +1,285 @@
+{
+    "SR_TRAFFIC_ENG_NODE": {
+        "desc": [
+            "SR_TRAFFIC_ENG_NODE node related command"
+        ],
+        "output": {
+            "desc": [
+                "Direct vtysh output to file"
+            ],
+            "file": {
+                "desc": [
+                    "Direct vtysh output to file"
+                ],
+                "FILE": {
+                    "desc": [
+                        "Path to dump output to"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            }
+        },
+        "no": {
+            "desc": [
+                "Negate a command or set its defaults"
+            ],
+            "segment-list": {
+                "desc": [
+                    "Segment List"
+                ],
+                "WORD": {
+                    "desc": [
+                        "Segment List Name"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            }
+        },
+        "list": {
+            "desc": [
+                "Print command list"
+            ],
+            "permutations": {
+                "desc": [
+                    "Print all possible command permutations"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "find": {
+            "desc": [
+                "Find CLI command matching a regular expression"
+            ],
+            "REGEX...": {
+                "desc": [
+                    "Search pattern (POSIX regex)"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "segment-list": {
+            "desc": [
+                "Segment List"
+            ],
+            "WORD": {
+                "desc": [
+                    "Segment List Name"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "change_node SR_SEGMENT_LIST_NODE"
+                    ]
+                }
+            }
+        },
+        "quit": {
+            "desc": [
+                "Exit current mode and down to previous mode"
+            ],
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "policy": {
+            "desc": [
+                "Segment Routing Policy"
+            ],
+            "color": {
+                "desc": [
+                    "SR Policy color"
+                ],
+                "(0-4294967295)": {
+                    "desc": [
+                        "SR Policy color value"
+                    ],
+                    "endpoint": {
+                        "desc": [
+                            "SR Policy endpoint"
+                        ],
+                        "<A.B.C.D|X:X::X:X>": {
+                            "desc": [
+                                "SR Policy endpoint IPv4 address",
+                                "SR Policy endpoint IPv6 address"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "change_node SR_POLICY_NODE"
+                                ]
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "pcep": {
+            "desc": [
+                "PCEP configuration"
+            ],
+            "<cr>": {
+                "desc": [
+                    "change_node PCEP_NODE"
+                ]
+            }
+        },
+        "mpls-te": {
+            "desc": [
+                "Negate a command or set its defaults"
+            ],
+            "on": {
+                "desc": [
+                    "Enable the TE database (TED) functionality"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "import": {
+                "desc": [
+                    "import"
+                ],
+                "<ospfv2|ospfv3|isis>": {
+                    "desc": [
+                        "Origin ospfv2",
+                        "Origin ospfv3",
+                        "Origin isis"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            }
+        },
+        "exit": {
+            "desc": [
+                "Exit current mode and down to previous mode"
+            ],
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "end": {
+            "desc": [
+                "End current mode and change to enable mode"
+            ],
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_policy": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Segment Routing Policy"
+            ],
+            "color": {
+                "desc": [
+                    "SR Policy color"
+                ],
+                "(0-4294967295)": {
+                    "desc": [
+                        "SR Policy color value"
+                    ],
+                    "endpoint": {
+                        "desc": [
+                            "SR Policy endpoint"
+                        ],
+                        "<A.B.C.D|X:X::X:X>": {
+                            "desc": [
+                                "SR Policy endpoint IPv4 address",
+                                "SR Policy endpoint IPv6 address"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "no_mpls-te": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Negate a command or set its defaults"
+            ],
+            "import": {
+                "desc": [
+                    "Disable the TE Database fill with remote igp data"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "on": {
+                "desc": [
+                    "Disable the TE Database functionality"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_output_file": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Direct vtysh output to file",
+                "Direct vtysh output to file"
+            ],
+            "FILE": {
+                "desc": [
+                    "Path to dump output to"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+CONFIG_NODE router ripng [vrf NAME] RIPNG_NODE timers basic (1-65535) (1-65535) (1-65535)
+CONFIG_NODE router ripng [vrf NAME] RIPNG_NODE quit
+CONFIG_NODE router ripng [vrf NAME] RIPNG_NODE no timers basic [(1-65535) (1-65535) (1-65535)]
+CONFIG_NODE router ripng [vrf NAME] RIPNG_NODE no ipv6 distribute-list [prefix] ACCESSLIST6_NAME <in|out> [WORD]
+CONFIG_NODE router ripng [vrf NAME] RIPNG_NODE no default-metric [(1-16)]
+CONFIG_NODE router ripng [vrf NAME] RIPNG_NODE ipv6 distribute-list [prefix] ACCESSLIST6_NAME <in|out> [WORD]
+CONFIG_NODE router ripng [vrf NAME] RIPNG_NODE exit
+CONFIG_NODE router ripng [vrf NAME] RIPNG_NODE end
+CONFIG_NODE router ripng [vrf NAME] RIPNG_NODE default-metric (1-16)
+CONFIG_NODE router ripng [vrf NAME] RIPNG_NODE [no] route X:X::X:X/M
+CONFIG_NODE router ripng [vrf NAME] RIPNG_NODE [no] redistribute FRR_REDIST_STR_RIPNGD [{metric (0-16)|route-map RMAP_NAME}]
+CONFIG_NODE router ripng [vrf NAME] RIPNG_NODE [no] passive-interface IFNAME
+CONFIG_NODE router ripng [vrf NAME] RIPNG_NODE [no] offset-list ACCESSLIST6_NAME <in|out> (0-16) [IFNAME]
+CONFIG_NODE router ripng [vrf NAME] RIPNG_NODE [no] network X:X::X:X/M
+CONFIG_NODE router ripng [vrf NAME] RIPNG_NODE [no] network WORD
+CONFIG_NODE router ripng [vrf NAME] RIPNG_NODE [no] default-information originate
+CONFIG_NODE router ripng [vrf NAME] RIPNG_NODE [no] allow-ecmp
+CONFIG_NODE router ripng [vrf NAME] RIPNG_NODE [no] aggregate-address X:X::X:X/M

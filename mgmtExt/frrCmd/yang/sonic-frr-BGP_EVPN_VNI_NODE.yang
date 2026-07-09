@@ -1,0 +1,189 @@
+
+module sonic-frr-BGP_EVPN_VNI_NODE {
+    namespace "http://github.com/sonic-net/frr/sonic-frr-BGP_EVPN_VNI_NODE";
+    prefix frr-BGP_EVPN_VNI_NODE;
+    yang-version 1.1;
+
+    import ietf-inet-types {
+        prefix inet;
+    }
+
+    organization
+        "SONiC";
+
+    contact
+        "SONiC";
+
+    description
+        "SONIC frr-BGP_EVPN_VNI_NODE FRR YANG";
+
+    revision 2024-12-23 {
+        description
+            "Initial revision.";
+    }
+    container sonic-frr-BGP_EVPN_VNI_NODE {
+        container BGP_EVPN_VNI_NODE {
+            list OUTPUT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf file {
+                    type enumeration {
+                        enum file;
+                    }
+                }                  //file
+                leaf PATH_TO_DUMP_OUTPUT {
+                    type string;
+                }                  //FILE
+            }
+            list NO {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf advertise-subnet {
+                    type enumeration {
+                        enum advertise-subnet;
+                    }
+                }                  //advertise-subnet
+                leaf advertise-default-gw {
+                    type enumeration {
+                        enum advertise-default-gw;
+                    }
+                }                  //advertise-default-gw
+                leaf advertise-svi-ip {
+                    type enumeration {
+                        enum advertise-svi-ip;
+                    }
+                }                  //advertise-svi-ip
+            }
+            list LIST {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf permutations {
+                    type enumeration {
+                        enum permutations;
+                    }
+                }                  //permutations
+            }
+            list FIND {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf-list SEARCH_PATTERN {
+                    type string;
+                }                  //REGEX...
+            }
+            list ROUTE-TARGET {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf ROUTE-TARGET_ROUTE_DIRECTION {
+                    type enumeration {
+                        enum both;
+                        enum import;
+                        enum export;
+                    }
+                }                  //<both|import|export> ['import and export', 'import', 'export']
+                leaf ROUTER_TARGET {
+                    type string;
+                }                  //RT
+            }
+            list RD {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf BGP_IDENTIFIER {
+                    type string;
+                }                  //ASN:NN_OR_IP-ADDRESS:NN
+            }
+            list QUIT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list EXIT-VNI {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list EXIT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list END {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list ADVERTISE-SUBNET {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list ADVERTISE-DEFAULT-GW {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list ADVERTISE-SVI-IP {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list NO_ROUTE-TARGET {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf FILTER_DIRECTION {
+                    type enumeration {
+                        enum import;
+                        enum export;
+                    }
+                }                  //<import|export> ['import', 'export']
+                leaf ROUTER_TARGET {
+                    type string;
+                }                  //RT
+                leaf both {
+                    type enumeration {
+                        enum both;
+                    }
+                }                  //both
+            }
+            list NO_RD {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf BGP_IDENTIFIER {
+                    type string;
+                }                  //ASN:NN_OR_IP-ADDRESS:NN
+            }
+            list NO_OUTPUT_FILE {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf PATH_TO_DUMP_OUTPUT {
+                    type string;
+                }                  //FILE
+            }
+        }
+
+    }
+}

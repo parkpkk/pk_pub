@@ -1,0 +1,196 @@
+
+module sonic-frr-SR_POLICY_NODE {
+    namespace "http://github.com/sonic-net/frr/sonic-frr-SR_POLICY_NODE";
+    prefix frr-SR_POLICY_NODE;
+    yang-version 1.1;
+
+    import ietf-inet-types {
+        prefix inet;
+    }
+
+    organization
+        "SONiC";
+
+    contact
+        "SONiC";
+
+    description
+        "SONIC frr-SR_POLICY_NODE FRR YANG";
+
+    revision 2024-12-23 {
+        description
+            "Initial revision.";
+    }
+    container sonic-frr-SR_POLICY_NODE {
+        container SR_POLICY_NODE {
+            list OUTPUT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf file {
+                    type enumeration {
+                        enum file;
+                    }
+                }                  //file
+                leaf PATH_TO_DUMP_OUTPUT {
+                    type string;
+                }                  //FILE
+            }
+            list LIST {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf permutations {
+                    type enumeration {
+                        enum permutations;
+                    }
+                }                  //permutations
+            }
+            list FIND {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf-list SEARCH_PATTERN {
+                    type string;
+                }                  //REGEX...
+            }
+            list QUIT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list NAME {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf SR_POLICY_NAME_VALUE {
+                    type string;
+                }                  //WORD
+            }
+            list EXIT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list END {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list CANDIDATE-PATH {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf preference {
+                    type enumeration {
+                        enum preference;
+                    }
+                }                  //preference
+                leaf ADMINISTRATIVE_PREFERENCE {
+                    type int32;
+                }                  //(0-4294967295)
+                leaf name {
+                    type enumeration {
+                        enum name;
+                    }
+                }                  //name
+                leaf SYMBOLIC_NAME {
+                    type string;
+                }                  //WORD
+                leaf explicit_segment-list {
+                    type enumeration {
+                        enum explicit_segment-list;
+                    }
+                }                  //segment-list
+                leaf NAME_OF_THE_SEGMENT {
+                    type string;
+                }                  //WORD
+                leaf dynamic {
+                    type enumeration {
+                        enum dynamic;
+                    }
+                }                  //dynamic
+            }
+            list BINDING-SID {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf SR_POLICY_BINDING-SID_LABEL {
+                    type int32;
+                }                  //(16-1048575)
+            }
+            list NO_NAME {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf SR_POLICY_NAME_VALUE {
+                    type string;
+                }                  //WORD
+            }
+            list NO_CANDIDATE-PATH {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf preference {
+                    type enumeration {
+                        enum preference;
+                    }
+                }                  //preference
+                leaf ADMINISTRATIVE_PREFERENCE {
+                    type int32;
+                }                  //(0-4294967295)
+                leaf name {
+                    type enumeration {
+                        enum name;
+                    }
+                }                  //name
+                leaf SYMBOLIC_NAME {
+                    type string;
+                }                  //WORD
+                leaf explicit_segment-list {
+                    type enumeration {
+                        enum explicit_segment-list;
+                    }
+                }                  //segment-list
+                leaf NAME_OF_THE_SEGMENT {
+                    type string;
+                }                  //WORD
+                leaf dynamic {
+                    type enumeration {
+                        enum dynamic;
+                    }
+                }                  //dynamic
+            }
+            list NO_BINDING-SID {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf SR_POLICY_BINDING-SID_LABEL {
+                    type int32;
+                }                  //(16-1048575)
+            }
+            list NO_OUTPUT_FILE {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf PATH_TO_DUMP_OUTPUT {
+                    type string;
+                }                  //FILE
+            }
+        }
+
+    }
+}

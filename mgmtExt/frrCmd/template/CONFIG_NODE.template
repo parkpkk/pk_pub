@@ -1,0 +1,665 @@
+CONFIG_NODE output file FILE
+CONFIG_NODE no output file [FILE]
+CONFIG_NODE list [permutations]
+CONFIG_NODE find REGEX...
+CONFIG_NODE zebra zapi-packets (1-10000)
+CONFIG_NODE zebra work-queue (0-10000)
+CONFIG_NODE zebra route-map delay-timer (0-600)
+CONFIG_NODE zebra protodown reason-bit (0-31)
+CONFIG_NODE zebra on-rib-process script SCRIPT
+CONFIG_NODE zebra kernel netlink batch-tx-buf (1-1048576) (1-1048576)
+CONFIG_NODE zebra dplane limit (0-10000)
+CONFIG_NODE vrf NAME
+CONFIG_NODE vni (1-16777215) [prefix-routes-only]
+CONFIG_NODE username WORD nopassword
+CONFIG_NODE service terminal-length (0-512)
+CONFIG_NODE service password-encryption
+CONFIG_NODE service integrated-vtysh-config
+CONFIG_NODE service advanced-vty
+CONFIG_NODE segment-routing
+CONFIG_NODE rpki
+CONFIG_NODE router-id A.B.C.D vrf NAME
+CONFIG_NODE router-id A.B.C.D
+CONFIG_NODE router ripng [vrf NAME]
+CONFIG_NODE router rip [vrf NAME]
+CONFIG_NODE router ospf6 [vrf NAME]
+CONFIG_NODE router ospf [{(1-65535)|vrf NAME}]
+CONFIG_NODE router ospf [(1-65535)] [vrf NAME]
+CONFIG_NODE router openfabric WORD
+CONFIG_NODE router isis WORD [vrf NAME]
+CONFIG_NODE router eigrp (1-65535) [vrf NAME]
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]]
+CONFIG_NODE router babel
+CONFIG_NODE route-map RMAP_NAME <deny|permit> (1-65535)
+CONFIG_NODE quit
+CONFIG_NODE pseudowire IFNAME
+CONFIG_NODE pbr-map PBRMAP seq (1-700)
+CONFIG_NODE pbr table range (10000-4294966272) (10000-4294966272)
+CONFIG_NODE password [(8-8)] WORD
+CONFIG_NODE password [(8-8)] LINE
+CONFIG_NODE no zebra zapi-packets [(1-10000)]
+CONFIG_NODE no zebra work-queue [(0-10000)]
+CONFIG_NODE no zebra route-map delay-timer [(0-600)]
+CONFIG_NODE no zebra protodown reason-bit [(0-31)]
+CONFIG_NODE no zebra kernel netlink batch-tx-buf [(0-1048576)] [(0-1048576)]
+CONFIG_NODE no zebra dplane limit [(0-10000)]
+CONFIG_NODE no vrf NAME
+CONFIG_NODE no vni (1-16777215) [prefix-routes-only]
+CONFIG_NODE no service walltime-warning
+CONFIG_NODE no service terminal-length [(0-512)]
+CONFIG_NODE no service password-encryption
+CONFIG_NODE no service integrated-vtysh-config
+CONFIG_NODE no service cputime-warning
+CONFIG_NODE no service advanced-vty
+CONFIG_NODE no rpki
+CONFIG_NODE no router-id [A.B.C.D]
+CONFIG_NODE no router-id [A.B.C.D vrf NAME]
+CONFIG_NODE no router ripng [vrf NAME]
+CONFIG_NODE no router rip [vrf NAME]
+CONFIG_NODE no router ospf6 [vrf NAME]
+CONFIG_NODE no router ospf [{(1-65535)|vrf NAME}]
+CONFIG_NODE no router openfabric WORD
+CONFIG_NODE no router isis WORD [vrf NAME]
+CONFIG_NODE no router eigrp (1-65535) [vrf NAME]
+CONFIG_NODE no router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]]
+CONFIG_NODE no router babel
+CONFIG_NODE no route-map RMAP_NAME <deny|permit> (1-65535)
+CONFIG_NODE no route-map RMAP_NAME
+CONFIG_NODE no ptm-enable
+CONFIG_NODE no pseudowire IFNAME
+CONFIG_NODE no pbr-map PBRMAP [seq (1-700)]
+CONFIG_NODE no pbr table range [(10000-4294966272) (10000-4294966272)]
+CONFIG_NODE no password
+CONFIG_NODE no nhrp nflog-group [(1-65535)]
+CONFIG_NODE no nhrp multicast-nflog-group [(1-65535)]
+CONFIG_NODE no nhrp event socket [SOCKET]
+CONFIG_NODE no nexthop-group NHGNAME
+CONFIG_NODE no mpls lsp (16-1048575) <A.B.C.D|X:X::X:X> <(16-1048575)|explicit-null|implicit-null>
+CONFIG_NODE no mpls lsp (16-1048575) <A.B.C.D|X:X::X:X>
+CONFIG_NODE no mpls lsp (16-1048575)
+CONFIG_NODE no mpls ldp
+CONFIG_NODE no mpls label global-block [(16-1048575) (16-1048575)]
+CONFIG_NODE no mpls label bind <A.B.C.D/M|X:X::X:X/M> [<(16-1048575)|implicit-null>]
+CONFIG_NODE no mac access-list ACCESSLIST_MAC_NAME remark LINE...
+CONFIG_NODE no mac access-list ACCESSLIST_MAC_NAME remark
+CONFIG_NODE no mac access-list ACCESSLIST_MAC_NAME [seq (1-4294967295)] <deny|permit> <X:X:X:X:X:X|any>
+CONFIG_NODE no mac access-list ACCESSLIST_MAC_NAME
+CONFIG_NODE no log timestamp precision [(0-6)]
+CONFIG_NODE no log syslog [<kern|user|mail|daemon|auth|syslog|lpr|news|uucp|cron|local0|local1|local2|local3|local4|local5|local6|local7>] [<emergencies|alerts|critical|errors|warnings|notifications|informational|debugging>]
+CONFIG_NODE no log stdout [<emergencies|alerts|critical|errors|warnings|notifications|informational|debugging>]
+CONFIG_NODE no log record-priority
+CONFIG_NODE no log monitor [<emergencies|alerts|critical|errors|warnings|notifications|informational|debugging>]
+CONFIG_NODE no log filtered-file [FILENAME [LEVEL]]
+CONFIG_NODE no log file [FILENAME [LEVEL]]
+CONFIG_NODE no log facility [<kern|user|mail|daemon|auth|syslog|lpr|news|uucp|cron|local0|local1|local2|local3|local4|local5|local6|local7>]
+CONFIG_NODE no l2vpn WORD type vpls
+CONFIG_NODE no key chain WORD
+CONFIG_NODE no ipv6 ssmpingd [X:X::X:X]
+CONFIG_NODE no ipv6 protocol <any|babel|bgp|connected|isis|kernel|nhrp|openfabric|ospf6|ripng|static|table|vnc> [route-map ROUTE-MAP]
+CONFIG_NODE no ipv6 prefix-list WORD seq (1-4294967295)
+CONFIG_NODE no ipv6 prefix-list WORD description LINE...
+CONFIG_NODE no ipv6 prefix-list WORD description
+CONFIG_NODE no ipv6 prefix-list WORD [seq (1-4294967295)] <deny|permit> <any|X:X::X:X/M [{ge (0-128)|le (0-128)}]>
+CONFIG_NODE no ipv6 prefix-list WORD
+CONFIG_NODE no ipv6 pim spt-switchover infinity-and-beyond prefix-list WORD
+CONFIG_NODE no ipv6 pim spt-switchover infinity-and-beyond
+CONFIG_NODE no ipv6 pim rp keep-alive-timer [(1-65535)]
+CONFIG_NODE no ipv6 pim rp X:X::X:X prefix-list WORD
+CONFIG_NODE no ipv6 pim rp X:X::X:X [X:X::X:X/M]
+CONFIG_NODE no ipv6 pim register-suppress-time [(1-65535)]
+CONFIG_NODE no ipv6 pim packets [(1-255)]
+CONFIG_NODE no ipv6 pim keep-alive-timer [(1-65535)]
+CONFIG_NODE no ipv6 pim join-prune-interval [(1-65535)]
+CONFIG_NODE no ipv6 nht resolve-via-default
+CONFIG_NODE no ipv6 nht <any|babel|bgp|connected|isis|kernel|nhrp|openfabric|ospf6|ripng|static|table|vnc> [route-map ROUTE-MAP]
+CONFIG_NODE no ipv6 mld watermark-warn [(1-65535)]
+CONFIG_NODE no ipv6 forwarding
+CONFIG_NODE no ipv6 access-list WORD remark
+CONFIG_NODE no ipv6 access-list WORD [seq (1-4294967295)] <deny|permit> <X:X::X:X/M [exact-match]|any>
+CONFIG_NODE no ipv6 access-list WORD
+CONFIG_NODE no ipv6 access-list ACCESSLIST6_NAME remark LINE...
+CONFIG_NODE no ip ssmpingd [A.B.C.D]
+CONFIG_NODE no ip router-id [A.B.C.D]
+CONFIG_NODE no ip router-id [A.B.C.D vrf NAME]
+CONFIG_NODE no ip protocol <any|babel|bgp|connected|eigrp|isis|kernel|nhrp|openfabric|ospf|rip|static|table|vnc> [route-map ROUTE-MAP]
+CONFIG_NODE no ip prefix-list WORD seq (1-4294967295)
+CONFIG_NODE no ip prefix-list WORD description LINE...
+CONFIG_NODE no ip prefix-list WORD description
+CONFIG_NODE no ip prefix-list WORD [seq (1-4294967295)] <deny|permit> <any|A.B.C.D/M [{ge (0-32)|le (0-32)}]>
+CONFIG_NODE no ip prefix-list WORD
+CONFIG_NODE no ip pim ssm prefix-list WORD
+CONFIG_NODE no ip pim ssm prefix-list
+CONFIG_NODE no ip pim spt-switchover infinity-and-beyond prefix-list WORD
+CONFIG_NODE no ip pim spt-switchover infinity-and-beyond
+CONFIG_NODE no ip pim send-v6-secondary
+CONFIG_NODE no ip pim rp keep-alive-timer [(1-65535)]
+CONFIG_NODE no ip pim rp A.B.C.D prefix-list WORD
+CONFIG_NODE no ip pim rp A.B.C.D [A.B.C.D/M]
+CONFIG_NODE no ip pim register-suppress-time [(1-65535)]
+CONFIG_NODE no ip pim packets [(1-255)]
+CONFIG_NODE no ip pim mlag
+CONFIG_NODE no ip pim keep-alive-timer [(1-65535)]
+CONFIG_NODE no ip pim join-prune-interval [(1-65535)]
+CONFIG_NODE no ip pim ecmp rebalance
+CONFIG_NODE no ip pim ecmp
+CONFIG_NODE no ip nht resolve-via-default
+CONFIG_NODE no ip nht <any|babel|bgp|connected|eigrp|isis|kernel|nhrp|openfabric|ospf|rip|static|table|vnc> route-map [ROUTE-MAP]
+CONFIG_NODE no ip multicast rpf-lookup-mode [<urib-only|mrib-only|mrib-then-urib|lower-distance|longer-prefix>]
+CONFIG_NODE no ip msdp timers [(1-65535) (1-65535) [(1-65535)]]
+CONFIG_NODE no ip msdp peer A.B.C.D
+CONFIG_NODE no ip msdp mesh-group WORD source [A.B.C.D]
+CONFIG_NODE no ip msdp mesh-group WORD member A.B.C.D
+CONFIG_NODE no ip msdp mesh-group WORD
+CONFIG_NODE no ip import-table (1-252) [distance (1-255)] [route-map NAME]
+CONFIG_NODE no ip igmp watermark-warn [(1-65535)]
+CONFIG_NODE no ip forwarding
+CONFIG_NODE no hostname [HOSTNAME]
+CONFIG_NODE no fpm use-next-hop-groups
+CONFIG_NODE no fpm connection ip A.B.C.D port (1-65535)
+CONFIG_NODE no fpm address [<A.B.C.D|X:X::X:X> [port <1-65535>]]
+CONFIG_NODE no enable password
+CONFIG_NODE no dump bgp <all|all-et|updates|updates-et|routes-mrt> [PATH [INTERVAL]]
+CONFIG_NODE no domainname [DOMAINNAME]
+CONFIG_NODE no debug zebra vxlan
+CONFIG_NODE no debug zebra rib [detailed]
+CONFIG_NODE no debug zebra pbr
+CONFIG_NODE no debug zebra packet [<recv|send>] [detail]
+CONFIG_NODE no debug zebra nht [detailed]
+CONFIG_NODE no debug zebra mpls [detailed]
+CONFIG_NODE no debug zebra kernel msgdump [<recv|send>]
+CONFIG_NODE no debug zebra kernel
+CONFIG_NODE no debug zebra fpm
+CONFIG_NODE no debug zebra events
+CONFIG_NODE no debug zebra dplane
+CONFIG_NODE no debug vrf
+CONFIG_NODE no debug ssmpingd
+CONFIG_NODE no debug spf-delay-ietf
+CONFIG_NODE no debug rpki
+CONFIG_NODE no debug route-map
+CONFIG_NODE no debug ripng zebra
+CONFIG_NODE no debug ripng packet <recv|send>
+CONFIG_NODE no debug ripng packet
+CONFIG_NODE no debug ripng events
+CONFIG_NODE no debug rip zebra
+CONFIG_NODE no debug rip packet <recv|send>
+CONFIG_NODE no debug rip packet
+CONFIG_NODE no debug rip events
+CONFIG_NODE no debug pim vxlan
+CONFIG_NODE no debug pim static
+CONFIG_NODE no debug pim nht rp
+CONFIG_NODE no debug pim mlag
+CONFIG_NODE no debug pim bsm
+CONFIG_NODE no debug ospf6 zebra [<send|recv>]
+CONFIG_NODE no debug ospf6 spf time
+CONFIG_NODE no debug ospf6 spf process
+CONFIG_NODE no debug ospf6 spf database
+CONFIG_NODE no debug ospf6 nssa
+CONFIG_NODE no debug ospf6 neighbor [<state|event>]
+CONFIG_NODE no debug ospf6 message <unknown|hello|dbdesc|lsreq|lsupdate|lsack|all> [<send|recv|send-hdr|recv-hdr>]
+CONFIG_NODE no debug ospf6 lsa <router|network|inter-prefix|inter-router|as-external|nssa|link|intra-prefix|unknown> [<originate|examine|flooding>]
+CONFIG_NODE no debug ospf6 interface
+CONFIG_NODE no debug ospf6 flooding
+CONFIG_NODE no debug ospf6 border-routers router-id [A.B.C.D]
+CONFIG_NODE no debug ospf6 border-routers area-id [A.B.C.D]
+CONFIG_NODE no debug ospf6 border-routers
+CONFIG_NODE no debug ospf6 authentication [<tx|rx>]
+CONFIG_NODE no debug ospf6 asbr
+CONFIG_NODE no debug ospf6 abr
+CONFIG_NODE no debug ospf6
+CONFIG_NODE no debug ospf zebra [<interface|redistribute>]
+CONFIG_NODE no debug ospf nssa
+CONFIG_NODE no debug ospf nsm [<status|events|timers>]
+CONFIG_NODE no debug ospf lsa [<generate|flooding|install|refresh|aggregate>]
+CONFIG_NODE no debug ospf event
+CONFIG_NODE no debug ospf [(1-65535)] ism [<status|events|timers>]
+CONFIG_NODE no debug ospf (1-65535) zebra [<interface|redistribute>]
+CONFIG_NODE no debug ospf (1-65535) nssa
+CONFIG_NODE no debug ospf (1-65535) nsm [<status|events|timers>]
+CONFIG_NODE no debug ospf (1-65535) lsa [<generate|flooding|install|refresh|aggregate>]
+CONFIG_NODE no debug ospf (1-65535) event
+CONFIG_NODE no debug ospf
+CONFIG_NODE no debug openfabric update-packets
+CONFIG_NODE no debug openfabric tx-queue
+CONFIG_NODE no debug openfabric te-events
+CONFIG_NODE no debug openfabric sr-events
+CONFIG_NODE no debug openfabric spf-events
+CONFIG_NODE no debug openfabric snp-packets
+CONFIG_NODE no debug openfabric route-events
+CONFIG_NODE no debug openfabric packet-dump
+CONFIG_NODE no debug openfabric lsp-sched
+CONFIG_NODE no debug openfabric lsp-gen
+CONFIG_NODE no debug openfabric lfa
+CONFIG_NODE no debug openfabric ldp-sync
+CONFIG_NODE no debug openfabric flooding
+CONFIG_NODE no debug openfabric events
+CONFIG_NODE no debug openfabric bfd
+CONFIG_NODE no debug openfabric adj-packets
+CONFIG_NODE no debug nhrp <all|common|event|interface|kernel|route|vici>
+CONFIG_NODE no debug mtrace
+CONFIG_NODE no debug msdp packets
+CONFIG_NODE no debug msdp events
+CONFIG_NODE no debug msdp
+CONFIG_NODE no debug mroute detail
+CONFIG_NODE no debug mroute
+CONFIG_NODE no debug isis update-packets
+CONFIG_NODE no debug isis tx-queue
+CONFIG_NODE no debug isis te-events
+CONFIG_NODE no debug isis sr-events
+CONFIG_NODE no debug isis spf-events
+CONFIG_NODE no debug isis snp-packets
+CONFIG_NODE no debug isis route-events
+CONFIG_NODE no debug isis packet-dump
+CONFIG_NODE no debug isis lsp-sched
+CONFIG_NODE no debug isis lsp-gen
+CONFIG_NODE no debug isis lfa
+CONFIG_NODE no debug isis ldp-sync
+CONFIG_NODE no debug isis flooding
+CONFIG_NODE no debug isis events
+CONFIG_NODE no debug isis bfd
+CONFIG_NODE no debug isis adj-packets
+CONFIG_NODE no debug igmp trace detail
+CONFIG_NODE no debug igmp trace
+CONFIG_NODE no debug igmp packets
+CONFIG_NODE no debug igmp events
+CONFIG_NODE no debug igmp
+CONFIG_NODE no debug eigrp transmit <send|recv|all> [detail]
+CONFIG_NODE no debug eigrp packets <siaquery|siareply|ack|hello|probe|query|reply|request|retry|stub|terse|update|all> [send|receive] [detail]
+CONFIG_NODE no debug bgp zebra prefix <A.B.C.D/M|X:X::X:X/M>
+CONFIG_NODE no debug bgp zebra
+CONFIG_NODE no debug bgp vpn <leak-from-vrf|leak-to-vrf|rmap-event|label>
+CONFIG_NODE no debug bgp vnc <rfapi-query|import-bi-attach|import-del-remote|verbose>
+CONFIG_NODE no debug bgp updates prefix l2vpn evpn type <<macip|2> mac <X:X:X:X:X:X|X:X:X:X:X:X/M> [ip <A.B.C.D|X:X::X:X>]|<multicast|3> ip <A.B.C.D|X:X::X:X>|<prefix|5> ip <A.B.C.D/M|X:X::X:X/M>>
+CONFIG_NODE no debug bgp updates prefix <A.B.C.D/M|X:X::X:X/M>
+CONFIG_NODE no debug bgp updates <in|out> <A.B.C.D|X:X::X:X|WORD>
+CONFIG_NODE no debug bgp updates <in|out>
+CONFIG_NODE no debug bgp updates
+CONFIG_NODE no debug bgp update-groups
+CONFIG_NODE no debug bgp pbr [error]
+CONFIG_NODE no debug bgp nht
+CONFIG_NODE no debug bgp neighbor-events <A.B.C.D|X:X::X:X|WORD>
+CONFIG_NODE no debug bgp neighbor-events
+CONFIG_NODE no debug bgp labelpool
+CONFIG_NODE no debug bgp keepalives <A.B.C.D|X:X::X:X|WORD>
+CONFIG_NODE no debug bgp keepalives
+CONFIG_NODE no debug bgp graceful-restart
+CONFIG_NODE no debug bgp flowspec
+CONFIG_NODE no debug bgp bestpath <A.B.C.D/M|X:X::X:X/M>
+CONFIG_NODE no debug bgp bestpath
+CONFIG_NODE no debug bgp as4 segment
+CONFIG_NODE no debug bgp as4
+CONFIG_NODE no debug babel <common|kernel|filter|timeout|interface|route|all>
+CONFIG_NODE no debug all bgp vnc
+CONFIG_NODE no bgp update-delay [(0-3600) [(1-3600)]]
+CONFIG_NODE no bgp session-dscp [(0-63)]
+CONFIG_NODE no bgp route-map delay-timer [(0-600)]
+CONFIG_NODE no bgp output-queue-limit [(1-4294967295)]
+CONFIG_NODE no bgp no-rib
+CONFIG_NODE no bgp local-mac vni (1-16777215) mac WORD
+CONFIG_NODE no bgp large-community-list standard LCOMMUNITY_LIST_NAME [seq (0-4294967295)] <deny|permit> AA:AA:NN...
+CONFIG_NODE no bgp large-community-list standard LCOMMUNITY_LIST_NAME
+CONFIG_NODE no bgp large-community-list expanded LCOMMUNITY_LIST_NAME [seq (0-4294967295)] <deny|permit> LINE...
+CONFIG_NODE no bgp large-community-list expanded LCOMMUNITY_LIST_NAME
+CONFIG_NODE no bgp large-community-list <(1-99)|(100-500)|LCOMMUNITY_LIST_NAME>
+CONFIG_NODE no bgp large-community-list (100-500) [seq (0-4294967295)] <deny|permit> LINE...
+CONFIG_NODE no bgp large-community-list (1-99) [seq (0-4294967295)] <deny|permit> AA:AA:NN...
+CONFIG_NODE no bgp input-queue-limit [(1-4294967295)]
+CONFIG_NODE no bgp graceful-shutdown
+CONFIG_NODE no bgp extcommunity-list <(100-500)|expanded EXTCOMMUNITY_LIST_NAME> [seq (0-4294967295)] <deny|permit> LINE...
+CONFIG_NODE no bgp extcommunity-list <(100-500)|expanded EXTCOMMUNITY_LIST_NAME>
+CONFIG_NODE no bgp extcommunity-list <(1-99)|standard EXTCOMMUNITY_LIST_NAME> [seq (0-4294967295)] <deny|permit> AA:NN...
+CONFIG_NODE no bgp extcommunity-list <(1-99)|standard EXTCOMMUNITY_LIST_NAME>
+CONFIG_NODE no bgp community-list <(100-500)|expanded COMMUNITY_LIST_NAME> [seq (0-4294967295)] <deny|permit> AA:NN...
+CONFIG_NODE no bgp community-list <(100-500)|expanded COMMUNITY_LIST_NAME>
+CONFIG_NODE no bgp community-list <(1-99)|standard COMMUNITY_LIST_NAME> [seq (0-4294967295)] <deny|permit> AA:NN...
+CONFIG_NODE no bgp community-list <(1-99)|standard COMMUNITY_LIST_NAME>
+CONFIG_NODE no bgp as-path access-list AS_PATH_FILTER_NAME [seq (0-4294967295)] <deny|permit> LINE...
+CONFIG_NODE no bgp as-path access-list AS_PATH_FILTER_NAME
+CONFIG_NODE no bfd
+CONFIG_NODE no banner motd
+CONFIG_NODE no allow-reserved-ranges
+CONFIG_NODE no allow-external-route-update
+CONFIG_NODE no agentx
+CONFIG_NODE no access-list WORD remark LINE...
+CONFIG_NODE no access-list WORD remark
+CONFIG_NODE no access-list WORD [seq (1-4294967295)] <deny|permit> ip <A.B.C.D A.B.C.D|host A.B.C.D|any> <A.B.C.D A.B.C.D|host A.B.C.D|any>
+CONFIG_NODE no access-list WORD [seq (1-4294967295)] <deny|permit> <[host] A.B.C.D|A.B.C.D A.B.C.D>
+CONFIG_NODE no access-list WORD [seq (1-4294967295)] <deny|permit> <A.B.C.D/M [exact-match]|any>
+CONFIG_NODE no access-list WORD
+CONFIG_NODE nhrp nflog-group (1-65535)
+CONFIG_NODE nhrp multicast-nflog-group (1-65535)
+CONFIG_NODE nhrp event socket SOCKET
+CONFIG_NODE nexthop-group NHGNAME
+CONFIG_NODE mpls lsp (16-1048575) <A.B.C.D|X:X::X:X> <(16-1048575)|explicit-null|implicit-null>
+CONFIG_NODE mpls ldp
+CONFIG_NODE mpls label global-block (16-1048575) (16-1048575)
+CONFIG_NODE mpls label bind <A.B.C.D/M|X:X::X:X/M> <(16-1048575)|implicit-null|explicit-null>
+CONFIG_NODE mac access-list ACCESSLIST_MAC_NAME remark LINE...
+CONFIG_NODE mac access-list ACCESSLIST_MAC_NAME [seq (1-4294967295)] <deny|permit> <X:X:X:X:X:X|any>
+CONFIG_NODE log timestamp precision (0-6)
+CONFIG_NODE log syslog [<emergencies|alerts|critical|errors|warnings|notifications|informational|debugging>]
+CONFIG_NODE log stdout [<emergencies|alerts|critical|errors|warnings|notifications|informational|debugging>]
+CONFIG_NODE log record-priority
+CONFIG_NODE log monitor [<emergencies|alerts|critical|errors|warnings|notifications|informational|debugging>]
+CONFIG_NODE log filtered-file FILENAME [<emergencies|alerts|critical|errors|warnings|notifications|informational|debugging>]
+CONFIG_NODE log file FILENAME [<emergencies|alerts|critical|errors|warnings|notifications|informational|debugging>]
+CONFIG_NODE log facility <kern|user|mail|daemon|auth|syslog|lpr|news|uucp|cron|local0|local1|local2|local3|local4|local5|local6|local7>
+CONFIG_NODE line vty
+CONFIG_NODE l2vpn WORD type vpls
+CONFIG_NODE key chain WORD
+CONFIG_NODE ipv6 ssmpingd [X:X::X:X]
+CONFIG_NODE ipv6 protocol <any|babel|bgp|connected|isis|kernel|nhrp|openfabric|ospf6|ripng|static|table|vnc> route-map ROUTE-MAP
+CONFIG_NODE ipv6 prefix-list WORD description LINE...
+CONFIG_NODE ipv6 prefix-list WORD [seq (1-4294967295)] <deny|permit> <any|X:X::X:X/M [{ge (0-128)|le (0-128)}]>
+CONFIG_NODE ipv6 pim spt-switchover infinity-and-beyond prefix-list WORD
+CONFIG_NODE ipv6 pim spt-switchover infinity-and-beyond
+CONFIG_NODE ipv6 pim rp keep-alive-timer (1-65535)
+CONFIG_NODE ipv6 pim rp X:X::X:X prefix-list WORD
+CONFIG_NODE ipv6 pim rp X:X::X:X [X:X::X:X/M]
+CONFIG_NODE ipv6 pim register-suppress-time (1-65535)
+CONFIG_NODE ipv6 pim packets (1-255)
+CONFIG_NODE ipv6 pim keep-alive-timer (1-65535)
+CONFIG_NODE ipv6 pim join-prune-interval (1-65535)
+CONFIG_NODE ipv6 nht resolve-via-default
+CONFIG_NODE ipv6 nht <any|babel|bgp|connected|isis|kernel|nhrp|openfabric|ospf6|ripng|static|table|vnc> route-map ROUTE-MAP
+CONFIG_NODE ipv6 mld watermark-warn (1-65535)
+CONFIG_NODE ipv6 forwarding
+CONFIG_NODE ipv6 access-list WORD remark LINE...
+CONFIG_NODE ipv6 access-list WORD [seq (1-4294967295)] <deny|permit> <X:X::X:X/M [exact-match]|any>
+CONFIG_NODE ip ssmpingd [A.B.C.D]
+CONFIG_NODE ip router-id A.B.C.D vrf NAME
+CONFIG_NODE ip router-id A.B.C.D
+CONFIG_NODE ip protocol <any|babel|bgp|connected|eigrp|isis|kernel|nhrp|openfabric|ospf|rip|static|table|vnc> route-map ROUTE-MAP
+CONFIG_NODE ip prefix-list WORD description LINE...
+CONFIG_NODE ip prefix-list WORD [seq (1-4294967295)] <deny|permit> <any|A.B.C.D/M [{ge (0-32)|le (0-32)}]>
+CONFIG_NODE ip pim ssm prefix-list WORD
+CONFIG_NODE ip pim spt-switchover infinity-and-beyond prefix-list WORD
+CONFIG_NODE ip pim spt-switchover infinity-and-beyond
+CONFIG_NODE ip pim send-v6-secondary
+CONFIG_NODE ip pim rp keep-alive-timer (1-65535)
+CONFIG_NODE ip pim rp A.B.C.D prefix-list WORD
+CONFIG_NODE ip pim rp A.B.C.D [A.B.C.D/M]
+CONFIG_NODE ip pim register-suppress-time (1-65535)
+CONFIG_NODE ip pim packets (1-255)
+CONFIG_NODE ip pim mlag INTERFACE role [primary|secondary] state [up|down] addr A.B.C.D
+CONFIG_NODE ip pim keep-alive-timer (1-65535)
+CONFIG_NODE ip pim join-prune-interval (1-65535)
+CONFIG_NODE ip pim ecmp rebalance
+CONFIG_NODE ip pim ecmp
+CONFIG_NODE ip nht resolve-via-default
+CONFIG_NODE ip nht <any|babel|bgp|connected|eigrp|isis|kernel|nhrp|openfabric|ospf|rip|static|table|vnc> route-map ROUTE-MAP
+CONFIG_NODE ip multicast rpf-lookup-mode <urib-only|mrib-only|mrib-then-urib|lower-distance|longer-prefix>
+CONFIG_NODE ip msdp timers (1-65535) (1-65535) [(1-65535)]
+CONFIG_NODE ip msdp peer A.B.C.D source A.B.C.D
+CONFIG_NODE ip msdp mesh-group WORD source A.B.C.D
+CONFIG_NODE ip msdp mesh-group WORD member A.B.C.D
+CONFIG_NODE ip import-table (1-252) [distance (1-255)] [route-map RMAP_NAME]
+CONFIG_NODE ip igmp watermark-warn (1-65535)
+CONFIG_NODE ip forwarding
+CONFIG_NODE interface IFNAME [vrf NAME]
+CONFIG_NODE hostname WORD
+CONFIG_NODE frr version VERSION...
+CONFIG_NODE frr defaults PROFILE...
+CONFIG_NODE fpm use-next-hop-groups
+CONFIG_NODE fpm connection ip A.B.C.D port (1-65535)
+CONFIG_NODE fpm address <A.B.C.D|X:X::X:X> [port (1-65535)]
+CONFIG_NODE exit
+CONFIG_NODE end
+CONFIG_NODE enable password [(8-8)] WORD
+CONFIG_NODE enable password [(8-8)] LINE
+CONFIG_NODE dump bgp <all|all-et|updates|updates-et|routes-mrt> PATH [INTERVAL]
+CONFIG_NODE domainname WORD
+CONFIG_NODE debug zebra vxlan
+CONFIG_NODE debug zebra rib [detailed]
+CONFIG_NODE debug zebra pbr
+CONFIG_NODE debug zebra packet [<recv|send>] [detail]
+CONFIG_NODE debug zebra nht [detailed]
+CONFIG_NODE debug zebra mpls [detailed]
+CONFIG_NODE debug zebra kernel msgdump [<recv|send>]
+CONFIG_NODE debug zebra kernel
+CONFIG_NODE debug zebra fpm
+CONFIG_NODE debug zebra events
+CONFIG_NODE debug zebra dplane [detailed]
+CONFIG_NODE debug vrf
+CONFIG_NODE debug ssmpingd
+CONFIG_NODE debug spf-delay-ietf
+CONFIG_NODE debug rpki
+CONFIG_NODE debug route-map
+CONFIG_NODE debug ripng zebra
+CONFIG_NODE debug ripng packet <recv|send>
+CONFIG_NODE debug ripng packet
+CONFIG_NODE debug ripng events
+CONFIG_NODE debug rip zebra
+CONFIG_NODE debug rip packet <recv|send>
+CONFIG_NODE debug rip packet
+CONFIG_NODE debug rip events
+CONFIG_NODE debug pim vxlan
+CONFIG_NODE debug pim static
+CONFIG_NODE debug pim nht rp
+CONFIG_NODE debug pim mlag
+CONFIG_NODE debug pim bsm
+CONFIG_NODE debug ospf6 zebra [<send|recv>]
+CONFIG_NODE debug ospf6 spf time
+CONFIG_NODE debug ospf6 spf process
+CONFIG_NODE debug ospf6 spf database
+CONFIG_NODE debug ospf6 nssa
+CONFIG_NODE debug ospf6 neighbor [<state|event>]
+CONFIG_NODE debug ospf6 message <unknown|hello|dbdesc|lsreq|lsupdate|lsack|all> [<send|recv|send-hdr|recv-hdr>]
+CONFIG_NODE debug ospf6 lsa <router|network|inter-prefix|inter-router|as-external|nssa|link|intra-prefix|unknown> [<originate|examine|flooding>]
+CONFIG_NODE debug ospf6 interface
+CONFIG_NODE debug ospf6 flooding
+CONFIG_NODE debug ospf6 border-routers router-id A.B.C.D
+CONFIG_NODE debug ospf6 border-routers area-id A.B.C.D
+CONFIG_NODE debug ospf6 border-routers
+CONFIG_NODE debug ospf6 authentication [<tx|rx>]
+CONFIG_NODE debug ospf6 asbr
+CONFIG_NODE debug ospf6 abr
+CONFIG_NODE debug ospf zebra [<interface|redistribute>]
+CONFIG_NODE debug ospf nssa
+CONFIG_NODE debug ospf nsm [<status|events|timers>]
+CONFIG_NODE debug ospf lsa [<generate|flooding|install|refresh|aggregate>]
+CONFIG_NODE debug ospf event
+CONFIG_NODE debug ospf [(1-65535)] ism [<status|events|timers>]
+CONFIG_NODE debug ospf (1-65535) zebra [<interface|redistribute>]
+CONFIG_NODE debug ospf (1-65535) nssa
+CONFIG_NODE debug ospf (1-65535) nsm [<status|events|timers>]
+CONFIG_NODE debug ospf (1-65535) lsa [<generate|flooding|install|refresh|aggregate>]
+CONFIG_NODE debug ospf (1-65535) event
+CONFIG_NODE debug openfabric update-packets
+CONFIG_NODE debug openfabric tx-queue
+CONFIG_NODE debug openfabric te-events
+CONFIG_NODE debug openfabric sr-events
+CONFIG_NODE debug openfabric spf-events
+CONFIG_NODE debug openfabric snp-packets
+CONFIG_NODE debug openfabric route-events
+CONFIG_NODE debug openfabric packet-dump
+CONFIG_NODE debug openfabric lsp-sched
+CONFIG_NODE debug openfabric lsp-gen
+CONFIG_NODE debug openfabric lfa
+CONFIG_NODE debug openfabric ldp-sync
+CONFIG_NODE debug openfabric flooding
+CONFIG_NODE debug openfabric events
+CONFIG_NODE debug openfabric bfd
+CONFIG_NODE debug openfabric adj-packets
+CONFIG_NODE debug nhrp <all|common|event|interface|kernel|route|vici>
+CONFIG_NODE debug mtrace
+CONFIG_NODE debug msdp packets
+CONFIG_NODE debug msdp events
+CONFIG_NODE debug msdp
+CONFIG_NODE debug mroute detail
+CONFIG_NODE debug mroute
+CONFIG_NODE debug isis update-packets
+CONFIG_NODE debug isis tx-queue
+CONFIG_NODE debug isis te-events
+CONFIG_NODE debug isis sr-events
+CONFIG_NODE debug isis spf-events
+CONFIG_NODE debug isis snp-packets
+CONFIG_NODE debug isis route-events
+CONFIG_NODE debug isis packet-dump
+CONFIG_NODE debug isis lsp-sched
+CONFIG_NODE debug isis lsp-gen
+CONFIG_NODE debug isis lfa
+CONFIG_NODE debug isis ldp-sync
+CONFIG_NODE debug isis flooding
+CONFIG_NODE debug isis events
+CONFIG_NODE debug isis bfd
+CONFIG_NODE debug isis adj-packets
+CONFIG_NODE debug igmp trace detail
+CONFIG_NODE debug igmp trace
+CONFIG_NODE debug igmp packets
+CONFIG_NODE debug igmp events
+CONFIG_NODE debug igmp
+CONFIG_NODE debug eigrp transmit <send|recv|all> [detail]
+CONFIG_NODE debug eigrp packets <siaquery|siareply|ack|hello|probe|query|reply|request|retry|stub|terse|update|all> [send|receive] [detail]
+CONFIG_NODE debug bgp zebra prefix <A.B.C.D/M|X:X::X:X/M>
+CONFIG_NODE debug bgp zebra
+CONFIG_NODE debug bgp vpn <leak-from-vrf|leak-to-vrf|rmap-event|label>
+CONFIG_NODE debug bgp vnc <rfapi-query|import-bi-attach|import-del-remote|verbose>
+CONFIG_NODE debug bgp updates prefix l2vpn evpn type <<macip|2> mac <X:X:X:X:X:X|X:X:X:X:X:X/M> [ip <A.B.C.D|X:X::X:X>]|<multicast|3> ip <A.B.C.D|X:X::X:X>|<prefix|5> ip <A.B.C.D/M|X:X::X:X/M>>
+CONFIG_NODE debug bgp updates prefix <A.B.C.D/M|X:X::X:X/M>
+CONFIG_NODE debug bgp updates <in|out> <A.B.C.D|X:X::X:X|WORD>
+CONFIG_NODE debug bgp updates <in|out>
+CONFIG_NODE debug bgp updates
+CONFIG_NODE debug bgp update-groups
+CONFIG_NODE debug bgp pbr [error]
+CONFIG_NODE debug bgp nht
+CONFIG_NODE debug bgp neighbor-events <A.B.C.D|X:X::X:X|WORD>
+CONFIG_NODE debug bgp neighbor-events
+CONFIG_NODE debug bgp labelpool
+CONFIG_NODE debug bgp keepalives <A.B.C.D|X:X::X:X|WORD>
+CONFIG_NODE debug bgp keepalives
+CONFIG_NODE debug bgp graceful-restart
+CONFIG_NODE debug bgp flowspec
+CONFIG_NODE debug bgp bestpath <A.B.C.D/M|X:X::X:X/M>
+CONFIG_NODE debug bgp as4 segment
+CONFIG_NODE debug bgp as4
+CONFIG_NODE debug babel <common|kernel|filter|timeout|interface|route|all>
+CONFIG_NODE clear log filter-text
+CONFIG_NODE bgp update-delay (0-3600) [(1-3600)]
+CONFIG_NODE bgp session-dscp (0-63)
+CONFIG_NODE bgp route-map delay-timer (0-600)
+CONFIG_NODE bgp output-queue-limit (1-4294967295)
+CONFIG_NODE bgp no-rib
+CONFIG_NODE bgp local-mac vni (1-16777215) mac WORD seq (0-4294967295)
+CONFIG_NODE bgp large-community-list standard LCOMMUNITY_LIST_NAME [seq (0-4294967295)] <deny|permit> AA:BB:CC...
+CONFIG_NODE bgp large-community-list expanded LCOMMUNITY_LIST_NAME [seq (0-4294967295)] <deny|permit> LINE...
+CONFIG_NODE bgp large-community-list (100-500) [seq (0-4294967295)] <deny|permit> LINE...
+CONFIG_NODE bgp large-community-list (1-99) [seq (0-4294967295)] <deny|permit> AA:BB:CC...
+CONFIG_NODE bgp input-queue-limit (1-4294967295)
+CONFIG_NODE bgp graceful-shutdown
+CONFIG_NODE bgp extcommunity-list <(100-500)|expanded EXTCOMMUNITY_LIST_NAME> [seq (0-4294967295)] <deny|permit> LINE...
+CONFIG_NODE bgp extcommunity-list <(1-99)|standard EXTCOMMUNITY_LIST_NAME> [seq (0-4294967295)] <deny|permit> AA:NN...
+CONFIG_NODE bgp community-list <(100-500)|expanded COMMUNITY_LIST_NAME> [seq (0-4294967295)] <deny|permit> AA:NN...
+CONFIG_NODE bgp community-list <(1-99)|standard COMMUNITY_LIST_NAME> [seq (0-4294967295)] <deny|permit> AA:NN...
+CONFIG_NODE bgp as-path access-list AS_PATH_FILTER_NAME [seq (0-4294967295)] <deny|permit> LINE...
+CONFIG_NODE bfd
+CONFIG_NODE banner motd line LINE...
+CONFIG_NODE banner motd file FILE
+CONFIG_NODE banner motd default
+CONFIG_NODE allow-reserved-ranges
+CONFIG_NODE allow-external-route-update
+CONFIG_NODE agentx
+CONFIG_NODE access-list WORD remark LINE...
+CONFIG_NODE access-list WORD [seq (1-4294967295)] <deny|permit> ip <A.B.C.D A.B.C.D|host A.B.C.D|any> <A.B.C.D A.B.C.D|host A.B.C.D|any>
+CONFIG_NODE access-list WORD [seq (1-4294967295)] <deny|permit> <[host] A.B.C.D|A.B.C.D A.B.C.D>
+CONFIG_NODE access-list WORD [seq (1-4294967295)] <deny|permit> <A.B.C.D/M [exact-match]|any>
+CONFIG_NODE [no] zebra nexthop-group keep (1-3600)
+CONFIG_NODE [no] vrrp default <advertisement-interval (10-40950)|preempt|priority (1-254)|checksum-with-ipv4-pseudoheader|shutdown>
+CONFIG_NODE [no] vrrp autoconfigure [version (2-3)]
+CONFIG_NODE [no] terminal paginate
+CONFIG_NODE [no] service walltime-warning (1-4294967295)
+CONFIG_NODE [no] service cputime-warning (1-4294967295)
+CONFIG_NODE [no] service cputime-stats
+CONFIG_NODE [no] route-map RMAP_NAME optimization
+CONFIG_NODE [no] pbr nexthop-resolve
+CONFIG_NODE [no] log unique-id
+CONFIG_NODE [no] log immediate-mode
+CONFIG_NODE [no] log filter-text WORD
+CONFIG_NODE [no] log error-category
+CONFIG_NODE [no] log commands
+CONFIG_NODE [no] ipv6 route X:X::X:X/M [from X:X::X:X/M] X:X::X:X <INTERFACE|Null0> [{tag (1-4294967295)|(1-255)|vrf NAME|label WORD|table (1-4294967295)|nexthop-vrf NAME|onlink|color (1-4294967295)|bfd [{multi-hop|source X:X::X:X|profile BFDPROF}]}]
+CONFIG_NODE [no] ipv6 route X:X::X:X/M [from X:X::X:X/M] <reject|blackhole> [{tag (1-4294967295)|(1-255)|vrf NAME|label WORD|table (1-4294967295)}]
+CONFIG_NODE [no] ipv6 route X:X::X:X/M [from X:X::X:X/M] <X:X::X:X|<INTERFACE|Null0>> [{tag (1-4294967295)|(1-255)|vrf NAME|label WORD|table (1-4294967295)|nexthop-vrf NAME|color (1-4294967295)|bfd [{multi-hop|source X:X::X:X|profile BFDPROF}]}]
+CONFIG_NODE [no] ip table range (1-4294967295) (1-4294967295)
+CONFIG_NODE [no] ip route <A.B.C.D/M|A.B.C.D A.B.C.D> A.B.C.D <INTERFACE|Null0> [{tag (1-4294967295)|(1-255)|vrf NAME|label WORD|table (1-4294967295)|nexthop-vrf NAME|onlink|color (1-4294967295)|bfd [{multi-hop|source A.B.C.D|profile BFDPROF}]}]
+CONFIG_NODE [no] ip route <A.B.C.D/M|A.B.C.D A.B.C.D> <reject|blackhole> [{tag (1-4294967295)|(1-255)|vrf NAME|label WORD|table (1-4294967295)}]
+CONFIG_NODE [no] ip route <A.B.C.D/M|A.B.C.D A.B.C.D> <A.B.C.D|<INTERFACE|Null0>> [{tag (1-4294967295)|(1-255)|vrf NAME|label WORD|table (1-4294967295)|nexthop-vrf NAME|color (1-4294967295)|bfd [{multi-hop|source A.B.C.D|profile BFDPROF}]}]
+CONFIG_NODE [no] ip pim register-accept-list WORD
+CONFIG_NODE [no] ip mroute A.B.C.D/M <A.B.C.D|INTERFACE> [{(1-255)|bfd [{multi-hop|source A.B.C.D|profile BFDPROF}]}]
+CONFIG_NODE [no] evpn mh startup-delay (0-3600)
+CONFIG_NODE [no] evpn mh redirect-off
+CONFIG_NODE [no] evpn mh neigh-holdtime (0-86400)
+CONFIG_NODE [no] evpn mh mac-holdtime (0-86400)
+CONFIG_NODE [no] debug zebra pseudowires
+CONFIG_NODE [no] debug zebra nexthop [detail]
+CONFIG_NODE [no] debug zebra neigh
+CONFIG_NODE [no] debug zebra mlag
+CONFIG_NODE [no] debug zebra evpn mh <es|mac|neigh|nh>
+CONFIG_NODE [no] debug zebra dplane dpdk [detailed]
+CONFIG_NODE [no] debug vrrp [{protocol|autoconfigure|packets|sockets|ndisc|arp|zebra}]
+CONFIG_NODE [no] debug unique-id UID backtrace
+CONFIG_NODE [no] debug static [{events|route|bfd}]
+CONFIG_NODE [no] debug resolver
+CONFIG_NODE [no] debug pimv6 zebra
+CONFIG_NODE [no] debug pimv6 trace detail
+CONFIG_NODE [no] debug pimv6 trace
+CONFIG_NODE [no] debug pimv6 packets [<hello|joins|register>]
+CONFIG_NODE [no] debug pimv6 packet-dump send
+CONFIG_NODE [no] debug pimv6 packet-dump receive
+CONFIG_NODE [no] debug pimv6 nht detail
+CONFIG_NODE [no] debug pimv6 nht
+CONFIG_NODE [no] debug pimv6 events
+CONFIG_NODE [no] debug pimv6 bsm
+CONFIG_NODE [no] debug pimv6
+CONFIG_NODE [no] debug pim zebra
+CONFIG_NODE [no] debug pim trace detail
+CONFIG_NODE [no] debug pim trace
+CONFIG_NODE [no] debug pim packets [<hello|joins|register>]
+CONFIG_NODE [no] debug pim packet-dump send
+CONFIG_NODE [no] debug pim packet-dump receive
+CONFIG_NODE [no] debug pim nht detail
+CONFIG_NODE [no] debug pim nht
+CONFIG_NODE [no] debug pim events
+CONFIG_NODE [no] debug pim
+CONFIG_NODE [no] debug pbr [{map|zebra|nht|events}]
+CONFIG_NODE [no] debug pathd policy
+CONFIG_NODE [no] debug pathd pcep [basic] [path] [message] [pceplib]
+CONFIG_NODE [no] debug pathd mpls-te
+CONFIG_NODE [no] debug ospf6 route <all|table|intra-area|inter-area|memory>
+CONFIG_NODE [no] debug ospf6 lsa all
+CONFIG_NODE [no] debug ospf6 lsa aggregation
+CONFIG_NODE [no] debug ospf6 graceful-restart
+CONFIG_NODE [no] debug ospf [(1-65535)] ti-lfa
+CONFIG_NODE [no] debug ospf [(1-65535)] te
+CONFIG_NODE [no] debug ospf [(1-65535)] sr
+CONFIG_NODE [no] debug ospf [(1-65535)] packet <hello|dd|ls-request|ls-update|ls-ack|all> [<send [detail]|recv [detail]|detail>]
+CONFIG_NODE [no] debug ospf [(1-65535)] ldp-sync
+CONFIG_NODE [no] debug ospf [(1-65535)] graceful-restart
+CONFIG_NODE [no] debug ospf [(1-65535)] default-information
+CONFIG_NODE [no] debug ospf [(1-65535)] client-api
+CONFIG_NODE [no] debug ospf [(1-65535)] bfd
+CONFIG_NODE [no] debug northbound client sysrepo
+CONFIG_NODE [no] debug northbound client confd
+CONFIG_NODE [no] debug northbound [<callbacks [{configuration|state|rpc}]|notifications|events|libyang>]
+CONFIG_NODE [no] debug mroute6 detail
+CONFIG_NODE [no] debug mroute6
+CONFIG_NODE [no] debug mpls ldp messages sent [all]
+CONFIG_NODE [no] debug mpls ldp messages recv [all]
+CONFIG_NODE [no] debug mpls ldp discovery hello <recv|sent>
+CONFIG_NODE [no] debug mpls ldp <errors|event|labels|sync|zebra>
+CONFIG_NODE [no] debug mld trace detail
+CONFIG_NODE [no] debug mld trace
+CONFIG_NODE [no] debug mld packets
+CONFIG_NODE [no] debug mld events
+CONFIG_NODE [no] debug mld
+CONFIG_NODE [no] debug memstats-at-exit
+CONFIG_NODE [no] debug bgp evpn mh <es|route>
+CONFIG_NODE [no] debug bgp conditional-advertisement
+CONFIG_NODE [no] debug bgp bfd
+CONFIG_NODE [no] debug bfd zebra
+CONFIG_NODE [no] debug bfd peer
+CONFIG_NODE [no] debug bfd network
+CONFIG_NODE [no] debug bfd distributed
+CONFIG_NODE [no] debug all
+CONFIG_NODE [no] bgp suppress-fib-pending
+CONFIG_NODE [no] bgp send-extra-data zebra
+CONFIG_NODE [no] bgp community alias WORD ALIAS_NAME

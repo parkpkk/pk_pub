@@ -1,0 +1,1037 @@
+VIEW_NODE traceroute ipv6 WORD
+VIEW_NODE traceroute ip WORD
+VIEW_NODE traceroute WORD
+VIEW_NODE terminal no length
+VIEW_NODE terminal monitor [<zebra|bgpd|ripd|ripngd|ospfd|ospf6d|isisd|fabricd|nhrpd|ldpd|babeld|eigrpd|pimd|pim6d|pbrd|staticd|bfdd|vrrpd|pathd>]
+VIEW_NODE terminal length (0-512)
+VIEW_NODE show zebra router table summary
+VIEW_NODE show zebra mlag
+VIEW_NODE show zebra dplane providers [detailed]
+VIEW_NODE show zebra dplane [detailed]
+VIEW_NODE show work-queues <zebra|bgpd|ripd|ripngd|ospfd|ospf6d|isisd|fabricd|nhrpd|ldpd|babeld|eigrpd|pimd|pim6d|pbrd|staticd|bfdd|vrrpd|pathd>
+VIEW_NODE show work-queues
+VIEW_NODE show watchfrr
+VIEW_NODE show vrrp [interface INTERFACE] [(1-255)] summary
+VIEW_NODE show vrrp [interface INTERFACE] [(1-255)] [json]
+VIEW_NODE show vrf [<NAME|all>] vni [json]
+VIEW_NODE show vrf
+VIEW_NODE show vnc summary
+VIEW_NODE show vnc responses [<A.B.C.D|A.B.C.D/M|X:X::X:X|X:X::X:X/M|X:X:X:X:X:X>]
+VIEW_NODE show vnc responses <active|removed> [<A.B.C.D|A.B.C.D/M|X:X::X:X|X:X::X:X/M|X:X:X:X:X:X>]
+VIEW_NODE show vnc registrations [<A.B.C.D|A.B.C.D/M|X:X::X:X|X:X::X:X/M|X:X:X:X:X:X>]
+VIEW_NODE show vnc registrations <all|holddown|imported|local|remote> [<A.B.C.D|A.B.C.D/M|X:X::X:X|X:X::X:X/M|X:X:X:X:X:X>]
+VIEW_NODE show vnc queries [<A.B.C.D|A.B.C.D/M|X:X::X:X|X:X::X:X/M|X:X:X:X:X:X>]
+VIEW_NODE show vnc nves <vn|un> <A.B.C.D|X:X::X:X>
+VIEW_NODE show vnc nves
+VIEW_NODE show version
+VIEW_NODE show thread timers
+VIEW_NODE show thread poll
+VIEW_NODE show thread cpu [FILTER]
+VIEW_NODE show segment-routing srv6 locator [json]
+VIEW_NODE show segment-routing srv6 locator NAME detail [json]
+VIEW_NODE show rpki prefix-table [json]
+VIEW_NODE show rpki prefix <A.B.C.D/M|X:X::X:X/M> [(1-4294967295)] [json]
+VIEW_NODE show rpki cache-server [json]
+VIEW_NODE show rpki cache-connection [json]
+VIEW_NODE show rpki as-number (1-4294967295) [json]
+VIEW_NODE show pbr rule
+VIEW_NODE show pbr nexthop-groups [WORD] [json]
+VIEW_NODE show pbr map [NAME] [detail|json]
+VIEW_NODE show pbr iptable [WORD]
+VIEW_NODE show pbr ipset [WORD]
+VIEW_NODE show pbr interface [NAME] [json]
+VIEW_NODE show pbr
+VIEW_NODE show pathd ted database <verbose|json>
+VIEW_NODE show openfabric segment-routing node
+VIEW_NODE show openfabric mpls-te interface [INTERFACE]
+VIEW_NODE show openfabric mpls ldp-sync [interface <INTERFACE|all>]
+VIEW_NODE show openfabric [vrf <NAME|all>] topology [<level-1|level-2>]
+VIEW_NODE show openfabric [vrf <NAME|all>] summary [json]
+VIEW_NODE show openfabric [vrf <NAME|all>] spf-delay-ietf
+VIEW_NODE show openfabric [vrf <NAME|all>] route [<level-1|level-2>] [<prefix-sid|backup>]
+VIEW_NODE show openfabric [vrf <NAME|all>] neighbor detail [json]
+VIEW_NODE show openfabric [vrf <NAME|all>] neighbor [json]
+VIEW_NODE show openfabric [vrf <NAME|all>] neighbor WORD [json]
+VIEW_NODE show openfabric [vrf <NAME|all>] mpls-te router
+VIEW_NODE show openfabric [vrf <NAME|all>] mpls-te database [<vertex [WORD]|edge [A.B.C.D|X:X::X:X]|subnet [A.B.C.D/M|X:X::X:X/M]>] [detail|json]
+VIEW_NODE show openfabric [vrf <NAME|all>] interface detail [json]
+VIEW_NODE show openfabric [vrf <NAME|all>] interface [json]
+VIEW_NODE show openfabric [vrf <NAME|all>] interface WORD [json]
+VIEW_NODE show openfabric [vrf <NAME|all>] hostname
+VIEW_NODE show openfabric [vrf <NAME|all>] fast-reroute summary [<level-1|level-2>]
+VIEW_NODE show openfabric [vrf <NAME|all>] database [detail] [WORD] [json]
+VIEW_NODE show nexthop-group rib <(0-4294967295)|[singleton <ip|ipv6>] [<kernel|zebra|bgp|sharp>] [vrf <NAME|all>]> [json]
+VIEW_NODE show mpls table [json]
+VIEW_NODE show mpls table (16-1048575) [json]
+VIEW_NODE show mpls status
+VIEW_NODE show mpls pseudowires detail [json]
+VIEW_NODE show mpls pseudowires
+VIEW_NODE show mpls ldp neighbor [A.B.C.D] capabilities [json]
+VIEW_NODE show mpls ldp neighbor [A.B.C.D] [detail] [json]
+VIEW_NODE show mpls ldp igp-sync [json]
+VIEW_NODE show mpls ldp capabilities [json]
+VIEW_NODE show mpls ldp [<ipv4|ipv6>] interface [json]
+VIEW_NODE show mpls ldp [<ipv4|ipv6>] discovery [detail] [json]
+VIEW_NODE show mpls ldp [<ipv4|ipv6>] binding [<A.B.C.D/M|X:X::X:X/M> [longer-prefixes]] [{neighbor A.B.C.D|local-label (0-1048575)|remote-label (0-1048575)}] [detail] [json]
+VIEW_NODE show mpls fec [<A.B.C.D/M|X:X::X:X/M>]
+VIEW_NODE show motd
+VIEW_NODE show modules
+VIEW_NODE show memory [<zebra|bgpd|ripd|ripngd|ospfd|ospf6d|isisd|fabricd|nhrpd|ldpd|babeld|eigrpd|pimd|pim6d|pbrd|staticd|bfdd|vrrpd|pathd>]
+VIEW_NODE show memory
+VIEW_NODE show logging filter-text
+VIEW_NODE show logging
+VIEW_NODE show l2vpn atom vc [{A.B.C.D|interface IFNAME|vc-id (1-4294967295)}] [json]
+VIEW_NODE show l2vpn atom binding [{A.B.C.D|local-label (16-1048575)|remote-label (16-1048575)}] [json]
+VIEW_NODE show isis segment-routing node
+VIEW_NODE show isis mpls-te interface [INTERFACE]
+VIEW_NODE show isis mpls ldp-sync [interface <INTERFACE|all>]
+VIEW_NODE show isis [vrf <NAME|all>] topology [<level-1|level-2>]
+VIEW_NODE show isis [vrf <NAME|all>] summary [json]
+VIEW_NODE show isis [vrf <NAME|all>] spf-delay-ietf
+VIEW_NODE show isis [vrf <NAME|all>] route [<level-1|level-2>] [<prefix-sid|backup>]
+VIEW_NODE show isis [vrf <NAME|all>] neighbor detail [json]
+VIEW_NODE show isis [vrf <NAME|all>] neighbor [json]
+VIEW_NODE show isis [vrf <NAME|all>] neighbor WORD [json]
+VIEW_NODE show isis [vrf <NAME|all>] mpls-te router
+VIEW_NODE show isis [vrf <NAME|all>] mpls-te database [<vertex [WORD]|edge [A.B.C.D|X:X::X:X]|subnet [A.B.C.D/M|X:X::X:X/M]>] [detail|json]
+VIEW_NODE show isis [vrf <NAME|all>] interface detail [json]
+VIEW_NODE show isis [vrf <NAME|all>] interface [json]
+VIEW_NODE show isis [vrf <NAME|all>] interface WORD [json]
+VIEW_NODE show isis [vrf <NAME|all>] hostname
+VIEW_NODE show isis [vrf <NAME|all>] fast-reroute summary [<level-1|level-2>]
+VIEW_NODE show isis [vrf <NAME|all>] database [detail] [WORD] [json]
+VIEW_NODE show ipv6 ripng [vrf NAME] status
+VIEW_NODE show ipv6 ripng [vrf NAME]
+VIEW_NODE show ipv6 protocol [vrf <NAME|all>]
+VIEW_NODE show ipv6 prefix-list summary [WORD] [json]
+VIEW_NODE show ipv6 prefix-list detail [WORD] [json]
+VIEW_NODE show ipv6 prefix-list [WORD [seq (1-4294967295)]] [json]
+VIEW_NODE show ipv6 prefix-list WORD X:X::X:X/M [longer|first-match]
+VIEW_NODE show ipv6 pim vrf all upstream [json]
+VIEW_NODE show ipv6 pim vrf all state [X:X::X:X [X:X::X:X]] [json]
+VIEW_NODE show ipv6 pim vrf all rpf [json]
+VIEW_NODE show ipv6 pim vrf all rp-info [X:X::X:X/M] [json]
+VIEW_NODE show ipv6 pim vrf all neighbor [detail|WORD] [json]
+VIEW_NODE show ipv6 pim vrf all join [json]
+VIEW_NODE show ipv6 pim vrf all interface [detail|WORD] [json]
+VIEW_NODE show ipv6 pim bsrp-info [vrf NAME] [json]
+VIEW_NODE show ipv6 pim bsr [vrf NAME] [json]
+VIEW_NODE show ipv6 pim bsm-database [vrf NAME] [json]
+VIEW_NODE show ipv6 pim [vrf NAME] upstream-rpf [json]
+VIEW_NODE show ipv6 pim [vrf NAME] upstream-join-desired [json]
+VIEW_NODE show ipv6 pim [vrf NAME] upstream [X:X::X:X [X:X::X:X]] [json]
+VIEW_NODE show ipv6 pim [vrf NAME] statistics [interface WORD] [json]
+VIEW_NODE show ipv6 pim [vrf NAME] state [X:X::X:X [X:X::X:X]] [json]
+VIEW_NODE show ipv6 pim [vrf NAME] secondary
+VIEW_NODE show ipv6 pim [vrf NAME] rpf [json]
+VIEW_NODE show ipv6 pim [vrf NAME] rp-info [X:X::X:X/M] [json]
+VIEW_NODE show ipv6 pim [vrf NAME] nexthop-lookup X:X::X:X X:X::X:X
+VIEW_NODE show ipv6 pim [vrf NAME] nexthop [json]
+VIEW_NODE show ipv6 pim [vrf NAME] neighbor [detail|WORD] [json]
+VIEW_NODE show ipv6 pim [vrf NAME] local-membership [json]
+VIEW_NODE show ipv6 pim [vrf NAME] jp-agg
+VIEW_NODE show ipv6 pim [vrf NAME] join [X:X::X:X [X:X::X:X]] [json]
+VIEW_NODE show ipv6 pim [vrf NAME] interface traffic [WORD] [json]
+VIEW_NODE show ipv6 pim [vrf NAME] interface [detail|WORD] [json]
+VIEW_NODE show ipv6 pim [vrf NAME] channel [json]
+VIEW_NODE show ipv6 ospf6 zebra [json]
+VIEW_NODE show ipv6 ospf6 vrfs [json]
+VIEW_NODE show ipv6 ospf6 graceful-restart helper [detail] [json]
+VIEW_NODE show ipv6 ospf6 [vrf <NAME|all>] summary-address [detail] [json]
+VIEW_NODE show ipv6 ospf6 [vrf <NAME|all>] spf tree [json]
+VIEW_NODE show ipv6 ospf6 [vrf <NAME|all>] simulate spf-tree A.B.C.D area A.B.C.D
+VIEW_NODE show ipv6 ospf6 [vrf <NAME|all>] route [<intra-area|inter-area|external-1|external-2|X:X::X:X|X:X::X:X/M|detail|summary>] [json]
+VIEW_NODE show ipv6 ospf6 [vrf <NAME|all>] route X:X::X:X/M match detail [json]
+VIEW_NODE show ipv6 ospf6 [vrf <NAME|all>] route X:X::X:X/M <match|longer> [json]
+VIEW_NODE show ipv6 ospf6 [vrf <NAME|all>] route <intra-area|inter-area|external-1|external-2> detail [json]
+VIEW_NODE show ipv6 ospf6 [vrf <NAME|all>] redistribute [json]
+VIEW_NODE show ipv6 ospf6 [vrf <NAME|all>] neighbor [<detail|drchoice>] [json]
+VIEW_NODE show ipv6 ospf6 [vrf <NAME|all>] neighbor A.B.C.D [json]
+VIEW_NODE show ipv6 ospf6 [vrf <NAME|all>] linkstate detail
+VIEW_NODE show ipv6 ospf6 [vrf <NAME|all>] linkstate <router A.B.C.D|network A.B.C.D A.B.C.D>
+VIEW_NODE show ipv6 ospf6 [vrf <NAME|all>] interface traffic [IFNAME] [json]
+VIEW_NODE show ipv6 ospf6 [vrf <NAME|all>] interface prefix [<detail|<X:X::X:X|X:X::X:X/M> [<match|detail>]>] [json]
+VIEW_NODE show ipv6 ospf6 [vrf <NAME|all>] interface [IFNAME] [json]
+VIEW_NODE show ipv6 ospf6 [vrf <NAME|all>] interface IFNAME prefix [<detail|<X:X::X:X|X:X::X:X/M> [<match|detail>]>] [json]
+VIEW_NODE show ipv6 ospf6 [vrf <NAME|all>] database self-originated [<detail|dump|internal>] [json]
+VIEW_NODE show ipv6 ospf6 [vrf <NAME|all>] database aggr adv-router A.B.C.D
+VIEW_NODE show ipv6 ospf6 [vrf <NAME|all>] database adv-router A.B.C.D linkstate-id A.B.C.D [<detail|dump|internal>] [json]
+VIEW_NODE show ipv6 ospf6 [vrf <NAME|all>] database [<detail|dump|internal>] [json]
+VIEW_NODE show ipv6 ospf6 [vrf <NAME|all>] database <router|network|inter-prefix|inter-router|as-external|group-membership|type-7|link|intra-prefix> self-originated linkstate-id A.B.C.D [<detail|dump|internal>] [json]
+VIEW_NODE show ipv6 ospf6 [vrf <NAME|all>] database <router|network|inter-prefix|inter-router|as-external|group-membership|type-7|link|intra-prefix> self-originated [<detail|dump|internal>] [json]
+VIEW_NODE show ipv6 ospf6 [vrf <NAME|all>] database <router|network|inter-prefix|inter-router|as-external|group-membership|type-7|link|intra-prefix> linkstate-id A.B.C.D [<detail|dump|internal>] [json]
+VIEW_NODE show ipv6 ospf6 [vrf <NAME|all>] database <router|network|inter-prefix|inter-router|as-external|group-membership|type-7|link|intra-prefix> adv-router A.B.C.D linkstate-id A.B.C.D [<dump|internal>] [json]
+VIEW_NODE show ipv6 ospf6 [vrf <NAME|all>] database <router|network|inter-prefix|inter-router|as-external|group-membership|type-7|link|intra-prefix> [<detail|dump|internal>] [json]
+VIEW_NODE show ipv6 ospf6 [vrf <NAME|all>] database <router|network|inter-prefix|inter-router|as-external|group-membership|type-7|link|intra-prefix> A.B.C.D self-originated [<detail|dump|internal>] [json]
+VIEW_NODE show ipv6 ospf6 [vrf <NAME|all>] database <router|network|inter-prefix|inter-router|as-external|group-membership|type-7|link|intra-prefix> A.B.C.D A.B.C.D [<dump|internal>] [json]
+VIEW_NODE show ipv6 ospf6 [vrf <NAME|all>] database <router|network|inter-prefix|inter-router|as-external|group-membership|type-7|link|intra-prefix> <*|adv-router> A.B.C.D [<detail|dump|internal>] [json]
+VIEW_NODE show ipv6 ospf6 [vrf <NAME|all>] database <*|linkstate-id> A.B.C.D [<detail|dump|internal>] [json]
+VIEW_NODE show ipv6 ospf6 [vrf <NAME|all>] database <*|adv-router> * A.B.C.D <detail|dump|internal> [json]
+VIEW_NODE show ipv6 ospf6 [vrf <NAME|all>] database * A.B.C.D A.B.C.D [<detail|dump|internal>] [json]
+VIEW_NODE show ipv6 ospf6 [vrf <NAME|all>] border-routers [<A.B.C.D|detail>]
+VIEW_NODE show ipv6 ospf6 [vrf <NAME|all>] area A.B.C.D spf tree
+VIEW_NODE show ipv6 ospf6 [vrf <NAME|all>] [json]
+VIEW_NODE show ipv6 nht route-map [vrf <NAME|all>] [json]
+VIEW_NODE show ipv6 nd ra-interfaces [vrf<NAME|all>]
+VIEW_NODE show ipv6 multicast vrf all
+VIEW_NODE show ipv6 multicast count vrf all [json]
+VIEW_NODE show ipv6 multicast count [vrf NAME] [json]
+VIEW_NODE show ipv6 multicast [vrf NAME]
+VIEW_NODE show ipv6 mroute vrf all summary [json]
+VIEW_NODE show ipv6 mroute vrf all count [json]
+VIEW_NODE show ipv6 mroute vrf all [fill] [json]
+VIEW_NODE show ipv6 mroute [vrf NAME] summary [json]
+VIEW_NODE show ipv6 mroute [vrf NAME] count [json]
+VIEW_NODE show ipv6 mroute [vrf NAME] [X:X::X:X [X:X::X:X]] [fill] [json]
+VIEW_NODE show ipv6 mld [vrf <VRF|all>] statistics [interface IFNAME] [json]
+VIEW_NODE show ipv6 mld [vrf <VRF|all>] joins [{interface IFNAME|groups X:X::X:X/M|sources X:X::X:X/M|detail}] [json]
+VIEW_NODE show ipv6 mld [vrf <VRF|all>] interface [IFNAME|detail] [json]
+VIEW_NODE show ipv6 mld [vrf <VRF|all>] groups [json]
+VIEW_NODE show ipv6 forwarding
+VIEW_NODE show ip ssmpingd [vrf NAME]
+VIEW_NODE show ip rpf [json]
+VIEW_NODE show ip rpf A.B.C.D
+VIEW_NODE show ip rip [vrf NAME] status
+VIEW_NODE show ip rip [vrf NAME]
+VIEW_NODE show ip rib [vrf NAME] A.B.C.D
+VIEW_NODE show ip protocol [vrf <NAME|all>]
+VIEW_NODE show ip prefix-list summary [WORD] [json]
+VIEW_NODE show ip prefix-list detail [WORD] [json]
+VIEW_NODE show ip prefix-list [WORD [seq (1-4294967295)]] [json]
+VIEW_NODE show ip prefix-list WORD A.B.C.D/M [longer|first-match]
+VIEW_NODE show ip pim vrf all upstream [json]
+VIEW_NODE show ip pim vrf all state [A.B.C.D [A.B.C.D]] [json]
+VIEW_NODE show ip pim vrf all rpf [json]
+VIEW_NODE show ip pim vrf all rp-info [A.B.C.D/M] [json]
+VIEW_NODE show ip pim vrf all neighbor [detail|WORD] [json]
+VIEW_NODE show ip pim vrf all mlag upstream [json]
+VIEW_NODE show ip pim vrf all join [json]
+VIEW_NODE show ip pim mlag summary [json]
+VIEW_NODE show ip pim bsrp-info [vrf NAME] [json]
+VIEW_NODE show ip pim bsr [vrf NAME] [json]
+VIEW_NODE show ip pim bsm-database [vrf NAME] [json]
+VIEW_NODE show ip pim [vrf NAME] vxlan-work [json]
+VIEW_NODE show ip pim [vrf NAME] vxlan-groups [A.B.C.D [A.B.C.D]] [json]
+VIEW_NODE show ip pim [vrf NAME] upstream-rpf [json]
+VIEW_NODE show ip pim [vrf NAME] upstream-join-desired [json]
+VIEW_NODE show ip pim [vrf NAME] upstream [A.B.C.D [A.B.C.D]] [json]
+VIEW_NODE show ip pim [vrf NAME] statistics [interface WORD] [json]
+VIEW_NODE show ip pim [vrf NAME] state [A.B.C.D [A.B.C.D]] [json]
+VIEW_NODE show ip pim [vrf NAME] secondary
+VIEW_NODE show ip pim [vrf NAME] rpf [json]
+VIEW_NODE show ip pim [vrf NAME] rp-info [A.B.C.D/M] [json]
+VIEW_NODE show ip pim [vrf NAME] nexthop-lookup A.B.C.D A.B.C.D
+VIEW_NODE show ip pim [vrf NAME] nexthop [json]
+VIEW_NODE show ip pim [vrf NAME] neighbor [detail|WORD] [json]
+VIEW_NODE show ip pim [vrf NAME] mlag upstream [A.B.C.D [A.B.C.D]] [json]
+VIEW_NODE show ip pim [vrf NAME] local-membership [json]
+VIEW_NODE show ip pim [vrf NAME] jp-agg
+VIEW_NODE show ip pim [vrf NAME] join [A.B.C.D [A.B.C.D]] [json]
+VIEW_NODE show ip pim [vrf NAME] interface traffic [WORD] [json]
+VIEW_NODE show ip pim [vrf NAME] group-type [json]
+VIEW_NODE show ip pim [vrf NAME] group-type A.B.C.D [json]
+VIEW_NODE show ip pim [vrf NAME] channel [json]
+VIEW_NODE show ip pim [vrf NAME] assert-winner-metric
+VIEW_NODE show ip pim [vrf NAME] assert-metric
+VIEW_NODE show ip pim [vrf NAME] assert-internal
+VIEW_NODE show ip pim [vrf NAME] assert
+VIEW_NODE show ip pim [mlag] vrf all interface [detail|WORD] [json]
+VIEW_NODE show ip pim [mlag] [vrf NAME] interface [detail|WORD] [json]
+VIEW_NODE show ip ospf vrfs [json]
+VIEW_NODE show ip ospf router-info pce
+VIEW_NODE show ip ospf router-info
+VIEW_NODE show ip ospf neighbor IFNAME detail [json]
+VIEW_NODE show ip ospf neighbor A.B.C.D [detail] [json]
+VIEW_NODE show ip ospf mpls-te router
+VIEW_NODE show ip ospf mpls-te database [<vertex [<self-originate|adv-router A.B.C.D>]|edge [A.B.C.D]|subnet [A.B.C.D/M]>] [verbose|json]
+VIEW_NODE show ip ospf mpls ldp-sync [interface <INTERFACE|all>] [json]
+VIEW_NODE show ip ospf database segment-routing [adv-router A.B.C.D|self-originate] [json]
+VIEW_NODE show ip ospf [vrf <NAME|all>] summary-address [detail] [json]
+VIEW_NODE show ip ospf [vrf <NAME|all>] route [json]
+VIEW_NODE show ip ospf [vrf <NAME|all>] reachable-routers
+VIEW_NODE show ip ospf [vrf <NAME|all>] neighbor detail all [json]
+VIEW_NODE show ip ospf [vrf <NAME|all>] neighbor detail [json]
+VIEW_NODE show ip ospf [vrf <NAME|all>] neighbor all [json]
+VIEW_NODE show ip ospf [vrf <NAME|all>] neighbor [json]
+VIEW_NODE show ip ospf [vrf <NAME|all>] mpls-te interface [INTERFACE]
+VIEW_NODE show ip ospf [vrf <NAME|all>] interface traffic [INTERFACE] [json]
+VIEW_NODE show ip ospf [vrf <NAME|all>] interface [INTERFACE] [json]
+VIEW_NODE show ip ospf [vrf <NAME|all>] graceful-restart helper [detail] [json]
+VIEW_NODE show ip ospf [vrf <NAME|all>] database [<asbr-summary|external|network|router|summary|nssa-external|opaque-link|opaque-area|opaque-as> [A.B.C.D [<self-originate|adv-router A.B.C.D>]]] [json]
+VIEW_NODE show ip ospf [vrf <NAME|all>] database <max-age|self-originate> [json]
+VIEW_NODE show ip ospf [vrf <NAME|all>] database <asbr-summary|external|network|router|summary|nssa-external|opaque-link|opaque-area|opaque-as> <adv-router A.B.C.D|self-originate> [json]
+VIEW_NODE show ip ospf [vrf <NAME|all>] border-routers [json]
+VIEW_NODE show ip ospf [vrf <NAME|all>] [json]
+VIEW_NODE show ip ospf [vrf <NAME>] neighbor IFNAME [json]
+VIEW_NODE show ip ospf (1-65535) route
+VIEW_NODE show ip ospf (1-65535) reachable-routers
+VIEW_NODE show ip ospf (1-65535) neighbor detail all [json]
+VIEW_NODE show ip ospf (1-65535) neighbor detail [json]
+VIEW_NODE show ip ospf (1-65535) neighbor all [json]
+VIEW_NODE show ip ospf (1-65535) neighbor [json]
+VIEW_NODE show ip ospf (1-65535) neighbor IFNAME detail [json]
+VIEW_NODE show ip ospf (1-65535) neighbor IFNAME [json]
+VIEW_NODE show ip ospf (1-65535) neighbor A.B.C.D [detail] [json]
+VIEW_NODE show ip ospf (1-65535) interface [INTERFACE] [json]
+VIEW_NODE show ip ospf (1-65535) database [<asbr-summary|external|network|router|summary|nssa-external|opaque-link|opaque-area|opaque-as> [A.B.C.D [<self-originate|adv-router A.B.C.D>]]] [json]
+VIEW_NODE show ip ospf (1-65535) database <max-age|self-originate> [json]
+VIEW_NODE show ip ospf (1-65535) database <asbr-summary|external|network|router|summary|nssa-external|opaque-link|opaque-area|opaque-as> <adv-router A.B.C.D|self-originate> [json]
+VIEW_NODE show ip ospf (1-65535) border-routers
+VIEW_NODE show ip ospf (1-65535) [json]
+VIEW_NODE show ip nht route-map [vrf <NAME|all>] [json]
+VIEW_NODE show ip neigh
+VIEW_NODE show ip multicast vrf all
+VIEW_NODE show ip multicast count vrf all [json]
+VIEW_NODE show ip multicast count [vrf NAME] [json]
+VIEW_NODE show ip multicast [vrf NAME]
+VIEW_NODE show ip msdp vrf all sa detail [json]
+VIEW_NODE show ip msdp vrf all sa [A.B.C.D [A.B.C.D]] [json]
+VIEW_NODE show ip msdp vrf all peer [detail|A.B.C.D] [json]
+VIEW_NODE show ip msdp vrf all mesh-group [json]
+VIEW_NODE show ip msdp [vrf NAME] sa detail [json]
+VIEW_NODE show ip msdp [vrf NAME] sa [A.B.C.D [A.B.C.D]] [json]
+VIEW_NODE show ip msdp [vrf NAME] peer [detail|A.B.C.D] [json]
+VIEW_NODE show ip msdp [vrf NAME] mesh-group [json]
+VIEW_NODE show ip mroute vrf all summary [json]
+VIEW_NODE show ip mroute vrf all count [json]
+VIEW_NODE show ip mroute vrf all [fill] [json]
+VIEW_NODE show ip mroute [vrf NAME] summary [json]
+VIEW_NODE show ip mroute [vrf NAME] count [json]
+VIEW_NODE show ip mroute [vrf NAME] [A.B.C.D [A.B.C.D]] [fill] [json]
+VIEW_NODE show ip igmp vrf all join [json]
+VIEW_NODE show ip igmp vrf all interface [detail|WORD] [json]
+VIEW_NODE show ip igmp vrf all groups [json]
+VIEW_NODE show ip igmp [vrf NAME] statistics [interface WORD] [json]
+VIEW_NODE show ip igmp [vrf NAME] sources retransmissions
+VIEW_NODE show ip igmp [vrf NAME] sources [json]
+VIEW_NODE show ip igmp [vrf NAME] join [json]
+VIEW_NODE show ip igmp [vrf NAME] interface [detail|WORD] [json]
+VIEW_NODE show ip igmp [vrf NAME] groups retransmissions
+VIEW_NODE show ip igmp [vrf NAME] groups [json]
+VIEW_NODE show ip forwarding
+VIEW_NODE show ip eigrp [vrf NAME] topology [all-links]
+VIEW_NODE show ip eigrp [vrf NAME] topology <A.B.C.D|A.B.C.D/M>
+VIEW_NODE show ip eigrp [vrf NAME] neighbors [IFNAME] [detail]
+VIEW_NODE show ip eigrp [vrf NAME] interfaces [IFNAME] [detail]
+VIEW_NODE show ip bgp large-community-info
+VIEW_NODE show ip bgp <ipv4|ipv6> vpn rd <ASN:NN_OR_IP-ADDRESS:NN|all>
+VIEW_NODE show ip as-path-access-list [json]
+VIEW_NODE show ip as-path-access-list AS_PATH_FILTER_NAME [json]
+VIEW_NODE show interface vrf NAME [brief] [json]
+VIEW_NODE show interface [vrf all] [brief] [json]
+VIEW_NODE show interface [IFNAME] nexthop-group
+VIEW_NODE show interface IFNAME vrf NAME [json]
+VIEW_NODE show interface IFNAME [vrf all] [json]
+VIEW_NODE show history
+VIEW_NODE show frr
+VIEW_NODE show evpn vni detail [json]
+VIEW_NODE show evpn vni [json]
+VIEW_NODE show evpn vni (1-16777215) [json]
+VIEW_NODE show evpn rmac vni all [json]
+VIEW_NODE show evpn rmac vni (1-16777215) mac WORD [json]
+VIEW_NODE show evpn rmac vni (1-16777215) [json]
+VIEW_NODE show evpn next-hops vni all [json]
+VIEW_NODE show evpn next-hops vni (1-16777215) ip WORD [json]
+VIEW_NODE show evpn next-hops vni (1-16777215) [json]
+VIEW_NODE show evpn mac vni all vtep A.B.C.D [json]
+VIEW_NODE show evpn mac vni all duplicate [json]
+VIEW_NODE show evpn mac vni all detail [json]
+VIEW_NODE show evpn mac vni all [json]
+VIEW_NODE show evpn mac vni (1-16777215) vtep A.B.C.D [json]
+VIEW_NODE show evpn mac vni (1-16777215) mac WORD [json]
+VIEW_NODE show evpn mac vni (1-16777215) duplicate [json]
+VIEW_NODE show evpn mac vni (1-16777215) detail [json]
+VIEW_NODE show evpn mac vni (1-16777215) [json]
+VIEW_NODE show evpn l2-nh [json]
+VIEW_NODE show evpn es-evi [vni (1-16777215)] [detail] [json]
+VIEW_NODE show evpn es [NAME|detail] [json]
+VIEW_NODE show evpn arp-cache vni all duplicate [json]
+VIEW_NODE show evpn arp-cache vni all detail [json]
+VIEW_NODE show evpn arp-cache vni all [json]
+VIEW_NODE show evpn arp-cache vni (1-16777215) vtep A.B.C.D [json]
+VIEW_NODE show evpn arp-cache vni (1-16777215) ip WORD [json]
+VIEW_NODE show evpn arp-cache vni (1-16777215) duplicate [json]
+VIEW_NODE show evpn arp-cache vni (1-16777215) [json]
+VIEW_NODE show evpn access-vlan [(1-4094)|detail] [json]
+VIEW_NODE show evpn [json]
+VIEW_NODE show error <(1-4294967296)|all> [json]
+VIEW_NODE show dmvpn [json]
+VIEW_NODE show debugging [mpls ldp]
+VIEW_NODE show daemons
+VIEW_NODE show commandtree [permutations]
+VIEW_NODE show cli graph
+VIEW_NODE show bmp
+VIEW_NODE show bgp vrf VRFNAME vni [json]
+VIEW_NODE show bgp vni all type <3|multicast> [vtep A.B.C.D] [<detail|json>]
+VIEW_NODE show bgp vni all type <2|macip> mac [vtep A.B.C.D] [<detail|json>]
+VIEW_NODE show bgp vni all type <2|macip> ip [vtep A.B.C.D] [<detail|json>]
+VIEW_NODE show bgp vni all type <1|ead> [vtep A.B.C.D] [<detail|json>]
+VIEW_NODE show bgp vni all [vtep A.B.C.D] [detail] [json]
+VIEW_NODE show bgp vni (1-16777215) type <3|multicast> [vtep A.B.C.D] [json]
+VIEW_NODE show bgp vni (1-16777215) type <2|macip> mac [vtep A.B.C.D] [json]
+VIEW_NODE show bgp vni (1-16777215) type <2|macip> mac X:X:X:X:X:X [json]
+VIEW_NODE show bgp vni (1-16777215) type <2|macip> ip [vtep A.B.C.D] [json]
+VIEW_NODE show bgp vni (1-16777215) type <2|macip> ip <A.B.C.D|X:X::X:X> [json]
+VIEW_NODE show bgp vni (1-16777215) type <1|ead> [vtep A.B.C.D] [json]
+VIEW_NODE show bgp vni (1-16777215) [vtep A.B.C.D] [json]
+VIEW_NODE show bgp segment-routing srv6
+VIEW_NODE show bgp peerhash
+VIEW_NODE show bgp mac hash
+VIEW_NODE show bgp listeners
+VIEW_NODE show bgp large-community-list <(1-500)|LCOMMUNITY_LIST_NAME> detail
+VIEW_NODE show bgp large-community-list
+VIEW_NODE show bgp labelpool summary [json]
+VIEW_NODE show bgp labelpool requests [json]
+VIEW_NODE show bgp labelpool ledger [json]
+VIEW_NODE show bgp labelpool inuse [json]
+VIEW_NODE show bgp labelpool chunks [json]
+VIEW_NODE show bgp l2vpn evpn vrf-import-rt [json]
+VIEW_NODE show bgp l2vpn evpn vni-svi-hash
+VIEW_NODE show bgp l2vpn evpn vni remote-ip-hash
+VIEW_NODE show bgp l2vpn evpn vni [(1-16777215)] [json]
+VIEW_NODE show bgp l2vpn evpn route vni all [detail] [vtep A.B.C.D] [json]
+VIEW_NODE show bgp l2vpn evpn route vni (1-16777215) multicast A.B.C.D [json]
+VIEW_NODE show bgp l2vpn evpn route vni (1-16777215) mac WORD [ip WORD] [json]
+VIEW_NODE show bgp l2vpn evpn route vni (1-16777215) [<type <ead|1|macip|2|multicast|3>|vtep A.B.C.D>] [json]
+VIEW_NODE show bgp l2vpn evpn route rd <ASN:NN_OR_IP-ADDRESS:NN|all> mac WORD [ip WORD] [json]
+VIEW_NODE show bgp l2vpn evpn route rd <ASN:NN_OR_IP-ADDRESS:NN|all> [type <ead|1|macip|2|multicast|3|es|4|prefix|5>] [json]
+VIEW_NODE show bgp l2vpn evpn route esi ESI [json]
+VIEW_NODE show bgp l2vpn evpn route [detail] [type <ead|1|macip|2|multicast|3|es|4|prefix|5>] [json]
+VIEW_NODE show bgp l2vpn evpn next-hops [json]
+VIEW_NODE show bgp l2vpn evpn import-rt [json]
+VIEW_NODE show bgp l2vpn evpn es-vrf [NAME] [json]
+VIEW_NODE show bgp l2vpn evpn es-evi [vni (1-16777215)] [json] [detail]
+VIEW_NODE show bgp l2vpn evpn es [NAME|detail] [json]
+VIEW_NODE show bgp l2vpn evpn <community AA:NN|large-community AA:BB:CC> [exact-match] [json]
+VIEW_NODE show bgp l2vpn evpn <A.B.C.D|A.B.C.D/M|X:X::X:X|X:X::X:X/M> [json]
+VIEW_NODE show bgp extcommunity-list <(1-500)|EXTCOMMUNITY_LIST_NAME> detail
+VIEW_NODE show bgp extcommunity-list
+VIEW_NODE show bgp community-list <(1-500)|COMMUNITY_LIST_NAME> detail
+VIEW_NODE show bgp community-list
+VIEW_NODE show bgp as-path-access-list [json]
+VIEW_NODE show bgp as-path-access-list AS_PATH_FILTER_NAME [json]
+VIEW_NODE show bgp [vrf VRFNAME] l2vpn evpn summary [established|failed] [<neighbor <A.B.C.D|X:X::X:X|WORD>|remote-as <(1-4294967295)|internal|external>>] [terse] [wide] [json]
+VIEW_NODE show bgp [<view|vrf> VIEWVRFNAME] martian next-hop
+VIEW_NODE show bgp [<ipv4|ipv6>] neighbors [<A.B.C.D|X:X::X:X|WORD>] graceful-restart [json]
+VIEW_NODE show bgp <ipv4|ipv6> vpn rd <ASN:NN_OR_IP-ADDRESS:NN|all> [json]
+VIEW_NODE show bgp <ipv4|ipv6> vpn rd <ASN:NN_OR_IP-ADDRESS:NN|all> <A.B.C.D/M|X:X::X:X/M> [json]
+VIEW_NODE show bgp <ipv4|ipv6> vpn all [rd <ASN:NN_OR_IP-ADDRESS:NN|all>] [json]
+VIEW_NODE show babel route X:X::X:X
+VIEW_NODE show babel route A.B.C.D
+VIEW_NODE show babel route <A.B.C.D/M|X:X::X:X/M>
+VIEW_NODE show babel route
+VIEW_NODE show babel parameters
+VIEW_NODE show babel neighbor [IFNAME]
+VIEW_NODE show babel interface [IFNAME]
+VIEW_NODE show [ip|ipv6] router-id [vrf NAME]
+VIEW_NODE show [ip] bgp vrfs [<VRFNAME>] [json]
+VIEW_NODE show [ip] bgp views
+VIEW_NODE show [ip] bgp update-groups statistics
+VIEW_NODE show [ip] bgp memory
+VIEW_NODE show [ip] bgp l2vpn evpn update-groups
+VIEW_NODE show [ip] bgp l2vpn evpn rd <ASN:NN_OR_IP-ADDRESS:NN|all> tags
+VIEW_NODE show [ip] bgp l2vpn evpn rd <ASN:NN_OR_IP-ADDRESS:NN|all> overlay
+VIEW_NODE show [ip] bgp l2vpn evpn rd <ASN:NN_OR_IP-ADDRESS:NN|all> neighbors <A.B.C.D|X:X::X:X|WORD> routes [json]
+VIEW_NODE show [ip] bgp l2vpn evpn rd <ASN:NN_OR_IP-ADDRESS:NN|all> neighbors <A.B.C.D|X:X::X:X|WORD> advertised-routes [json]
+VIEW_NODE show [ip] bgp l2vpn evpn rd <ASN:NN_OR_IP-ADDRESS:NN|all> [json]
+VIEW_NODE show [ip] bgp l2vpn evpn neighbors <A.B.C.D|X:X::X:X|WORD> routes [json]
+VIEW_NODE show [ip] bgp l2vpn evpn neighbors <A.B.C.D|X:X::X:X|WORD> advertised-routes [json]
+VIEW_NODE show [ip] bgp l2vpn evpn all tags
+VIEW_NODE show [ip] bgp l2vpn evpn all overlay [json]
+VIEW_NODE show [ip] bgp l2vpn evpn [json]
+VIEW_NODE show [ip] bgp community-info
+VIEW_NODE show [ip] bgp attribute-info
+VIEW_NODE show [ip] bgp [<view|vrf> VIEWVRFNAME] statistics-all [json]
+VIEW_NODE show [ip] bgp [<view|vrf> VIEWVRFNAME] peer-group [PGNAME] [json]
+VIEW_NODE show [ip] bgp [<view|vrf> VIEWVRFNAME] nexthop [<A.B.C.D|X:X::X:X>] [<ipv4 [A.B.C.D]|ipv6 [X:X::X:X]>] [detail] [json]
+VIEW_NODE show [ip] bgp [<view|vrf> VIEWVRFNAME] l2vpn evpn statistics [json]
+VIEW_NODE show [ip] bgp [<view|vrf> VIEWVRFNAME] import-check-table [detail] [json]
+VIEW_NODE show [ip] bgp [<view|vrf> VIEWVRFNAME] [<ipv4|ipv6>] neighbors [<A.B.C.D|X:X::X:X|WORD>] [json]
+VIEW_NODE show [ip] bgp [<view|vrf> VIEWVRFNAME] [<ipv4|ipv6> flowspec] detail [json]
+VIEW_NODE show [ip] bgp [<view|vrf> VIEWVRFNAME] [<ipv4|ipv6> [unicast]] neighbors <A.B.C.D|X:X::X:X|WORD> received prefix-filter [json]
+VIEW_NODE show [ip] bgp [<view|vrf> VIEWVRFNAME] [<ipv4|ipv6> [<unicast|multicast|vpn|labeled-unicast|flowspec>]] <A.B.C.D|A.B.C.D/M|X:X::X:X|X:X::X:X/M> [<bestpath|multipath>] [rpki <valid|invalid|notfound>] [json]
+VIEW_NODE show [ip] bgp [<view|vrf> VIEWVRFNAME] [<ipv4|ipv6> [<unicast|multicast|vpn|labeled-unicast|flowspec>]] update-groups [SUBGROUP-ID] [json]
+VIEW_NODE show [ip] bgp [<view|vrf> VIEWVRFNAME] [<ipv4|ipv6> [<unicast|multicast|vpn|labeled-unicast|flowspec>]] statistics [json]
+VIEW_NODE show [ip] bgp [<view|vrf> VIEWVRFNAME] [<ipv4|ipv6> [<unicast|multicast|vpn|labeled-unicast|flowspec>]] regexp REGEX [json]
+VIEW_NODE show [ip] bgp [<view|vrf> VIEWVRFNAME] [<ipv4|ipv6> [<unicast|multicast|vpn|labeled-unicast|flowspec>]] neighbors <A.B.C.D|X:X::X:X|WORD> bestpath-routes [json|wide]
+VIEW_NODE show [ip] bgp [<view|vrf> VIEWVRFNAME] [<ipv4|ipv6> [<unicast|multicast|vpn|labeled-unicast|flowspec>]] neighbors <A.B.C.D|X:X::X:X|WORD> <flap-statistics|dampened-routes|routes> [json]
+VIEW_NODE show [ip] bgp [<view|vrf> VIEWVRFNAME] [<ipv4|ipv6> [<unicast|multicast|vpn|labeled-unicast|flowspec>]] large-community-list <(1-500)|LCOMMUNITY_LIST_NAME> [exact-match] [json]
+VIEW_NODE show [ip] bgp [<view|vrf> VIEWVRFNAME] [<ipv4|ipv6> [<unicast|multicast|vpn|labeled-unicast|flowspec>]] large-community [<AA:BB:CC> [exact-match]] [json]
+VIEW_NODE show [ip] bgp [<view|vrf> VIEWVRFNAME] [<ipv4|ipv6> [<unicast|multicast|vpn|labeled-unicast|flowspec>]] [all] summary [established|failed] [<neighbor <A.B.C.D|X:X::X:X|WORD>|remote-as <(1-4294967295)|internal|external>>] [terse] [wide] [json]
+VIEW_NODE show [ip] bgp [<view|vrf> VIEWVRFNAME] [<ipv4|ipv6> [<unicast|multicast|vpn|labeled-unicast|flowspec>]] [all] neighbors <A.B.C.D|X:X::X:X|WORD> <advertised-routes|received-routes|filtered-routes> [route-map RMAP_NAME] [detail] [json|wide]
+VIEW_NODE show [ip] bgp [<view|vrf> VIEWVRFNAME] [<ipv4|ipv6> [<unicast|multicast|vpn|labeled-unicast|flowspec>]] [all] dampening parameters [json]
+VIEW_NODE show [ip] bgp [<view|vrf> VIEWVRFNAME] [<ipv4|ipv6> [<unicast|multicast|vpn|labeled-unicast|flowspec>]] [all] [cidr-only|dampening <flap-statistics|dampened-paths>|community [AA:NN|local-AS|no-advertise|no-export|graceful-shutdown|no-peer|blackhole|llgr-stale|no-llgr|accept-own|accept-own-nexthop|route-filter-v6|route-filter-v4|route-filter-translated-v6|route-filter-translated-v4] [exact-match]|community-list <(1-500)|COMMUNITY_LIST_NAME> [exact-match]|filter-list AS_PATH_FILTER_NAME|prefix-list WORD|access-list ACCESSLIST_NAME|route-map RMAP_NAME|rpki <invalid|valid|notfound>|version (1-4294967295)|alias ALIAS_NAME|A.B.C.D/M longer-prefixes|X:X::X:X/M longer-prefixes|detail-routes] [json [detail]|wide]
+VIEW_NODE show [ip] bgp [<view|vrf> VIEWVRFNAME] [<ipv4|ipv6> [<unicast|multicast|vpn>]] route-leak [json]
+VIEW_NODE show [ip] bgp [<view|vrf> VIEWVRFNAME] [<ipv4|ipv6> <unicast|multicast|vpn>] update-groups [SUBGROUP-ID] <advertise-queue|advertised-routes|packet-queue>
+VIEW_NODE show [ip] bgp [<unicast|multicast|vpn>] paths
+VIEW_NODE show [ip] bgp <vpnv4|vpnv6> rd <ASN:NN_OR_IP-ADDRESS:NN|all> tags
+VIEW_NODE show [ip] bgp <vpnv4|vpnv6> rd <ASN:NN_OR_IP-ADDRESS:NN|all> neighbors A.B.C.D routes [json]
+VIEW_NODE show [ip] bgp <vpnv4|vpnv6> rd <ASN:NN_OR_IP-ADDRESS:NN|all> neighbors A.B.C.D advertised-routes [json]
+VIEW_NODE show [ip] bgp <vpnv4|vpnv6> all tags
+VIEW_NODE show [ip] bgp <vpnv4|vpnv6> all neighbors A.B.C.D routes [json]
+VIEW_NODE show [ip] bgp <vpnv4|vpnv6> all neighbors A.B.C.D advertised-routes [json]
+VIEW_NODE show [ip] bgp <vpnv4|vpnv6> all <A.B.C.D|A.B.C.D/M> [json]
+VIEW_NODE show [ip] bgp <vpnv4|vpnv6>
+VIEW_NODE show [ip] bgp <view|vrf> all update-groups [json]
+VIEW_NODE show [ip] bgp <view|vrf> all nexthop [<ipv4|ipv6>] [detail] [json]
+VIEW_NODE show [ip] bgp <view|vrf> all [<ipv4|ipv6> [<unicast|multicast|vpn|labeled-unicast|flowspec>]] [json|wide]
+VIEW_NODE show [ip] bgp <view|vrf> VIEWVRFNAME update-groups statistics
+VIEW_NODE show <ip|ipv6> zebra route dump [vrf VRFNAME]
+VIEW_NODE show <ip|ipv6> route [vrf <NAME|all>] summary [table (1-4294967295)] [prefix] [json]
+VIEW_NODE show <ip|ipv6> nhrp [cache|nhs|shortcut|opennhrp] [json]
+VIEW_NODE show <ip|ipv6> <nht|import-check> [<A.B.C.D|X:X::X:X>|vrf NAME [<A.B.C.D|X:X::X:X>]|vrf all] [mrib] [json]
+VIEW_NODE show <ip <fib|route> [vrf <NAME|all>] <A.B.C.D|A.B.C.D/M>|ipv6 <fib|route> [vrf <NAME|all>] <X:X::X:X|X:X::X:X/M>> [json] [nexthop-group]
+VIEW_NODE show <ip <fib|route> [table <(1-4294967295)|all>] [vrf <NAME|all>] [{tag (1-4294967295)|A.B.C.D/M longer-prefixes|supernets-only}] [<<babel|bgp|connected|eigrp|isis|kernel|nhrp|openfabric|rip|static|table|vnc>|ospf (1-65535)>]|ipv6 <fib|route> [table <(1-4294967295)|all>] [vrf <NAME|all>] [{tag (1-4294967295)|X:X::X:X/M longer-prefixes}] [<babel|bgp|connected|isis|kernel|nhrp|openfabric|ospf6|ripng|static|table|vnc>]> [<json|nexthop-group>]
+VIEW_NODE quit
+VIEW_NODE ping ipv6 WORD
+VIEW_NODE ping ip WORD
+VIEW_NODE ping WORD
+VIEW_NODE output file FILE
+VIEW_NODE no terminal monitor [<zebra|bgpd|ripd|ripngd|ospfd|ospf6d|isisd|fabricd|nhrpd|ldpd|babeld|eigrpd|pimd|pim6d|pbrd|staticd|bfdd|vrrpd|pathd>]
+VIEW_NODE no output file [FILE]
+VIEW_NODE mtrace WORD [WORD]
+VIEW_NODE list [permutations]
+VIEW_NODE find REGEX...
+VIEW_NODE exit
+VIEW_NODE enable
+VIEW_NODE debug show mld interface IFNAME
+VIEW_NODE debug prefix-list WORD match <A.B.C.D/M|X:X::X:X/M> [address-mode]
+VIEW_NODE [no] terminal paginate
+VIEW_NODE [no] terminal length (0-4294967295)
+VIEW_NODE write terminal [<zebra|bgpd|ripd|ripngd|ospfd|ospf6d|isisd|fabricd|nhrpd|ldpd|babeld|eigrpd|pimd|pim6d|pbrd|staticd|bfdd|vrrpd|pathd>] [no-header]
+VIEW_NODE write integrated
+VIEW_NODE write [<memory|file>]
+VIEW_NODE write [<file|memory|terminal>]
+VIEW_NODE terminal no monitor
+VIEW_NODE terminal monitor [detach]
+VIEW_NODE show zebra fpm stats
+VIEW_NODE show zebra client summary
+VIEW_NODE show zebra client
+VIEW_NODE show zebra
+VIEW_NODE show yang operational-data XPATH [{format <json|xml>|translate WORD|with-config}] <zebra|bgpd|ripd|ripngd|ospfd|ospf6d|isisd|fabricd|nhrpd|ldpd|babeld|eigrpd|pimd|pim6d|pbrd|staticd|bfdd|vrrpd|pathd>
+VIEW_NODE show yang operational-data XPATH [{format <json|xml>|translate WORD|with-config}]
+VIEW_NODE show yang module-translator
+VIEW_NODE show yang module [module-translator WORD] WORD <compiled|summary|tree|yang|yin> <zebra|bgpd|ripd|ripngd|ospfd|ospf6d|isisd|fabricd|nhrpd|ldpd|babeld|eigrpd|pimd|pim6d|pbrd|staticd|bfdd|vrrpd|pathd>
+VIEW_NODE show yang module [module-translator WORD] WORD <compiled|summary|tree|yang|yin>
+VIEW_NODE show yang module [module-translator WORD] <zebra|bgpd|ripd|ripngd|ospfd|ospf6d|isisd|fabricd|nhrpd|ldpd|babeld|eigrpd|pimd|pim6d|pbrd|staticd|bfdd|vrrpd|pathd>
+VIEW_NODE show yang module [module-translator WORD]
+VIEW_NODE show startup-config
+VIEW_NODE show sr-te policy detail
+VIEW_NODE show sr-te policy
+VIEW_NODE show sr-te pcep session [WORD]
+VIEW_NODE show sr-te pcep pce-config [<default|WORD>]
+VIEW_NODE show sr-te pcep pce [WORD]
+VIEW_NODE show sr-te pcep pcc
+VIEW_NODE show sr-te pcep counters
+VIEW_NODE show sharp ted [<vertex [A.B.C.D]|edge [A.B.C.D]|subnet [A.B.C.D/M]>] [verbose|json]
+VIEW_NODE show sharp segment-routing srv6 [json]
+VIEW_NODE show sharp cspf source <A.B.C.D|X:X::X:X> destination <A.B.C.D|X:X::X:X> <metric|te-metric|delay> (0-16777215) [rsv-bw (0-7) BANDWIDTH]
+VIEW_NODE show running-config [<zebra|bgpd|ripd|ripngd|ospfd|ospf6d|isisd|fabricd|nhrpd|ldpd|babeld|eigrpd|pimd|pim6d|pbrd|staticd|bfdd|vrrpd|pathd>] [no-header]
+VIEW_NODE show running-config
+VIEW_NODE show route-map-unused
+VIEW_NODE show route-map [WORD] [json]
+VIEW_NODE show route-map RMAP_NAME prefix-table
+VIEW_NODE show openfabric flooding [WORD]
+VIEW_NODE show mac access-list ACCESSLIST_MAC_NAME
+VIEW_NODE show mac access-list
+VIEW_NODE show ipv6 access-list [json]
+VIEW_NODE show ipv6 access-list ACCESSLIST6_NAME [json]
+VIEW_NODE show ip access-list [json]
+VIEW_NODE show ip access-list ACCESSLIST4_NAME [json]
+VIEW_NODE show interface description vrf NAME
+VIEW_NODE show interface description [vrf all]
+VIEW_NODE show fpm counters json
+VIEW_NODE show fpm counters
+VIEW_NODE show debugging pathd-pcep
+VIEW_NODE show debugging ospf (1-65535)
+VIEW_NODE show debugging hashtable [statistics]
+VIEW_NODE show debugging bgp vnc
+VIEW_NODE show debugging [zebra]
+VIEW_NODE show debugging [watchfrr]
+VIEW_NODE show debugging [vrrp]
+VIEW_NODE show debugging [static]
+VIEW_NODE show debugging [sharp]
+VIEW_NODE show debugging [ripng]
+VIEW_NODE show debugging [rip]
+VIEW_NODE show debugging [pimv6]
+VIEW_NODE show debugging [pim]
+VIEW_NODE show debugging [pbr]
+VIEW_NODE show debugging [pathd]
+VIEW_NODE show debugging [ospf]
+VIEW_NODE show debugging [ospf6]
+VIEW_NODE show debugging [openfabric]
+VIEW_NODE show debugging [nhrp]
+VIEW_NODE show debugging [isis]
+VIEW_NODE show debugging [eigrp]
+VIEW_NODE show debugging [bgp]
+VIEW_NODE show debugging [bfd]
+VIEW_NODE show debugging [babel]
+VIEW_NODE show debugging
+VIEW_NODE show configuration transaction [(1-4294967295) [<json|xml> [translate WORD]] [<with-defaults|changes>]]
+VIEW_NODE show configuration running [<json|xml> [translate WORD]] [with-defaults] <zebra|bgpd|ripd|ripngd|ospfd|ospf6d|isisd|fabricd|nhrpd|ldpd|babeld|eigrpd|pimd|pim6d|pbrd|staticd|bfdd|vrrpd|pathd>
+VIEW_NODE show configuration running [<json|xml> [translate WORD]] [with-defaults]
+VIEW_NODE show configuration compare <running|transaction (1-4294967295)> <running|transaction (1-4294967295)> [<json|xml> [translate WORD]]
+VIEW_NODE show bfd static route [json]
+VIEW_NODE show bfd distributed
+VIEW_NODE show bfd [vrf NAME] peers counters [json]
+VIEW_NODE show bfd [vrf NAME] peers [json]
+VIEW_NODE show bfd [vrf NAME] peer <WORD|<A.B.C.D|X:X::X:X> [{multihop|local-address <A.B.C.D|X:X::X:X>|interface IFNAME}]> counters [json]
+VIEW_NODE show bfd [vrf NAME] peer <WORD|<A.B.C.D|X:X::X:X> [{multihop|local-address <A.B.C.D|X:X::X:X>|interface IFNAME}]> [json]
+VIEW_NODE show bfd [vrf <NAME>] peers brief [json]
+VIEW_NODE show [ip] bgp [<view|vrf> VIEWVRFNAME] [<ipv4|ipv6> [<unicast|multicast|vpn>]] neighbors <A.B.C.D|X:X::X:X|WORD> prefix-counts [json]
+VIEW_NODE show [ip] bgp <vpnv4|vpnv6> all neighbors <A.B.C.D|X:X::X:X|WORD> prefix-counts [json]
+VIEW_NODE no terminal monitor
+VIEW_NODE no sharp interface IFNAME protodown
+VIEW_NODE no debug zebra vxlan
+VIEW_NODE no debug zebra rib [detailed]
+VIEW_NODE no debug zebra pbr
+VIEW_NODE no debug zebra packet [<recv|send>] [detail]
+VIEW_NODE no debug zebra nht [detailed]
+VIEW_NODE no debug zebra mpls [detailed]
+VIEW_NODE no debug zebra kernel msgdump [<recv|send>]
+VIEW_NODE no debug zebra kernel
+VIEW_NODE no debug zebra fpm
+VIEW_NODE no debug zebra events
+VIEW_NODE no debug zebra dplane
+VIEW_NODE no debug vrf
+VIEW_NODE no debug ssmpingd
+VIEW_NODE no debug spf-delay-ietf
+VIEW_NODE no debug rpki
+VIEW_NODE no debug route-map
+VIEW_NODE no debug ripng zebra
+VIEW_NODE no debug ripng packet <recv|send>
+VIEW_NODE no debug ripng packet
+VIEW_NODE no debug ripng events
+VIEW_NODE no debug rip zebra
+VIEW_NODE no debug rip packet <recv|send>
+VIEW_NODE no debug rip packet
+VIEW_NODE no debug rip events
+VIEW_NODE no debug pim vxlan
+VIEW_NODE no debug pim static
+VIEW_NODE no debug pim nht rp
+VIEW_NODE no debug pim mlag
+VIEW_NODE no debug pim bsm
+VIEW_NODE no debug ospf6 zebra [<send|recv>]
+VIEW_NODE no debug ospf6 spf time
+VIEW_NODE no debug ospf6 spf process
+VIEW_NODE no debug ospf6 spf database
+VIEW_NODE no debug ospf6 nssa
+VIEW_NODE no debug ospf6 neighbor [<state|event>]
+VIEW_NODE no debug ospf6 message <unknown|hello|dbdesc|lsreq|lsupdate|lsack|all> [<send|recv|send-hdr|recv-hdr>]
+VIEW_NODE no debug ospf6 lsa <router|network|inter-prefix|inter-router|as-external|nssa|link|intra-prefix|unknown> [<originate|examine|flooding>]
+VIEW_NODE no debug ospf6 interface
+VIEW_NODE no debug ospf6 flooding
+VIEW_NODE no debug ospf6 border-routers router-id [A.B.C.D]
+VIEW_NODE no debug ospf6 border-routers area-id [A.B.C.D]
+VIEW_NODE no debug ospf6 border-routers
+VIEW_NODE no debug ospf6 authentication [<tx|rx>]
+VIEW_NODE no debug ospf6 asbr
+VIEW_NODE no debug ospf6 abr
+VIEW_NODE no debug ospf6
+VIEW_NODE no debug ospf zebra [<interface|redistribute>]
+VIEW_NODE no debug ospf nssa
+VIEW_NODE no debug ospf nsm [<status|events|timers>]
+VIEW_NODE no debug ospf lsa [<generate|flooding|install|refresh|aggregate>]
+VIEW_NODE no debug ospf event
+VIEW_NODE no debug ospf [(1-65535)] ism [<status|events|timers>]
+VIEW_NODE no debug ospf (1-65535) zebra [<interface|redistribute>]
+VIEW_NODE no debug ospf (1-65535) nssa
+VIEW_NODE no debug ospf (1-65535) nsm [<status|events|timers>]
+VIEW_NODE no debug ospf (1-65535) lsa [<generate|flooding|install|refresh|aggregate>]
+VIEW_NODE no debug ospf (1-65535) event
+VIEW_NODE no debug ospf
+VIEW_NODE no debug openfabric update-packets
+VIEW_NODE no debug openfabric tx-queue
+VIEW_NODE no debug openfabric te-events
+VIEW_NODE no debug openfabric sr-events
+VIEW_NODE no debug openfabric spf-events
+VIEW_NODE no debug openfabric snp-packets
+VIEW_NODE no debug openfabric route-events
+VIEW_NODE no debug openfabric packet-dump
+VIEW_NODE no debug openfabric lsp-sched
+VIEW_NODE no debug openfabric lsp-gen
+VIEW_NODE no debug openfabric lfa
+VIEW_NODE no debug openfabric ldp-sync
+VIEW_NODE no debug openfabric flooding
+VIEW_NODE no debug openfabric events
+VIEW_NODE no debug openfabric bfd
+VIEW_NODE no debug openfabric adj-packets
+VIEW_NODE no debug nhrp <all|common|event|interface|kernel|route|vici>
+VIEW_NODE no debug mtrace
+VIEW_NODE no debug msdp packets
+VIEW_NODE no debug msdp events
+VIEW_NODE no debug msdp
+VIEW_NODE no debug mroute detail
+VIEW_NODE no debug mroute
+VIEW_NODE no debug isis update-packets
+VIEW_NODE no debug isis tx-queue
+VIEW_NODE no debug isis te-events
+VIEW_NODE no debug isis sr-events
+VIEW_NODE no debug isis spf-events
+VIEW_NODE no debug isis snp-packets
+VIEW_NODE no debug isis route-events
+VIEW_NODE no debug isis packet-dump
+VIEW_NODE no debug isis lsp-sched
+VIEW_NODE no debug isis lsp-gen
+VIEW_NODE no debug isis lfa
+VIEW_NODE no debug isis ldp-sync
+VIEW_NODE no debug isis flooding
+VIEW_NODE no debug isis events
+VIEW_NODE no debug isis bfd
+VIEW_NODE no debug isis adj-packets
+VIEW_NODE no debug igmp trace detail
+VIEW_NODE no debug igmp trace
+VIEW_NODE no debug igmp packets
+VIEW_NODE no debug igmp events
+VIEW_NODE no debug igmp
+VIEW_NODE no debug eigrp transmit <send|recv|all> [detail]
+VIEW_NODE no debug eigrp packets <siaquery|siareply|ack|hello|probe|query|reply|request|retry|stub|terse|update|all> [send|receive] [detail]
+VIEW_NODE no debug bgp zebra prefix <A.B.C.D/M|X:X::X:X/M>
+VIEW_NODE no debug bgp zebra
+VIEW_NODE no debug bgp vpn <leak-from-vrf|leak-to-vrf|rmap-event|label>
+VIEW_NODE no debug bgp vnc <rfapi-query|import-bi-attach|import-del-remote|verbose>
+VIEW_NODE no debug bgp updates prefix l2vpn evpn type <<macip|2> mac <X:X:X:X:X:X|X:X:X:X:X:X/M> [ip <A.B.C.D|X:X::X:X>]|<multicast|3> ip <A.B.C.D|X:X::X:X>|<prefix|5> ip <A.B.C.D/M|X:X::X:X/M>>
+VIEW_NODE no debug bgp updates prefix <A.B.C.D/M|X:X::X:X/M>
+VIEW_NODE no debug bgp updates <in|out> <A.B.C.D|X:X::X:X|WORD>
+VIEW_NODE no debug bgp updates <in|out>
+VIEW_NODE no debug bgp updates
+VIEW_NODE no debug bgp update-groups
+VIEW_NODE no debug bgp pbr [error]
+VIEW_NODE no debug bgp nht
+VIEW_NODE no debug bgp neighbor-events <A.B.C.D|X:X::X:X|WORD>
+VIEW_NODE no debug bgp neighbor-events
+VIEW_NODE no debug bgp labelpool
+VIEW_NODE no debug bgp keepalives <A.B.C.D|X:X::X:X|WORD>
+VIEW_NODE no debug bgp keepalives
+VIEW_NODE no debug bgp graceful-restart
+VIEW_NODE no debug bgp flowspec
+VIEW_NODE no debug bgp bestpath <A.B.C.D/M|X:X::X:X/M>
+VIEW_NODE no debug bgp bestpath
+VIEW_NODE no debug bgp as4 segment
+VIEW_NODE no debug bgp as4
+VIEW_NODE no debug bgp
+VIEW_NODE no debug babel <common|kernel|filter|timeout|interface|route|all>
+VIEW_NODE no debug all bgp vnc
+VIEW_NODE graceful-restart prepare ipv6 ospf
+VIEW_NODE graceful-restart prepare ip ospf
+VIEW_NODE end
+VIEW_NODE disable
+VIEW_NODE debug zebra vxlan
+VIEW_NODE debug zebra tc
+VIEW_NODE debug zebra rib [detailed]
+VIEW_NODE debug zebra pbr
+VIEW_NODE debug zebra packet [<recv|send>] [detail]
+VIEW_NODE debug zebra nht [detailed]
+VIEW_NODE debug zebra mpls [detailed]
+VIEW_NODE debug zebra kernel msgdump [<recv|send>]
+VIEW_NODE debug zebra kernel
+VIEW_NODE debug zebra fpm
+VIEW_NODE debug zebra events
+VIEW_NODE debug zebra dplane [detailed]
+VIEW_NODE debug vrf
+VIEW_NODE debug ssmpingd
+VIEW_NODE debug spf-delay-ietf
+VIEW_NODE debug rpki
+VIEW_NODE debug route-map
+VIEW_NODE debug ripng zebra
+VIEW_NODE debug ripng packet <recv|send>
+VIEW_NODE debug ripng packet
+VIEW_NODE debug ripng events
+VIEW_NODE debug rip zebra
+VIEW_NODE debug rip packet <recv|send>
+VIEW_NODE debug rip packet
+VIEW_NODE debug rip events
+VIEW_NODE debug rfapi-dev unregister vn <A.B.C.D|X:X::X:X> un <A.B.C.D|X:X::X:X> prefix <A.B.C.D/M|X:X::X:X/M> [kill]
+VIEW_NODE debug rfapi-dev show nves <vn|un> <A.B.C.D|X:X::X:X>
+VIEW_NODE debug rfapi-dev show nves
+VIEW_NODE debug rfapi-dev show import vn <A.B.C.D|X:X::X:X> un <A.B.C.D|X:X::X:X>
+VIEW_NODE debug rfapi-dev show import
+VIEW_NODE debug rfapi-dev response-omit-self <on|off>
+VIEW_NODE debug rfapi-dev register vn <A.B.C.D|X:X::X:X> un <A.B.C.D|X:X::X:X> prefix <A.B.C.D/M|X:X::X:X/M> lifetime SECONDS macaddr X:X:X:X:X:X lni (0-16777215)
+VIEW_NODE debug rfapi-dev register vn <A.B.C.D|X:X::X:X> un <A.B.C.D|X:X::X:X> prefix <A.B.C.D/M|X:X::X:X/M> lifetime SECONDS [cost (0-255)]
+VIEW_NODE debug rfapi-dev query vn <A.B.C.D|X:X::X:X> un <A.B.C.D|X:X::X:X> target <A.B.C.D|X:X::X:X>
+VIEW_NODE debug rfapi-dev query vn <A.B.C.D|X:X::X:X> un <A.B.C.D|X:X::X:X> lni LNI target X:X:X:X:X:X
+VIEW_NODE debug rfapi-dev query done vn <A.B.C.D|X:X::X:X> un <A.B.C.D|X:X::X:X> target <A.B.C.D|X:X::X:X>
+VIEW_NODE debug rfapi-dev open vn <A.B.C.D|X:X::X:X> un <A.B.C.D|X:X::X:X>
+VIEW_NODE debug rfapi-dev close vn <A.B.C.D|X:X::X:X> un <A.B.C.D|X:X::X:X>
+VIEW_NODE debug rfapi-dev close rfd HANDLE
+VIEW_NODE debug pim vxlan
+VIEW_NODE debug pim static
+VIEW_NODE debug pim nht rp
+VIEW_NODE debug pim mlag
+VIEW_NODE debug pim bsm
+VIEW_NODE debug ospf6 zebra [<send|recv>]
+VIEW_NODE debug ospf6 spf time
+VIEW_NODE debug ospf6 spf process
+VIEW_NODE debug ospf6 spf database
+VIEW_NODE debug ospf6 nssa
+VIEW_NODE debug ospf6 neighbor [<state|event>]
+VIEW_NODE debug ospf6 message <unknown|hello|dbdesc|lsreq|lsupdate|lsack|all> [<send|recv|send-hdr|recv-hdr>]
+VIEW_NODE debug ospf6 lsa <router|network|inter-prefix|inter-router|as-external|nssa|link|intra-prefix|unknown> [<originate|examine|flooding>]
+VIEW_NODE debug ospf6 interface
+VIEW_NODE debug ospf6 flooding
+VIEW_NODE debug ospf6 border-routers router-id A.B.C.D
+VIEW_NODE debug ospf6 border-routers area-id A.B.C.D
+VIEW_NODE debug ospf6 border-routers
+VIEW_NODE debug ospf6 authentication [<tx|rx>]
+VIEW_NODE debug ospf6 asbr
+VIEW_NODE debug ospf6 abr
+VIEW_NODE debug ospf zebra [<interface|redistribute>]
+VIEW_NODE debug ospf nssa
+VIEW_NODE debug ospf nsm [<status|events|timers>]
+VIEW_NODE debug ospf lsa [<generate|flooding|install|refresh|aggregate>]
+VIEW_NODE debug ospf event
+VIEW_NODE debug ospf [(1-65535)] ism [<status|events|timers>]
+VIEW_NODE debug ospf (1-65535) zebra [<interface|redistribute>]
+VIEW_NODE debug ospf (1-65535) nssa
+VIEW_NODE debug ospf (1-65535) nsm [<status|events|timers>]
+VIEW_NODE debug ospf (1-65535) lsa [<generate|flooding|install|refresh|aggregate>]
+VIEW_NODE debug ospf (1-65535) event
+VIEW_NODE debug openfabric update-packets
+VIEW_NODE debug openfabric tx-queue
+VIEW_NODE debug openfabric te-events
+VIEW_NODE debug openfabric sr-events
+VIEW_NODE debug openfabric spf-events
+VIEW_NODE debug openfabric snp-packets
+VIEW_NODE debug openfabric route-events
+VIEW_NODE debug openfabric packet-dump
+VIEW_NODE debug openfabric lsp-sched
+VIEW_NODE debug openfabric lsp-gen
+VIEW_NODE debug openfabric lfa
+VIEW_NODE debug openfabric ldp-sync
+VIEW_NODE debug openfabric flooding
+VIEW_NODE debug openfabric events
+VIEW_NODE debug openfabric bfd
+VIEW_NODE debug openfabric adj-packets
+VIEW_NODE debug nhrp <all|common|event|interface|kernel|route|vici>
+VIEW_NODE debug mtrace
+VIEW_NODE debug msdp packets
+VIEW_NODE debug msdp events
+VIEW_NODE debug msdp
+VIEW_NODE debug mroute detail
+VIEW_NODE debug mroute
+VIEW_NODE debug isis update-packets
+VIEW_NODE debug isis tx-queue
+VIEW_NODE debug isis te-events
+VIEW_NODE debug isis sr-events
+VIEW_NODE debug isis spf-events
+VIEW_NODE debug isis snp-packets
+VIEW_NODE debug isis route-events
+VIEW_NODE debug isis packet-dump
+VIEW_NODE debug isis lsp-sched
+VIEW_NODE debug isis lsp-gen
+VIEW_NODE debug isis lfa
+VIEW_NODE debug isis ldp-sync
+VIEW_NODE debug isis flooding
+VIEW_NODE debug isis events
+VIEW_NODE debug isis bfd
+VIEW_NODE debug isis adj-packets
+VIEW_NODE debug igmp trace detail
+VIEW_NODE debug igmp trace
+VIEW_NODE debug igmp packets
+VIEW_NODE debug igmp events
+VIEW_NODE debug igmp
+VIEW_NODE debug eigrp transmit <send|recv|all> [detail]
+VIEW_NODE debug eigrp packets <siaquery|siareply|ack|hello|probe|query|reply|request|retry|stub|terse|update|all> [send|receive] [detail]
+VIEW_NODE debug bgp zebra prefix <A.B.C.D/M|X:X::X:X/M>
+VIEW_NODE debug bgp zebra
+VIEW_NODE debug bgp vpn <leak-from-vrf|leak-to-vrf|rmap-event|label>
+VIEW_NODE debug bgp vnc <rfapi-query|import-bi-attach|import-del-remote|verbose>
+VIEW_NODE debug bgp updates prefix l2vpn evpn type <<macip|2> mac <X:X:X:X:X:X|X:X:X:X:X:X/M> [ip <A.B.C.D|X:X::X:X>]|<multicast|3> ip <A.B.C.D|X:X::X:X>|<prefix|5> ip <A.B.C.D/M|X:X::X:X/M>>
+VIEW_NODE debug bgp updates prefix <A.B.C.D/M|X:X::X:X/M>
+VIEW_NODE debug bgp updates <in|out> <A.B.C.D|X:X::X:X|WORD>
+VIEW_NODE debug bgp updates <in|out>
+VIEW_NODE debug bgp updates
+VIEW_NODE debug bgp update-groups
+VIEW_NODE debug bgp pbr [error]
+VIEW_NODE debug bgp nht
+VIEW_NODE debug bgp neighbor-events <A.B.C.D|X:X::X:X|WORD>
+VIEW_NODE debug bgp neighbor-events
+VIEW_NODE debug bgp lptest stop
+VIEW_NODE debug bgp lptest start
+VIEW_NODE debug bgp lptest show
+VIEW_NODE debug bgp lptest release test GENERATION every (1-5)
+VIEW_NODE debug bgp lptest clear
+VIEW_NODE debug bgp labelpool
+VIEW_NODE debug bgp keepalives <A.B.C.D|X:X::X:X|WORD>
+VIEW_NODE debug bgp keepalives
+VIEW_NODE debug bgp graceful-restart
+VIEW_NODE debug bgp flowspec
+VIEW_NODE debug bgp bestpath <A.B.C.D/M|X:X::X:X/M>
+VIEW_NODE debug bgp as4 segment
+VIEW_NODE debug bgp as4
+VIEW_NODE debug babel <common|kernel|filter|timeout|interface|route|all>
+VIEW_NODE copy running-config startup-config
+VIEW_NODE copy FILENAME running-config
+VIEW_NODE configure private
+VIEW_NODE configure exclusive
+VIEW_NODE configure [terminal]
+VIEW_NODE clear zebra fpm stats
+VIEW_NODE clear vrf NAME all
+VIEW_NODE clear vrf NAME [prefix <A.B.C.D/M|X:X::X:X/M>] [rd ASN:NN_OR_IP-ADDRESS]
+VIEW_NODE clear vnc prefix <*|A.B.C.D/M|X:X::X:X/M> vn <*|A.B.C.D|X:X::X:X> un <*|A.B.C.D|X:X::X:X>
+VIEW_NODE clear vnc prefix <*|A.B.C.D/M|X:X::X:X/M> vn <*|A.B.C.D|X:X::X:X>
+VIEW_NODE clear vnc prefix <*|A.B.C.D/M|X:X::X:X/M> un <*|A.B.C.D|X:X::X:X> vn <*|A.B.C.D|X:X::X:X>
+VIEW_NODE clear vnc prefix <*|A.B.C.D/M|X:X::X:X/M> un <*|A.B.C.D|X:X::X:X>
+VIEW_NODE clear vnc prefix <*|A.B.C.D/M|X:X::X:X/M> *
+VIEW_NODE clear vnc nve vn <*|A.B.C.D|X:X::X:X> un <*|A.B.C.D|X:X::X:X>
+VIEW_NODE clear vnc nve vn <*|A.B.C.D|X:X::X:X>
+VIEW_NODE clear vnc nve un <*|A.B.C.D|X:X::X:X> vn <*|A.B.C.D|X:X::X:X>
+VIEW_NODE clear vnc nve un <*|A.B.C.D|X:X::X:X>
+VIEW_NODE clear vnc nve *
+VIEW_NODE clear vnc mac <*|X:X:X:X:X:X> virtual-network-identifier <*|(1-4294967295)> vn <*|A.B.C.D|X:X::X:X> un <*|A.B.C.D|X:X::X:X> prefix <*|A.B.C.D/M|X:X::X:X/M>
+VIEW_NODE clear vnc mac <*|X:X:X:X:X:X> virtual-network-identifier <*|(1-4294967295)> vn <*|A.B.C.D|X:X::X:X> un <*|A.B.C.D|X:X::X:X>
+VIEW_NODE clear vnc mac <*|X:X:X:X:X:X> virtual-network-identifier <*|(1-4294967295)> vn <*|A.B.C.D|X:X::X:X> prefix <*|A.B.C.D/M|X:X::X:X/M>
+VIEW_NODE clear vnc mac <*|X:X:X:X:X:X> virtual-network-identifier <*|(1-4294967295)> vn <*|A.B.C.D|X:X::X:X>
+VIEW_NODE clear vnc mac <*|X:X:X:X:X:X> virtual-network-identifier <*|(1-4294967295)> un <*|A.B.C.D|X:X::X:X> vn <*|A.B.C.D|X:X::X:X> prefix <*|A.B.C.D/M|X:X::X:X/M> prefix <*|A.B.C.D/M|X:X::X:X/M>
+VIEW_NODE clear vnc mac <*|X:X:X:X:X:X> virtual-network-identifier <*|(1-4294967295)> un <*|A.B.C.D|X:X::X:X> vn <*|A.B.C.D|X:X::X:X>
+VIEW_NODE clear vnc mac <*|X:X:X:X:X:X> virtual-network-identifier <*|(1-4294967295)> un <*|A.B.C.D|X:X::X:X> prefix <*|A.B.C.D/M|X:X::X:X/M>
+VIEW_NODE clear vnc mac <*|X:X:X:X:X:X> virtual-network-identifier <*|(1-4294967295)> un <*|A.B.C.D|X:X::X:X>
+VIEW_NODE clear vnc mac <*|X:X:X:X:X:X> virtual-network-identifier <*|(1-4294967295)> prefix <*|A.B.C.D/M|X:X::X:X/M>
+VIEW_NODE clear vnc mac <*|X:X:X:X:X:X> virtual-network-identifier <*|(1-4294967295)> *
+VIEW_NODE clear vnc counters
+VIEW_NODE clear thread cpu [FILTER]
+VIEW_NODE clear sr-te pcep session [WORD]
+VIEW_NODE clear route-map counters [RMAP_NAME]
+VIEW_NODE clear openfabric [vrf <NAME|all>] neighbor WORD
+VIEW_NODE clear openfabric [vrf <NAME|all>] neighbor
+VIEW_NODE clear mpls ldp neighbor [<A.B.C.D|X:X::X:X>]
+VIEW_NODE clear log cmdline-targets
+VIEW_NODE clear isis [vrf <NAME|all>] neighbor WORD
+VIEW_NODE clear isis [vrf <NAME|all>] neighbor
+VIEW_NODE clear ipv6 ripng [vrf WORD]
+VIEW_NODE clear ipv6 prefix-list [WORD [X:X::X:X/M]]
+VIEW_NODE clear ipv6 pim statistics [vrf NAME]
+VIEW_NODE clear ipv6 pim [vrf NAME] oil
+VIEW_NODE clear ipv6 pim [vrf NAME] interfaces
+VIEW_NODE clear ipv6 pim [vrf NAME] interface traffic
+VIEW_NODE clear ipv6 pim [vrf NAME] bsr-data
+VIEW_NODE clear ipv6 ospf6 process [vrf NAME]
+VIEW_NODE clear ipv6 ospf6 [vrf VRF] auth-counters interface [IFNAME]
+VIEW_NODE clear ipv6 ospf6 [vrf NAME] interface [IFNAME]
+VIEW_NODE clear ipv6 mroute [vrf NAME] count
+VIEW_NODE clear ipv6 mroute [vrf NAME]
+VIEW_NODE clear ip rip [vrf WORD]
+VIEW_NODE clear ip prefix-list [WORD [A.B.C.D/M]]
+VIEW_NODE clear ip pim statistics [vrf NAME]
+VIEW_NODE clear ip pim [vrf NAME] oil
+VIEW_NODE clear ip pim [vrf NAME] interfaces
+VIEW_NODE clear ip pim [vrf NAME] interface traffic
+VIEW_NODE clear ip pim [vrf NAME] bsr-data
+VIEW_NODE clear ip ospf [vrf NAME] interface [IFNAME]
+VIEW_NODE clear ip ospf [(1-65535)] process
+VIEW_NODE clear ip ospf [(1-65535)] neighbor [A.B.C.D]
+VIEW_NODE clear ip mroute [vrf NAME] count
+VIEW_NODE clear ip mroute [vrf NAME]
+VIEW_NODE clear ip interfaces [vrf NAME]
+VIEW_NODE clear ip igmp [vrf NAME] interfaces
+VIEW_NODE clear ip eigrp [vrf NAME] neighbors soft
+VIEW_NODE clear ip eigrp [vrf NAME] neighbors IFNAME soft
+VIEW_NODE clear ip eigrp [vrf NAME] neighbors IFNAME
+VIEW_NODE clear ip eigrp [vrf NAME] neighbors A.B.C.D soft
+VIEW_NODE clear ip eigrp [vrf NAME] neighbors A.B.C.D
+VIEW_NODE clear ip eigrp [vrf NAME] neighbors
+VIEW_NODE clear ip bgp dampening A.B.C.D/M
+VIEW_NODE clear ip bgp dampening A.B.C.D A.B.C.D
+VIEW_NODE clear ip bgp dampening A.B.C.D
+VIEW_NODE clear ip bgp dampening
+VIEW_NODE clear fpm counters
+VIEW_NODE clear evpn dup-addr vni <all|(1-16777215) [mac X:X:X:X:X:X|ip <A.B.C.D|X:X::X:X>]>
+VIEW_NODE clear configuration transactions oldest (1-100)
+VIEW_NODE clear bfd [vrf <NAME>] peer <WORD|<A.B.C.D|X:X::X:X> [{multihop|local-address <A.B.C.D|X:X::X:X>|interface IFNAME}]> counters
+VIEW_NODE clear [ip] bgp ipv6 <unicast|multicast|vpn> prefix X:X::X:X/M
+VIEW_NODE clear [ip] bgp [<view|vrf> VIEWVRFNAME] prefix A.B.C.D/M
+VIEW_NODE clear [ip] bgp [<view|vrf> VIEWVRFNAME] [<ipv4|ipv6|l2vpn> [<unicast|multicast|vpn|labeled-unicast|flowspec|evpn>]] <*|A.B.C.D|X:X::X:X|WORD|(1-4294967295)|external|peer-group PGNAME> [<soft [<in|out>]|in [prefix-filter]|out|message-stats>]
+VIEW_NODE clear [ip] bgp <view|vrf> VIEWVRFNAME ipv6 <unicast|multicast|vpn> prefix X:X::X:X/M
+VIEW_NODE clear <ip|ipv6> nhrp <cache|shortcut>
+VIEW_NODE add vrf NAME prefix <A.B.C.D/M|X:X::X:X/M> [{rd ASN:NN_OR_IP-ADDRESS|label (0-1048575)|preference (0-4294967295)}]
+VIEW_NODE add vnc prefix <A.B.C.D/M|X:X::X:X/M> vn <A.B.C.D|X:X::X:X> un <A.B.C.D|X:X::X:X> lifetime (1-4294967295) cost (0-255) LNH_OPTIONS...
+VIEW_NODE add vnc prefix <A.B.C.D/M|X:X::X:X/M> vn <A.B.C.D|X:X::X:X> un <A.B.C.D|X:X::X:X> lifetime (1-4294967295) cost (0-255)
+VIEW_NODE add vnc prefix <A.B.C.D/M|X:X::X:X/M> vn <A.B.C.D|X:X::X:X> un <A.B.C.D|X:X::X:X> lifetime (1-4294967295) LNH_OPTIONS...
+VIEW_NODE add vnc prefix <A.B.C.D/M|X:X::X:X/M> vn <A.B.C.D|X:X::X:X> un <A.B.C.D|X:X::X:X> lifetime (1-4294967295)
+VIEW_NODE add vnc prefix <A.B.C.D/M|X:X::X:X/M> vn <A.B.C.D|X:X::X:X> un <A.B.C.D|X:X::X:X> cost (0-255) lifetime (1-4294967295) LNH_OPTIONS...
+VIEW_NODE add vnc prefix <A.B.C.D/M|X:X::X:X/M> vn <A.B.C.D|X:X::X:X> un <A.B.C.D|X:X::X:X> cost (0-255) lifetime (1-4294967295)
+VIEW_NODE add vnc prefix <A.B.C.D/M|X:X::X:X/M> vn <A.B.C.D|X:X::X:X> un <A.B.C.D|X:X::X:X> cost (0-255) LNH_OPTIONS...
+VIEW_NODE add vnc prefix <A.B.C.D/M|X:X::X:X/M> vn <A.B.C.D|X:X::X:X> un <A.B.C.D|X:X::X:X> cost (0-255)
+VIEW_NODE add vnc prefix <A.B.C.D/M|X:X::X:X/M> vn <A.B.C.D|X:X::X:X> un <A.B.C.D|X:X::X:X> LNH_OPTIONS...
+VIEW_NODE add vnc prefix <A.B.C.D/M|X:X::X:X/M> vn <A.B.C.D|X:X::X:X> un <A.B.C.D|X:X::X:X>
+VIEW_NODE add vnc mac X:X:X:X:X:X virtual-network-identifier (1-4294967295) vn <A.B.C.D|X:X::X:X> un <A.B.C.D|X:X::X:X> prefix <A.B.C.D/M|X:X::X:X/M> lifetime (1-4294967295)
+VIEW_NODE add vnc mac X:X:X:X:X:X virtual-network-identifier (1-4294967295) vn <A.B.C.D|X:X::X:X> un <A.B.C.D|X:X::X:X> prefix <A.B.C.D/M|X:X::X:X/M> cost (0-255) lifetime (1-4294967295)
+VIEW_NODE add vnc mac X:X:X:X:X:X virtual-network-identifier (1-4294967295) vn <A.B.C.D|X:X::X:X> un <A.B.C.D|X:X::X:X> prefix <A.B.C.D/M|X:X::X:X/M> cost (0-255)
+VIEW_NODE add vnc mac X:X:X:X:X:X virtual-network-identifier (1-4294967295) vn <A.B.C.D|X:X::X:X> un <A.B.C.D|X:X::X:X> prefix <A.B.C.D/M|X:X::X:X/M>
+VIEW_NODE add vnc mac X:X:X:X:X:X virtual-network-identifier (1-4294967295) vn <A.B.C.D|X:X::X:X> un <A.B.C.D|X:X::X:X> lifetime (1-4294967295)
+VIEW_NODE add vnc mac X:X:X:X:X:X virtual-network-identifier (1-4294967295) vn <A.B.C.D|X:X::X:X> un <A.B.C.D|X:X::X:X> cost (0-255) lifetime (1-4294967295)
+VIEW_NODE add vnc mac X:X:X:X:X:X virtual-network-identifier (1-4294967295) vn <A.B.C.D|X:X::X:X> un <A.B.C.D|X:X::X:X> cost (0-255)
+VIEW_NODE add vnc mac X:X:X:X:X:X virtual-network-identifier (1-4294967295) vn <A.B.C.D|X:X::X:X> un <A.B.C.D|X:X::X:X>
+VIEW_NODE [no] watchfrr ignore DAEMON
+VIEW_NODE [no] debug zebra pseudowires
+VIEW_NODE [no] debug zebra nexthop [detail]
+VIEW_NODE [no] debug zebra neigh
+VIEW_NODE [no] debug zebra mlag
+VIEW_NODE [no] debug zebra evpn mh <es|mac|neigh|nh>
+VIEW_NODE [no] debug zebra dplane dpdk [detailed]
+VIEW_NODE [no] debug vrrp [{protocol|autoconfigure|packets|sockets|ndisc|arp|zebra}]
+VIEW_NODE [no] debug unique-id UID backtrace
+VIEW_NODE [no] debug static [{events|route|bfd}]
+VIEW_NODE [no] debug resolver
+VIEW_NODE [no] debug pimv6 zebra
+VIEW_NODE [no] debug pimv6 trace detail
+VIEW_NODE [no] debug pimv6 trace
+VIEW_NODE [no] debug pimv6 packets [<hello|joins|register>]
+VIEW_NODE [no] debug pimv6 packet-dump send
+VIEW_NODE [no] debug pimv6 packet-dump receive
+VIEW_NODE [no] debug pimv6 nht detail
+VIEW_NODE [no] debug pimv6 nht
+VIEW_NODE [no] debug pimv6 events
+VIEW_NODE [no] debug pimv6 bsm
+VIEW_NODE [no] debug pimv6
+VIEW_NODE [no] debug pim zebra
+VIEW_NODE [no] debug pim trace detail
+VIEW_NODE [no] debug pim trace
+VIEW_NODE [no] debug pim packets [<hello|joins|register>]
+VIEW_NODE [no] debug pim packet-dump send
+VIEW_NODE [no] debug pim packet-dump receive
+VIEW_NODE [no] debug pim nht detail
+VIEW_NODE [no] debug pim nht
+VIEW_NODE [no] debug pim events
+VIEW_NODE [no] debug pim
+VIEW_NODE [no] debug pbr [{map|zebra|nht|events}]
+VIEW_NODE [no] debug pathd policy
+VIEW_NODE [no] debug pathd pcep [basic] [path] [message] [pceplib]
+VIEW_NODE [no] debug pathd mpls-te
+VIEW_NODE [no] debug ospf6 route <all|table|intra-area|inter-area|memory>
+VIEW_NODE [no] debug ospf6 lsa all
+VIEW_NODE [no] debug ospf6 lsa aggregation
+VIEW_NODE [no] debug ospf6 graceful-restart
+VIEW_NODE [no] debug ospf [(1-65535)] ti-lfa
+VIEW_NODE [no] debug ospf [(1-65535)] te
+VIEW_NODE [no] debug ospf [(1-65535)] sr
+VIEW_NODE [no] debug ospf [(1-65535)] packet <hello|dd|ls-request|ls-update|ls-ack|all> [<send [detail]|recv [detail]|detail>]
+VIEW_NODE [no] debug ospf [(1-65535)] ldp-sync
+VIEW_NODE [no] debug ospf [(1-65535)] graceful-restart
+VIEW_NODE [no] debug ospf [(1-65535)] default-information
+VIEW_NODE [no] debug ospf [(1-65535)] client-api
+VIEW_NODE [no] debug ospf [(1-65535)] bfd
+VIEW_NODE [no] debug northbound client sysrepo
+VIEW_NODE [no] debug northbound client confd
+VIEW_NODE [no] debug northbound [<callbacks [{configuration|state|rpc}]|notifications|events|libyang>]
+VIEW_NODE [no] debug mroute6 detail
+VIEW_NODE [no] debug mroute6
+VIEW_NODE [no] debug mpls ldp messages sent [all]
+VIEW_NODE [no] debug mpls ldp messages recv [all]
+VIEW_NODE [no] debug mpls ldp discovery hello <recv|sent>
+VIEW_NODE [no] debug mpls ldp <errors|event|labels|sync|zebra>
+VIEW_NODE [no] debug mld trace detail
+VIEW_NODE [no] debug mld trace
+VIEW_NODE [no] debug mld packets
+VIEW_NODE [no] debug mld events
+VIEW_NODE [no] debug mld
+VIEW_NODE [no] debug memstats-at-exit
+VIEW_NODE [no] debug bgp evpn mh <es|route>
+VIEW_NODE [no] debug bgp conditional-advertisement
+VIEW_NODE [no] debug bgp bfd
+VIEW_NODE [no] debug bfd zebra
+VIEW_NODE [no] debug bfd peer
+VIEW_NODE [no] debug bfd network
+VIEW_NODE [no] debug bfd distributed
+VIEW_NODE [no] debug all

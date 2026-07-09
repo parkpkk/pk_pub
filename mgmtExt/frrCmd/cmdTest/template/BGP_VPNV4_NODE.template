@@ -1,0 +1,69 @@
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE quit
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE no network A.B.C.D/M rd ASN:NN_OR_IP-ADDRESS:NN <tag|label> (0-1048575)
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE no neighbor <A.B.C.D|X:X::X:X|WORD> weight [(0-65535)]
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE no neighbor <A.B.C.D|X:X::X:X|WORD> unsuppress-map WORD
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE no neighbor <A.B.C.D|X:X::X:X|WORD> soo [ASN:NN_OR_IP-ADDRESS:NN]
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE no neighbor <A.B.C.D|X:X::X:X|WORD> soft-reconfiguration inbound
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE no neighbor <A.B.C.D|X:X::X:X|WORD> send-community <both|all|extended|standard|large>
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE no neighbor <A.B.C.D|X:X::X:X|WORD> send-community
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE no neighbor <A.B.C.D|X:X::X:X|WORD> route-server-client
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE no neighbor <A.B.C.D|X:X::X:X|WORD> route-reflector-client
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE no neighbor <A.B.C.D|X:X::X:X|WORD> route-map RMAP_NAME <in|out>
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE no neighbor <A.B.C.D|X:X::X:X|WORD> remove-private-AS replace-AS
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE no neighbor <A.B.C.D|X:X::X:X|WORD> remove-private-AS all replace-AS
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE no neighbor <A.B.C.D|X:X::X:X|WORD> remove-private-AS all
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE no neighbor <A.B.C.D|X:X::X:X|WORD> remove-private-AS
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE no neighbor <A.B.C.D|X:X::X:X|WORD> prefix-list WORD <in|out>
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE no neighbor <A.B.C.D|X:X::X:X|WORD> next-hop-self force
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE no neighbor <A.B.C.D|X:X::X:X|WORD> next-hop-self
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE no neighbor <A.B.C.D|X:X::X:X|WORD> maximum-prefix-out [(1-4294967295)]
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE no neighbor <A.B.C.D|X:X::X:X|WORD> maximum-prefix [(1-4294967295) [(1-100)] [restart (1-65535)] [warning-only] [force]]
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE no neighbor <A.B.C.D|X:X::X:X|WORD> filter-list AS_PATH_FILTER_NAME <in|out>
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE no neighbor <A.B.C.D|X:X::X:X|WORD> distribute-list ACCESSLIST_NAME <in|out>
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE no neighbor <A.B.C.D|X:X::X:X|WORD> disable-addpath-rx
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE no neighbor <A.B.C.D|X:X::X:X|WORD> attribute-unchanged [{as-path|next-hop|med}]
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE no neighbor <A.B.C.D|X:X::X:X|WORD> as-override
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE no neighbor <A.B.C.D|X:X::X:X|WORD> allowas-in [<(1-10)|origin>]
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE no neighbor <A.B.C.D|X:X::X:X|WORD> addpath-tx-bestpath-per-AS
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE no neighbor <A.B.C.D|X:X::X:X|WORD> addpath-tx-all-paths
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE no neighbor <A.B.C.D|X:X::X:X|WORD> activate
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE network A.B.C.D/M rd ASN:NN_OR_IP-ADDRESS:NN <tag|label> (0-1048575) route-map RMAP_NAME
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE network A.B.C.D/M rd ASN:NN_OR_IP-ADDRESS:NN <tag|label> (0-1048575)
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE neighbor <A.B.C.D|X:X::X:X|WORD> weight (0-65535)
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE neighbor <A.B.C.D|X:X::X:X|WORD> unsuppress-map WORD
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE neighbor <A.B.C.D|X:X::X:X|WORD> soo ASN:NN_OR_IP-ADDRESS:NN
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE neighbor <A.B.C.D|X:X::X:X|WORD> soft-reconfiguration inbound
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE neighbor <A.B.C.D|X:X::X:X|WORD> send-community <both|all|extended|standard|large>
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE neighbor <A.B.C.D|X:X::X:X|WORD> send-community
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE neighbor <A.B.C.D|X:X::X:X|WORD> route-server-client
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE neighbor <A.B.C.D|X:X::X:X|WORD> route-reflector-client
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE neighbor <A.B.C.D|X:X::X:X|WORD> route-map RMAP_NAME <in|out>
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE neighbor <A.B.C.D|X:X::X:X|WORD> remove-private-AS replace-AS
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE neighbor <A.B.C.D|X:X::X:X|WORD> remove-private-AS all replace-AS
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE neighbor <A.B.C.D|X:X::X:X|WORD> remove-private-AS all
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE neighbor <A.B.C.D|X:X::X:X|WORD> remove-private-AS
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE neighbor <A.B.C.D|X:X::X:X|WORD> prefix-list WORD <in|out>
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE neighbor <A.B.C.D|X:X::X:X|WORD> next-hop-self force
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE neighbor <A.B.C.D|X:X::X:X|WORD> next-hop-self
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE neighbor <A.B.C.D|X:X::X:X|WORD> maximum-prefix-out (1-4294967295)
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE neighbor <A.B.C.D|X:X::X:X|WORD> maximum-prefix (1-4294967295) warning-only [force]
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE neighbor <A.B.C.D|X:X::X:X|WORD> maximum-prefix (1-4294967295) restart (1-65535) [force]
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE neighbor <A.B.C.D|X:X::X:X|WORD> maximum-prefix (1-4294967295) [force]
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE neighbor <A.B.C.D|X:X::X:X|WORD> maximum-prefix (1-4294967295) (1-100) warning-only [force]
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE neighbor <A.B.C.D|X:X::X:X|WORD> maximum-prefix (1-4294967295) (1-100) restart (1-65535) [force]
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE neighbor <A.B.C.D|X:X::X:X|WORD> maximum-prefix (1-4294967295) (1-100) [force]
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE neighbor <A.B.C.D|X:X::X:X|WORD> filter-list AS_PATH_FILTER_NAME <in|out>
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE neighbor <A.B.C.D|X:X::X:X|WORD> distribute-list ACCESSLIST_NAME <in|out>
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE neighbor <A.B.C.D|X:X::X:X|WORD> disable-addpath-rx
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE neighbor <A.B.C.D|X:X::X:X|WORD> attribute-unchanged [{as-path|next-hop|med}]
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE neighbor <A.B.C.D|X:X::X:X|WORD> as-override
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE neighbor <A.B.C.D|X:X::X:X|WORD> allowas-in [<(1-10)|origin>]
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE neighbor <A.B.C.D|X:X::X:X|WORD> addpath-tx-bestpath-per-AS
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE neighbor <A.B.C.D|X:X::X:X|WORD> addpath-tx-all-paths
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE neighbor <A.B.C.D|X:X::X:X|WORD> activate
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE exit-address-family
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE exit
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE end
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE [no] neighbor <A.B.C.D|X:X::X:X|WORD> advertise-map RMAP_NAME <exist-map|non-exist-map> RMAP_NAME
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE [no] neighbor <A.B.C.D|X:X::X:X|WORD> accept-own
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family vpnv4 [unicast] BGP_VPNV4_NODE [no] bgp retain route-target all

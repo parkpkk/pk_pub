@@ -1,0 +1,933 @@
+
+module sonic-frr-OSPF6_NODE {
+    namespace "http://github.com/sonic-net/frr/sonic-frr-OSPF6_NODE";
+    prefix frr-OSPF6_NODE;
+    yang-version 1.1;
+
+    import ietf-inet-types {
+        prefix inet;
+    }
+
+    organization
+        "SONiC";
+
+    contact
+        "SONiC";
+
+    description
+        "SONIC frr-OSPF6_NODE FRR YANG";
+
+    revision 2024-12-23 {
+        description
+            "Initial revision.";
+    }
+    container sonic-frr-OSPF6_NODE {
+        container OSPF6_NODE {
+            list OUTPUT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf file {
+                    type enumeration {
+                        enum file;
+                    }
+                }                  //file
+                leaf PATH_TO_DUMP_OUTPUT {
+                    type string;
+                }                  //FILE
+            }
+            list NO {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf write-multiplier {
+                    type enumeration {
+                        enum write-multiplier;
+                    }
+                }                  //write-multiplier
+                leaf MAXIMUM_NUMBER_OF_INTERFACE {
+                    type int32;
+                }                  //(1-100)
+                leaf summary-address {
+                    type enumeration {
+                        enum summary-address;
+                    }
+                }                  //summary-address
+                leaf SPECIFY_IPV6_PREFIX {
+                    type inet:ipv6-prefix;
+                }                  //X:X::X:X/M
+                leaf no-advertise {
+                    type enumeration {
+                        enum no-advertise;
+                    }
+                }                  //no-advertise
+                leaf tag {
+                    type enumeration {
+                        enum tag;
+                    }
+                }                  //tag
+                leaf ROUTER_TAG_VALUE {
+                    type int32;
+                }                  //(1-4294967295)
+                leaf metric {
+                    type enumeration {
+                        enum metric;
+                    }
+                }                  //metric
+                leaf ADVERTISED_METRIC_FOR_THIS {
+                    type int32;
+                }                  //(0-16777215)
+                leaf metric-type {
+                    type enumeration {
+                        enum metric-type;
+                    }
+                }                  //metric-type
+                leaf SET_OSPFV3_EXTERNAL_TYPE {
+                    type int32;
+                }                  //(1-2)
+                leaf redistribute {
+                    type enumeration {
+                        enum redistribute;
+                    }
+                }                  //redistribute
+                leaf FRR_REDIST_HELP_STR_OSPF6D {
+                    type string;
+                }                  //FRR_REDIST_STR_OSPF6D
+                leaf OSPF_DEFAULT_METRIC {
+                    type int32;
+                }                  //(0-16777214)
+                leaf SET_OSPF_EXTERNAL_TYPE {
+                    type int32;
+                }                  //(1-2)
+                leaf route-map {
+                    type enumeration {
+                        enum route-map;
+                    }
+                }                  //route-map
+                leaf ROUTE_MAP_NAME {
+                    type string;
+                }                  //RMAP_NAME
+                leaf interface {
+                    type enumeration {
+                        enum interface;
+                    }
+                }                  //interface
+                leaf INTERFACE_NAME {
+                    type string;
+                }                  //IFNAME
+                leaf area {
+                    type enumeration {
+                        enum area;
+                    }
+                }                  //area
+                leaf AREA_CHOICE_CASE {
+                    type union {
+                        type inet:ipv4-address;
+                        type int32;
+                    }
+                }                  //<A.B.C.D|(0-4294967295)> ['OSPF6 area ID in IPv4 address notation', 'OSPF6 area ID in decimal notation']
+                leaf stub {
+                    type enumeration {
+                        enum stub;
+                    }
+                }                  //stub
+                leaf stub_no-summary {
+                    type enumeration {
+                        enum stub_no-summary;
+                    }
+                }                  //no-summary
+                leaf range {
+                    type enumeration {
+                        enum range;
+                    }
+                }                  //range
+                leaf advertise {
+                    type enumeration {
+                        enum advertise;
+                    }
+                }                  //advertise
+                leaf not-advertise {
+                    type enumeration {
+                        enum not-advertise;
+                    }
+                }                  //not-advertise
+                leaf cost {
+                    type enumeration {
+                        enum cost;
+                    }
+                }                  //cost
+                leaf nssa {
+                    type enumeration {
+                        enum nssa;
+                    }
+                }                  //nssa
+                leaf nssa_range {
+                    type enumeration {
+                        enum nssa_range;
+                    }
+                }                  //range
+                leaf nssa_no-summary {
+                    type enumeration {
+                        enum nssa_no-summary;
+                    }
+                }                  //no-summary
+                leaf import-list {
+                    type enumeration {
+                        enum import-list;
+                    }
+                }                  //import-list
+                leaf NAME_OF_THE_ACCESS-LIST {
+                    type string;
+                }                  //ACCESSLIST6_NAME
+                leaf filter-list_prefix {
+                    type enumeration {
+                        enum filter-list_prefix;
+                    }
+                }                  //prefix
+                leaf NAME_OF_AN_IPV6 {
+                    type string;
+                }                  //PREFIXLIST_NAME
+                leaf PREFIX_IN_OUT_BOUND {
+                    type enumeration {
+                        enum in;
+                        enum out;
+                    }
+                }                  //<in|out> ['Filter networks sent to this area', 'Filter networks sent from this area']
+                leaf export-list {
+                    type enumeration {
+                        enum export-list;
+                    }
+                }                  //export-list
+                leaf nssa_default-information-originate {
+                    type enumeration {
+                        enum nssa_default-information-originate;
+                    }
+                }                  //nssa_default-information-originate
+                leaf nssa_default-information-originate_metric {
+                    type enumeration {
+                        enum nssa_default-information-originate_metric;
+                    }
+                }                  //metric
+                leaf OSPFV3_METRIC {
+                    type int32;
+                }                  //(0-16777214)
+                leaf nssa_default-information-originate_metric-type {
+                    type enumeration {
+                        enum nssa_default-information-originate_metric-type;
+                    }
+                }                  //metric-type
+            }
+            list LIST {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf permutations {
+                    type enumeration {
+                        enum permutations;
+                    }
+                }                  //permutations
+            }
+            list FIND {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf-list SEARCH_PATTERN {
+                    type string;
+                }                  //REGEX...
+            }
+            list WRITE-MULTIPLIER {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf MAXIMUM_NUMBER_OF_INTERFACE {
+                    type int32;
+                }                  //(1-100)
+            }
+            list SUMMARY-ADDRESS {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf SPECIFY_IPV6_PREFIX {
+                    type inet:ipv6-prefix;
+                }                  //X:X::X:X/M
+                leaf no-advertise {
+                    type enumeration {
+                        enum no-advertise;
+                    }
+                }                  //no-advertise
+                leaf tag {
+                    type enumeration {
+                        enum tag;
+                    }
+                }                  //tag
+                leaf ROUTER_TAG_VALUE {
+                    type int32;
+                }                  //(1-4294967295)
+                leaf metric {
+                    type enumeration {
+                        enum metric;
+                    }
+                }                  //metric
+                leaf ADVERTISED_METRIC_FOR_THIS {
+                    type int32;
+                }                  //(0-16777215)
+                leaf metric-type {
+                    type enumeration {
+                        enum metric-type;
+                    }
+                }                  //metric-type
+                leaf SET_OSPFV3_EXTERNAL_TYPE {
+                    type int32;
+                }                  //(1-2)
+            }
+            list STUB-ROUTER {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf administrative {
+                    type enumeration {
+                        enum administrative;
+                    }
+                }                  //administrative
+            }
+            list REDISTRIBUTE {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf FRR_REDIST_HELP_STR_OSPF6D {
+                    type string;
+                }                  //FRR_REDIST_STR_OSPF6D
+                leaf metric {
+                    type enumeration {
+                        enum metric;
+                    }
+                }                  //metric
+                leaf OSPF_DEFAULT_METRIC {
+                    type int32;
+                }                  //(0-16777214)
+                leaf metric-type {
+                    type enumeration {
+                        enum metric-type;
+                    }
+                }                  //metric-type
+                leaf SET_OSPF_EXTERNAL_TYPE {
+                    type int32;
+                }                  //(1-2)
+                leaf route-map {
+                    type enumeration {
+                        enum route-map;
+                    }
+                }                  //route-map
+                leaf ROUTE_MAP_NAME {
+                    type string;
+                }                  //RMAP_NAME
+            }
+            list QUIT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list OSPF6 {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf router-id {
+                    type enumeration {
+                        enum router-id;
+                    }
+                }                  //router-id
+                leaf SPECIFY_BY_IPV4_ADDRESS {
+                    type inet:ipv4-address;
+                }                  //A.B.C.D
+            }
+            list MAXIMUM-PATHS {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf NUMBER_OF_PATHS {
+                    type int32;
+                }                  //(1-256)
+            }
+            list LOG-ADJACENCY-CHANGES {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf detail {
+                    type enumeration {
+                        enum detail;
+                    }
+                }                  //detail
+            }
+            list INTERFACE {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf INTERFACE_NAME {
+                    type string;
+                }                  //IFNAME
+                leaf area {
+                    type enumeration {
+                        enum area;
+                    }
+                }                  //area
+                leaf AREA_CHOICE_CASE {
+                    type union {
+                        type inet:ipv4-address;
+                        type int32;
+                    }
+                }                  //<A.B.C.D|(0-4294967295)> ['OSPF6 area ID in IPv4 address notation', 'OSPF6 area ID in decimal notation']
+            }
+            list GRACEFUL-RESTART {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf grace-period {
+                    type enumeration {
+                        enum grace-period;
+                    }
+                }                  //grace-period
+                leaf MAXIMUM_LENGTH_OF_THE {
+                    type int32;
+                }                  //(1-1800)
+            }
+            list EXIT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list END {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list DISTANCE {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf OSPF6_ADMINISTRATIVE_DISTANCE {
+                    type int32;
+                }                  //(1-255)
+            }
+            list AUTO-COST {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf reference-bandwidth {
+                    type enumeration {
+                        enum reference-bandwidth;
+                    }
+                }                  //reference-bandwidth
+                leaf THE_REFERENCE_BANDWIDTH_IN {
+                    type int32;
+                }                  //(1-4294967)
+            }
+            list AREA {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf AREA_CHOICE_CASE {
+                    type union {
+                        type inet:ipv4-address;
+                        type int32;
+                    }
+                }                  //<A.B.C.D|(0-4294967295)> ['OSPF6 area ID in IP address format', 'OSPF6 area ID as a decimal value']
+                leaf stub {
+                    type enumeration {
+                        enum stub;
+                    }
+                }                  //stub
+                leaf stub_no-summary {
+                    type enumeration {
+                        enum stub_no-summary;
+                    }
+                }                  //no-summary
+                leaf range {
+                    type enumeration {
+                        enum range;
+                    }
+                }                  //range
+                leaf SPECIFY_IPV6_PREFIX {
+                    type inet:ipv6-prefix;
+                }                  //X:X::X:X/M
+                leaf advertise {
+                    type enumeration {
+                        enum advertise;
+                    }
+                }                  //advertise
+                leaf not-advertise {
+                    type enumeration {
+                        enum not-advertise;
+                    }
+                }                  //not-advertise
+                leaf cost {
+                    type enumeration {
+                        enum cost;
+                    }
+                }                  //cost
+                leaf ADVERTISED_METRIC_FOR_THIS {
+                    type int32;
+                }                  //(0-16777215)
+                leaf nssa {
+                    type enumeration {
+                        enum nssa;
+                    }
+                }                  //nssa
+                leaf nssa_range {
+                    type enumeration {
+                        enum nssa_range;
+                    }
+                }                  //range
+                leaf nssa_no-summary {
+                    type enumeration {
+                        enum nssa_no-summary;
+                    }
+                }                  //no-summary
+                leaf import-list {
+                    type enumeration {
+                        enum import-list;
+                    }
+                }                  //import-list
+                leaf NAME_OF_THE_ACCESS-LIST {
+                    type string;
+                }                  //ACCESSLIST6_NAME
+                leaf filter-list_prefix {
+                    type enumeration {
+                        enum filter-list_prefix;
+                    }
+                }                  //prefix
+                leaf NAME_OF_AN_IPV6 {
+                    type string;
+                }                  //PREFIXLIST_NAME
+                leaf PREFIX_IN_OUT_BOUND {
+                    type enumeration {
+                        enum in;
+                        enum out;
+                    }
+                }                  //<in|out> ['Filter networks sent to this area', 'Filter networks sent from this area']
+                leaf export-list {
+                    type enumeration {
+                        enum export-list;
+                    }
+                }                  //export-list
+                leaf nssa_default-information-originate {
+                    type enumeration {
+                        enum nssa_default-information-originate;
+                    }
+                }                  //nssa_default-information-originate
+                leaf nssa_default-information-originate_metric {
+                    type enumeration {
+                        enum nssa_default-information-originate_metric;
+                    }
+                }                  //metric
+                leaf OSPFV3_METRIC {
+                    type int32;
+                }                  //(0-16777214)
+                leaf nssa_default-information-originate_metric-type {
+                    type enumeration {
+                        enum nssa_default-information-originate_metric-type;
+                    }
+                }                  //metric-type
+                leaf SET_OSPFV3_EXTERNAL_TYPE {
+                    type int32;
+                }                  //(1-2)
+            }
+            list AGGREGATION {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf timer {
+                    type enumeration {
+                        enum timer;
+                    }
+                }                  //timer
+                leaf TIMER_INTERVAL {
+                    type int32;
+                }                  //(5-1800)
+            }
+            list NO_STUB-ROUTER {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf administrative {
+                    type enumeration {
+                        enum administrative;
+                    }
+                }                  //administrative
+            }
+            list NO_MAXIMUM-PATHS {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf NUMBER_OF_PATHS {
+                    type int32;
+                }                  //(1-256)
+            }
+            list NO_LOG-ADJACENCY-CHANGES {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf detail {
+                    type enumeration {
+                        enum detail;
+                    }
+                }                  //detail
+            }
+            list NO_GRACEFUL-RESTART {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf period {
+                    type enumeration {
+                        enum period;
+                    }
+                }                  //period
+                leaf MAXIMUM_LENGTH_OF_THE {
+                    type int32;
+                }                  //(1-1800)
+            }
+            list NO_DISTANCE {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf OSPF6_ADMINISTRATIVE_DISTANCE {
+                    type int32;
+                }                  //(1-255)
+            }
+            list TIMERS_THROTTLE {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf spf {
+                    type enumeration {
+                        enum spf;
+                    }
+                }                  //spf
+                leaf DELAY_FROM_FIRST_CHANGE {
+                    type int32;
+                }                  //(0-600000)
+                leaf INITIAL_HOLD_TIME_BETWEEN {
+                    type int32;
+                }                  //(0-600000)
+                leaf MAXIMUM_HOLD_TIME {
+                    type int32;
+                }                  //(0-600000)
+            }
+            list TIMERS_LSA {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf min-arrival {
+                    type enumeration {
+                        enum min-arrival;
+                    }
+                }                  //min-arrival
+                leaf DELAY_IN_MILLISECONDS {
+                    type int32;
+                }                  //(0-600000)
+            }
+            list OSPF6_SEND-EXTRA-DATA {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf zebra {
+                    type enumeration {
+                        enum zebra;
+                    }
+                }                  //zebra
+            }
+            list GRACEFUL-RESTART_HELPER {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf supported-grace-time {
+                    type enumeration {
+                        enum supported-grace-time;
+                    }
+                }                  //supported-grace-time
+                leaf GRACE_INTERVAL {
+                    type int32;
+                }                  //(10-1800)
+                leaf planned-only {
+                    type enumeration {
+                        enum planned-only;
+                    }
+                }                  //planned-only
+                leaf lsa-check-disable {
+                    type enumeration {
+                        enum lsa-check-disable;
+                    }
+                }                  //lsa-check-disable
+            }
+            list DISTANCE_OSPF6 {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf intra-area {
+                    type enumeration {
+                        enum intra-area;
+                    }
+                }                  //intra-area
+                leaf DISTANCE_FOR_INTRA-AREA_ROUTES {
+                    type int32;
+                }                  //(1-255)
+                leaf inter-area {
+                    type enumeration {
+                        enum inter-area;
+                    }
+                }                  //inter-area
+                leaf DISTANCE_FOR_INTER-AREA_ROUTES {
+                    type int32;
+                }                  //(1-255)
+                leaf external {
+                    type enumeration {
+                        enum external;
+                    }
+                }                  //external
+                leaf DISTANCE_FOR_EXTERNAL_ROUTES {
+                    type int32;
+                }                  //(1-255)
+            }
+            list DEFAULT-INFORMATION_ORIGINATE {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf always {
+                    type enumeration {
+                        enum always;
+                    }
+                }                  //always
+                leaf metric {
+                    type enumeration {
+                        enum metric;
+                    }
+                }                  //metric
+                leaf OSPFV3_METRIC {
+                    type int32;
+                }                  //(0-16777214)
+                leaf metric-type {
+                    type enumeration {
+                        enum metric-type;
+                    }
+                }                  //metric-type
+                leaf SET_OSPFV3_EXTERNAL_TYPE {
+                    type int32;
+                }                  //(1-2)
+                leaf route-map {
+                    type enumeration {
+                        enum route-map;
+                    }
+                }                  //route-map
+                leaf POINTER_TO_ROUTE-MAP_ENTRIES {
+                    type string;
+                }                  //RMAP_NAME
+            }
+            list NO_OUTPUT_FILE {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf PATH_TO_DUMP_OUTPUT {
+                    type string;
+                }                  //FILE
+            }
+            list NO_OSPF6_ROUTER-ID {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf SPECIFY_BY_IPV4_ADDRESS {
+                    type inet:ipv4-address;
+                }                  //A.B.C.D
+            }
+            list NO_OSPF6_SEND-EXTRA-DATA {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf zebra {
+                    type enumeration {
+                        enum zebra;
+                    }
+                }                  //zebra
+            }
+            list NO_GRACEFUL-RESTART_HELPER {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf supported-grace-time {
+                    type enumeration {
+                        enum supported-grace-time;
+                    }
+                }                  //supported-grace-time
+                leaf GRACE_INTERVAL {
+                    type int32;
+                }                  //(10-1800)
+                leaf planned-only {
+                    type enumeration {
+                        enum planned-only;
+                    }
+                }                  //planned-only
+                leaf lsa-check-disable {
+                    type enumeration {
+                        enum lsa-check-disable;
+                    }
+                }                  //lsa-check-disable
+            }
+            list NO_DEFAULT-INFORMATION_ORIGINATE {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf always {
+                    type enumeration {
+                        enum always;
+                    }
+                }                  //always
+                leaf metric {
+                    type enumeration {
+                        enum metric;
+                    }
+                }                  //metric
+                leaf OSPFV3_METRIC {
+                    type int32;
+                }                  //(0-16777214)
+                leaf metric-type {
+                    type enumeration {
+                        enum metric-type;
+                    }
+                }                  //metric-type
+                leaf SET_OSPFV3_EXTERNAL_TYPE {
+                    type int32;
+                }                  //(1-2)
+                leaf route-map {
+                    type enumeration {
+                        enum route-map;
+                    }
+                }                  //route-map
+                leaf POINTER_TO_ROUTE-MAP_ENTRIES {
+                    type string;
+                }                  //RMAP_NAME
+            }
+            list NO_AUTO-COST_REFERENCE-BANDWIDTH {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf THE_REFERENCE_BANDWIDTH_IN {
+                    type int32;
+                }                  //(1-4294967)
+            }
+            list NO_AGGREGATION_TIMER {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf TIMER_INTERVAL {
+                    type int32;
+                }                  //(5-1800)
+            }
+            list GRACEFUL-RESTART_HELPER_ENABLE {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf ADVERTISEMENT_ROUTER-ID {
+                    type inet:ipv4-address;
+                }                  //A.B.C.D
+            }
+            list NO_TIMERS_THROTTLE_SPF {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf DELAY_FROM_FIRST_CHANGE {
+                    type int32;
+                }                  //(0-600000)
+                leaf INITIAL_HOLD_TIME_BETWEEN {
+                    type int32;
+                }                  //(0-600000)
+                leaf MAXIMUM_HOLD_TIME {
+                    type int32;
+                }                  //(0-600000)
+            }
+            list NO_TIMERS_LSA_MIN-ARRIVAL {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf DELAY_IN_MILLISECONDS {
+                    type int32;
+                }                  //(0-600000)
+            }
+            list NO_GRACEFUL-RESTART_HELPER_ENABLE {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf ADVERTISEMENT_ROUTER-ID {
+                    type inet:ipv4-address;
+                }                  //A.B.C.D
+            }
+            list NO_DISTANCE_OSPF6_INTRA-AREA {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf DISTANCE_FOR_INTRA-AREA_ROUTES {
+                    type int32;
+                }                  //(1-255)
+            }
+            list NO_DISTANCE_OSPF6_INTER-AREA {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf DISTANCE_FOR_INTER-AREA_ROUTES {
+                    type int32;
+                }                  //(1-255)
+            }
+            list NO_DISTANCE_OSPF6_EXTERNAL {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf DISTANCE_FOR_EXTERNAL_ROUTES {
+                    type int32;
+                }                  //(1-255)
+            }
+        }
+
+    }
+}

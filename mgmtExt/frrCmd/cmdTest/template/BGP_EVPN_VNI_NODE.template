@@ -1,0 +1,15 @@
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE vni (1-16777215) BGP_EVPN_VNI_NODE route-target <both|import|export> RT
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE vni (1-16777215) BGP_EVPN_VNI_NODE rd ASN:NN_OR_IP-ADDRESS:NN
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE vni (1-16777215) BGP_EVPN_VNI_NODE quit
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE vni (1-16777215) BGP_EVPN_VNI_NODE no route-target <import|export>
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE vni (1-16777215) BGP_EVPN_VNI_NODE no route-target <both|import|export> RT
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE vni (1-16777215) BGP_EVPN_VNI_NODE no rd ASN:NN_OR_IP-ADDRESS:NN
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE vni (1-16777215) BGP_EVPN_VNI_NODE no rd
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE vni (1-16777215) BGP_EVPN_VNI_NODE no advertise-subnet
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE vni (1-16777215) BGP_EVPN_VNI_NODE no advertise-default-gw
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE vni (1-16777215) BGP_EVPN_VNI_NODE exit-vni
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE vni (1-16777215) BGP_EVPN_VNI_NODE exit
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE vni (1-16777215) BGP_EVPN_VNI_NODE end
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE vni (1-16777215) BGP_EVPN_VNI_NODE advertise-subnet
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE vni (1-16777215) BGP_EVPN_VNI_NODE advertise-default-gw
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE vni (1-16777215) BGP_EVPN_VNI_NODE [no] advertise-svi-ip

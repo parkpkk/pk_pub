@@ -1,0 +1,6 @@
+CONFIG_NODE segment-routing SEGMENT_ROUTING_NODE traffic-eng
+CONFIG_NODE segment-routing SEGMENT_ROUTING_NODE srv6
+CONFIG_NODE segment-routing SEGMENT_ROUTING_NODE quit
+CONFIG_NODE segment-routing SEGMENT_ROUTING_NODE no srv6
+CONFIG_NODE segment-routing SEGMENT_ROUTING_NODE exit
+CONFIG_NODE segment-routing SEGMENT_ROUTING_NODE end

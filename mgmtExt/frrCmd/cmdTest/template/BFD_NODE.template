@@ -1,0 +1,7 @@
+CONFIG_NODE bfd BFD_NODE quit
+CONFIG_NODE bfd BFD_NODE profile BFDPROF
+CONFIG_NODE bfd BFD_NODE peer <A.B.C.D|X:X::X:X> [{multihop|local-address <A.B.C.D|X:X::X:X>|interface IFNAME|vrf NAME}]
+CONFIG_NODE bfd BFD_NODE no profile BFDPROF
+CONFIG_NODE bfd BFD_NODE no peer <A.B.C.D|X:X::X:X> [{multihop|local-address <A.B.C.D|X:X::X:X>|interface IFNAME|vrf NAME}]
+CONFIG_NODE bfd BFD_NODE exit
+CONFIG_NODE bfd BFD_NODE end

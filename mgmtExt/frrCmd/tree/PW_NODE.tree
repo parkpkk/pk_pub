@@ -1,0 +1,246 @@
+{
+    "PW_NODE": {
+        "desc": [
+            "PW_NODE node related command"
+        ],
+        "quit": {
+            "desc": [
+                "Exit current mode and down to previous mode"
+            ],
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "exit": {
+            "desc": [
+                "Exit current mode and down to previous mode"
+            ],
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "end": {
+            "desc": [
+                "End current mode and change to enable mode"
+            ],
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no": {
+            "desc": [
+                "Negate a command or set its defaults"
+            ],
+            "neighbor": {
+                "desc": [
+                    "Specify the IPv4 or IPv6 address of the remote endpoint"
+                ],
+                "<A.B.C.D|X:X::X:X>": {
+                    "desc": [
+                        "IPv4 address",
+                        "IPv6 address"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "control-word": {
+                "desc": [
+                    "Control-word options"
+                ],
+                "<exclude|include>": {
+                    "desc": [
+                        "Exclude control-word in pseudowire packets",
+                        "Include control-word in pseudowire packets"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            }
+        },
+        "neighbor": {
+            "desc": [
+                "Specify the IPv4 or IPv6 address of the remote endpoint"
+            ],
+            "<A.B.C.D|X:X::X:X>": {
+                "desc": [
+                    "IPv4 address",
+                    "IPv6 address"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "control-word": {
+            "desc": [
+                "Control-word options"
+            ],
+            "<exclude|include>": {
+                "desc": [
+                    "Exclude control-word in pseudowire packets",
+                    "Include control-word in pseudowire packets"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "output": {
+            "desc": [
+                "Direct vtysh output to file"
+            ],
+            "file": {
+                "desc": [
+                    "Direct vtysh output to file"
+                ],
+                "FILE": {
+                    "desc": [
+                        "Path to dump output to"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            }
+        },
+        "list": {
+            "desc": [
+                "Print command list"
+            ],
+            "permutations": {
+                "desc": [
+                    "Print all possible command permutations"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "find": {
+            "desc": [
+                "Find CLI command matching a regular expression"
+            ],
+            "REGEX...": {
+                "desc": [
+                    "Search pattern (POSIX regex)"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "mpls_label": {
+            "desc": [
+                "MPLS L2VPN PW command",
+                "MPLS L2VPN static labels"
+            ],
+            "local": {
+                "desc": [
+                    "Local pseudowire label"
+                ],
+                "(16-1048575)": {
+                    "desc": [
+                        "Local pseudowire label"
+                    ],
+                    "remote": {
+                        "desc": [
+                            "Remote pseudowire label"
+                        ],
+                        "(16-1048575)": {
+                            "desc": [
+                                "Remote pseudowire label"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "no_mpls_label": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "MPLS L2VPN PW command",
+                "MPLS L2VPN static labels"
+            ],
+            "local": {
+                "desc": [
+                    "Local pseudowire label"
+                ],
+                "(16-1048575)": {
+                    "desc": [
+                        "Local pseudowire label"
+                    ],
+                    "remote": {
+                        "desc": [
+                            "Remote pseudowire label"
+                        ],
+                        "(16-1048575)": {
+                            "desc": [
+                                "Remote pseudowire label"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "no_output_file": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Direct vtysh output to file",
+                "Direct vtysh output to file"
+            ],
+            "FILE": {
+                "desc": [
+                    "Path to dump output to"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        }
+    }
+}

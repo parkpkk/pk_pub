@@ -1,0 +1,360 @@
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE vrrp (1-255) priority (1-254)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE vrrp (1-255) advertisement-interval (10-40950)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE tunnel source INTERFACE
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE tunnel protection vici profile PROFILE [fallback-profile FALLBACK]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE shutdown
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE quit
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ptm-enable
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ospf transmit-delay (1-65535) [A.B.C.D]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ospf retransmit-interval (1-65535) [A.B.C.D]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ospf priority (0-255) [A.B.C.D]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ospf network <broadcast|non-broadcast|point-to-multipoint|point-to-point>
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ospf message-digest-key (1-255) md5 KEY [A.B.C.D]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ospf hello-interval (1-65535) [A.B.C.D]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ospf dead-interval (1-65535) [A.B.C.D]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ospf cost (1-65535) [A.B.C.D]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ospf authentication-key AUTH_KEY [A.B.C.D]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE openfabric topology ISIS_MT_NAMES
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE openfabric psnp-interval (1-120)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE openfabric password <md5|clear> WORD
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE openfabric passive
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE openfabric metric (0-16777215)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE openfabric hello-multiplier (2-100)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE openfabric hello-interval (1-600)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE openfabric csnp-interval (1-600)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE openfabric bfd
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no vrrp (1-255) priority [(1-254)]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no vrrp (1-255) advertisement-interval [(10-40950)]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no tunnel source
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no tunnel protection
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no shutdown
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ptm-enable
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ospf transmit-delay [(1-65535) [A.B.C.D]]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ospf retransmit-interval [(1-65535)] [A.B.C.D]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ospf priority [(0-255) [A.B.C.D]]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ospf network [<broadcast|non-broadcast|point-to-multipoint|point-to-point>]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ospf message-digest-key (1-255) [md5 KEY] [A.B.C.D]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ospf hello-interval [(1-65535) [A.B.C.D]]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ospf dead-interval [<(1-65535)|minimal hello-multiplier (1-10)> [A.B.C.D]]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ospf cost [(1-65535)] [A.B.C.D]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ospf authentication-key [AUTH_KEY [A.B.C.D]]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no openfabric topology ISIS_MT_NAMES
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no openfabric psnp-interval [(1-120)]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no openfabric password [<md5|clear> WORD]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no openfabric passive
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no openfabric metric [(0-16777215)]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no openfabric hello-multiplier [(2-100)]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no openfabric hello-interval [(1-600)]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no openfabric csnp-interval [(1-600)]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no openfabric bfd
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no multicast
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no link-detect
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no isis topology ISIS_MT_NAMES
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no isis psnp-interval [(1-120)] [level-1|level-2]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no isis psnp-interval [(1-120)]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no isis priority [(0-127)] [level-1|level-2]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no isis password [<md5|clear> WORD]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no isis passive
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no isis mpls ldp-sync holddown [<(1-10000)>]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no isis metric [level-1|level-2] [(0-16777215)]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no isis metric [(0-16777215)]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no isis hello-multiplier [level-1|level-2] [(2-100)]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no isis hello-multiplier [(2-100)]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no isis hello-interval [level-1|level-2] [(1-600)]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no isis hello-interval [(1-600)]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no isis csnp-interval [(1-600)] [level-1|level-2]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no isis csnp-interval [(1-600)]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no isis circuit-type [level-1|level-1-2|level-2-only]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no isis bfd
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ipv6 pim unicast-bsm
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ipv6 pim hello [(1-65535) [(1-65535)]]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ipv6 pim drpriority [(1-4294967295)]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ipv6 pim bsm
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ipv6 pim [passive]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ipv6 ospf6 transmit-delay [(1-3600)]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ipv6 ospf6 retransmit-interval [(1-65535)]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ipv6 ospf6 priority [(0-255)]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ipv6 ospf6 passive
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ipv6 ospf6 network [<broadcast|point-to-point>]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ipv6 ospf6 mtu-ignore
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ipv6 ospf6 instance-id [(0-255)]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ipv6 ospf6 ifmtu [(1-65535)]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ipv6 ospf6 hello-interval [(1-65535)]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ipv6 ospf6 dead-interval [(1-65535)]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ipv6 ospf6 cost [(1-65535)]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ipv6 ospf6 bfd profile [BFDPROF]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ipv6 ospf6 bfd
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ipv6 ospf6 authentication keychain [KEYCHAIN_NAME]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ipv6 ospf6 authentication key-id [(1-65535) hash-algo <md5|hmac-sha-1|hmac-sha-256|hmac-sha-384|hmac-sha-512> key WORD]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ipv6 ospf6 area [<A.B.C.D|(0-4294967295)>]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ipv6 ospf6 advertise prefix-list [WORD]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ipv6 nd suppress-ra
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ipv6 nd router-preference [<high|medium|low>]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ipv6 nd reachable-time [(1-3600000)]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ipv6 nd rdnss X:X::X:X [<(0-4294967295)|infinite>]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ipv6 nd ra-retrans-interval [(0-4294967295)]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ipv6 nd ra-lifetime [(0-9000)]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ipv6 nd ra-interval [<(1-1800)|msec (1-1800000)>]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ipv6 nd ra-hop-limit [(0-255)]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ipv6 nd ra-fast-retrans
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ipv6 nd prefix X:X::X:X/M [<(0-4294967295)|infinite> <(0-4294967295)|infinite>] [<router-address|off-link [no-autoconfig]|no-autoconfig [off-link]>]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ipv6 nd other-config-flag
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ipv6 nd mtu [(1-65535)]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ipv6 nd managed-config-flag
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ipv6 nd home-agent-preference [(0-65535)]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ipv6 nd home-agent-lifetime [(0-65520)]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ipv6 nd home-agent-config-flag
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ipv6 nd dnssl SUFFIX [<(0-4294967295)|infinite>]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ipv6 nd adv-interval-option
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ipv6 multicast boundary oil [WORD]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ipv6 mroute INTERFACE X:X::X:X [X:X::X:X]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ipv6 mld version [(1-2)]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ipv6 mld query-max-response-time [(1-65535)]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ipv6 mld query-interval [(1-65535)]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ipv6 mld last-member-query-interval [(1-65535)]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ipv6 mld last-member-query-count [(1-255)]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ipv6 mld join X:X::X:X [X:X::X:X]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ipv6 mld
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ipv6 address X:X::X:X/M
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ip rip send version [<{1|2}|none>]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ip rip receive version [<{1|2}|none>]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ip rip authentication string [LINE]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ip rip authentication mode [<md5 [auth-length <rfc|old-ripd>]|text>]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ip rip authentication key-chain [LINE]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ip pim use-source [A.B.C.D]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ip pim unicast-bsm
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ip pim ssm
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ip pim sm
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ip pim hello [(1-65535) [(1-65535)]]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ip pim drpriority [(1-4294967295)]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ip pim bsm
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ip pim bfd profile [BFDPROF]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ip pim bfd
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ip pim [passive]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ip ospf transmit-delay [(1-65535)] [A.B.C.D]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ip ospf retransmit-interval [(1-65535)] [A.B.C.D]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ip ospf priority [(0-255) [A.B.C.D]]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ip ospf passive [A.B.C.D]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ip ospf network [<broadcast|non-broadcast|point-to-multipoint|point-to-point>]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ip ospf mtu-ignore [A.B.C.D]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ip ospf message-digest-key (1-255) [md5 KEY] [A.B.C.D]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ip ospf hello-interval [(1-65535) [A.B.C.D]]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ip ospf dead-interval [<(1-65535)|minimal hello-multiplier (1-10)> [A.B.C.D]]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ip ospf cost [(1-65535)] [A.B.C.D]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ip ospf bfd profile [BFDPROF]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ip ospf bfd
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ip ospf authentication-key [AUTH_KEY [A.B.C.D]]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ip ospf authentication [A.B.C.D]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ip ospf authentication <null|message-digest> [A.B.C.D]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ip ospf [(1-65535)] area [<A.B.C.D|(0-4294967295)> [A.B.C.D]]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ip nhrp mtu [(576-1500)|opennhrp]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ip multicast boundary oil [WORD]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ip mroute INTERFACE A.B.C.D [A.B.C.D]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ip irdp shutdown
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ip irdp address A.B.C.D preference (0-2147483647)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ip irdp
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ip igmp version (2-3)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ip igmp query-max-response-time-dsec [(1-65535)]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ip igmp query-max-response-time [(1-65535)]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ip igmp query-interval [(1-65535)]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ip igmp last-member-query-interval [(1-65535)]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ip igmp last-member-query-count [(1-255)]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ip igmp join A.B.C.D [A.B.C.D]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ip igmp
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ip address A.B.C.D/M label LINE
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ip address A.B.C.D/M
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no ip address A.B.C.D peer A.B.C.D/M
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no bandwidth [(1-100000)]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no <ip|ipv6> router openfabric WORD
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no <ip|ipv6> router isis [WORD]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no <ip|ipv6> router isis WORD
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no <ip|ipv6> nhrp registration no-unique
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no <ip|ipv6> nhrp nhs <A.B.C.D|X:X::X:X|dynamic> nbma <A.B.C.D|FQDN>
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no <ip|ipv6> nhrp network-id [(1-4294967295)]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no <ip|ipv6> nhrp map multicast <A.B.C.D|X:X::X:X|dynamic>
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no <ip|ipv6> nhrp map <A.B.C.D|X:X::X:X> [<A.B.C.D|local>]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no <ip|ipv6> nhrp holdtime [(1-65000)]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE no <ip|ipv6> nhrp <shortcut|redirect>
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE multicast
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE link-params
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE link-detect
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE isis topology ISIS_MT_NAMES
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE isis psnp-interval (1-120) [level-1|level-2]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE isis psnp-interval (1-120)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE isis priority (0-127) [level-1|level-2]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE isis password <md5|clear> WORD
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE isis passive
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE isis mpls ldp-sync holddown (0-10000)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE isis metric [level-1|level-2] (0-16777215)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE isis metric (0-16777215)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE isis hello-multiplier [level-1|level-2] (2-100)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE isis hello-multiplier (2-100)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE isis hello-interval [level-1|level-2] (1-600)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE isis hello-interval (1-600)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE isis csnp-interval (1-600) [level-1|level-2]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE isis csnp-interval (1-600)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE isis circuit-type <level-1|level-1-2|level-2-only>
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE isis bfd
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ipv6 router openfabric WORD
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ipv6 router isis WORD
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ipv6 pim unicast-bsm
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ipv6 pim hello (1-65535) [(1-65535)]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ipv6 pim drpriority (1-4294967295)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ipv6 pim bsm
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ipv6 pim [passive]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ipv6 ospf6 transmit-delay (1-3600)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ipv6 ospf6 retransmit-interval (1-65535)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ipv6 ospf6 priority (0-255)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ipv6 ospf6 passive
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ipv6 ospf6 network <broadcast|point-to-point>
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ipv6 ospf6 mtu-ignore
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ipv6 ospf6 instance-id (0-255)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ipv6 ospf6 ifmtu (1-65535)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ipv6 ospf6 hello-interval (1-65535)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ipv6 ospf6 dead-interval (1-65535)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ipv6 ospf6 cost (1-65535)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ipv6 ospf6 bfd [profile BFDPROF]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ipv6 ospf6 bfd (2-255) (50-60000) (50-60000)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ipv6 ospf6 authentication keychain KEYCHAIN_NAME
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ipv6 ospf6 authentication key-id (1-65535) hash-algo <md5|hmac-sha-1|hmac-sha-256|hmac-sha-384|hmac-sha-512> key WORD
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ipv6 ospf6 area <A.B.C.D|(0-4294967295)>
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ipv6 ospf6 advertise prefix-list WORD
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ipv6 nd suppress-ra
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ipv6 nd router-preference <high|medium|low>
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ipv6 nd reachable-time (1-3600000)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ipv6 nd rdnss X:X::X:X [<(0-4294967295)|infinite>]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ipv6 nd ra-retrans-interval (0-4294967295)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ipv6 nd ra-lifetime (0-9000)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ipv6 nd ra-interval msec (70-1800000)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ipv6 nd ra-interval (1-1800)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ipv6 nd ra-hop-limit (0-255)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ipv6 nd ra-fast-retrans
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ipv6 nd prefix X:X::X:X/M [<(0-4294967295)|infinite> <(0-4294967295)|infinite>] [<router-address|off-link [no-autoconfig]|no-autoconfig [off-link]>]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ipv6 nd other-config-flag
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ipv6 nd mtu (1-65535)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ipv6 nd managed-config-flag
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ipv6 nd home-agent-preference (0-65535)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ipv6 nd home-agent-lifetime (0-65520)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ipv6 nd home-agent-config-flag
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ipv6 nd dnssl SUFFIX [<(0-4294967295)|infinite>]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ipv6 nd adv-interval-option
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ipv6 multicast boundary oil WORD
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ipv6 mroute INTERFACE X:X::X:X [X:X::X:X]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ipv6 mld version (1-2)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ipv6 mld query-max-response-time (1-65535)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ipv6 mld query-interval (1-65535)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ipv6 mld last-member-query-interval (1-65535)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ipv6 mld last-member-query-count (1-255)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ipv6 mld join X:X::X:X [X:X::X:X]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ipv6 mld
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ipv6 address X:X::X:X/M
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip router openfabric WORD
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip router isis WORD
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip rip send version <{1|2}|none>
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip rip receive version <{1|2}|none>
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip rip authentication string LINE
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip rip authentication mode <md5 [auth-length <rfc|old-ripd>]|text>
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip rip authentication key-chain LINE
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip pim use-source A.B.C.D
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip pim unicast-bsm
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip pim ssm
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip pim sm
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip pim hello (1-65535) [(1-65535)]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip pim drpriority (1-4294967295)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip pim bsm
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip pim bfd [profile BFDPROF]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip pim [passive]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip ospf transmit-delay (1-65535) [A.B.C.D]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip ospf retransmit-interval (1-65535) [A.B.C.D]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip ospf priority (0-255) [A.B.C.D]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip ospf passive [A.B.C.D]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip ospf network <broadcast|non-broadcast|point-to-multipoint|point-to-point [dmvpn]>
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip ospf mtu-ignore [A.B.C.D]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip ospf message-digest-key (1-255) md5 KEY [A.B.C.D]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip ospf hello-interval (1-65535) [A.B.C.D]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip ospf dead-interval minimal hello-multiplier (1-10) [A.B.C.D]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip ospf dead-interval (1-65535) [A.B.C.D]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip ospf cost (1-65535) [A.B.C.D]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip ospf bfd profile BFDPROF
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip ospf bfd (2-255) (50-60000) (50-60000)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip ospf bfd
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip ospf authentication-key AUTH_KEY [A.B.C.D]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip ospf authentication [A.B.C.D]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip ospf authentication <null|message-digest> [A.B.C.D]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip ospf [(1-65535)] area <A.B.C.D|(0-4294967295)> [A.B.C.D]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip nhrp mtu <(576-1500)|opennhrp>
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip multicast boundary oil WORD
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip mroute INTERFACE A.B.C.D [A.B.C.D]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip irdp shutdown
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip irdp preference (0-2147483647)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip irdp multicast
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip irdp minadvertinterval (3-1800)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip irdp maxadvertinterval (4-1800)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip irdp holdtime (0-9000)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip irdp debug packet
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip irdp debug misc
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip irdp debug messages
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip irdp debug disable
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip irdp broadcast
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip irdp address A.B.C.D preference (0-2147483647)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip igmp version (2-3)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip igmp query-max-response-time-dsec (1-65535)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip igmp query-max-response-time (1-65535)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip igmp query-interval (1-65535)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip igmp last-member-query-interval (1-65535)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip igmp last-member-query-count (1-255)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip igmp join A.B.C.D [A.B.C.D]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip igmp
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip address A.B.C.D/M label LINE
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip address A.B.C.D/M
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE ip address A.B.C.D peer A.B.C.D/M
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE exit
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE end
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE debug ipv6 mld {robustness (0-7)|query-max-response-time (1-8387584)}
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE bandwidth (1-100000)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE [no] vrrp (1-255) shutdown
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE [no] vrrp (1-255) preempt
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE [no] vrrp (1-255) ipv6 X:X::X:X
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE [no] vrrp (1-255) ip A.B.C.D
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE [no] vrrp (1-255) checksum-with-ipv4-pseudoheader
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE [no] vrrp (1-255) [version (2-3)]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE [no] pbr-policy PBRMAP
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE [no] mpls enable
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE [no] mpls bgp forwarding
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE [no] isis topology <standard|ipv4-unicast|ipv4-mgmt|ipv6-unicast|ipv4-multicast|ipv6-multicast|ipv6-mgmt|ipv6-dstsrc>
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE [no] isis three-way-handshake
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE [no] isis passive
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE [no] isis network point-to-point
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE [no] isis mpls ldp-sync
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE [no] isis hello padding
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE [no] isis fast-reroute ti-lfa [level-1|level-2] [node-protection [link-fallback]]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE [no] isis fast-reroute remote-lfa tunnel mpls-ldp [level-1|level-2]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE [no] isis fast-reroute remote-lfa maximum-metric (1-16777215) [level-1|level-2]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE [no] isis fast-reroute lfa [level-1|level-2] exclude interface IFNAME
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE [no] isis fast-reroute lfa [level-1|level-2]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE [no] isis bfd profile BFDPROF
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE [no] isis bfd
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE [no] ipv6 ripng split-horizon [poisoned-reverse]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE [no] ipv6 pim active-active
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE [no] ip rip v2-broadcast
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE [no] ip rip split-horizon [poisoned-reverse]
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE [no] ip pim active-active
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE [no] babel wireless
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE [no] babel wired
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE [no] babel update-interval (20-655340)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE [no] babel split-horizon
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE [no] babel rxcost (1-65534)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE [no] babel rtt-min (1-65535)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE [no] babel rtt-max (1-65535)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE [no] babel rtt-decay (1-256)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE [no] babel max-rtt-penalty (0-65535)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE [no] babel hello-interval (20-655340)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE [no] babel enable-timestamps
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE [no] babel channel <(1-254)|interfering|noninterfering>
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE <ip|ipv6> nhrp registration no-unique
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE <ip|ipv6> nhrp nhs <A.B.C.D|X:X::X:X|dynamic> nbma <A.B.C.D|FQDN>
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE <ip|ipv6> nhrp network-id (1-4294967295)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE <ip|ipv6> nhrp map multicast <A.B.C.D|X:X::X:X|dynamic>
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE <ip|ipv6> nhrp map <A.B.C.D|X:X::X:X> <A.B.C.D|local>
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE <ip|ipv6> nhrp holdtime (1-65000)
+CONFIG_NODE interface IFNAME [vrf NAME] INTERFACE_NODE <ip|ipv6> nhrp <shortcut|redirect>

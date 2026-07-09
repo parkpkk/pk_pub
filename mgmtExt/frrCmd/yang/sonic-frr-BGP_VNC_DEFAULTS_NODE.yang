@@ -1,0 +1,168 @@
+
+module sonic-frr-BGP_VNC_DEFAULTS_NODE {
+    namespace "http://github.com/sonic-net/frr/sonic-frr-BGP_VNC_DEFAULTS_NODE";
+    prefix frr-BGP_VNC_DEFAULTS_NODE;
+    yang-version 1.1;
+
+    import ietf-inet-types {
+        prefix inet;
+    }
+
+    organization
+        "SONiC";
+
+    contact
+        "SONiC";
+
+    description
+        "SONIC frr-BGP_VNC_DEFAULTS_NODE FRR YANG";
+
+    revision 2024-12-23 {
+        description
+            "Initial revision.";
+    }
+    container sonic-frr-BGP_VNC_DEFAULTS_NODE {
+        container BGP_VNC_DEFAULTS_NODE {
+            list OUTPUT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf file {
+                    type enumeration {
+                        enum file;
+                    }
+                }                  //file
+                leaf PATH_TO_DUMP_OUTPUT {
+                    type string;
+                }                  //FILE
+            }
+            list NO {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf l2rd {
+                    type enumeration {
+                        enum l2rd;
+                    }
+                }                  //l2rd
+            }
+            list LIST {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf permutations {
+                    type enumeration {
+                        enum permutations;
+                    }
+                }                  //permutations
+            }
+            list FIND {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf-list SEARCH_PATTERN {
+                    type string;
+                }                  //REGEX...
+            }
+            list RT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf import {
+                    type enumeration {
+                        enum import;
+                    }
+                }                  //import
+                leaf-list ROUTER_TARGET {
+                    type string;
+                }                  //RTLIST...
+                leaf export {
+                    type enumeration {
+                        enum export;
+                    }
+                }                  //export
+                leaf both {
+                    type enumeration {
+                        enum both;
+                    }
+                }                  //both
+            }
+            list RESPONSE-LIFETIME {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf RESPONSE-LIFETIME_CHOICE_CASE {
+                    type union {
+                        type string;
+                        type enumeration {
+                        enum infinite;
+                        }
+                    }
+                }                  //<LIFETIME|infinite> ['Response lifetime in seconds', 'Infinite response lifetime']
+            }
+            list RD {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf BGP_IDENTIFIER {
+                    type string;
+                }                  //ASN:NN_OR_IP-ADDRESS:NN
+            }
+            list QUIT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list L2RD {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf L2RD_CHOICE_CASE {
+                    type union {
+                        type int32;
+                        type enumeration {
+                        enum auto-vn;
+                        }
+                    }
+                }                  //<(1-255)|auto-vn> ['Fixed value 1-255', "use the low-order octet of the NVE's VN address"]
+            }
+            list EXIT-VNC {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list EXIT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list END {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list NO_OUTPUT_FILE {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf PATH_TO_DUMP_OUTPUT {
+                    type string;
+                }                  //FILE
+            }
+        }
+
+    }
+}

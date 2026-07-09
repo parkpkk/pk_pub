@@ -1,0 +1,78 @@
+CONFIG_NODE vrf NAME VRF_NODE vni (1-16777215) [prefix-routes-only]
+CONFIG_NODE vrf NAME VRF_NODE router-id A.B.C.D
+CONFIG_NODE vrf NAME VRF_NODE quit
+CONFIG_NODE vrf NAME VRF_NODE no vni (1-16777215) [prefix-routes-only]
+CONFIG_NODE vrf NAME VRF_NODE no router-id [A.B.C.D]
+CONFIG_NODE vrf NAME VRF_NODE no netns [NAME]
+CONFIG_NODE vrf NAME VRF_NODE no ipv6 ssmpingd [X:X::X:X]
+CONFIG_NODE vrf NAME VRF_NODE no ipv6 protocol <any|babel|bgp|connected|isis|kernel|nhrp|openfabric|ospf6|ripng|static|table|vnc> [route-map ROUTE-MAP]
+CONFIG_NODE vrf NAME VRF_NODE no ipv6 pim rp X:X::X:X prefix-list WORD
+CONFIG_NODE vrf NAME VRF_NODE no ipv6 pim rp X:X::X:X [X:X::X:X/M]
+CONFIG_NODE vrf NAME VRF_NODE no ipv6 nht resolve-via-default
+CONFIG_NODE vrf NAME VRF_NODE no ipv6 nht <any|babel|bgp|connected|isis|kernel|nhrp|openfabric|ospf6|ripng|static|table|vnc> [route-map ROUTE-MAP]
+CONFIG_NODE vrf NAME VRF_NODE no ipv6 mld watermark-warn [(1-65535)]
+CONFIG_NODE vrf NAME VRF_NODE no ip ssmpingd [A.B.C.D]
+CONFIG_NODE vrf NAME VRF_NODE no ip router-id [A.B.C.D]
+CONFIG_NODE vrf NAME VRF_NODE no ip protocol <any|babel|bgp|connected|eigrp|isis|kernel|nhrp|openfabric|ospf|rip|static|table|vnc> [route-map ROUTE-MAP]
+CONFIG_NODE vrf NAME VRF_NODE no ip pim ssm prefix-list WORD
+CONFIG_NODE vrf NAME VRF_NODE no ip pim ssm prefix-list
+CONFIG_NODE vrf NAME VRF_NODE no ip pim spt-switchover infinity-and-beyond prefix-list WORD
+CONFIG_NODE vrf NAME VRF_NODE no ip pim spt-switchover infinity-and-beyond
+CONFIG_NODE vrf NAME VRF_NODE no ip pim send-v6-secondary
+CONFIG_NODE vrf NAME VRF_NODE no ip pim rp keep-alive-timer [(1-65535)]
+CONFIG_NODE vrf NAME VRF_NODE no ip pim rp A.B.C.D prefix-list WORD
+CONFIG_NODE vrf NAME VRF_NODE no ip pim rp A.B.C.D [A.B.C.D/M]
+CONFIG_NODE vrf NAME VRF_NODE no ip pim keep-alive-timer [(1-65535)]
+CONFIG_NODE vrf NAME VRF_NODE no ip pim ecmp rebalance
+CONFIG_NODE vrf NAME VRF_NODE no ip pim ecmp
+CONFIG_NODE vrf NAME VRF_NODE no ip nht resolve-via-default
+CONFIG_NODE vrf NAME VRF_NODE no ip nht <any|babel|bgp|connected|eigrp|isis|kernel|nhrp|openfabric|ospf|rip|static|table|vnc> route-map [ROUTE-MAP]
+CONFIG_NODE vrf NAME VRF_NODE no ip msdp timers [(1-65535) (1-65535) [(1-65535)]]
+CONFIG_NODE vrf NAME VRF_NODE no ip msdp peer A.B.C.D
+CONFIG_NODE vrf NAME VRF_NODE no ip msdp mesh-group WORD source [A.B.C.D]
+CONFIG_NODE vrf NAME VRF_NODE no ip msdp mesh-group WORD member A.B.C.D
+CONFIG_NODE vrf NAME VRF_NODE no ip msdp mesh-group WORD
+CONFIG_NODE vrf NAME VRF_NODE no ip igmp watermark-warn [(1-65535)]
+CONFIG_NODE vrf NAME VRF_NODE netns NAME
+CONFIG_NODE vrf NAME VRF_NODE ipv6 ssmpingd [X:X::X:X]
+CONFIG_NODE vrf NAME VRF_NODE ipv6 protocol <any|babel|bgp|connected|isis|kernel|nhrp|openfabric|ospf6|ripng|static|table|vnc> route-map ROUTE-MAP
+CONFIG_NODE vrf NAME VRF_NODE ipv6 pim rp X:X::X:X prefix-list WORD
+CONFIG_NODE vrf NAME VRF_NODE ipv6 pim rp X:X::X:X [X:X::X:X/M]
+CONFIG_NODE vrf NAME VRF_NODE ipv6 nht resolve-via-default
+CONFIG_NODE vrf NAME VRF_NODE ipv6 nht <any|babel|bgp|connected|isis|kernel|nhrp|openfabric|ospf6|ripng|static|table|vnc> route-map ROUTE-MAP
+CONFIG_NODE vrf NAME VRF_NODE ipv6 mld watermark-warn (1-65535)
+CONFIG_NODE vrf NAME VRF_NODE ip ssmpingd [A.B.C.D]
+CONFIG_NODE vrf NAME VRF_NODE ip router-id A.B.C.D
+CONFIG_NODE vrf NAME VRF_NODE ip protocol <any|babel|bgp|connected|eigrp|isis|kernel|nhrp|openfabric|ospf|rip|static|table|vnc> route-map ROUTE-MAP
+CONFIG_NODE vrf NAME VRF_NODE ip pim ssm prefix-list WORD
+CONFIG_NODE vrf NAME VRF_NODE ip pim spt-switchover infinity-and-beyond prefix-list WORD
+CONFIG_NODE vrf NAME VRF_NODE ip pim spt-switchover infinity-and-beyond
+CONFIG_NODE vrf NAME VRF_NODE ip pim send-v6-secondary
+CONFIG_NODE vrf NAME VRF_NODE ip pim rp keep-alive-timer (1-65535)
+CONFIG_NODE vrf NAME VRF_NODE ip pim rp A.B.C.D prefix-list WORD
+CONFIG_NODE vrf NAME VRF_NODE ip pim rp A.B.C.D [A.B.C.D/M]
+CONFIG_NODE vrf NAME VRF_NODE ip pim keep-alive-timer (1-65535)
+CONFIG_NODE vrf NAME VRF_NODE ip pim ecmp rebalance
+CONFIG_NODE vrf NAME VRF_NODE ip pim ecmp
+CONFIG_NODE vrf NAME VRF_NODE ip nht resolve-via-default
+CONFIG_NODE vrf NAME VRF_NODE ip nht <any|babel|bgp|connected|eigrp|isis|kernel|nhrp|openfabric|ospf|rip|static|table|vnc> route-map ROUTE-MAP
+CONFIG_NODE vrf NAME VRF_NODE ip msdp timers (1-65535) (1-65535) [(1-65535)]
+CONFIG_NODE vrf NAME VRF_NODE ip msdp peer A.B.C.D source A.B.C.D
+CONFIG_NODE vrf NAME VRF_NODE ip msdp mesh-group WORD source A.B.C.D
+CONFIG_NODE vrf NAME VRF_NODE ip msdp mesh-group WORD member A.B.C.D
+CONFIG_NODE vrf NAME VRF_NODE ip igmp watermark-warn (1-65535)
+CONFIG_NODE vrf NAME VRF_NODE exit-vrf
+CONFIG_NODE vrf NAME VRF_NODE exit
+CONFIG_NODE vrf NAME VRF_NODE end
+CONFIG_NODE vrf NAME VRF_NODE [no] ipv6 route X:X::X:X/M [from X:X::X:X/M] X:X::X:X <INTERFACE|Null0> [{tag (1-4294967295)|(1-255)|label WORD|table (1-4294967295)|nexthop-vrf NAME|onlink|color (1-4294967295)|bfd [{multi-hop|source X:X::X:X|profile BFDPROF}]}]
+CONFIG_NODE vrf NAME VRF_NODE [no] ipv6 route X:X::X:X/M [from X:X::X:X/M] <reject|blackhole> [{tag (1-4294967295)|(1-255)|label WORD|table (1-4294967295)}]
+CONFIG_NODE vrf NAME VRF_NODE [no] ipv6 route X:X::X:X/M [from X:X::X:X/M] <X:X::X:X|<INTERFACE|Null0>> [{tag (1-4294967295)|(1-255)|label WORD|table (1-4294967295)|nexthop-vrf NAME|color (1-4294967295)|bfd [{multi-hop|source X:X::X:X|profile BFDPROF}]}]
+CONFIG_NODE vrf NAME VRF_NODE [no] ip table range (1-4294967295) (1-4294967295)
+CONFIG_NODE vrf NAME VRF_NODE [no] ip route <A.B.C.D/M|A.B.C.D A.B.C.D> A.B.C.D <INTERFACE|Null0> [{tag (1-4294967295)|(1-255)|label WORD|table (1-4294967295)|nexthop-vrf NAME|onlink|color (1-4294967295)|bfd [{multi-hop|source A.B.C.D|profile BFDPROF}]}]
+CONFIG_NODE vrf NAME VRF_NODE [no] ip route <A.B.C.D/M|A.B.C.D A.B.C.D> <reject|blackhole> [{tag (1-4294967295)|(1-255)|label WORD|table (1-4294967295)}]
+CONFIG_NODE vrf NAME VRF_NODE [no] ip route <A.B.C.D/M|A.B.C.D A.B.C.D> <A.B.C.D|<INTERFACE|Null0>> [{tag (1-4294967295)|(1-255)|label WORD|table (1-4294967295)|nexthop-vrf NAME|color (1-4294967295)|bfd [{multi-hop|source A.B.C.D|profile BFDPROF}]}]
+CONFIG_NODE vrf NAME VRF_NODE [no] ip pim register-accept-list WORD
+CONFIG_NODE vrf NAME VRF_NODE output file FILE
+CONFIG_NODE vrf NAME VRF_NODE no output file [FILE]
+CONFIG_NODE vrf NAME VRF_NODE list [permutations]
+CONFIG_NODE vrf NAME VRF_NODE find REGEX...

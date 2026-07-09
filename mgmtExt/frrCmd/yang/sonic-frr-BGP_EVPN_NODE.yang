@@ -1,0 +1,859 @@
+
+module sonic-frr-BGP_EVPN_NODE {
+    namespace "http://github.com/sonic-net/frr/sonic-frr-BGP_EVPN_NODE";
+    prefix frr-BGP_EVPN_NODE;
+    yang-version 1.1;
+
+    import ietf-inet-types {
+        prefix inet;
+    }
+
+    organization
+        "SONiC";
+
+    contact
+        "SONiC";
+
+    description
+        "SONIC frr-BGP_EVPN_NODE FRR YANG";
+
+    revision 2024-12-23 {
+        description
+            "Initial revision.";
+    }
+    container sonic-frr-BGP_EVPN_NODE {
+        container BGP_EVPN_NODE {
+            list OUTPUT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf file {
+                    type enumeration {
+                        enum file;
+                    }
+                }                  //file
+                leaf PATH_TO_DUMP_OUTPUT {
+                    type string;
+                }                  //FILE
+            }
+            list NO {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf vni {
+                    type enumeration {
+                        enum vni;
+                    }
+                }                  //vni
+                leaf VNI_NUMBER {
+                    type int32;
+                }                  //(1-16777215)
+                leaf route-target {
+                    type enumeration {
+                        enum route-target;
+                    }
+                }                  //route-target
+                leaf ROUTE-TARGET_ROUTE_DIRECTION {
+                    type enumeration {
+                        enum both;
+                        enum import;
+                        enum export;
+                    }
+                }                  //<both|import|export> ['import and export', 'import', 'export']
+                leaf auto {
+                    type enumeration {
+                        enum auto;
+                    }
+                }                  //auto
+                leaf-list ROUTER_TARGET {
+                    type string;
+                }                  //RTLIST...
+                leaf rd {
+                    type enumeration {
+                        enum rd;
+                    }
+                }                  //rd
+                leaf BGP_IDENTIFIER {
+                    type string;
+                }                  //ASN:NN_OR_IP-ADDRESS:NN
+                leaf network {
+                    type enumeration {
+                        enum network;
+                    }
+                }                  //network
+                leaf NETWORK_IP_PREFIX {
+                    type union {
+                        type inet:ipv4-prefix;
+                        type inet:ipv6-prefix;
+                    }
+                }                  //<A.B.C.D/M|X:X::X:X/M> ['IP prefix', 'IPv6 prefix']
+                leaf ethtag {
+                    type enumeration {
+                        enum ethtag;
+                    }
+                }                  //ethtag
+                leaf ETHERNET_TAG_VALUE {
+                    type string;
+                }                  //WORD
+                leaf label {
+                    type enumeration {
+                        enum label;
+                    }
+                }                  //label
+                leaf LABEL_VALUE {
+                    type string;
+                }                  //WORD
+                leaf esi {
+                    type enumeration {
+                        enum esi;
+                    }
+                }                  //esi
+                leaf ESI_VALUE {
+                    type string;
+                }                  //WORD
+                leaf gwip {
+                    type enumeration {
+                        enum gwip;
+                    }
+                }                  //gwip
+                leaf GWIP_IP_ADDRESS {
+                    type union {
+                        type inet:ipv4-address;
+                        type inet:ipv6-address;
+                    }
+                }                  //<A.B.C.D|X:X::X:X> ['Gateway IP ( A.B.C.D )', 'Gateway IPv6 ( X:X::X:X )']
+                leaf neighbor {
+                    type enumeration {
+                        enum neighbor;
+                    }
+                }                  //neighbor
+                leaf NEIGHBOR_IP_ADDRESS {
+                    type union {
+                        type inet:ipv4-address;
+                        type inet:ipv6-address;
+                        type string;
+                    }
+                }                  //<A.B.C.D|X:X::X:X|WORD> ['Neighbor address', 'Neighbor IPv6 address', 'Interface name or neighbor tag']
+                leaf soo {
+                    type enumeration {
+                        enum soo;
+                    }
+                }                  //soo
+                leaf soft-reconfiguration_inbound {
+                    type enumeration {
+                        enum soft-reconfiguration_inbound;
+                    }
+                }                  //inbound
+                leaf route-server-client {
+                    type enumeration {
+                        enum route-server-client;
+                    }
+                }                  //route-server-client
+                leaf route-reflector-client {
+                    type enumeration {
+                        enum route-reflector-client;
+                    }
+                }                  //route-reflector-client
+                leaf route-map {
+                    type enumeration {
+                        enum route-map;
+                    }
+                }                  //route-map
+                leaf NAME_OF_ROUTE_MAP {
+                    type string;
+                }                  //RMAP_NAME
+                leaf ROUTE-MAP_IN_OUT_BOUND {
+                    type enumeration {
+                        enum in;
+                        enum out;
+                    }
+                }                  //<in|out> ['Apply map to incoming routes', 'Apply map to outbound routes']
+                leaf next-hop-self {
+                    type enumeration {
+                        enum next-hop-self;
+                    }
+                }                  //next-hop-self
+                leaf next-hop-self_force {
+                    type enumeration {
+                        enum next-hop-self_force;
+                    }
+                }                  //force
+                leaf attribute-unchanged {
+                    type enumeration {
+                        enum attribute-unchanged;
+                    }
+                }                  //attribute-unchanged
+                leaf attribute-unchanged_as-path {
+                    type enumeration {
+                        enum attribute-unchanged_as-path;
+                    }
+                }                  //as-path
+                leaf attribute-unchanged_next-hop {
+                    type enumeration {
+                        enum attribute-unchanged_next-hop;
+                    }
+                }                  //next-hop
+                leaf attribute-unchanged_med {
+                    type enumeration {
+                        enum attribute-unchanged_med;
+                    }
+                }                  //med
+                leaf allowas-in {
+                    type enumeration {
+                        enum allowas-in;
+                    }
+                }                  //allowas-in
+                leaf CHOICE_CASE {
+                    type union {
+                        type int32;
+                        type enumeration {
+                        enum origin;
+                        }
+                    }
+                }                  //<(1-10)|origin> ['Number of occurrences of AS number', 'Only accept my AS in the as-path if the route was originated in my AS']
+                leaf activate {
+                    type enumeration {
+                        enum activate;
+                    }
+                }                  //activate
+                leaf default-originate {
+                    type enumeration {
+                        enum default-originate;
+                    }
+                }                  //default-originate
+                leaf DEFAULT-ORIGINATE_REDISTRIBUTE_IP {
+                    type enumeration {
+                        enum ipv4;
+                        enum ipv6;
+                    }
+                }                  //<ipv4|ipv6> ['ipv4 address family', 'ipv6 address family']
+                leaf advertise-default-gw {
+                    type enumeration {
+                        enum advertise-default-gw;
+                    }
+                }                  //advertise-default-gw
+                leaf advertise-all-vni {
+                    type enumeration {
+                        enum advertise-all-vni;
+                    }
+                }                  //advertise-all-vni
+                leaf advertise {
+                    type enumeration {
+                        enum advertise;
+                    }
+                }                  //advertise
+                leaf ADVERTISE_REDISTRIBUTE_IP {
+                    type enumeration {
+                        enum ipv4;
+                        enum ipv6;
+                    }
+                }                  //<ipv4|ipv6> ['Address Family', 'Address Family']
+                leaf ADVERTISE-REDISTRIBUTE-IP_ADDRESS_FAMILY_MODIFIER {
+                    type enumeration {
+                        enum unicast;
+                        enum multicast;
+                        enum vpn;
+                    }
+                }                  //<unicast|multicast|vpn> ['Address Family modifier', 'Address Family modifier', 'Address Family modifier']
+                leaf NAME_OF_THE_ROUTE {
+                    type string;
+                }                  //WORD
+                leaf use-es-l3nhg {
+                    type enumeration {
+                        enum use-es-l3nhg;
+                    }
+                }                  //use-es-l3nhg
+                leaf flooding {
+                    type enumeration {
+                        enum flooding;
+                    }
+                }                  //flooding
+                leaf FLOODING_BUM_FLOODING_MODE {
+                    type enumeration {
+                        enum disable;
+                        enum head-end-replication;
+                    }
+                }                  //<disable|head-end-replication> ['Do not flood any BUM packets', 'Flood BUM packets using head-end replication']
+                leaf enable-resolve-overlay-index {
+                    type enumeration {
+                        enum enable-resolve-overlay-index;
+                    }
+                }                  //enable-resolve-overlay-index
+                leaf disable-ead-evi-tx {
+                    type enumeration {
+                        enum disable-ead-evi-tx;
+                    }
+                }                  //disable-ead-evi-tx
+                leaf disable-ead-evi-rx {
+                    type enumeration {
+                        enum disable-ead-evi-rx;
+                    }
+                }                  //disable-ead-evi-rx
+                leaf advertise-svi-ip {
+                    type enumeration {
+                        enum advertise-svi-ip;
+                    }
+                }                  //advertise-svi-ip
+            }
+            list LIST {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf permutations {
+                    type enumeration {
+                        enum permutations;
+                    }
+                }                  //permutations
+            }
+            list FIND {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf-list SEARCH_PATTERN {
+                    type string;
+                }                  //REGEX...
+            }
+            list VNI {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf VNI_NUMBER {
+                    type int32;
+                }                  //(1-16777215)
+            }
+            list ROUTE-TARGET {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf ROUTE-TARGET_ROUTE_DIRECTION {
+                    type enumeration {
+                        enum both;
+                        enum import;
+                        enum export;
+                    }
+                }                  //<both|import|export> ['import and export', 'import', 'export']
+                leaf auto {
+                    type enumeration {
+                        enum auto;
+                    }
+                }                  //auto
+                leaf-list ROUTER_TARGET {
+                    type string;
+                }                  //RTLIST...
+            }
+            list RD {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf BGP_IDENTIFIER {
+                    type string;
+                }                  //ASN:NN_OR_IP-ADDRESS:NN
+            }
+            list QUIT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list NETWORK {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf NETWORK_IP_PREFIX {
+                    type union {
+                        type inet:ipv4-prefix;
+                        type inet:ipv6-prefix;
+                    }
+                }                  //<A.B.C.D/M|X:X::X:X/M> ['IP prefix', 'IPv6 prefix']
+                leaf rd {
+                    type enumeration {
+                        enum rd;
+                    }
+                }                  //rd
+                leaf BGP_IDENTIFIER {
+                    type string;
+                }                  //ASN:NN_OR_IP-ADDRESS:NN
+                leaf ethtag {
+                    type enumeration {
+                        enum ethtag;
+                    }
+                }                  //ethtag
+                leaf ETHERNET_TAG_VALUE {
+                    type string;
+                }                  //WORD
+                leaf label {
+                    type enumeration {
+                        enum label;
+                    }
+                }                  //label
+                leaf LABEL_VALUE {
+                    type string;
+                }                  //WORD
+                leaf esi {
+                    type enumeration {
+                        enum esi;
+                    }
+                }                  //esi
+                leaf ESI_VALUE {
+                    type string;
+                }                  //WORD
+                leaf gwip {
+                    type enumeration {
+                        enum gwip;
+                    }
+                }                  //gwip
+                leaf GWIP_IP_ADDRESS {
+                    type union {
+                        type inet:ipv4-address;
+                        type inet:ipv6-address;
+                    }
+                }                  //<A.B.C.D|X:X::X:X> ['Gateway IP ( A.B.C.D )', 'Gateway IPv6 ( X:X::X:X )']
+                leaf routermac {
+                    type enumeration {
+                        enum routermac;
+                    }
+                }                  //routermac
+                leaf ROUTER_MAC_ADDRESS_VALUE {
+                    type string;
+                }                  //WORD
+                leaf route-map {
+                    type enumeration {
+                        enum route-map;
+                    }
+                }                  //route-map
+                leaf NAME_OF_THE_ROUTE {
+                    type string;
+                }                  //RMAP_NAME
+            }
+            list NEIGHBOR {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf NEIGHBOR_IP_ADDRESS {
+                    type union {
+                        type inet:ipv4-address;
+                        type inet:ipv6-address;
+                        type string;
+                    }
+                }                  //<A.B.C.D|X:X::X:X|WORD> ['Neighbor address', 'Neighbor IPv6 address', 'Interface name or neighbor tag']
+                leaf soo {
+                    type enumeration {
+                        enum soo;
+                    }
+                }                  //soo
+                leaf BGP_IDENTIFIER {
+                    type string;
+                }                  //ASN:NN_OR_IP-ADDRESS:NN
+                leaf soft-reconfiguration_inbound {
+                    type enumeration {
+                        enum soft-reconfiguration_inbound;
+                    }
+                }                  //inbound
+                leaf route-server-client {
+                    type enumeration {
+                        enum route-server-client;
+                    }
+                }                  //route-server-client
+                leaf route-reflector-client {
+                    type enumeration {
+                        enum route-reflector-client;
+                    }
+                }                  //route-reflector-client
+                leaf route-map {
+                    type enumeration {
+                        enum route-map;
+                    }
+                }                  //route-map
+                leaf NAME_OF_ROUTE_MAP {
+                    type string;
+                }                  //RMAP_NAME
+                leaf ROUTE-MAP_IN_OUT_BOUND {
+                    type enumeration {
+                        enum in;
+                        enum out;
+                    }
+                }                  //<in|out> ['Apply map to incoming routes', 'Apply map to outbound routes']
+                leaf next-hop-self {
+                    type enumeration {
+                        enum next-hop-self;
+                    }
+                }                  //next-hop-self
+                leaf next-hop-self_force {
+                    type enumeration {
+                        enum next-hop-self_force;
+                    }
+                }                  //force
+                leaf attribute-unchanged {
+                    type enumeration {
+                        enum attribute-unchanged;
+                    }
+                }                  //attribute-unchanged
+                leaf attribute-unchanged_as-path {
+                    type enumeration {
+                        enum attribute-unchanged_as-path;
+                    }
+                }                  //as-path
+                leaf attribute-unchanged_next-hop {
+                    type enumeration {
+                        enum attribute-unchanged_next-hop;
+                    }
+                }                  //next-hop
+                leaf attribute-unchanged_med {
+                    type enumeration {
+                        enum attribute-unchanged_med;
+                    }
+                }                  //med
+                leaf allowas-in {
+                    type enumeration {
+                        enum allowas-in;
+                    }
+                }                  //allowas-in
+                leaf CHOICE_CASE {
+                    type union {
+                        type int32;
+                        type enumeration {
+                        enum origin;
+                        }
+                    }
+                }                  //<(1-10)|origin> ['Number of occurrences of AS number', 'Only accept my AS in the as-path if the route was originated in my AS']
+                leaf activate {
+                    type enumeration {
+                        enum activate;
+                    }
+                }                  //activate
+            }
+            list EXIT-ADDRESS-FAMILY {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list EXIT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list END {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list EAD-ES-ROUTE-TARGET {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf export {
+                    type enumeration {
+                        enum export;
+                    }
+                }                  //export
+                leaf ROUTER_TARGET {
+                    type string;
+                }                  //RT
+            }
+            list DUP-ADDR-DETECTION {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf freeze {
+                    type enumeration {
+                        enum freeze;
+                    }
+                }                  //freeze
+                leaf FREEZE_CHOICE_CASE {
+                    type union {
+                        type int32;
+                        type enumeration {
+                        enum permanent;
+                        }
+                    }
+                }                  //<permanent|(30-3600)> ['Duplicate address detection permanent freeze', 'Duplicate address detection freeze time (30-3600)']
+                leaf max-moves {
+                    type enumeration {
+                        enum max-moves;
+                    }
+                }                  //max-moves
+                leaf NUM_OF_MAX_ALLOWED {
+                    type int32;
+                }                  //(2-1000)
+                leaf time {
+                    type enumeration {
+                        enum time;
+                    }
+                }                  //time
+                leaf TIME_IN_SECONDS_DEFAULT {
+                    type int32;
+                }                  //(2-1800)
+            }
+            list DEFAULT-ORIGINATE {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf DEFAULT-ORIGINATE_REDISTRIBUTE_IP {
+                    type enumeration {
+                        enum ipv4;
+                        enum ipv6;
+                    }
+                }                  //<ipv4|ipv6> ['ipv4 address family', 'ipv6 address family']
+            }
+            list AUTORT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf rfc8365-compatible {
+                    type enumeration {
+                        enum rfc8365-compatible;
+                    }
+                }                  //rfc8365-compatible
+            }
+            list ADVERTISE-DEFAULT-GW {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list ADVERTISE-ALL-VNI {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list ADVERTISE {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf ADVERTISE_REDISTRIBUTE_IP {
+                    type enumeration {
+                        enum ipv4;
+                        enum ipv6;
+                    }
+                }                  //<ipv4|ipv6> ['Address Family', 'Address Family']
+                leaf ADVERTISE-REDISTRIBUTE-IP_ADDRESS_FAMILY_MODIFIER {
+                    type enumeration {
+                        enum unicast;
+                        enum multicast;
+                        enum vpn;
+                    }
+                }                  //<unicast|multicast|vpn> ['Address Family modifier', 'Address Family modifier', 'Address Family modifier']
+                leaf gateway-ip {
+                    type enumeration {
+                        enum gateway-ip;
+                    }
+                }                  //gateway-ip
+                leaf gateway-ip_route-map {
+                    type enumeration {
+                        enum gateway-ip_route-map;
+                    }
+                }                  //route-map
+                leaf NAME_OF_THE_ROUTE {
+                    type string;
+                }                  //RMAP_NAME
+                leaf route-map {
+                    type enumeration {
+                        enum route-map;
+                    }
+                }                  //route-map
+            }
+            list USE-ES-L3NHG {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list FLOODING {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf FLOODING_BUM_FLOODING_MODE {
+                    type enumeration {
+                        enum disable;
+                        enum head-end-replication;
+                    }
+                }                  //<disable|head-end-replication> ['Do not flood any BUM packets', 'Flood BUM packets using head-end replication']
+            }
+            list ENABLE-RESOLVE-OVERLAY-INDEX {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list EAD-ES-FRAG {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf evi-limit {
+                    type enumeration {
+                        enum evi-limit;
+                    }
+                }                  //evi-limit
+                leaf LIMIT {
+                    type int32;
+                }                  //(1-1000)
+            }
+            list DISABLE-EAD-EVI-TX {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list DISABLE-EAD-EVI-RX {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list ADVERTISE-SVI-IP {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list ADVERTISE-PIP {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf ip {
+                    type enumeration {
+                        enum ip;
+                    }
+                }                  //ip
+                leaf IP_ADDRESS {
+                    type inet:ipv4-address;
+                }                  //A.B.C.D
+                leaf mac {
+                    type enumeration {
+                        enum mac;
+                    }
+                }                  //mac
+                leaf MAC_ADDRESS {
+                    type string;
+                }                  //X:X:X:X:X:X
+            }
+            list NO_EAD-ES-ROUTE-TARGET {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf export {
+                    type enumeration {
+                        enum export;
+                    }
+                }                  //export
+                leaf ROUTER_TARGET {
+                    type string;
+                }                  //RT
+            }
+            list NO_DUP-ADDR-DETECTION {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf max-moves {
+                    type enumeration {
+                        enum max-moves;
+                    }
+                }                  //max-moves
+                leaf NUM_OF_MAX_ALLOWED {
+                    type int32;
+                }                  //(2-1000)
+                leaf time {
+                    type enumeration {
+                        enum time;
+                    }
+                }                  //time
+                leaf TIME_IN_SECONDS_DEFAULT {
+                    type int32;
+                }                  //(2-1800)
+                leaf freeze {
+                    type enumeration {
+                        enum freeze;
+                    }
+                }                  //freeze
+                leaf FREEZE_CHOICE_CASE {
+                    type union {
+                        type int32;
+                        type enumeration {
+                        enum permanent;
+                        }
+                    }
+                }                  //<permanent|(30-3600)> ['Duplicate address detection permanent freeze', 'Duplicate address detection freeze time (30-3600)']
+            }
+            list NO_AUTORT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf rfc8365-compatible {
+                    type enumeration {
+                        enum rfc8365-compatible;
+                    }
+                }                  //rfc8365-compatible
+            }
+            list NO_EAD-ES-FRAG {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf evi-limit {
+                    type enumeration {
+                        enum evi-limit;
+                    }
+                }                  //evi-limit
+                leaf LIMIT {
+                    type int32;
+                }                  //(1-1000)
+            }
+            list NO_ADVERTISE-PIP {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf ip {
+                    type enumeration {
+                        enum ip;
+                    }
+                }                  //ip
+                leaf IP_ADDRESS {
+                    type inet:ipv4-address;
+                }                  //A.B.C.D
+                leaf mac {
+                    type enumeration {
+                        enum mac;
+                    }
+                }                  //mac
+                leaf MAC_ADDRESS {
+                    type string;
+                }                  //X:X:X:X:X:X
+            }
+            list NO_OUTPUT_FILE {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf PATH_TO_DUMP_OUTPUT {
+                    type string;
+                }                  //FILE
+            }
+        }
+
+    }
+}

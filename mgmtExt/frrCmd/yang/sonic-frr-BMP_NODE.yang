@@ -1,0 +1,278 @@
+
+module sonic-frr-BMP_NODE {
+    namespace "http://github.com/sonic-net/frr/sonic-frr-BMP_NODE";
+    prefix frr-BMP_NODE;
+    yang-version 1.1;
+
+    import ietf-inet-types {
+        prefix inet;
+    }
+
+    organization
+        "SONiC";
+
+    contact
+        "SONiC";
+
+    description
+        "SONIC frr-BMP_NODE FRR YANG";
+
+    revision 2024-12-23 {
+        description
+            "Initial revision.";
+    }
+    container sonic-frr-BMP_NODE {
+        container BMP_NODE {
+            list QUIT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list NO {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf NO_LABEL_FORWARD {
+                    type enumeration {
+                        enum ip;
+                        enum ipv6;
+                    }
+                }                  //<ip|ipv6> ['IP information', 'IPv6 information']
+                leaf access-list {
+                    type enumeration {
+                        enum access-list;
+                    }
+                }                  //access-list
+                leaf ACCESS_LIST_NAME {
+                    type string;
+                }                  //ACCESSLIST_NAME
+            }
+            list EXIT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list END {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list BMP {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf listener {
+                    type enumeration {
+                        enum listener;
+                    }
+                }                  //listener
+                leaf LISTENER_CHOICE_CASE {
+                    type union {
+                        type inet:ipv6-address;
+                        type inet:ipv4-address;
+                    }
+                }                  //<X:X::X:X|A.B.C.D> ['IPv6 address to listen on', 'IPv4 address to listen on']
+                leaf port {
+                    type enumeration {
+                        enum port;
+                    }
+                }                  //port
+                leaf TCP_PORT_NUMBER {
+                    type int32;
+                }                  //(1-65535)
+                leaf monitor {
+                    type enumeration {
+                        enum monitor;
+                    }
+                }                  //monitor
+                leaf MONITOR_ADDRESS_FAMILY {
+                    type enumeration {
+                        enum ipv4;
+                        enum ipv6;
+                        enum l2vpn;
+                    }
+                }                  //<ipv4|ipv6|l2vpn> ['Address Family', 'Address Family', 'Address Family']
+                leaf MONITOR-ADDRESS-FAMILY_CHOICE_CASE {
+                    type enumeration {
+                        enum unicast;
+                        enum multicast;
+                        enum evpn;
+                        enum vpn;
+                    }
+                }                  //<unicast|multicast|evpn|vpn> ['Address Family', 'Address Family', 'Address Family', 'Address Family']
+                leaf MONITOR-ADDRESS-FAMILY-CHOICE-CASE_CHOICE_CASE {
+                    type enumeration {
+                        enum pre-policy;
+                        enum post-policy;
+                    }
+                }                  //<pre-policy|post-policy> ['Send state before policy and filter processing', 'Send state with policy and filters applied']
+                leaf mirror {
+                    type enumeration {
+                        enum mirror;
+                    }
+                }                  //mirror
+            }
+            list OUTPUT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf file {
+                    type enumeration {
+                        enum file;
+                    }
+                }                  //file
+                leaf PATH_TO_DUMP_OUTPUT {
+                    type string;
+                }                  //FILE
+            }
+            list LIST {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf permutations {
+                    type enumeration {
+                        enum permutations;
+                    }
+                }                  //permutations
+            }
+            list FIND {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf-list SEARCH_PATTERN {
+                    type string;
+                }                  //REGEX...
+            }
+            list NO_BMP {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf listener {
+                    type enumeration {
+                        enum listener;
+                    }
+                }                  //listener
+                leaf LISTENER_CHOICE_CASE {
+                    type union {
+                        type inet:ipv6-address;
+                        type inet:ipv4-address;
+                    }
+                }                  //<X:X::X:X|A.B.C.D> ['IPv6 address to listen on', 'IPv4 address to listen on']
+                leaf port {
+                    type enumeration {
+                        enum port;
+                    }
+                }                  //port
+                leaf TCP_PORT_NUMBER {
+                    type int32;
+                }                  //(1-65535)
+                leaf monitor {
+                    type enumeration {
+                        enum monitor;
+                    }
+                }                  //monitor
+                leaf MONITOR_ADDRESS_FAMILY {
+                    type enumeration {
+                        enum ipv4;
+                        enum ipv6;
+                        enum l2vpn;
+                    }
+                }                  //<ipv4|ipv6|l2vpn> ['Address Family', 'Address Family', 'Address Family']
+                leaf MONITOR-ADDRESS-FAMILY_CHOICE_CASE {
+                    type enumeration {
+                        enum unicast;
+                        enum multicast;
+                        enum evpn;
+                        enum vpn;
+                    }
+                }                  //<unicast|multicast|evpn|vpn> ['Address Family', 'Address Family', 'Address Family', 'Address Family']
+                leaf MONITOR-ADDRESS-FAMILY-CHOICE-CASE_CHOICE_CASE {
+                    type enumeration {
+                        enum pre-policy;
+                        enum post-policy;
+                    }
+                }                  //<pre-policy|post-policy> ['Send state before policy and filter processing', 'Send state with policy and filters applied']
+                leaf mirror {
+                    type enumeration {
+                        enum mirror;
+                    }
+                }                  //mirror
+            }
+            list BMP_STATS {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf interval {
+                    type enumeration {
+                        enum interval;
+                    }
+                }                  //interval
+                leaf INTERVAL_TO_SEND_BMP {
+                    type int32;
+                }                  //(100-86400000)
+            }
+            list NO_BMP_STATS {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf interval {
+                    type enumeration {
+                        enum interval;
+                    }
+                }                  //interval
+                leaf INTERVAL_TO_SEND_BMP {
+                    type int32;
+                }                  //(100-86400000)
+            }
+            list NO_OUTPUT_FILE {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf PATH_TO_DUMP_OUTPUT {
+                    type string;
+                }                  //FILE
+            }
+            list IP {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf access-list {
+                    type enumeration {
+                        enum access-list;
+                    }
+                }                  //access-list
+                leaf ACCESS_LIST_NAME {
+                    type string;
+                }                  //ACCESSLIST_NAME
+            }
+            list IPV6 {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf access-list {
+                    type enumeration {
+                        enum access-list;
+                    }
+                }                  //access-list
+                leaf ACCESS_LIST_NAME {
+                    type string;
+                }                  //ACCESSLIST_NAME
+            }
+        }
+
+    }
+}

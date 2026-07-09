@@ -1,0 +1,15 @@
+CONFIG_NODE router babel BABEL_NODE quit
+CONFIG_NODE router babel BABEL_NODE no network IF_OR_ADDR
+CONFIG_NODE router babel BABEL_NODE no ipv6 distribute-list [prefix] ACCESSLIST6_NAME <in|out> [WORD]
+CONFIG_NODE router babel BABEL_NODE no distribute-list [prefix] ACCESSLIST4_NAME <in|out> [WORD]
+CONFIG_NODE router babel BABEL_NODE no babel diversity
+CONFIG_NODE router babel BABEL_NODE network IF_OR_ADDR
+CONFIG_NODE router babel BABEL_NODE ipv6 distribute-list [prefix] ACCESSLIST6_NAME <in|out> [WORD]
+CONFIG_NODE router babel BABEL_NODE exit
+CONFIG_NODE router babel BABEL_NODE end
+CONFIG_NODE router babel BABEL_NODE distribute-list [prefix] ACCESSLIST4_NAME <in|out> [WORD]
+CONFIG_NODE router babel BABEL_NODE babel diversity
+CONFIG_NODE router babel BABEL_NODE [no] redistribute <ipv4 FRR_IP_REDIST_STR_BABELD|ipv6 FRR_IP6_REDIST_STR_BABELD>
+CONFIG_NODE router babel BABEL_NODE [no] babel smoothing-half-life (0-65534)
+CONFIG_NODE router babel BABEL_NODE [no] babel resend-delay (20-655340)
+CONFIG_NODE router babel BABEL_NODE [no] babel diversity-factor (1-256)

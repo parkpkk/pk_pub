@@ -1,0 +1,3181 @@
+{
+    "ISIS_NODE": {
+        "desc": [
+            "ISIS_NODE node related command"
+        ],
+        "topology": {
+            "desc": [
+                "Configure IS-IS topologies"
+            ],
+            "ISIS_MT_NAMES": {
+                "desc": [
+                    "ISIS_MT_DESCRIPTIONS"
+                ],
+                "overload": {
+                    "desc": [
+                        "Set overload bit for topology"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                },
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<standard|ipv4-unicast|ipv4-mgmt|ipv6-unicast|ipv4-multicast|ipv6-multicast|ipv6-mgmt|ipv6-dstsrc>": {
+                "desc": [
+                    "standard topology",
+                    "IPv4 unicast topology",
+                    "IPv4 management topology",
+                    "IPv6 unicast topology",
+                    "IPv4 multicast topology",
+                    "IPv6 multicast topology",
+                    "IPv6 management topology",
+                    "IPv6 dst-src topology"
+                ],
+                "overload": {
+                    "desc": [
+                        "Set overload bit for topology"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                },
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "spf-interval": {
+            "desc": [
+                "Minimum interval between SPF calculations"
+            ],
+            "level-1": {
+                "desc": [
+                    "Set interval for level 1 only"
+                ],
+                "(1-120)": {
+                    "desc": [
+                        "Minimum interval between consecutive SPFs in seconds"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "level-2": {
+                "desc": [
+                    "Set interval for level 2 only"
+                ],
+                "(1-120)": {
+                    "desc": [
+                        "Minimum interval between consecutive SPFs in seconds"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "(1-120)": {
+                "desc": [
+                    "Minimum interval between consecutive SPFs in seconds"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "spf-delay-ietf": {
+            "desc": [
+                "IETF SPF delay algorithm"
+            ],
+            "init-delay": {
+                "desc": [
+                    "Delay used while in QUIET state"
+                ],
+                "(0-60000)": {
+                    "desc": [
+                        "Delay used while in QUIET state in milliseconds"
+                    ],
+                    "short-delay": {
+                        "desc": [
+                            "Delay used while in SHORT_WAIT state"
+                        ],
+                        "(0-60000)": {
+                            "desc": [
+                                "Delay used while in SHORT_WAIT state in milliseconds"
+                            ],
+                            "long-delay": {
+                                "desc": [
+                                    "Delay used while in LONG_WAIT"
+                                ],
+                                "(0-60000)": {
+                                    "desc": [
+                                        "Delay used while in LONG_WAIT state in milliseconds"
+                                    ],
+                                    "holddown": {
+                                        "desc": [
+                                            "Time with no received IGP events before considering IGP stable"
+                                        ],
+                                        "(0-60000)": {
+                                            "desc": [
+                                                "Time with no received IGP events before considering IGP stable (in milliseconds)"
+                                            ],
+                                            "time-to-learn": {
+                                                "desc": [
+                                                    "Maximum duration needed to learn all the events related to a single failure"
+                                                ],
+                                                "(0-60000)": {
+                                                    "desc": [
+                                                        "Maximum duration needed to learn all the events related to a single failure (in milliseconds)"
+                                                    ],
+                                                    "<cr>": {
+                                                        "desc": [
+                                                            "end_cmd"
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "spf": {
+            "desc": [
+                "SPF configuration"
+            ],
+            "prefix-priority": {
+                "desc": [
+                    "Configure a prefix priority list"
+                ],
+                "<critical|high|medium>": {
+                    "desc": [
+                        "Specify critical priority prefixes",
+                        "Specify high priority prefixes",
+                        "Specify medium priority prefixes"
+                    ],
+                    "ACCESSLIST_NAME": {
+                        "desc": [
+                            "Access-list name"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "set-overload-bit": {
+            "desc": [
+                "Set overload bit to avoid any transit traffic"
+            ],
+            "on-startup": {
+                "desc": [
+                    "Set overload bit on startup"
+                ],
+                "(0-86400)": {
+                    "desc": [
+                        "Set overload time in seconds"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "segment-routing": {
+            "desc": [
+                "Segment-Routing specific commands"
+            ],
+            "prefix": {
+                "desc": [
+                    "Prefix SID"
+                ],
+                "<A.B.C.D/M|X:X::X:X/M>": {
+                    "desc": [
+                        "IPv4 Prefix",
+                        "IPv6 Prefix"
+                    ],
+                    "absolute": {
+                        "desc": [
+                            "Specify the absolute value of Prefix Segment ID"
+                        ],
+                        "(16-1048575)": {
+                            "desc": [
+                                "The Prefix Segment ID value"
+                            ],
+                            "<no-php-flag|explicit-null>": {
+                                "desc": [
+                                    "Don't request Penultimate Hop Popping (PHP)",
+                                    "Upstream neighbor must replace prefix-sid with explicit null label"
+                                ],
+                                "n-flag-clear": {
+                                    "desc": [
+                                        "Not a node SID"
+                                    ],
+                                    "<cr>": {
+                                        "desc": [
+                                            "end_cmd"
+                                        ]
+                                    }
+                                },
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            },
+                            "n-flag-clear": {
+                                "desc": [
+                                    "Not a node SID"
+                                ],
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            },
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        }
+                    },
+                    "index": {
+                        "desc": [
+                            "Specify the index of Prefix Segment ID"
+                        ],
+                        "(0-65535)": {
+                            "desc": [
+                                "The Prefix Segment ID index"
+                            ],
+                            "<no-php-flag|explicit-null>": {
+                                "desc": [
+                                    "Don't request Penultimate Hop Popping (PHP)",
+                                    "Upstream neighbor must replace prefix-sid with explicit null label"
+                                ],
+                                "n-flag-clear": {
+                                    "desc": [
+                                        "Not a node SID"
+                                    ],
+                                    "<cr>": {
+                                        "desc": [
+                                            "end_cmd"
+                                        ]
+                                    }
+                                },
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            },
+                            "n-flag-clear": {
+                                "desc": [
+                                    "Not a node SID"
+                                ],
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            },
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        }
+                    },
+                    "<no-php-flag|explicit-null>": {
+                        "desc": [
+                            "Don't request Penultimate Hop Popping (PHP)",
+                            "Upstream neighbor must replace prefix-sid with explicit null label"
+                        ],
+                        "n-flag-clear": {
+                            "desc": [
+                                "Not a node SID"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        },
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "n-flag-clear": {
+                        "desc": [
+                            "Not a node SID"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "on": {
+                "desc": [
+                    "Enable Segment Routing"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "node-msd": {
+                "desc": [
+                    "Maximum Stack Depth for this router"
+                ],
+                "(1-16)": {
+                    "desc": [
+                        "Maximum number of label that can be stack (1-16)"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "global-block": {
+                "desc": [
+                    "Segment Routing Global Block label range"
+                ],
+                "(16-1048575)": {
+                    "desc": [
+                        "The lower bound of the global block"
+                    ],
+                    "(16-1048575)": {
+                        "desc": [
+                            "The upper bound of the global block (block size may not exceed 65535)"
+                        ],
+                        "local-block": {
+                            "desc": [
+                                "Segment Routing Local Block label range"
+                            ],
+                            "(16-1048575)": {
+                                "desc": [
+                                    "The lower bound of the local block"
+                                ],
+                                "(16-1048575)": {
+                                    "desc": [
+                                        "The upper bound of the local block (block size may not exceed 65535)"
+                                    ],
+                                    "<cr>": {
+                                        "desc": [
+                                            "end_cmd"
+                                        ]
+                                    }
+                                }
+                            }
+                        },
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "redistribute": {
+            "desc": [
+                "REDIST_STR"
+            ],
+            "ipv4": {
+                "desc": [
+                    "Redistribute IPv4 routes"
+                ],
+                "PROTO_IP_REDIST_STR": {
+                    "desc": [
+                        "FRR_IP_REDIST_HELP_STR_ISISD"
+                    ],
+                    "metric": {
+                        "desc": [
+                            "Metric for redistributed routes"
+                        ],
+                        "(0-16777215)": {
+                            "desc": [
+                                "ISIS default metric"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        }
+                    },
+                    "route-map": {
+                        "desc": [
+                            "Route map reference"
+                        ],
+                        "RMAP_NAME": {
+                            "desc": [
+                                "Pointer to route-map entries"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        }
+                    },
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    },
+                    "<level-1|level-2>": {
+                        "desc": [
+                            "Redistribute into level-1",
+                            "Redistribute into level-2"
+                        ],
+                        "metric": {
+                            "desc": [
+                                "Metric for redistributed routes"
+                            ],
+                            "(0-16777215)": {
+                                "desc": [
+                                    "IS-IS default metric"
+                                ],
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            }
+                        },
+                        "route-map": {
+                            "desc": [
+                                "Route map reference"
+                            ],
+                            "RMAP_NAME": {
+                                "desc": [
+                                    "Pointer to route-map entries"
+                                ],
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            }
+                        },
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    }
+                }
+            },
+            "ipv6": {
+                "desc": [
+                    "Redistribute IPv6 routes"
+                ],
+                "PROTO_IP6_REDIST_STR": {
+                    "desc": [
+                        "FRR_IP6_REDIST_HELP_STR_ISISD"
+                    ],
+                    "metric": {
+                        "desc": [
+                            "Metric for redistributed routes"
+                        ],
+                        "(0-16777215)": {
+                            "desc": [
+                                "ISIS default metric"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        }
+                    },
+                    "route-map": {
+                        "desc": [
+                            "Route map reference"
+                        ],
+                        "RMAP_NAME": {
+                            "desc": [
+                                "Pointer to route-map entries"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        }
+                    },
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    },
+                    "<level-1|level-2>": {
+                        "desc": [
+                            "Redistribute into level-1",
+                            "Redistribute into level-2"
+                        ],
+                        "metric": {
+                            "desc": [
+                                "Metric for redistributed routes"
+                            ],
+                            "(0-16777215)": {
+                                "desc": [
+                                    "IS-IS default metric"
+                                ],
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            }
+                        },
+                        "route-map": {
+                            "desc": [
+                                "Route map reference"
+                            ],
+                            "RMAP_NAME": {
+                                "desc": [
+                                    "Pointer to route-map entries"
+                                ],
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            }
+                        },
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    }
+                }
+            },
+            "metric": {
+                "desc": [
+                    "Metric for redistributed routes"
+                ],
+                "(0-16777215)": {
+                    "desc": [
+                        "ISIS default metric"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "route-map": {
+                "desc": [
+                    "Route map reference"
+                ],
+                "RMAP_NAME": {
+                    "desc": [
+                        "Pointer to route-map entries"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            },
+            "<level-1|level-2>": {
+                "desc": [
+                    "Redistribute into level-1",
+                    "Redistribute into level-2"
+                ],
+                "metric": {
+                    "desc": [
+                        "Metric for redistributed routes"
+                    ],
+                    "(0-16777215)": {
+                        "desc": [
+                            "IS-IS default metric"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    }
+                },
+                "route-map": {
+                    "desc": [
+                        "Route map reference"
+                    ],
+                    "RMAP_NAME": {
+                        "desc": [
+                            "Pointer to route-map entries"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    }
+                },
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "quit": {
+            "desc": [
+                "Exit current mode and down to previous mode"
+            ],
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "output": {
+            "desc": [
+                "Direct vtysh output to file"
+            ],
+            "file": {
+                "desc": [
+                    "Direct vtysh output to file"
+                ],
+                "FILE": {
+                    "desc": [
+                        "Path to dump output to"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            }
+        },
+        "no": {
+            "desc": [
+                "Negate a command or set its defaults"
+            ],
+            "<area-password|domain-password>": {
+                "desc": [
+                    "Configure the authentication password for an area",
+                    "Set the authentication password for a routing domain"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "topology": {
+                "desc": [
+                    "Configure IS-IS topologies"
+                ],
+                "<standard|ipv4-unicast|ipv4-mgmt|ipv6-unicast|ipv4-multicast|ipv6-multicast|ipv6-mgmt|ipv6-dstsrc>": {
+                    "desc": [
+                        "standard topology",
+                        "IPv4 unicast topology",
+                        "IPv4 management topology",
+                        "IPv6 unicast topology",
+                        "IPv4 multicast topology",
+                        "IPv6 multicast topology",
+                        "IPv6 management topology",
+                        "IPv6 dst-src topology"
+                    ],
+                    "overload": {
+                        "desc": [
+                            "Set overload bit for topology"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "purge-originator": {
+                "desc": [
+                    "Use the RFC 6232 purge-originator"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "net": {
+                "desc": [
+                    "A Network Entity Title for this process (OSI only)"
+                ],
+                "WORD": {
+                    "desc": [
+                        "XX.XXXX. ... .XXX.XX Network entity title (NET)"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "log-adjacency-changes": {
+                "desc": [
+                    "Log changes in adjacency state"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "net": {
+            "desc": [
+                "A Network Entity Title for this process (OSI only)"
+            ],
+            "WORD": {
+                "desc": [
+                    "XX.XXXX. ... .XXX.XX Network entity title (NET)"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "mpls-te": {
+            "desc": [
+                "MPLS-TE specific commands"
+            ],
+            "on": {
+                "desc": [
+                    "Enable the MPLS-TE functionality"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "export": {
+                "desc": [
+                    "Enable export of MPLS-TE Link State information"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "metric-style": {
+            "desc": [
+                "Use old-style (ISO 10589) or new-style packet formats"
+            ],
+            "<narrow|transition|wide>": {
+                "desc": [
+                    "Use old style of TLVs with narrow metric",
+                    "Send and accept both styles of TLVs during transition",
+                    "Use new style of TLVs to carry wider metric"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "max-lsp-lifetime": {
+            "desc": [
+                "Maximum LSP lifetime"
+            ],
+            "level-1": {
+                "desc": [
+                    "Maximum LSP lifetime for Level 1 only"
+                ],
+                "(350-65535)": {
+                    "desc": [
+                        "LSP lifetime in seconds"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "level-2": {
+                "desc": [
+                    "Maximum LSP lifetime for Level 2 only"
+                ],
+                "(350-65535)": {
+                    "desc": [
+                        "LSP lifetime in seconds"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "(350-65535)": {
+                "desc": [
+                    "LSP lifetime in seconds"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "lsp-timers": {
+            "desc": [
+                "LSP-related timers"
+            ],
+            "gen-interval": {
+                "desc": [
+                    "Minimum interval between regenerating same LSP"
+                ],
+                "(1-120)": {
+                    "desc": [
+                        "Generation interval in seconds"
+                    ],
+                    "refresh-interval": {
+                        "desc": [
+                            "LSP refresh interval"
+                        ],
+                        "(1-65235)": {
+                            "desc": [
+                                "LSP refresh interval in seconds"
+                            ],
+                            "max-lifetime": {
+                                "desc": [
+                                    "Maximum LSP lifetime"
+                                ],
+                                "(350-65535)": {
+                                    "desc": [
+                                        "Maximum LSP lifetime in seconds"
+                                    ],
+                                    "<cr>": {
+                                        "desc": [
+                                            "end_cmd"
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "lsp-refresh-interval": {
+            "desc": [
+                "LSP refresh interval"
+            ],
+            "level-1": {
+                "desc": [
+                    "LSP refresh interval for Level 1 only"
+                ],
+                "(1-65235)": {
+                    "desc": [
+                        "LSP refresh interval in seconds"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "level-2": {
+                "desc": [
+                    "LSP refresh interval for Level 2 only"
+                ],
+                "(1-65235)": {
+                    "desc": [
+                        "LSP refresh interval in seconds"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "(1-65235)": {
+                "desc": [
+                    "LSP refresh interval in seconds"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "lsp-mtu": {
+            "desc": [
+                "Configure the maximum size of generated LSPs"
+            ],
+            "(128-4352)": {
+                "desc": [
+                    "Maximum size of generated LSPs"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "lsp-gen-interval": {
+            "desc": [
+                "Minimum interval between regenerating same LSP"
+            ],
+            "level-1": {
+                "desc": [
+                    "Set interval for level 1 only"
+                ],
+                "(1-120)": {
+                    "desc": [
+                        "Minimum interval in seconds"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "level-2": {
+                "desc": [
+                    "Set interval for level 2 only"
+                ],
+                "(1-120)": {
+                    "desc": [
+                        "Minimum interval in seconds"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "(1-120)": {
+                "desc": [
+                    "Minimum interval in seconds"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "log-adjacency-changes": {
+            "desc": [
+                "Log changes in adjacency state"
+            ],
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "list": {
+            "desc": [
+                "Print command list"
+            ],
+            "permutations": {
+                "desc": [
+                    "Print all possible command permutations"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "is-type": {
+            "desc": [
+                "IS Level for this routing process (OSI only)"
+            ],
+            "<level-1|level-1-2|level-2-only>": {
+                "desc": [
+                    "Act as a station router only",
+                    "Act as both a station router and an area router",
+                    "Act as an area router only"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "find": {
+            "desc": [
+                "Find CLI command matching a regular expression"
+            ],
+            "REGEX...": {
+                "desc": [
+                    "Search pattern (POSIX regex)"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "fast-reroute": {
+            "desc": [
+                "Configure Fast ReRoute"
+            ],
+            "priority-limit": {
+                "desc": [
+                    "Limit backup computation up to the prefix priority"
+                ],
+                "<critical|high|medium>": {
+                    "desc": [
+                        "Compute for critical priority prefixes only",
+                        "Compute for critical & high priority prefixes",
+                        "Compute for critical, high & medium priority prefixes"
+                    ],
+                    "<level-1|level-2>": {
+                        "desc": [
+                            "Set priority-limit for level-1 only",
+                            "Set priority-limit for level-2 only"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            }
+        },
+        "exit": {
+            "desc": [
+                "Exit current mode and down to previous mode"
+            ],
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "end": {
+            "desc": [
+                "End current mode and change to enable mode"
+            ],
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "domain-password": {
+            "desc": [
+                "Set the authentication password for a routing domain"
+            ],
+            "<clear|md5>": {
+                "desc": [
+                    "Clear-text authentication type",
+                    "MD5 authentication type"
+                ],
+                "WORD": {
+                    "desc": [
+                        "Level-wide password"
+                    ],
+                    "authenticate": {
+                        "desc": [
+                            "Authentication"
+                        ],
+                        "snp": {
+                            "desc": [
+                                "SNP PDUs"
+                            ],
+                            "<send-only|validate>": {
+                                "desc": [
+                                    "Send but do not check PDUs on receiving",
+                                    "Send and check PDUs on receiving"
+                                ],
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            }
+        },
+        "default-information": {
+            "desc": [
+                "Control distribution of default information"
+            ],
+            "originate": {
+                "desc": [
+                    "Distribute a default route"
+                ],
+                "<ipv4|ipv6>": {
+                    "desc": [
+                        "Distribute default route for IPv4",
+                        "Distribute default route for IPv6"
+                    ],
+                    "always": {
+                        "desc": [
+                            "Always advertise default route"
+                        ],
+                        "metric": {
+                            "desc": [
+                                "Metric for default route"
+                            ],
+                            "(0-16777215)": {
+                                "desc": [
+                                    "ISIS default metric"
+                                ],
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            }
+                        },
+                        "route-map": {
+                            "desc": [
+                                "Route map reference"
+                            ],
+                            "RMAP_NAME": {
+                                "desc": [
+                                    "Pointer to route-map entries"
+                                ],
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            }
+                        },
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "metric": {
+                        "desc": [
+                            "Metric for default route"
+                        ],
+                        "(0-16777215)": {
+                            "desc": [
+                                "ISIS default metric"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        }
+                    },
+                    "route-map": {
+                        "desc": [
+                            "Route map reference"
+                        ],
+                        "RMAP_NAME": {
+                            "desc": [
+                                "Pointer to route-map entries"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        }
+                    },
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    },
+                    "<level-1|level-2>": {
+                        "desc": [
+                            "Distribute default route into level-1",
+                            "Distribute default route into level-2"
+                        ],
+                        "always": {
+                            "desc": [
+                                "Always advertise default route"
+                            ],
+                            "metric": {
+                                "desc": [
+                                    "Metric for default route"
+                                ],
+                                "(0-16777215)": {
+                                    "desc": [
+                                        "IS-IS default metric"
+                                    ],
+                                    "<cr>": {
+                                        "desc": [
+                                            "end_cmd"
+                                        ]
+                                    }
+                                }
+                            },
+                            "route-map": {
+                                "desc": [
+                                    "Route map reference"
+                                ],
+                                "RMAP_NAME": {
+                                    "desc": [
+                                        "Pointer to route-map entries"
+                                    ],
+                                    "<cr>": {
+                                        "desc": [
+                                            "end_cmd"
+                                        ]
+                                    }
+                                }
+                            },
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        },
+                        "metric": {
+                            "desc": [
+                                "Metric for default route"
+                            ],
+                            "(0-16777215)": {
+                                "desc": [
+                                    "IS-IS default metric"
+                                ],
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            }
+                        },
+                        "route-map": {
+                            "desc": [
+                                "Route map reference"
+                            ],
+                            "RMAP_NAME": {
+                                "desc": [
+                                    "Pointer to route-map entries"
+                                ],
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            }
+                        },
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "area-password": {
+            "desc": [
+                "Configure the authentication password for an area"
+            ],
+            "<clear|md5>": {
+                "desc": [
+                    "Clear-text authentication type",
+                    "MD5 authentication type"
+                ],
+                "WORD": {
+                    "desc": [
+                        "Level-wide password"
+                    ],
+                    "authenticate": {
+                        "desc": [
+                            "Authentication"
+                        ],
+                        "snp": {
+                            "desc": [
+                                "SNP PDUs"
+                            ],
+                            "<send-only|validate>": {
+                                "desc": [
+                                    "Send but do not check PDUs on receiving",
+                                    "Send and check PDUs on receiving"
+                                ],
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            }
+        },
+        "purge-originator": {
+            "desc": [
+                "Use the RFC 6232 purge-originator"
+            ],
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "hostname": {
+            "desc": [
+                "Dynamic hostname for IS-IS"
+            ],
+            "dynamic": {
+                "desc": [
+                    "Dynamic hostname"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "attached-bit": {
+            "desc": [
+                "Set attached bit for inter-area traffic"
+            ],
+            "send": {
+                "desc": [
+                    "Set attached bit in LSP sent to L1 router"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "no_spf-interval": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Minimum interval between SPF calculations"
+            ],
+            "(1-120)": {
+                "desc": [
+                    "Minimum interval between consecutive SPFs in seconds"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_spf-delay-ietf": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "IETF SPF delay algorithm"
+            ],
+            "init-delay": {
+                "desc": [
+                    "Delay used while in QUIET state"
+                ],
+                "(0-60000)": {
+                    "desc": [
+                        "Delay used while in QUIET state in milliseconds"
+                    ],
+                    "short-delay": {
+                        "desc": [
+                            "Delay used while in SHORT_WAIT state"
+                        ],
+                        "(0-60000)": {
+                            "desc": [
+                                "Delay used while in SHORT_WAIT state in milliseconds"
+                            ],
+                            "long-delay": {
+                                "desc": [
+                                    "Delay used while in LONG_WAIT"
+                                ],
+                                "(0-60000)": {
+                                    "desc": [
+                                        "Delay used while in LONG_WAIT state in milliseconds"
+                                    ],
+                                    "holddown": {
+                                        "desc": [
+                                            "Time with no received IGP events before considering IGP stable"
+                                        ],
+                                        "(0-60000)": {
+                                            "desc": [
+                                                "Time with no received IGP events before considering IGP stable (in milliseconds)"
+                                            ],
+                                            "time-to-learn": {
+                                                "desc": [
+                                                    "Maximum duration needed to learn all the events related to a single failure"
+                                                ],
+                                                "(0-60000)": {
+                                                    "desc": [
+                                                        "Maximum duration needed to learn all the events related to a single failure (in milliseconds)"
+                                                    ],
+                                                    "<cr>": {
+                                                        "desc": [
+                                                            "end_cmd"
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_spf": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "SPF configuration"
+            ],
+            "prefix-priority": {
+                "desc": [
+                    "Configure a prefix priority list"
+                ],
+                "<critical|high|medium>": {
+                    "desc": [
+                        "Specify critical priority prefixes",
+                        "Specify high priority prefixes",
+                        "Specify medium priority prefixes"
+                    ],
+                    "ACCESSLIST_NAME": {
+                        "desc": [
+                            "Access-list name"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            }
+        },
+        "no_segment-routing": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Segment-Routing specific commands"
+            ],
+            "prefix": {
+                "desc": [
+                    "Prefix SID"
+                ],
+                "<A.B.C.D/M|X:X::X:X/M>": {
+                    "desc": [
+                        "IPv4 Prefix",
+                        "IPv6 Prefix"
+                    ],
+                    "absolute": {
+                        "desc": [
+                            "Specify the absolute value of Prefix Segment ID"
+                        ],
+                        "(16-1048575)": {
+                            "desc": [
+                                "The Prefix Segment ID value"
+                            ],
+                            "<no-php-flag|explicit-null>": {
+                                "desc": [
+                                    "Don't request Penultimate Hop Popping (PHP)",
+                                    "Upstream neighbor must replace prefix-sid with explicit null label"
+                                ],
+                                "n-flag-clear": {
+                                    "desc": [
+                                        "Not a node SID"
+                                    ],
+                                    "<cr>": {
+                                        "desc": [
+                                            "end_cmd"
+                                        ]
+                                    }
+                                },
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            },
+                            "n-flag-clear": {
+                                "desc": [
+                                    "Not a node SID"
+                                ],
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            },
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        }
+                    },
+                    "index": {
+                        "desc": [
+                            "Specify the index of Prefix Segment ID"
+                        ],
+                        "(0-65535)": {
+                            "desc": [
+                                "The Prefix Segment ID index"
+                            ],
+                            "<no-php-flag|explicit-null>": {
+                                "desc": [
+                                    "Don't request Penultimate Hop Popping (PHP)",
+                                    "Upstream neighbor must replace prefix-sid with explicit null label"
+                                ],
+                                "n-flag-clear": {
+                                    "desc": [
+                                        "Not a node SID"
+                                    ],
+                                    "<cr>": {
+                                        "desc": [
+                                            "end_cmd"
+                                        ]
+                                    }
+                                },
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            },
+                            "n-flag-clear": {
+                                "desc": [
+                                    "Not a node SID"
+                                ],
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            },
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        }
+                    },
+                    "<no-php-flag|explicit-null>": {
+                        "desc": [
+                            "Don't request Penultimate Hop Popping (PHP)",
+                            "Upstream neighbor must replace prefix-sid with explicit null label"
+                        ],
+                        "n-flag-clear": {
+                            "desc": [
+                                "Not a node SID"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        },
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "n-flag-clear": {
+                        "desc": [
+                            "Not a node SID"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "on": {
+                "desc": [
+                    "Disable Segment Routing"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_mpls-te": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "MPLS-TE specific commands"
+            ],
+            "export": {
+                "desc": [
+                    "Disable export of MPLS-TE Link State information"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "on": {
+                "desc": [
+                    "Disable the MPLS-TE functionality"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_metric-style": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Use old-style (ISO 10589) or new-style packet formats"
+            ],
+            "narrow": {
+                "desc": [
+                    "Use old style of TLVs with narrow metric"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "transition": {
+                "desc": [
+                    "Send and accept both styles of TLVs during transition"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "wide": {
+                "desc": [
+                    "Use new style of TLVs to carry wider metric"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_max-lsp-lifetime": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Maximum LSP lifetime"
+            ],
+            "(350-65535)": {
+                "desc": [
+                    "LSP lifetime in seconds"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_lsp-timers": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "LSP-related timers"
+            ],
+            "gen-interval": {
+                "desc": [
+                    "Minimum interval between regenerating same LSP"
+                ],
+                "(1-120)": {
+                    "desc": [
+                        "Generation interval in seconds"
+                    ],
+                    "refresh-interval": {
+                        "desc": [
+                            "LSP refresh interval"
+                        ],
+                        "(1-65235)": {
+                            "desc": [
+                                "LSP refresh interval in seconds"
+                            ],
+                            "max-lifetime": {
+                                "desc": [
+                                    "Maximum LSP lifetime"
+                                ],
+                                "(350-65535)": {
+                                    "desc": [
+                                        "Maximum LSP lifetime in seconds"
+                                    ],
+                                    "<cr>": {
+                                        "desc": [
+                                            "end_cmd"
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_lsp-refresh-interval": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "LSP refresh interval"
+            ],
+            "(1-65235)": {
+                "desc": [
+                    "LSP refresh interval in seconds"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_lsp-mtu": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Configure the maximum size of generated LSPs"
+            ],
+            "(128-4352)": {
+                "desc": [
+                    "Maximum size of generated LSPs"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_lsp-gen-interval": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Minimum interval between regenerating same LSP"
+            ],
+            "(1-120)": {
+                "desc": [
+                    "Minimum interval in seconds"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_is-type": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "IS Level for this routing process (OSI only)"
+            ],
+            "<level-1|level-1-2|level-2-only>": {
+                "desc": [
+                    "Act as a station router only",
+                    "Act as both a station router and an area router",
+                    "Act as an area router only"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_fast-reroute": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Configure Fast ReRoute"
+            ],
+            "priority-limit": {
+                "desc": [
+                    "Limit backup computation up to the prefix priority"
+                ],
+                "<critical|high|medium>": {
+                    "desc": [
+                        "Compute for critical priority prefixes only",
+                        "Compute for critical & high priority prefixes",
+                        "Compute for critical, high & medium priority prefixes"
+                    ],
+                    "<level-1|level-2>": {
+                        "desc": [
+                            "Set priority-limit for level-1 only",
+                            "Set priority-limit for level-2 only"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            }
+        },
+        "no_redistribute": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "REDIST_STR"
+            ],
+            "ipv4": {
+                "desc": [
+                    "Redistribute IPv4 routes"
+                ],
+                "PROTO_IP_REDIST_STR": {
+                    "desc": [
+                        "FRR_IP_REDIST_HELP_STR_ISISD"
+                    ],
+                    "<level-1|level-2>": {
+                        "desc": [
+                            "Redistribute into level-1",
+                            "Redistribute into level-2"
+                        ],
+                        "metric": {
+                            "desc": [
+                                "Metric for redistributed routes"
+                            ],
+                            "(0-16777215)": {
+                                "desc": [
+                                    "IS-IS default metric"
+                                ],
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            }
+                        },
+                        "route-map": {
+                            "desc": [
+                                "Route map reference"
+                            ],
+                            "RMAP_NAME": {
+                                "desc": [
+                                    "Pointer to route-map entries"
+                                ],
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            }
+                        },
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    }
+                }
+            },
+            "ipv6": {
+                "desc": [
+                    "Redistribute IPv6 routes"
+                ],
+                "PROTO_IP6_REDIST_STR": {
+                    "desc": [
+                        "FRR_IP6_REDIST_HELP_STR_ISISD"
+                    ],
+                    "<level-1|level-2>": {
+                        "desc": [
+                            "Redistribute into level-1",
+                            "Redistribute into level-2"
+                        ],
+                        "metric": {
+                            "desc": [
+                                "Metric for redistributed routes"
+                            ],
+                            "(0-16777215)": {
+                                "desc": [
+                                    "IS-IS default metric"
+                                ],
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            }
+                        },
+                        "route-map": {
+                            "desc": [
+                                "Route map reference"
+                            ],
+                            "RMAP_NAME": {
+                                "desc": [
+                                    "Pointer to route-map entries"
+                                ],
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            }
+                        },
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    }
+                }
+            },
+            "<level-1|level-2>": {
+                "desc": [
+                    "Redistribute into level-1",
+                    "Redistribute into level-2"
+                ],
+                "metric": {
+                    "desc": [
+                        "Metric for redistributed routes"
+                    ],
+                    "(0-16777215)": {
+                        "desc": [
+                            "IS-IS default metric"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    }
+                },
+                "route-map": {
+                    "desc": [
+                        "Route map reference"
+                    ],
+                    "RMAP_NAME": {
+                        "desc": [
+                            "Pointer to route-map entries"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    }
+                },
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "no_hostname": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Dynamic hostname for IS-IS"
+            ],
+            "dynamic": {
+                "desc": [
+                    "Dynamic hostname"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "no_default-information": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Control distribution of default information"
+            ],
+            "originate": {
+                "desc": [
+                    "Distribute a default route"
+                ],
+                "<ipv4|ipv6>": {
+                    "desc": [
+                        "Distribute default route for IPv4",
+                        "Distribute default route for IPv6"
+                    ],
+                    "<level-1|level-2>": {
+                        "desc": [
+                            "Distribute default route into level-1",
+                            "Distribute default route into level-2"
+                        ],
+                        "always": {
+                            "desc": [
+                                "Always advertise default route"
+                            ],
+                            "metric": {
+                                "desc": [
+                                    "Metric for default route"
+                                ],
+                                "(0-16777215)": {
+                                    "desc": [
+                                        "IS-IS default metric"
+                                    ],
+                                    "<cr>": {
+                                        "desc": [
+                                            "end_cmd"
+                                        ]
+                                    }
+                                }
+                            },
+                            "route-map": {
+                                "desc": [
+                                    "Route map reference"
+                                ],
+                                "RMAP_NAME": {
+                                    "desc": [
+                                        "Pointer to route-map entries"
+                                    ],
+                                    "<cr>": {
+                                        "desc": [
+                                            "end_cmd"
+                                        ]
+                                    }
+                                }
+                            },
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        },
+                        "metric": {
+                            "desc": [
+                                "Metric for default route"
+                            ],
+                            "(0-16777215)": {
+                                "desc": [
+                                    "IS-IS default metric"
+                                ],
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            }
+                        },
+                        "route-map": {
+                            "desc": [
+                                "Route map reference"
+                            ],
+                            "RMAP_NAME": {
+                                "desc": [
+                                    "Pointer to route-map entries"
+                                ],
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            }
+                        },
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "no_attached-bit": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Set attached bit for inter-area traffic"
+            ],
+            "send": {
+                "desc": [
+                    "Set attached bit in LSP sent to L1 router"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "mpls-te_router-address": {
+            "desc": [
+                "MPLS-TE specific commands",
+                "Stable IP address of the advertising router"
+            ],
+            "ipv6": {
+                "desc": [
+                    "IPv6 address"
+                ],
+                "X:X::X:X": {
+                    "desc": [
+                        "MPLS-TE router address in IPv6 address format"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "A.B.C.D": {
+                "desc": [
+                    "MPLS-TE router address in IPv4 address format"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "mpls-te_inter-as": {
+            "desc": [
+                "MPLS-TE specific commands",
+                "Configure MPLS-TE Inter-AS support"
+            ],
+            "level-1": {
+                "desc": [
+                    "AREA native mode self originate INTER-AS LSP with L1 only flooding scope"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "level-1-2": {
+                "desc": [
+                    "AREA native mode self originate INTER-AS LSP with L1 and L2 flooding scope"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "level-2-only": {
+                "desc": [
+                    "AS native mode self originate INTER-AS LSP with L2 only flooding scope"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "mpls_ldp-sync": {
+            "desc": [
+                "MPLS information",
+                "Enable MPLS LDP-SYNC"
+            ],
+            "holddown": {
+                "desc": [
+                    "Time to wait for LDP-SYNC to occur before restoring interface metric"
+                ],
+                "(0-10000)": {
+                    "desc": [
+                        "Time in seconds"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "lsp-timers_level-1": {
+            "desc": [
+                "LSP-related timers",
+                "LSP-related timers for Level 1 only"
+            ],
+            "gen-interval": {
+                "desc": [
+                    "Minimum interval between regenerating same LSP"
+                ],
+                "(1-120)": {
+                    "desc": [
+                        "Generation interval in seconds"
+                    ],
+                    "refresh-interval": {
+                        "desc": [
+                            "LSP refresh interval"
+                        ],
+                        "(1-65235)": {
+                            "desc": [
+                                "LSP refresh interval in seconds"
+                            ],
+                            "max-lifetime": {
+                                "desc": [
+                                    "Maximum LSP lifetime"
+                                ],
+                                "(350-65535)": {
+                                    "desc": [
+                                        "Maximum LSP lifetime in seconds"
+                                    ],
+                                    "<cr>": {
+                                        "desc": [
+                                            "end_cmd"
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "lsp-timers_level-2": {
+            "desc": [
+                "LSP-related timers",
+                "LSP-related timers for Level 2 only"
+            ],
+            "gen-interval": {
+                "desc": [
+                    "Minimum interval between regenerating same LSP"
+                ],
+                "(1-120)": {
+                    "desc": [
+                        "Generation interval in seconds"
+                    ],
+                    "refresh-interval": {
+                        "desc": [
+                            "LSP refresh interval"
+                        ],
+                        "(1-65235)": {
+                            "desc": [
+                                "LSP refresh interval in seconds"
+                            ],
+                            "max-lifetime": {
+                                "desc": [
+                                    "Maximum LSP lifetime"
+                                ],
+                                "(350-65535)": {
+                                    "desc": [
+                                        "Maximum LSP lifetime in seconds"
+                                    ],
+                                    "<cr>": {
+                                        "desc": [
+                                            "end_cmd"
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "fast-reroute_remote-lfa": {
+            "desc": [
+                "Configure Fast ReRoute",
+                "Enable remote LFA related configuration"
+            ],
+            "prefix-list": {
+                "desc": [
+                    "Filter PQ node router ID based on prefix list"
+                ],
+                "WORD": {
+                    "desc": [
+                        "Prefix-list name"
+                    ],
+                    "<level-1|level-2>": {
+                        "desc": [
+                            "Enable router ID filtering for level-1 only",
+                            "Enable router ID filtering for level-2 only"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            }
+        },
+        "fast-reroute_lfa": {
+            "desc": [
+                "Configure Fast ReRoute",
+                "LFA configuration"
+            ],
+            "tiebreaker": {
+                "desc": [
+                    "Configure tiebreaker for multiple backups"
+                ],
+                "<downstream|lowest-backup-metric|node-protecting>": {
+                    "desc": [
+                        "Prefer backup path via downstream node",
+                        "Prefer backup path with lowest total metric",
+                        "Prefer node protecting backup path"
+                    ],
+                    "index": {
+                        "desc": [
+                            "Set preference order among tiebreakers"
+                        ],
+                        "(1-255)": {
+                            "desc": [
+                                "Index"
+                            ],
+                            "<level-1|level-2>": {
+                                "desc": [
+                                    "Configure tiebreaker for level-1 only",
+                                    "Configure tiebreaker for level-2 only"
+                                ],
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            },
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "attached-bit_receive": {
+            "desc": [
+                "Set attached bit for inter-area traffic",
+                "If LSP received with attached bit set, create default route to neighbor"
+            ],
+            "ignore": {
+                "desc": [
+                    "Do not process attached bit"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "no_spf-interval_level-1": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Minimum interval between SPF calculations",
+                "Set interval for level 1 only"
+            ],
+            "(1-120)": {
+                "desc": [
+                    "Minimum interval between consecutive SPFs in seconds"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_spf-interval_level-2": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Minimum interval between SPF calculations",
+                "Set interval for level 2 only"
+            ],
+            "(1-120)": {
+                "desc": [
+                    "Minimum interval between consecutive SPFs in seconds"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_set-overload-bit_on-startup": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Reset overload bit to accept transit traffic",
+                "Set overload bit on startup"
+            ],
+            "(0-86400)": {
+                "desc": [
+                    "Set overload time in seconds"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_segment-routing_node-msd": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Segment-Routing specific commands",
+                "Maximum Stack Depth for this router"
+            ],
+            "(1-16)": {
+                "desc": [
+                    "Maximum number of label that can be stack (1-16)"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_segment-routing_global-block": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Segment-Routing specific commands",
+                "Segment Routing Global Block label range"
+            ],
+            "(16-1048575)": {
+                "desc": [
+                    "The lower bound of the global block"
+                ],
+                "(16-1048575)": {
+                    "desc": [
+                        "The upper bound of the global block (block size may not exceed 65535)"
+                    ],
+                    "local-block": {
+                        "desc": [
+                            "Segment Routing Local Block label range"
+                        ],
+                        "(16-1048575)": {
+                            "desc": [
+                                "The lower bound of the local block"
+                            ],
+                            "(16-1048575)": {
+                                "desc": [
+                                    "The upper bound of the local block (block size may not exceed 65535)"
+                                ],
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_output_file": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Direct vtysh output to file",
+                "Direct vtysh output to file"
+            ],
+            "FILE": {
+                "desc": [
+                    "Path to dump output to"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_mpls-te_router-address": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "MPLS-TE specific commands",
+                "Delete IP address of the advertising router"
+            ],
+            "A.B.C.D": {
+                "desc": [
+                    "MPLS-TE router address in IPv4 address format"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_mpls-te_inter-as": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "MPLS-TE specific commands",
+                "Configure MPLS-TE Inter-AS support"
+            ],
+            "level-1": {
+                "desc": [
+                    "AREA native mode self originate INTER-AS LSP with L1 only flooding scope"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "level-1-2": {
+                "desc": [
+                    "AREA native mode self originate INTER-AS LSP with L1 and L2 flooding scope"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "level-2-only": {
+                "desc": [
+                    "AS native mode self originate INTER-AS LSP with L2 only flooding scope"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_max-lsp-lifetime_level-1": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Maximum LSP lifetime",
+                "Maximum LSP lifetime for Level 1 only"
+            ],
+            "(350-65535)": {
+                "desc": [
+                    "LSP lifetime in seconds"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_max-lsp-lifetime_level-2": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Maximum LSP lifetime",
+                "Maximum LSP lifetime for Level 2 only"
+            ],
+            "(350-65535)": {
+                "desc": [
+                    "LSP lifetime in seconds"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_lsp-timers_level-1": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "LSP-related timers",
+                "LSP-related timers for Level 1 only"
+            ],
+            "gen-interval": {
+                "desc": [
+                    "Minimum interval between regenerating same LSP"
+                ],
+                "(1-120)": {
+                    "desc": [
+                        "Generation interval in seconds"
+                    ],
+                    "refresh-interval": {
+                        "desc": [
+                            "LSP refresh interval"
+                        ],
+                        "(1-65235)": {
+                            "desc": [
+                                "LSP refresh interval in seconds"
+                            ],
+                            "max-lifetime": {
+                                "desc": [
+                                    "Maximum LSP lifetime"
+                                ],
+                                "(350-65535)": {
+                                    "desc": [
+                                        "Maximum LSP lifetime in seconds"
+                                    ],
+                                    "<cr>": {
+                                        "desc": [
+                                            "end_cmd"
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_lsp-timers_level-2": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "LSP-related timers",
+                "LSP-related timers for Level 2 only"
+            ],
+            "gen-interval": {
+                "desc": [
+                    "Minimum interval between regenerating same LSP"
+                ],
+                "(1-120)": {
+                    "desc": [
+                        "Generation interval in seconds"
+                    ],
+                    "refresh-interval": {
+                        "desc": [
+                            "LSP refresh interval"
+                        ],
+                        "(1-65235)": {
+                            "desc": [
+                                "LSP refresh interval in seconds"
+                            ],
+                            "max-lifetime": {
+                                "desc": [
+                                    "Maximum LSP lifetime"
+                                ],
+                                "(350-65535)": {
+                                    "desc": [
+                                        "Maximum LSP lifetime in seconds"
+                                    ],
+                                    "<cr>": {
+                                        "desc": [
+                                            "end_cmd"
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_lsp-refresh-interval_level-1": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "LSP refresh interval",
+                "LSP refresh interval for Level 1 only"
+            ],
+            "(1-65235)": {
+                "desc": [
+                    "LSP refresh interval in seconds"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_lsp-refresh-interval_level-2": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "LSP refresh interval",
+                "LSP refresh interval for Level 2 only"
+            ],
+            "(1-65235)": {
+                "desc": [
+                    "LSP refresh interval in seconds"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_lsp-gen-interval_level-1": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Minimum interval between regenerating same LSP",
+                "Set interval for level 1 only"
+            ],
+            "(1-120)": {
+                "desc": [
+                    "Minimum interval in seconds"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_lsp-gen-interval_level-2": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Minimum interval between regenerating same LSP",
+                "Set interval for level 2 only"
+            ],
+            "(1-120)": {
+                "desc": [
+                    "Minimum interval in seconds"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_fast-reroute_lfa": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Configure Fast ReRoute",
+                "LFA configuration"
+            ],
+            "tiebreaker": {
+                "desc": [
+                    "Configure tiebreaker for multiple backups"
+                ],
+                "<downstream|lowest-backup-metric|node-protecting>": {
+                    "desc": [
+                        "Prefer backup path via downstream node",
+                        "Prefer backup path with lowest total metric",
+                        "Prefer node protecting backup path"
+                    ],
+                    "index": {
+                        "desc": [
+                            "Set preference order among tiebreakers"
+                        ],
+                        "(1-255)": {
+                            "desc": [
+                                "Index"
+                            ],
+                            "<level-1|level-2>": {
+                                "desc": [
+                                    "Configure tiebreaker for level-1 only",
+                                    "Configure tiebreaker for level-2 only"
+                                ],
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            },
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "no_attached-bit_receive": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Set attached bit for inter-area traffic",
+                "If LSP received with attached bit set, create default route to neighbor"
+            ],
+            "ignore": {
+                "desc": [
+                    "Do not process attached bit"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "fast-reroute_load-sharing_disable": {
+            "desc": [
+                "Configure Fast ReRoute",
+                "Load share prefixes across multiple backups",
+                "Disable load sharing"
+            ],
+            "<level-1|level-2>": {
+                "desc": [
+                    "Disable load sharing for level-1 only",
+                    "Disable load sharing for level-2 only"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_mpls-te_router-address_ipv6": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "MPLS-TE specific commands",
+                "Delete IP address of the advertising router",
+                "IPv6 address"
+            ],
+            "X:X::X:X": {
+                "desc": [
+                    "MPLS-TE router address in IPv6 address format"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_mpls_ldp-sync_holddown": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "MPLS information",
+                "Enable MPLS LDP-SYNC",
+                "holddown timer disable"
+            ],
+            "(1-10000)": {
+                "desc": [
+                    "Time in seconds"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_fast-reroute_remote-lfa_prefix-list": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Configure Fast ReRoute",
+                "Enable remote LFA related configuration",
+                "Filter PQ node router ID based on prefix list"
+            ],
+            "WORD": {
+                "desc": [
+                    "Prefix-list name"
+                ],
+                "<level-1|level-2>": {
+                    "desc": [
+                        "Enable router ID filtering for level-1 only",
+                        "Enable router ID filtering for level-2 only"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                },
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<level-1|level-2>": {
+                "desc": [
+                    "Enable router ID filtering for level-1 only",
+                    "Enable router ID filtering for level-2 only"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_fast-reroute_load-sharing_disable": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Configure Fast ReRoute",
+                "Load share prefixes across multiple backups",
+                "Disable load sharing"
+            ],
+            "<level-1|level-2>": {
+                "desc": [
+                    "Disable load sharing for level-1 only",
+                    "Disable load sharing for level-2 only"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        }
+    }
+}

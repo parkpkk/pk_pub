@@ -1,0 +1,13 @@
+CONFIG_NODE segment-routing SEGMENT_ROUTING_NODE traffic-eng SR_TRAFFIC_ENG_NODE pcep PCEP_NODE quit
+CONFIG_NODE segment-routing SEGMENT_ROUTING_NODE traffic-eng SR_TRAFFIC_ENG_NODE pcep PCEP_NODE pce-config WORD
+CONFIG_NODE segment-routing SEGMENT_ROUTING_NODE traffic-eng SR_TRAFFIC_ENG_NODE pcep PCEP_NODE pce WORD
+CONFIG_NODE segment-routing SEGMENT_ROUTING_NODE traffic-eng SR_TRAFFIC_ENG_NODE pcep PCEP_NODE pcc
+CONFIG_NODE segment-routing SEGMENT_ROUTING_NODE traffic-eng SR_TRAFFIC_ENG_NODE pcep PCEP_NODE output file FILE
+CONFIG_NODE segment-routing SEGMENT_ROUTING_NODE traffic-eng SR_TRAFFIC_ENG_NODE pcep PCEP_NODE no pce-config WORD
+CONFIG_NODE segment-routing SEGMENT_ROUTING_NODE traffic-eng SR_TRAFFIC_ENG_NODE pcep PCEP_NODE no pce WORD
+CONFIG_NODE segment-routing SEGMENT_ROUTING_NODE traffic-eng SR_TRAFFIC_ENG_NODE pcep PCEP_NODE no pcc
+CONFIG_NODE segment-routing SEGMENT_ROUTING_NODE traffic-eng SR_TRAFFIC_ENG_NODE pcep PCEP_NODE no output file [FILE]
+CONFIG_NODE segment-routing SEGMENT_ROUTING_NODE traffic-eng SR_TRAFFIC_ENG_NODE pcep PCEP_NODE list [permutations]
+CONFIG_NODE segment-routing SEGMENT_ROUTING_NODE traffic-eng SR_TRAFFIC_ENG_NODE pcep PCEP_NODE find REGEX...
+CONFIG_NODE segment-routing SEGMENT_ROUTING_NODE traffic-eng SR_TRAFFIC_ENG_NODE pcep PCEP_NODE exit
+CONFIG_NODE segment-routing SEGMENT_ROUTING_NODE traffic-eng SR_TRAFFIC_ENG_NODE pcep PCEP_NODE end

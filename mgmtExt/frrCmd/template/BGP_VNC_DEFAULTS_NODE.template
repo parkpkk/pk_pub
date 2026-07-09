@@ -1,0 +1,15 @@
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE vnc defaults BGP_VNC_DEFAULTS_NODE output file FILE
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE vnc defaults BGP_VNC_DEFAULTS_NODE no output file [FILE]
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE vnc defaults BGP_VNC_DEFAULTS_NODE list [permutations]
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE vnc defaults BGP_VNC_DEFAULTS_NODE find REGEX...
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE vnc defaults BGP_VNC_DEFAULTS_NODE rt import RTLIST...
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE vnc defaults BGP_VNC_DEFAULTS_NODE rt export RTLIST...
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE vnc defaults BGP_VNC_DEFAULTS_NODE rt both RTLIST...
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE vnc defaults BGP_VNC_DEFAULTS_NODE response-lifetime <LIFETIME|infinite>
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE vnc defaults BGP_VNC_DEFAULTS_NODE rd ASN:NN_OR_IP-ADDRESS:NN
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE vnc defaults BGP_VNC_DEFAULTS_NODE quit
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE vnc defaults BGP_VNC_DEFAULTS_NODE no l2rd
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE vnc defaults BGP_VNC_DEFAULTS_NODE l2rd <(1-255)|auto-vn>
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE vnc defaults BGP_VNC_DEFAULTS_NODE exit-vnc
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE vnc defaults BGP_VNC_DEFAULTS_NODE exit
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE vnc defaults BGP_VNC_DEFAULTS_NODE end

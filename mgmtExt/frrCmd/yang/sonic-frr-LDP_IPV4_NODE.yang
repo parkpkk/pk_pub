@@ -1,0 +1,482 @@
+
+module sonic-frr-LDP_IPV4_NODE {
+    namespace "http://github.com/sonic-net/frr/sonic-frr-LDP_IPV4_NODE";
+    prefix frr-LDP_IPV4_NODE;
+    yang-version 1.1;
+
+    import ietf-inet-types {
+        prefix inet;
+    }
+
+    organization
+        "SONiC";
+
+    contact
+        "SONiC";
+
+    description
+        "SONIC frr-LDP_IPV4_NODE FRR YANG";
+
+    revision 2024-12-23 {
+        description
+            "Initial revision.";
+    }
+    container sonic-frr-LDP_IPV4_NODE {
+        container LDP_IPV4_NODE {
+            list OUTPUT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf file {
+                    type enumeration {
+                        enum file;
+                    }
+                }                  //file
+                leaf PATH_TO_DUMP_OUTPUT {
+                    type string;
+                }                  //FILE
+            }
+            list NO {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf interface {
+                    type enumeration {
+                        enum interface;
+                    }
+                }                  //interface
+                leaf INTERFACE_NAME {
+                    type string;
+                }                  //IFNAME
+                leaf neighbor {
+                    type enumeration {
+                        enum neighbor;
+                    }
+                }                  //neighbor
+                leaf IP_ADDRESS_OF_NEIGHBOR {
+                    type inet:ipv4-address;
+                }                  //A.B.C.D
+                leaf targeted {
+                    type enumeration {
+                        enum targeted;
+                    }
+                }                  //targeted
+            }
+            list LIST {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf permutations {
+                    type enumeration {
+                        enum permutations;
+                    }
+                }                  //permutations
+            }
+            list FIND {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf-list SEARCH_PATTERN {
+                    type string;
+                }                  //REGEX...
+            }
+            list QUIT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list INTERFACE {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf INTERFACE_NAME {
+                    type string;
+                }                  //IFNAME
+            }
+            list EXIT-ADDRESS-FAMILY {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list EXIT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list END {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list TTL-SECURITY {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf disable {
+                    type enumeration {
+                        enum disable;
+                    }
+                }                  //disable
+            }
+            list SESSION {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf holdtime {
+                    type enumeration {
+                        enum holdtime;
+                    }
+                }                  //holdtime
+                leaf TIME {
+                    type int32;
+                }                  //(15-65535)
+            }
+            list NEIGHBOR {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf IP_ADDRESS_OF_NEIGHBOR {
+                    type inet:ipv4-address;
+                }                  //A.B.C.D
+                leaf targeted {
+                    type enumeration {
+                        enum targeted;
+                    }
+                }                  //targeted
+            }
+            list DISCOVERY {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf transport-address {
+                    type enumeration {
+                        enum transport-address;
+                    }
+                }                  //transport-address
+                leaf IP_ADDRESS_TO_BE {
+                    type inet:ipv4-address;
+                }                  //A.B.C.D
+            }
+            list NO_TTL-SECURITY {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf disable {
+                    type enumeration {
+                        enum disable;
+                    }
+                }                  //disable
+            }
+            list NO_SESSION {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf holdtime {
+                    type enumeration {
+                        enum holdtime;
+                    }
+                }                  //holdtime
+                leaf TIME {
+                    type int32;
+                }                  //(15-65535)
+            }
+            list NO_DISCOVERY {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf transport-address {
+                    type enumeration {
+                        enum transport-address;
+                    }
+                }                  //transport-address
+                leaf IP_ADDRESS_TO_BE {
+                    type inet:ipv4-address;
+                }                  //A.B.C.D
+            }
+            list DISCOVERY_TARGETED-HELLO {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf interval {
+                    type enumeration {
+                        enum interval;
+                    }
+                }                  //interval
+                leaf TIME {
+                    type int32;
+                }                  //(1-65535)
+                leaf holdtime {
+                    type enumeration {
+                        enum holdtime;
+                    }
+                }                  //holdtime
+                leaf TIME_-_65535_IMPLIES {
+                    type int32;
+                }                  //(1-65535)
+            }
+            list DISCOVERY_HELLO {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf interval {
+                    type enumeration {
+                        enum interval;
+                    }
+                }                  //interval
+                leaf TIME {
+                    type int32;
+                }                  //(1-65535)
+                leaf holdtime {
+                    type enumeration {
+                        enum holdtime;
+                    }
+                }                  //holdtime
+                leaf TIME_-_65535_IMPLIES {
+                    type int32;
+                }                  //(1-65535)
+            }
+            list NO_OUTPUT_FILE {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf PATH_TO_DUMP_OUTPUT {
+                    type string;
+                }                  //FILE
+            }
+            list NO_DISCOVERY_TARGETED-HELLO {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf interval {
+                    type enumeration {
+                        enum interval;
+                    }
+                }                  //interval
+                leaf TIME {
+                    type int32;
+                }                  //(1-65535)
+                leaf holdtime {
+                    type enumeration {
+                        enum holdtime;
+                    }
+                }                  //holdtime
+                leaf TIME_-_65535_IMPLIES {
+                    type int32;
+                }                  //(1-65535)
+            }
+            list NO_DISCOVERY_HELLO {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf interval {
+                    type enumeration {
+                        enum interval;
+                    }
+                }                  //interval
+                leaf TIME {
+                    type int32;
+                }                  //(1-65535)
+                leaf holdtime {
+                    type enumeration {
+                        enum holdtime;
+                    }
+                }                  //holdtime
+                leaf TIME_-_65535_IMPLIES {
+                    type int32;
+                }                  //(1-65535)
+            }
+            list LABEL_REMOTE_ACCEPT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf from {
+                    type enumeration {
+                        enum from;
+                    }
+                }                  //from
+                leaf IP_ACCESS-LIST_NAME {
+                    type string;
+                }                  //ACCESSLIST_NAME
+                leaf for {
+                    type enumeration {
+                        enum for;
+                    }
+                }                  //for
+            }
+            list LABEL_LOCAL_ALLOCATE {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf host-routes {
+                    type enumeration {
+                        enum host-routes;
+                    }
+                }                  //host-routes
+                leaf for {
+                    type enumeration {
+                        enum for;
+                    }
+                }                  //for
+                leaf IP_ACCESS-LIST_NAME {
+                    type string;
+                }                  //ACCESSLIST_NAME
+            }
+            list LABEL_LOCAL_ADVERTISE {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf to {
+                    type enumeration {
+                        enum to;
+                    }
+                }                  //to
+                leaf IP_ACCESS-LIST_NAME {
+                    type string;
+                }                  //ACCESSLIST_NAME
+                leaf for {
+                    type enumeration {
+                        enum for;
+                    }
+                }                  //for
+            }
+            list DISCOVERY_TARGETED-HELLO_ACCEPT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf from {
+                    type enumeration {
+                        enum from;
+                    }
+                }                  //from
+                leaf IP_ACCESS-LIST_NAME {
+                    type string;
+                }                  //ACCESSLIST_NAME
+            }
+            list NO_LABEL_REMOTE_ACCEPT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf from {
+                    type enumeration {
+                        enum from;
+                    }
+                }                  //from
+                leaf IP_ACCESS-LIST_NAME {
+                    type string;
+                }                  //ACCESSLIST_NAME
+                leaf for {
+                    type enumeration {
+                        enum for;
+                    }
+                }                  //for
+            }
+            list NO_LABEL_LOCAL_ALLOCATE {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf host-routes {
+                    type enumeration {
+                        enum host-routes;
+                    }
+                }                  //host-routes
+                leaf for {
+                    type enumeration {
+                        enum for;
+                    }
+                }                  //for
+                leaf IP_ACCESS-LIST_NAME {
+                    type string;
+                }                  //ACCESSLIST_NAME
+            }
+            list NO_LABEL_LOCAL_ADVERTISE {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf to {
+                    type enumeration {
+                        enum to;
+                    }
+                }                  //to
+                leaf IP_ACCESS-LIST_NAME {
+                    type string;
+                }                  //ACCESSLIST_NAME
+                leaf for {
+                    type enumeration {
+                        enum for;
+                    }
+                }                  //for
+            }
+            list NO_DISCOVERY_TARGETED-HELLO_ACCEPT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf from {
+                    type enumeration {
+                        enum from;
+                    }
+                }                  //from
+                leaf IP_ACCESS-LIST_NAME {
+                    type string;
+                }                  //ACCESSLIST_NAME
+            }
+            list LABEL_LOCAL_ADVERTISE_EXPLICIT-NULL {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf for {
+                    type enumeration {
+                        enum for;
+                    }
+                }                  //for
+                leaf IP_ACCESS-LIST_NAME {
+                    type string;
+                }                  //ACCESSLIST_NAME
+            }
+            list NO_LABEL_LOCAL_ADVERTISE_EXPLICIT-NULL {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf for {
+                    type enumeration {
+                        enum for;
+                    }
+                }                  //for
+                leaf IP_ACCESS-LIST_NAME {
+                    type string;
+                }                  //ACCESSLIST_NAME
+            }
+        }
+
+    }
+}

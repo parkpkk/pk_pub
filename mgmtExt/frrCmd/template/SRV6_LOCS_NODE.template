@@ -1,0 +1,8 @@
+CONFIG_NODE segment-routing SEGMENT_ROUTING_NODE srv6 SRV6_NODE locators SRV6_LOCS_NODE output file FILE
+CONFIG_NODE segment-routing SEGMENT_ROUTING_NODE srv6 SRV6_NODE locators SRV6_LOCS_NODE no output file [FILE]
+CONFIG_NODE segment-routing SEGMENT_ROUTING_NODE srv6 SRV6_NODE locators SRV6_LOCS_NODE list [permutations]
+CONFIG_NODE segment-routing SEGMENT_ROUTING_NODE srv6 SRV6_NODE locators SRV6_LOCS_NODE find REGEX...
+CONFIG_NODE segment-routing SEGMENT_ROUTING_NODE srv6 SRV6_NODE locators SRV6_LOCS_NODE no locator WORD
+CONFIG_NODE segment-routing SEGMENT_ROUTING_NODE srv6 SRV6_NODE locators SRV6_LOCS_NODE locator WORD
+CONFIG_NODE segment-routing SEGMENT_ROUTING_NODE srv6 SRV6_NODE locators SRV6_LOCS_NODE exit
+CONFIG_NODE segment-routing SEGMENT_ROUTING_NODE srv6 SRV6_NODE locators SRV6_LOCS_NODE end

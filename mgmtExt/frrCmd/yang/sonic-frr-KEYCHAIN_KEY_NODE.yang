@@ -1,0 +1,262 @@
+
+module sonic-frr-KEYCHAIN_KEY_NODE {
+    namespace "http://github.com/sonic-net/frr/sonic-frr-KEYCHAIN_KEY_NODE";
+    prefix frr-KEYCHAIN_KEY_NODE;
+    yang-version 1.1;
+
+    import ietf-inet-types {
+        prefix inet;
+    }
+
+    organization
+        "SONiC";
+
+    contact
+        "SONiC";
+
+    description
+        "SONIC frr-KEYCHAIN_KEY_NODE FRR YANG";
+
+    revision 2024-12-23 {
+        description
+            "Initial revision.";
+    }
+    container sonic-frr-KEYCHAIN_KEY_NODE {
+        container KEYCHAIN_KEY_NODE {
+            list OUTPUT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf file {
+                    type enumeration {
+                        enum file;
+                    }
+                }                  //file
+                leaf PATH_TO_DUMP_OUTPUT {
+                    type string;
+                }                  //FILE
+            }
+            list NO {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf send-lifetime {
+                    type enumeration {
+                        enum send-lifetime;
+                    }
+                }                  //send-lifetime
+                leaf accept-lifetime {
+                    type enumeration {
+                        enum accept-lifetime;
+                    }
+                }                  //accept-lifetime
+            }
+            list LIST {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf permutations {
+                    type enumeration {
+                        enum permutations;
+                    }
+                }                  //permutations
+            }
+            list FIND {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf-list SEARCH_PATTERN {
+                    type string;
+                }                  //REGEX...
+            }
+            list SEND-LIFETIME {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf TIME_TO_START {
+                    type string;
+                }                  //HH:MM:SS
+                leaf MONTH_OF_THE_YEAR {
+                    type string;
+                }                  //MONTH
+                leaf DAY_OF_TH_MONTH {
+                    type int32;
+                }                  //(1-31)
+                leaf YEAR_TO_START {
+                    type int32;
+                }                  //(1993-2035)
+                leaf infinite {
+                    type enumeration {
+                        enum infinite;
+                    }
+                }                  //infinite
+                leaf duration {
+                    type enumeration {
+                        enum duration;
+                    }
+                }                  //duration
+                leaf DURATION_SECONDS {
+                    type int32;
+                }                  //(1-2147483646)
+                leaf TIME_TO_EXPIRE {
+                    type string;
+                }                  //HH:MM:SS
+                leaf YEAR_TO_EXPIRE {
+                    type int32;
+                }                  //(1993-2035)
+            }
+            list QUIT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list KEY-STRING {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf LIST {
+                    type string;
+                }                  //LINE
+            }
+            list KEY {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf chain {
+                    type enumeration {
+                        enum chain;
+                    }
+                }                  //chain
+                leaf KEY-CHAIN_NAME {
+                    type string;
+                }                  //WORD
+                leaf KEY_IDENTIFIER_NUMBER {
+                    type int32;
+                }                  //(0-2147483647)
+            }
+            list EXIT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list END {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list CRYPTOGRAPHIC-ALGORITHM {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf CRYPTOGRAPHIC-ALGORITHM_CHOICE_CASE {
+                    type enumeration {
+                        enum md5;
+                        enum hmac-sha-1;
+                        enum hmac-sha-256;
+                        enum hmac-sha-384;
+                        enum hmac-sha-512;
+                    }
+                }                  //<md5|hmac-sha-1|hmac-sha-256|hmac-sha-384|hmac-sha-512> ['Use MD5 algorithm', 'Use HMAC-SHA-1 algorithm', 'Use HMAC-SHA-256 algorithm', 'Use HMAC-SHA-384 algorithm', 'Use HMAC-SHA-512 algorithm']
+            }
+            list ACCEPT-LIFETIME {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf TIME_TO_START {
+                    type string;
+                }                  //HH:MM:SS
+                leaf MONTH_OF_THE_YEAR {
+                    type string;
+                }                  //MONTH
+                leaf DAY_OF_TH_MONTH {
+                    type int32;
+                }                  //(1-31)
+                leaf YEAR_TO_START {
+                    type int32;
+                }                  //(1993-2035)
+                leaf infinite {
+                    type enumeration {
+                        enum infinite;
+                    }
+                }                  //infinite
+                leaf duration {
+                    type enumeration {
+                        enum duration;
+                    }
+                }                  //duration
+                leaf DURATION_SECONDS {
+                    type int32;
+                }                  //(1-2147483646)
+                leaf TIME_TO_EXPIRE {
+                    type string;
+                }                  //HH:MM:SS
+                leaf YEAR_TO_EXPIRE {
+                    type int32;
+                }                  //(1993-2035)
+            }
+            list NO_KEY-STRING {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf LIST {
+                    type string;
+                }                  //LINE
+            }
+            list NO_KEY {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf chain {
+                    type enumeration {
+                        enum chain;
+                    }
+                }                  //chain
+                leaf KEY-CHAIN_NAME {
+                    type string;
+                }                  //WORD
+                leaf KEY_IDENTIFIER_NUMBER {
+                    type int32;
+                }                  //(0-2147483647)
+            }
+            list NO_CRYPTOGRAPHIC-ALGORITHM {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf CHOICE_CASE {
+                    type enumeration {
+                        enum md5;
+                        enum hmac-sha-1;
+                        enum hmac-sha-256;
+                        enum hmac-sha-384;
+                        enum hmac-sha-512;
+                    }
+                }                  //<md5|hmac-sha-1|hmac-sha-256|hmac-sha-384|hmac-sha-512> ['Use MD5 algorithm', 'Use HMAC-SHA-1 algorithm', 'Use HMAC-SHA-256 algorithm', 'Use HMAC-SHA-384 algorithm', 'Use HMAC-SHA-512 algorithm']
+            }
+            list NO_OUTPUT_FILE {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf PATH_TO_DUMP_OUTPUT {
+                    type string;
+                }                  //FILE
+            }
+        }
+
+    }
+}

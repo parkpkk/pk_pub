@@ -1,0 +1,57 @@
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE vni (1-16777215)
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE route-target <both|import|export> auto
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE route-target <both|import|export> RTLIST...
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE rd ASN:NN_OR_IP-ADDRESS:NN
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE quit
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE no vni (1-16777215)
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE no route-target <both|import|export> auto
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE no route-target <both|import|export> RTLIST...
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE no rd ASN:NN_OR_IP-ADDRESS:NN
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE no network <A.B.C.D/M|X:X::X:X/M> rd ASN:NN_OR_IP-ADDRESS:NN ethtag WORD label WORD esi WORD gwip <A.B.C.D|X:X::X:X>
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE no neighbor <A.B.C.D|X:X::X:X|WORD> soo [ASN:NN_OR_IP-ADDRESS:NN]
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE no neighbor <A.B.C.D|X:X::X:X|WORD> soft-reconfiguration inbound
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE no neighbor <A.B.C.D|X:X::X:X|WORD> route-server-client
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE no neighbor <A.B.C.D|X:X::X:X|WORD> route-reflector-client
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE no neighbor <A.B.C.D|X:X::X:X|WORD> route-map RMAP_NAME <in|out>
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE no neighbor <A.B.C.D|X:X::X:X|WORD> next-hop-self force
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE no neighbor <A.B.C.D|X:X::X:X|WORD> next-hop-self
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE no neighbor <A.B.C.D|X:X::X:X|WORD> attribute-unchanged [{as-path|next-hop|med}]
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE no neighbor <A.B.C.D|X:X::X:X|WORD> allowas-in [<(1-10)|origin>]
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE no neighbor <A.B.C.D|X:X::X:X|WORD> activate
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE no ead-es-route-target export RT
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE no dup-addr-detection [max-moves (2-1000) time (2-1800)|freeze <permanent|(30-3600)>]
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE no default-originate <ipv4|ipv6>
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE no autort rfc8365-compatible
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE no advertise-default-gw
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE no advertise-all-vni
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE no advertise <ipv4|ipv6> <unicast|multicast|vpn> [route-map WORD]
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE network <A.B.C.D/M|X:X::X:X/M> rd ASN:NN_OR_IP-ADDRESS:NN ethtag WORD label WORD esi WORD gwip <A.B.C.D|X:X::X:X> routermac WORD [route-map RMAP_NAME]
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE neighbor <A.B.C.D|X:X::X:X|WORD> soo ASN:NN_OR_IP-ADDRESS:NN
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE neighbor <A.B.C.D|X:X::X:X|WORD> soft-reconfiguration inbound
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE neighbor <A.B.C.D|X:X::X:X|WORD> route-server-client
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE neighbor <A.B.C.D|X:X::X:X|WORD> route-reflector-client
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE neighbor <A.B.C.D|X:X::X:X|WORD> route-map RMAP_NAME <in|out>
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE neighbor <A.B.C.D|X:X::X:X|WORD> next-hop-self force
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE neighbor <A.B.C.D|X:X::X:X|WORD> next-hop-self
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE neighbor <A.B.C.D|X:X::X:X|WORD> attribute-unchanged [{as-path|next-hop|med}]
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE neighbor <A.B.C.D|X:X::X:X|WORD> allowas-in [<(1-10)|origin>]
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE neighbor <A.B.C.D|X:X::X:X|WORD> activate
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE exit-address-family
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE exit
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE end
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE ead-es-route-target export RT
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE dup-addr-detection freeze <permanent|(30-3600)>
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE dup-addr-detection [max-moves (2-1000) time (2-1800)]
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE default-originate <ipv4|ipv6>
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE autort rfc8365-compatible
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE advertise-default-gw
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE advertise-all-vni
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE advertise <ipv4|ipv6> <unicast|multicast|vpn> [gateway-ip] [route-map RMAP_NAME]
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE [no] use-es-l3nhg
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE [no] flooding <disable|head-end-replication>
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE [no] enable-resolve-overlay-index
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE [no] ead-es-frag evi-limit (1-1000)
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE [no] disable-ead-evi-tx
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE [no] disable-ead-evi-rx
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE [no] advertise-svi-ip
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE address-family l2vpn evpn BGP_EVPN_NODE [no] advertise-pip [ip <A.B.C.D> [mac <X:X:X:X:X:X|X:X:X:X:X:X/M>]]

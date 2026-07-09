@@ -1,0 +1,479 @@
+{
+    "BGP_FLOWSPECV6_NODE": {
+        "desc": [
+            "BGP_FLOWSPECV6_NODE node related command"
+        ],
+        "output": {
+            "desc": [
+                "Direct vtysh output to file"
+            ],
+            "file": {
+                "desc": [
+                    "Direct vtysh output to file"
+                ],
+                "FILE": {
+                    "desc": [
+                        "Path to dump output to"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            }
+        },
+        "no": {
+            "desc": [
+                "Negate a command or set its defaults"
+            ],
+            "neighbor": {
+                "desc": [
+                    "Specify neighbor router"
+                ],
+                "<A.B.C.D|X:X::X:X|WORD>": {
+                    "desc": [
+                        "Neighbor address",
+                        "Neighbor IPv6 address",
+                        "Interface name or neighbor tag"
+                    ],
+                    "soft-reconfiguration": {
+                        "desc": [
+                            "Per neighbor soft reconfiguration"
+                        ],
+                        "inbound": {
+                            "desc": [
+                                "Allow inbound soft reconfiguration for this neighbor"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        }
+                    },
+                    "route-server-client": {
+                        "desc": [
+                            "Configure a neighbor as Route Server client"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "route-reflector-client": {
+                        "desc": [
+                            "Configure a neighbor as Route Reflector client"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "route-map": {
+                        "desc": [
+                            "Apply route map to neighbor"
+                        ],
+                        "RMAP_NAME": {
+                            "desc": [
+                                "Name of route map"
+                            ],
+                            "<in|out>": {
+                                "desc": [
+                                    "Apply map to incoming routes",
+                                    "Apply map to outbound routes"
+                                ],
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "prefix-list": {
+                        "desc": [
+                            "Filter updates to/from this neighbor"
+                        ],
+                        "WORD": {
+                            "desc": [
+                                "Name of a prefix list"
+                            ],
+                            "<in|out>": {
+                                "desc": [
+                                    "Filter incoming updates",
+                                    "Filter outgoing updates"
+                                ],
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "filter-list": {
+                        "desc": [
+                            "Establish BGP filters"
+                        ],
+                        "AS_PATH_FILTER_NAME": {
+                            "desc": [
+                                "AS path access-list name"
+                            ],
+                            "<in|out>": {
+                                "desc": [
+                                    "Filter incoming routes",
+                                    "Filter outgoing routes"
+                                ],
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "attribute-unchanged": {
+                        "desc": [
+                            "BGP attribute is propagated unchanged to this neighbor"
+                        ],
+                        "as-path": {
+                            "desc": [
+                                "As-path attribute"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        },
+                        "next-hop": {
+                            "desc": [
+                                "Nexthop attribute"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        },
+                        "med": {
+                            "desc": [
+                                "Med attribute"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        },
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "activate": {
+                        "desc": [
+                            "Enable the Address Family for this Neighbor"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    }
+                }
+            },
+            "local-install": {
+                "desc": [
+                    "Apply local policy routing"
+                ],
+                "INTERFACE": {
+                    "desc": [
+                        "Interface name"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            }
+        },
+        "list": {
+            "desc": [
+                "Print command list"
+            ],
+            "permutations": {
+                "desc": [
+                    "Print all possible command permutations"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "find": {
+            "desc": [
+                "Find CLI command matching a regular expression"
+            ],
+            "REGEX...": {
+                "desc": [
+                    "Search pattern (POSIX regex)"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "quit": {
+            "desc": [
+                "Exit current mode and down to previous mode"
+            ],
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "neighbor": {
+            "desc": [
+                "Specify neighbor router"
+            ],
+            "<A.B.C.D|X:X::X:X|WORD>": {
+                "desc": [
+                    "Neighbor address",
+                    "Neighbor IPv6 address",
+                    "Interface name or neighbor tag"
+                ],
+                "soft-reconfiguration": {
+                    "desc": [
+                        "Per neighbor soft reconfiguration"
+                    ],
+                    "inbound": {
+                        "desc": [
+                            "Allow inbound soft reconfiguration for this neighbor"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    }
+                },
+                "route-server-client": {
+                    "desc": [
+                        "Configure a neighbor as Route Server client"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                },
+                "route-reflector-client": {
+                    "desc": [
+                        "Configure a neighbor as Route Reflector client"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                },
+                "route-map": {
+                    "desc": [
+                        "Apply route map to neighbor"
+                    ],
+                    "RMAP_NAME": {
+                        "desc": [
+                            "Name of route map"
+                        ],
+                        "<in|out>": {
+                            "desc": [
+                                "Apply map to incoming routes",
+                                "Apply map to outbound routes"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "prefix-list": {
+                    "desc": [
+                        "Filter updates to/from this neighbor"
+                    ],
+                    "WORD": {
+                        "desc": [
+                            "Name of a prefix list"
+                        ],
+                        "<in|out>": {
+                            "desc": [
+                                "Filter incoming updates",
+                                "Filter outgoing updates"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "filter-list": {
+                    "desc": [
+                        "Establish BGP filters"
+                    ],
+                    "AS_PATH_FILTER_NAME": {
+                        "desc": [
+                            "AS path access-list name"
+                        ],
+                        "<in|out>": {
+                            "desc": [
+                                "Filter incoming routes",
+                                "Filter outgoing routes"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "attribute-unchanged": {
+                    "desc": [
+                        "BGP attribute is propagated unchanged to this neighbor"
+                    ],
+                    "as-path": {
+                        "desc": [
+                            "As-path attribute"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "next-hop": {
+                        "desc": [
+                            "Nexthop attribute"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "med": {
+                        "desc": [
+                            "Med attribute"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                },
+                "activate": {
+                    "desc": [
+                        "Enable the Address Family for this Neighbor"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            }
+        },
+        "exit-address-family": {
+            "desc": [
+                "Exit from Address Family configuration mode"
+            ],
+            "<cr>": {
+                "desc": [
+                    "change_node BGP_NODE"
+                ]
+            }
+        },
+        "exit": {
+            "desc": [
+                "Exit current mode and down to previous mode"
+            ],
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "end": {
+            "desc": [
+                "End current mode and change to enable mode"
+            ],
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "local-install": {
+            "desc": [
+                "Apply local policy routing"
+            ],
+            "INTERFACE": {
+                "desc": [
+                    "Interface name"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "no_output_file": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Direct vtysh output to file",
+                "Direct vtysh output to file"
+            ],
+            "FILE": {
+                "desc": [
+                    "Path to dump output to"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        }
+    }
+}

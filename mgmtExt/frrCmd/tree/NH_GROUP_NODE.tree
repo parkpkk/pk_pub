@@ -1,0 +1,939 @@
+{
+    "NH_GROUP_NODE": {
+        "desc": [
+            "NH_GROUP_NODE node related command"
+        ],
+        "output": {
+            "desc": [
+                "Direct vtysh output to file"
+            ],
+            "file": {
+                "desc": [
+                    "Direct vtysh output to file"
+                ],
+                "FILE": {
+                    "desc": [
+                        "Path to dump output to"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            }
+        },
+        "list": {
+            "desc": [
+                "Print command list"
+            ],
+            "permutations": {
+                "desc": [
+                    "Print all possible command permutations"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "find": {
+            "desc": [
+                "Find CLI command matching a regular expression"
+            ],
+            "REGEX...": {
+                "desc": [
+                    "Search pattern (POSIX regex)"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "resilient": {
+            "desc": [
+                "A resilient Nexthop Group"
+            ],
+            "buckets": {
+                "desc": [
+                    "Buckets in the Hash for this Group"
+                ],
+                "(1-256)": {
+                    "desc": [
+                        "Number of buckets"
+                    ],
+                    "idle-timer": {
+                        "desc": [
+                            "The Idle timer for this Resilient Nexthop Group in seconds"
+                        ],
+                        "(1-4294967295)": {
+                            "desc": [
+                                "Number of seconds of Idle time"
+                            ],
+                            "unbalanced-timer": {
+                                "desc": [
+                                    "The length of time that the Nexthop Group can be unbalanced"
+                                ],
+                                "(1-4294967295)": {
+                                    "desc": [
+                                        "Number of seconds of Unbalanced time"
+                                    ],
+                                    "<cr>": {
+                                        "desc": [
+                                            "end_cmd"
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "quit": {
+            "desc": [
+                "Exit current mode and down to previous mode"
+            ],
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "exit": {
+            "desc": [
+                "Exit current mode and down to previous mode"
+            ],
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "end": {
+            "desc": [
+                "End current mode and change to enable mode"
+            ],
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "backup-group": {
+            "desc": [
+                "Specify a group name containing backup nexthops"
+            ],
+            "WORD": {
+                "desc": [
+                    "The name of the backup group"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "nexthop": {
+            "desc": [
+                "Specify one of the nexthops in this ECMP group"
+            ],
+            "<A.B.C.D|X:X::X:X>": {
+                "desc": [
+                    "v4 Address",
+                    "v6 Address"
+                ],
+                "INTERFACE": {
+                    "desc": [
+                        "Interface to use"
+                    ],
+                    "onlink": {
+                        "desc": [
+                            "Treat nexthop as directly attached to the interface"
+                        ],
+                        "nexthop-vrf": {
+                            "desc": [
+                                "If the nexthop is in a different vrf tell us"
+                            ],
+                            "NAME": {
+                                "desc": [
+                                    "The nexthop-vrf Name"
+                                ],
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            }
+                        },
+                        "label": {
+                            "desc": [
+                                "Specify label(s) for this nexthop"
+                            ],
+                            "WORD": {
+                                "desc": [
+                                    "One or more labels in the range (16-1048575) separated by '/'"
+                                ],
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            }
+                        },
+                        "weight": {
+                            "desc": [
+                                "Weight to be used by the nexthop for purposes of ECMP"
+                            ],
+                            "(1-255)": {
+                                "desc": [
+                                    "Weight value to be used"
+                                ],
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            }
+                        },
+                        "backup-idx": {
+                            "desc": [
+                                "Specify backup nexthop indexes in another group"
+                            ],
+                            "WORD": {
+                                "desc": [
+                                    "One or more indexes in the range (0-254) separated by ','"
+                                ],
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            }
+                        },
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "nexthop-vrf": {
+                        "desc": [
+                            "If the nexthop is in a different vrf tell us"
+                        ],
+                        "NAME": {
+                            "desc": [
+                                "The nexthop-vrf Name"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        }
+                    },
+                    "label": {
+                        "desc": [
+                            "Specify label(s) for this nexthop"
+                        ],
+                        "WORD": {
+                            "desc": [
+                                "One or more labels in the range (16-1048575) separated by '/'"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        }
+                    },
+                    "weight": {
+                        "desc": [
+                            "Weight to be used by the nexthop for purposes of ECMP"
+                        ],
+                        "(1-255)": {
+                            "desc": [
+                                "Weight value to be used"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        }
+                    },
+                    "backup-idx": {
+                        "desc": [
+                            "Specify backup nexthop indexes in another group"
+                        ],
+                        "WORD": {
+                            "desc": [
+                                "One or more indexes in the range (0-254) separated by ','"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        }
+                    },
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                },
+                "nexthop-vrf": {
+                    "desc": [
+                        "If the nexthop is in a different vrf tell us"
+                    ],
+                    "NAME": {
+                        "desc": [
+                            "The nexthop-vrf Name"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    }
+                },
+                "label": {
+                    "desc": [
+                        "Specify label(s) for this nexthop"
+                    ],
+                    "WORD": {
+                        "desc": [
+                            "One or more labels in the range (16-1048575) separated by '/'"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    }
+                },
+                "weight": {
+                    "desc": [
+                        "Weight to be used by the nexthop for purposes of ECMP"
+                    ],
+                    "(1-255)": {
+                        "desc": [
+                            "Weight value to be used"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    }
+                },
+                "backup-idx": {
+                    "desc": [
+                        "Specify backup nexthop indexes in another group"
+                    ],
+                    "WORD": {
+                        "desc": [
+                            "One or more indexes in the range (0-254) separated by ','"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    }
+                },
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "INTERFACE": {
+                "desc": [
+                    "Interface to use"
+                ],
+                "nexthop-vrf": {
+                    "desc": [
+                        "If the nexthop is in a different vrf tell us"
+                    ],
+                    "NAME": {
+                        "desc": [
+                            "The nexthop-vrf Name"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    }
+                },
+                "label": {
+                    "desc": [
+                        "Specify label(s) for this nexthop"
+                    ],
+                    "WORD": {
+                        "desc": [
+                            "One or more labels in the range (16-1048575) separated by '/'"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    }
+                },
+                "weight": {
+                    "desc": [
+                        "Weight to be used by the nexthop for purposes of ECMP"
+                    ],
+                    "(1-255)": {
+                        "desc": [
+                            "Weight value to be used"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    }
+                },
+                "backup-idx": {
+                    "desc": [
+                        "Specify backup nexthop indexes in another group"
+                    ],
+                    "WORD": {
+                        "desc": [
+                            "One or more indexes in the range (0-254) separated by ','"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    }
+                },
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "nexthop-vrf": {
+                "desc": [
+                    "If the nexthop is in a different vrf tell us"
+                ],
+                "NAME": {
+                    "desc": [
+                        "The nexthop-vrf Name"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "label": {
+                "desc": [
+                    "Specify label(s) for this nexthop"
+                ],
+                "WORD": {
+                    "desc": [
+                        "One or more labels in the range (16-1048575) separated by '/'"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "weight": {
+                "desc": [
+                    "Weight to be used by the nexthop for purposes of ECMP"
+                ],
+                "(1-255)": {
+                    "desc": [
+                        "Weight value to be used"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "backup-idx": {
+                "desc": [
+                    "Specify backup nexthop indexes in another group"
+                ],
+                "WORD": {
+                    "desc": [
+                        "One or more indexes in the range (0-254) separated by ','"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_resilient": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "A resilient Nexthop Group"
+            ],
+            "buckets": {
+                "desc": [
+                    "Buckets in the Hash for this Group"
+                ],
+                "(1-256)": {
+                    "desc": [
+                        "Number of buckets"
+                    ],
+                    "idle-timer": {
+                        "desc": [
+                            "The Idle timer for this Resilient Nexthop Group in seconds"
+                        ],
+                        "(1-4294967295)": {
+                            "desc": [
+                                "Number of seconds of Idle time"
+                            ],
+                            "unbalanced-timer": {
+                                "desc": [
+                                    "The length of time that the Nexthop Group can be unbalanced"
+                                ],
+                                "(1-4294967295)": {
+                                    "desc": [
+                                        "Number of seconds of Unbalanced time"
+                                    ],
+                                    "<cr>": {
+                                        "desc": [
+                                            "end_cmd"
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_backup-group": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Clear group name containing backup nexthops"
+            ],
+            "WORD": {
+                "desc": [
+                    "The name of the backup group"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_nexthop": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Specify one of the nexthops in this ECMP group"
+            ],
+            "<A.B.C.D|X:X::X:X>": {
+                "desc": [
+                    "v4 Address",
+                    "v6 Address"
+                ],
+                "INTERFACE": {
+                    "desc": [
+                        "Interface to use"
+                    ],
+                    "onlink": {
+                        "desc": [
+                            "Treat nexthop as directly attached to the interface"
+                        ],
+                        "nexthop-vrf": {
+                            "desc": [
+                                "If the nexthop is in a different vrf tell us"
+                            ],
+                            "NAME": {
+                                "desc": [
+                                    "The nexthop-vrf Name"
+                                ],
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            }
+                        },
+                        "label": {
+                            "desc": [
+                                "Specify label(s) for this nexthop"
+                            ],
+                            "WORD": {
+                                "desc": [
+                                    "One or more labels in the range (16-1048575) separated by '/'"
+                                ],
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            }
+                        },
+                        "weight": {
+                            "desc": [
+                                "Weight to be used by the nexthop for purposes of ECMP"
+                            ],
+                            "(1-255)": {
+                                "desc": [
+                                    "Weight value to be used"
+                                ],
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            }
+                        },
+                        "backup-idx": {
+                            "desc": [
+                                "Specify backup nexthop indexes in another group"
+                            ],
+                            "WORD": {
+                                "desc": [
+                                    "One or more indexes in the range (0-254) separated by ','"
+                                ],
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            }
+                        },
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    },
+                    "nexthop-vrf": {
+                        "desc": [
+                            "If the nexthop is in a different vrf tell us"
+                        ],
+                        "NAME": {
+                            "desc": [
+                                "The nexthop-vrf Name"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        }
+                    },
+                    "label": {
+                        "desc": [
+                            "Specify label(s) for this nexthop"
+                        ],
+                        "WORD": {
+                            "desc": [
+                                "One or more labels in the range (16-1048575) separated by '/'"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        }
+                    },
+                    "weight": {
+                        "desc": [
+                            "Weight to be used by the nexthop for purposes of ECMP"
+                        ],
+                        "(1-255)": {
+                            "desc": [
+                                "Weight value to be used"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        }
+                    },
+                    "backup-idx": {
+                        "desc": [
+                            "Specify backup nexthop indexes in another group"
+                        ],
+                        "WORD": {
+                            "desc": [
+                                "One or more indexes in the range (0-254) separated by ','"
+                            ],
+                            "<cr>": {
+                                "desc": [
+                                    "end_cmd"
+                                ]
+                            }
+                        }
+                    },
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                },
+                "nexthop-vrf": {
+                    "desc": [
+                        "If the nexthop is in a different vrf tell us"
+                    ],
+                    "NAME": {
+                        "desc": [
+                            "The nexthop-vrf Name"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    }
+                },
+                "label": {
+                    "desc": [
+                        "Specify label(s) for this nexthop"
+                    ],
+                    "WORD": {
+                        "desc": [
+                            "One or more labels in the range (16-1048575) separated by '/'"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    }
+                },
+                "weight": {
+                    "desc": [
+                        "Weight to be used by the nexthop for purposes of ECMP"
+                    ],
+                    "(1-255)": {
+                        "desc": [
+                            "Weight value to be used"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    }
+                },
+                "backup-idx": {
+                    "desc": [
+                        "Specify backup nexthop indexes in another group"
+                    ],
+                    "WORD": {
+                        "desc": [
+                            "One or more indexes in the range (0-254) separated by ','"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    }
+                },
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "INTERFACE": {
+                "desc": [
+                    "Interface to use"
+                ],
+                "nexthop-vrf": {
+                    "desc": [
+                        "If the nexthop is in a different vrf tell us"
+                    ],
+                    "NAME": {
+                        "desc": [
+                            "The nexthop-vrf Name"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    }
+                },
+                "label": {
+                    "desc": [
+                        "Specify label(s) for this nexthop"
+                    ],
+                    "WORD": {
+                        "desc": [
+                            "One or more labels in the range (16-1048575) separated by '/'"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    }
+                },
+                "weight": {
+                    "desc": [
+                        "Weight to be used by the nexthop for purposes of ECMP"
+                    ],
+                    "(1-255)": {
+                        "desc": [
+                            "Weight value to be used"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    }
+                },
+                "backup-idx": {
+                    "desc": [
+                        "Specify backup nexthop indexes in another group"
+                    ],
+                    "WORD": {
+                        "desc": [
+                            "One or more indexes in the range (0-254) separated by ','"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    }
+                },
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "nexthop-vrf": {
+                "desc": [
+                    "If the nexthop is in a different vrf tell us"
+                ],
+                "NAME": {
+                    "desc": [
+                        "The nexthop-vrf Name"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "label": {
+                "desc": [
+                    "Specify label(s) for this nexthop"
+                ],
+                "WORD": {
+                    "desc": [
+                        "One or more labels in the range (16-1048575) separated by '/'"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "weight": {
+                "desc": [
+                    "Weight to be used by the nexthop for purposes of ECMP"
+                ],
+                "(1-255)": {
+                    "desc": [
+                        "Weight value to be used"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "backup-idx": {
+                "desc": [
+                    "Specify backup nexthop indexes in another group"
+                ],
+                "WORD": {
+                    "desc": [
+                        "One or more indexes in the range (0-254) separated by ','"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_output_file": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Direct vtysh output to file",
+                "Direct vtysh output to file"
+            ],
+            "FILE": {
+                "desc": [
+                    "Path to dump output to"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        }
+    }
+}

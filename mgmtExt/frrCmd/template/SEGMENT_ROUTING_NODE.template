@@ -1,0 +1,10 @@
+CONFIG_NODE segment-routing SEGMENT_ROUTING_NODE output file FILE
+CONFIG_NODE segment-routing SEGMENT_ROUTING_NODE no output file [FILE]
+CONFIG_NODE segment-routing SEGMENT_ROUTING_NODE list [permutations]
+CONFIG_NODE segment-routing SEGMENT_ROUTING_NODE find REGEX...
+CONFIG_NODE segment-routing SEGMENT_ROUTING_NODE traffic-eng
+CONFIG_NODE segment-routing SEGMENT_ROUTING_NODE srv6
+CONFIG_NODE segment-routing SEGMENT_ROUTING_NODE quit
+CONFIG_NODE segment-routing SEGMENT_ROUTING_NODE no srv6
+CONFIG_NODE segment-routing SEGMENT_ROUTING_NODE exit
+CONFIG_NODE segment-routing SEGMENT_ROUTING_NODE end

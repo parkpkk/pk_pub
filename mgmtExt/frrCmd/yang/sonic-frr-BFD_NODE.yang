@@ -1,0 +1,200 @@
+
+module sonic-frr-BFD_NODE {
+    namespace "http://github.com/sonic-net/frr/sonic-frr-BFD_NODE";
+    prefix frr-BFD_NODE;
+    yang-version 1.1;
+
+    import ietf-inet-types {
+        prefix inet;
+    }
+
+    organization
+        "SONiC";
+
+    contact
+        "SONiC";
+
+    description
+        "SONIC frr-BFD_NODE FRR YANG";
+
+    revision 2024-12-23 {
+        description
+            "Initial revision.";
+    }
+    container sonic-frr-BFD_NODE {
+        container BFD_NODE {
+            list QUIT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list PROFILE {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf BFD_PROFILE_NAME {
+                    type string;
+                }                  //BFDPROF
+            }
+            list PEER {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf PEER_IP_ADDRESS {
+                    type union {
+                        type inet:ipv4-address;
+                        type inet:ipv6-address;
+                    }
+                }                  //<A.B.C.D|X:X::X:X> ['IPv4 peer address', 'IPv6 peer address']
+                leaf multihop {
+                    type enumeration {
+                        enum multihop;
+                    }
+                }                  //multihop
+                leaf local-address {
+                    type enumeration {
+                        enum local-address;
+                    }
+                }                  //local-address
+                leaf LOCAL-ADDRESS_IP_ADDRESS {
+                    type union {
+                        type inet:ipv4-address;
+                        type inet:ipv6-address;
+                    }
+                }                  //<A.B.C.D|X:X::X:X> ['IPv4 local address', 'IPv6 local address']
+                leaf interface {
+                    type enumeration {
+                        enum interface;
+                    }
+                }                  //interface
+                leaf CONFIGURE_INTERFACE_NAME_TO {
+                    type string;
+                }                  //IFNAME
+                leaf vrf {
+                    type enumeration {
+                        enum vrf;
+                    }
+                }                  //vrf
+                leaf CONFIGURE_VRF_NAME {
+                    type string;
+                }                  //NAME
+            }
+            list NO {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf profile {
+                    type enumeration {
+                        enum profile;
+                    }
+                }                  //profile
+                leaf BFD_PROFILE_NAME {
+                    type string;
+                }                  //BFDPROF
+                leaf peer {
+                    type enumeration {
+                        enum peer;
+                    }
+                }                  //peer
+                leaf PEER_IP_ADDRESS {
+                    type union {
+                        type inet:ipv4-address;
+                        type inet:ipv6-address;
+                    }
+                }                  //<A.B.C.D|X:X::X:X> ['IPv4 peer address', 'IPv6 peer address']
+                leaf multihop {
+                    type enumeration {
+                        enum multihop;
+                    }
+                }                  //multihop
+                leaf local-address {
+                    type enumeration {
+                        enum local-address;
+                    }
+                }                  //local-address
+                leaf LOCAL-ADDRESS_IP_ADDRESS {
+                    type union {
+                        type inet:ipv4-address;
+                        type inet:ipv6-address;
+                    }
+                }                  //<A.B.C.D|X:X::X:X> ['IPv4 local address', 'IPv6 local address']
+                leaf interface {
+                    type enumeration {
+                        enum interface;
+                    }
+                }                  //interface
+                leaf CONFIGURE_LOCAL_INTERFACE_NAME {
+                    type string;
+                }                  //IFNAME
+                leaf vrf {
+                    type enumeration {
+                        enum vrf;
+                    }
+                }                  //vrf
+                leaf CONFIGURE_VRF_NAME {
+                    type string;
+                }                  //NAME
+            }
+            list EXIT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list END {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list OUTPUT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf file {
+                    type enumeration {
+                        enum file;
+                    }
+                }                  //file
+                leaf PATH_TO_DUMP_OUTPUT {
+                    type string;
+                }                  //FILE
+            }
+            list LIST {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf permutations {
+                    type enumeration {
+                        enum permutations;
+                    }
+                }                  //permutations
+            }
+            list FIND {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf-list SEARCH_PATTERN {
+                    type string;
+                }                  //REGEX...
+            }
+            list NO_OUTPUT_FILE {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf PATH_TO_DUMP_OUTPUT {
+                    type string;
+                }                  //FILE
+            }
+        }
+
+    }
+}

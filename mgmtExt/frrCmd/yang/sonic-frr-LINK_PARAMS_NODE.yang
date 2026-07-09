@@ -1,0 +1,293 @@
+
+module sonic-frr-LINK_PARAMS_NODE {
+    namespace "http://github.com/sonic-net/frr/sonic-frr-LINK_PARAMS_NODE";
+    prefix frr-LINK_PARAMS_NODE;
+    yang-version 1.1;
+
+    import ietf-inet-types {
+        prefix inet;
+    }
+
+    organization
+        "SONiC";
+
+    contact
+        "SONiC";
+
+    description
+        "SONIC frr-LINK_PARAMS_NODE FRR YANG";
+
+    revision 2024-12-23 {
+        description
+            "Initial revision.";
+    }
+    container sonic-frr-LINK_PARAMS_NODE {
+        container LINK_PARAMS_NODE {
+            list OUTPUT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf file {
+                    type enumeration {
+                        enum file;
+                    }
+                }                  //file
+                leaf PATH_TO_DUMP_OUTPUT {
+                    type string;
+                }                  //FILE
+            }
+            list NO {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf use-bw {
+                    type enumeration {
+                        enum use-bw;
+                    }
+                }                  //use-bw
+                leaf res-bw {
+                    type enumeration {
+                        enum res-bw;
+                    }
+                }                  //res-bw
+                leaf packet-loss {
+                    type enumeration {
+                        enum packet-loss;
+                    }
+                }                  //packet-loss
+                leaf neighbor {
+                    type enumeration {
+                        enum neighbor;
+                    }
+                }                  //neighbor
+                leaf metric {
+                    type enumeration {
+                        enum metric;
+                    }
+                }                  //metric
+                leaf enable {
+                    type enumeration {
+                        enum enable;
+                    }
+                }                  //enable
+                leaf delay-variation {
+                    type enumeration {
+                        enum delay-variation;
+                    }
+                }                  //delay-variation
+                leaf delay {
+                    type enumeration {
+                        enum delay;
+                    }
+                }                  //delay
+                leaf ava-bw {
+                    type enumeration {
+                        enum ava-bw;
+                    }
+                }                  //ava-bw
+                leaf admin-grp {
+                    type enumeration {
+                        enum admin-grp;
+                    }
+                }                  //admin-grp
+            }
+            list LIST {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf permutations {
+                    type enumeration {
+                        enum permutations;
+                    }
+                }                  //permutations
+            }
+            list FIND {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf-list SEARCH_PATTERN {
+                    type string;
+                }                  //REGEX...
+            }
+            list USE-BW {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf BYTESSECOND {
+                    type string;
+                }                  //BANDWIDTH
+            }
+            list UNRSV-BW {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf PRIORITY {
+                    type int32;
+                }                  //(0-7)
+                leaf BYTESSECOND {
+                    type string;
+                }                  //BANDWIDTH
+            }
+            list RES-BW {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf BYTESSECOND {
+                    type string;
+                }                  //BANDWIDTH
+            }
+            list QUIT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list PACKET-LOSS {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf PERCENTAGE_OF_TOTAL_TRAFFIC {
+                    type string;
+                }                  //PERCENTAGE
+            }
+            list NEIGHBOR {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf REMOTE_IP_ADDRESS_IN {
+                    type inet:ipv4-address;
+                }                  //A.B.C.D
+                leaf as {
+                    type enumeration {
+                        enum as;
+                    }
+                }                  //as
+                leaf AS_NUMBER_IN_THE {
+                    type int32;
+                }                  //(1-4294967295)
+            }
+            list METRIC {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf METRIC_VALUE_IN_DECIMAL {
+                    type int32;
+                }                  //(0-4294967295)
+            }
+            list MAX-RSV-BW {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf BYTESSECOND {
+                    type string;
+                }                  //BANDWIDTH
+            }
+            list MAX-BW {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf BYTESSECOND {
+                    type string;
+                }                  //BANDWIDTH
+            }
+            list EXIT-LINK-PARAMS {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list EXIT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list END {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list ENABLE {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list DELAY-VARIATION {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf DELAY_VARIATION_IN_MICRO-SECOND {
+                    type int32;
+                }                  //(0-16777215)
+            }
+            list DELAY {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf AVERAGE_DELAY_IN_MICRO-SECOND {
+                    type int32;
+                }                  //(0-16777215)
+                leaf min {
+                    type enumeration {
+                        enum min;
+                    }
+                }                  //min
+                leaf MINIMUM_DELAY_IN_MICRO-SECOND {
+                    type int32;
+                }                  //(0-16777215)
+                leaf max {
+                    type enumeration {
+                        enum max;
+                    }
+                }                  //max
+                leaf MAXIMUM_DELAY_IN_MICRO-SECOND {
+                    type int32;
+                }                  //(0-16777215)
+            }
+            list AVA-BW {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf BYTESSECOND {
+                    type string;
+                }                  //BANDWIDTH
+            }
+            list ADMIN-GRP {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf HEXADECIMAL_VALUE {
+                    type string;
+                }                  //BITPATTERN
+            }
+            list NO_OUTPUT_FILE {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf PATH_TO_DUMP_OUTPUT {
+                    type string;
+                }                  //FILE
+            }
+        }
+
+    }
+}

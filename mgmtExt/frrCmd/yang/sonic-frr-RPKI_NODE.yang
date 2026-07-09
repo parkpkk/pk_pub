@@ -1,0 +1,242 @@
+
+module sonic-frr-RPKI_NODE {
+    namespace "http://github.com/sonic-net/frr/sonic-frr-RPKI_NODE";
+    prefix frr-RPKI_NODE;
+    yang-version 1.1;
+
+    import ietf-inet-types {
+        prefix inet;
+    }
+
+    organization
+        "SONiC";
+
+    contact
+        "SONiC";
+
+    description
+        "SONIC frr-RPKI_NODE FRR YANG";
+
+    revision 2024-12-23 {
+        description
+            "Initial revision.";
+    }
+    container sonic-frr-RPKI_NODE {
+        container RPKI_NODE {
+            list RPKI {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf retry_interval {
+                    type enumeration {
+                        enum retry_interval;
+                    }
+                }                  //retry_interval
+                leaf RETRY_INTERVAL_VALUE {
+                    type int32;
+                }                  //(1-7200)
+                leaf reset {
+                    type enumeration {
+                        enum reset;
+                    }
+                }                  //reset
+                leaf polling_period {
+                    type enumeration {
+                        enum polling_period;
+                    }
+                }                  //polling_period
+                leaf POLLING_PERIOD_VALUE {
+                    type int32;
+                }                  //(1-86400)
+                leaf expire_interval {
+                    type enumeration {
+                        enum expire_interval;
+                    }
+                }                  //expire_interval
+                leaf EXPIRE_INTERVAL_VALUE {
+                    type int32;
+                }                  //(600-172800)
+                leaf cache {
+                    type enumeration {
+                        enum cache;
+                    }
+                }                  //cache
+                leaf CACHE_CHOICE_CASE {
+                    type union {
+                        type inet:ipv4-address;
+                        type string;
+                    }
+                }                  //<A.B.C.D|WORD> ['IP address of cache server', 'Hostname of cache server']
+                leaf ROUTER_TARGET {
+                    type string;
+                }                  //TCPPORT
+                leaf source {
+                    type enumeration {
+                        enum source;
+                    }
+                }                  //source
+                leaf DEFINE_A_SOURCE_IP {
+                    type inet:ipv4-address;
+                }                  //A.B.C.D
+                leaf preference {
+                    type enumeration {
+                        enum preference;
+                    }
+                }                  //preference
+                leaf PREFERENCE_VALUE {
+                    type int32;
+                }                  //(1-255)
+                leaf SSH_PORT_NUMBER {
+                    type int32;
+                }                  //(1-65535)
+                leaf SSH_USER_NAME {
+                    type string;
+                }                  //SSH_UNAME
+                leaf PATH_TO_OWN_SSH {
+                    type string;
+                }                  //SSH_PRIVKEY
+                leaf PATH_TO_PUBLIC_KEY {
+                    type string;
+                }                  //SERVER_PUBKEY
+            }
+            list QUIT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list OUTPUT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf file {
+                    type enumeration {
+                        enum file;
+                    }
+                }                  //file
+                leaf PATH_TO_DUMP_OUTPUT {
+                    type string;
+                }                  //FILE
+            }
+            list LIST {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf permutations {
+                    type enumeration {
+                        enum permutations;
+                    }
+                }                  //permutations
+            }
+            list FIND {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf-list SEARCH_PATTERN {
+                    type string;
+                }                  //REGEX...
+            }
+            list EXIT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list END {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list NO_RPKI {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf cache {
+                    type enumeration {
+                        enum cache;
+                    }
+                }                  //cache
+                leaf CACHE_CHOICE_CASE {
+                    type union {
+                        type inet:ipv4-address;
+                        type string;
+                    }
+                }                  //<A.B.C.D|WORD> ['IP address of cache server', 'Hostname of cache server']
+                leaf ROUTER_TARGET {
+                    type string;
+                }                  //TCPPORT
+                leaf source {
+                    type enumeration {
+                        enum source;
+                    }
+                }                  //source
+                leaf DEFINE_A_SOURCE_IP {
+                    type inet:ipv4-address;
+                }                  //A.B.C.D
+                leaf preference {
+                    type enumeration {
+                        enum preference;
+                    }
+                }                  //preference
+                leaf PREFERENCE_VALUE {
+                    type int32;
+                }                  //(1-255)
+                leaf SSH_PORT_NUMBER {
+                    type int32;
+                }                  //(1-65535)
+                leaf SSH_USER_NAME {
+                    type string;
+                }                  //SSH_UNAME
+                leaf PATH_TO_OWN_SSH {
+                    type string;
+                }                  //SSH_PRIVKEY
+                leaf PATH_TO_PUBLIC_KEY {
+                    type string;
+                }                  //SERVER_PUBKEY
+            }
+            list NO_RPKI_RETRY_INTERVAL {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf RETRY_INTERVAL_VALUE {
+                    type int32;
+                }                  //(1-7200)
+            }
+            list NO_RPKI_POLLING_PERIOD {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf POLLING_PERIOD_VALUE {
+                    type int32;
+                }                  //(1-86400)
+            }
+            list NO_RPKI_EXPIRE_INTERVAL {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf EXPIRE_INTERVAL_VALUE {
+                    type int32;
+                }                  //(600-172800)
+            }
+            list NO_OUTPUT_FILE {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf PATH_TO_DUMP_OUTPUT {
+                    type string;
+                }                  //FILE
+            }
+        }
+
+    }
+}

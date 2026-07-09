@@ -1,0 +1,9 @@
+CONFIG_NODE mpls ldp LDP_NODE address-family ipv4 LDP_IPV4_NODE interface IFNAME LDP_IPV4_IFACE_NODE output file FILE
+CONFIG_NODE mpls ldp LDP_NODE address-family ipv4 LDP_IPV4_NODE interface IFNAME LDP_IPV4_IFACE_NODE no output file [FILE]
+CONFIG_NODE mpls ldp LDP_NODE address-family ipv4 LDP_IPV4_NODE interface IFNAME LDP_IPV4_IFACE_NODE list [permutations]
+CONFIG_NODE mpls ldp LDP_NODE address-family ipv4 LDP_IPV4_NODE interface IFNAME LDP_IPV4_IFACE_NODE find REGEX...
+CONFIG_NODE mpls ldp LDP_NODE address-family ipv4 LDP_IPV4_NODE interface IFNAME LDP_IPV4_IFACE_NODE quit
+CONFIG_NODE mpls ldp LDP_NODE address-family ipv4 LDP_IPV4_NODE interface IFNAME LDP_IPV4_IFACE_NODE exit
+CONFIG_NODE mpls ldp LDP_NODE address-family ipv4 LDP_IPV4_NODE interface IFNAME LDP_IPV4_IFACE_NODE end
+CONFIG_NODE mpls ldp LDP_NODE address-family ipv4 LDP_IPV4_NODE interface IFNAME LDP_IPV4_IFACE_NODE [no] discovery hello interval (1-65535)
+CONFIG_NODE mpls ldp LDP_NODE address-family ipv4 LDP_IPV4_NODE interface IFNAME LDP_IPV4_IFACE_NODE [no] discovery hello holdtime (1-65535)

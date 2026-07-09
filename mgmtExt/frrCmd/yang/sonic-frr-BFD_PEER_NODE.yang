@@ -1,0 +1,227 @@
+
+module sonic-frr-BFD_PEER_NODE {
+    namespace "http://github.com/sonic-net/frr/sonic-frr-BFD_PEER_NODE";
+    prefix frr-BFD_PEER_NODE;
+    yang-version 1.1;
+
+    import ietf-inet-types {
+        prefix inet;
+    }
+
+    organization
+        "SONiC";
+
+    contact
+        "SONiC";
+
+    description
+        "SONIC frr-BFD_PEER_NODE FRR YANG";
+
+    revision 2024-12-23 {
+        description
+            "Initial revision.";
+    }
+    container sonic-frr-BFD_PEER_NODE {
+        container BFD_PEER_NODE {
+            list OUTPUT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf file {
+                    type enumeration {
+                        enum file;
+                    }
+                }                  //file
+                leaf PATH_TO_DUMP_OUTPUT {
+                    type string;
+                }                  //FILE
+            }
+            list NO {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf shutdown {
+                    type enumeration {
+                        enum shutdown;
+                    }
+                }                  //shutdown
+                leaf profile {
+                    type enumeration {
+                        enum profile;
+                    }
+                }                  //profile
+                leaf BFD_PROFILE_NAME {
+                    type string;
+                }                  //BFDPROF
+                leaf passive-mode {
+                    type enumeration {
+                        enum passive-mode;
+                    }
+                }                  //passive-mode
+                leaf echo-mode {
+                    type enumeration {
+                        enum echo-mode;
+                    }
+                }                  //echo-mode
+            }
+            list LIST {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf permutations {
+                    type enumeration {
+                        enum permutations;
+                    }
+                }                  //permutations
+            }
+            list FIND {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf-list SEARCH_PATTERN {
+                    type string;
+                }                  //REGEX...
+            }
+            list TRANSMIT-INTERVAL {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf CONFIGURE_PEER_TRANSMIT_INTERVAL {
+                    type int32;
+                }                  //(10-60000)
+            }
+            list RECEIVE-INTERVAL {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf CONFIGURE_PEER_RECEIVE_INTERVAL {
+                    type int32;
+                }                  //(10-60000)
+            }
+            list QUIT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list EXIT {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list END {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list ECHO-INTERVAL {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf CONFIGURE_PEER_ECHO_RXTX {
+                    type int32;
+                }                  //(10-60000)
+            }
+            list ECHO {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf transmit-interval {
+                    type enumeration {
+                        enum transmit-interval;
+                    }
+                }                  //transmit-interval
+                leaf CONFIGURE_INTERVAL_VALUE_IN {
+                    type int32;
+                }                  //(10-60000)
+                leaf receive-interval {
+                    type enumeration {
+                        enum receive-interval;
+                    }
+                }                  //receive-interval
+                leaf RECEIVE-INTERVAL_CHOICE_CASE {
+                    type union {
+                        type int32;
+                        type enumeration {
+                        enum disabled;
+                        }
+                    }
+                }                  //<disabled|(10-60000)> ['Disable echo packets receive', 'Configure interval value in milliseconds']
+            }
+            list DETECT-MULTIPLIER {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf CONFIGURE_PEER_DETECTION_MULTIPLIER {
+                    type int32;
+                }                  //(2-255)
+            }
+            list SHUTDOWN {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list PROFILE {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf BFD_PROFILE_NAME {
+                    type string;
+                }                  //BFDPROF
+            }
+            list PASSIVE-MODE {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list MINIMUM-TTL {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf MINIMUM_TTL_EXPECTED {
+                    type int32;
+                }                  //(1-254)
+            }
+            list ECHO-MODE {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+            }
+            list NO_MINIMUM-TTL {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf MINIMUM_TTL_EXPECTED {
+                    type int32;
+                }                  //(1-254)
+            }
+            list NO_OUTPUT_FILE {
+                key "PREFIX";
+                leaf PREFIX {
+                    type string; 
+                } 
+                leaf PATH_TO_DUMP_OUTPUT {
+                    type string;
+                }                  //FILE
+            }
+        }
+
+    }
+}

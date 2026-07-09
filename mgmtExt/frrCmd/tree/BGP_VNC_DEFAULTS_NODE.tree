@@ -1,0 +1,236 @@
+{
+    "BGP_VNC_DEFAULTS_NODE": {
+        "desc": [
+            "BGP_VNC_DEFAULTS_NODE node related command"
+        ],
+        "output": {
+            "desc": [
+                "Direct vtysh output to file"
+            ],
+            "file": {
+                "desc": [
+                    "Direct vtysh output to file"
+                ],
+                "FILE": {
+                    "desc": [
+                        "Path to dump output to"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            }
+        },
+        "no": {
+            "desc": [
+                "Negate a command or set its defaults"
+            ],
+            "l2rd": {
+                "desc": [
+                    "Specify default Local Nve ID value to use in RD for L2 routes"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "list": {
+            "desc": [
+                "Print command list"
+            ],
+            "permutations": {
+                "desc": [
+                    "Print all possible command permutations"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "find": {
+            "desc": [
+                "Find CLI command matching a regular expression"
+            ],
+            "REGEX...": {
+                "desc": [
+                    "Search pattern (POSIX regex)"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "rt": {
+            "desc": [
+                "Specify default route targets"
+            ],
+            "import": {
+                "desc": [
+                    "Import filter"
+                ],
+                "RTLIST...": {
+                    "desc": [
+                        "Space separated route target list (A.B.C.D:MN|EF:OPQR|GHJK:MN)"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "export": {
+                "desc": [
+                    "Export filter"
+                ],
+                "RTLIST...": {
+                    "desc": [
+                        "Space separated route target list (A.B.C.D:MN|EF:OPQR|GHJK:MN)"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "both": {
+                "desc": [
+                    "Export+import filters"
+                ],
+                "RTLIST...": {
+                    "desc": [
+                        "Space separated route target list (A.B.C.D:MN|EF:OPQR|GHJK:MN)"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            }
+        },
+        "response-lifetime": {
+            "desc": [
+                "Specify default response lifetime"
+            ],
+            "<LIFETIME|infinite>": {
+                "desc": [
+                    "Response lifetime in seconds",
+                    "Infinite response lifetime"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "rd": {
+            "desc": [
+                "Specify default route distinguisher"
+            ],
+            "ASN:NN_OR_IP-ADDRESS:NN": {
+                "desc": [
+                    "Route Distinguisher (<as-number>:<number> | <ip-address>:<number> | auto:vn:<number> )"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "quit": {
+            "desc": [
+                "Exit current mode and down to previous mode"
+            ],
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "l2rd": {
+            "desc": [
+                "Specify default Local Nve ID value to use in RD for L2 routes"
+            ],
+            "<(1-255)|auto-vn>": {
+                "desc": [
+                    "Fixed value 1-255",
+                    "use the low-order octet of the NVE's VN address"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "exit-vnc": {
+            "desc": [
+                "Exit VNC configuration mode"
+            ],
+            "<cr>": {
+                "desc": [
+                    "change_node BGP_NODE"
+                ]
+            }
+        },
+        "exit": {
+            "desc": [
+                "Exit current mode and down to previous mode"
+            ],
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "end": {
+            "desc": [
+                "End current mode and change to enable mode"
+            ],
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_output_file": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Direct vtysh output to file",
+                "Direct vtysh output to file"
+            ],
+            "FILE": {
+                "desc": [
+                    "Path to dump output to"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        }
+    }
+}

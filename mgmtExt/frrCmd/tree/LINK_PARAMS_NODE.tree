@@ -1,0 +1,459 @@
+{
+    "LINK_PARAMS_NODE": {
+        "desc": [
+            "LINK_PARAMS_NODE node related command"
+        ],
+        "output": {
+            "desc": [
+                "Direct vtysh output to file"
+            ],
+            "file": {
+                "desc": [
+                    "Direct vtysh output to file"
+                ],
+                "FILE": {
+                    "desc": [
+                        "Path to dump output to"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            }
+        },
+        "no": {
+            "desc": [
+                "Negate a command or set its defaults"
+            ],
+            "use-bw": {
+                "desc": [
+                    "Disable Unidirectional Utilised Bandwidth on this interface"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "res-bw": {
+                "desc": [
+                    "Disable Unidirectional Residual Bandwidth on this interface"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "packet-loss": {
+                "desc": [
+                    "Disable Unidirectional Link Packet Loss on this interface"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "neighbor": {
+                "desc": [
+                    "Remove Neighbor IP address and AS number for Inter-AS TE"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "metric": {
+                "desc": [
+                    "Disable Link Metric on this interface"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "enable": {
+                "desc": [
+                    "Disable link parameters on this interface"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "delay-variation": {
+                "desc": [
+                    "Disable Unidirectional Delay Variation on this interface"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "delay": {
+                "desc": [
+                    "Disable Unidirectional Average, Min & Max Link Delay on this interface"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "ava-bw": {
+                "desc": [
+                    "Disable Unidirectional Available Bandwidth on this interface"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "admin-grp": {
+                "desc": [
+                    "Disable Administrative group membership on this interface"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "list": {
+            "desc": [
+                "Print command list"
+            ],
+            "permutations": {
+                "desc": [
+                    "Print all possible command permutations"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "find": {
+            "desc": [
+                "Find CLI command matching a regular expression"
+            ],
+            "REGEX...": {
+                "desc": [
+                    "Search pattern (POSIX regex)"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "use-bw": {
+            "desc": [
+                "Unidirectional Utilised Bandwidth"
+            ],
+            "BANDWIDTH": {
+                "desc": [
+                    "Bytes/second (IEEE floating point format)"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "unrsv-bw": {
+            "desc": [
+                "Unreserved bandwidth at each priority level"
+            ],
+            "(0-7)": {
+                "desc": [
+                    "Priority"
+                ],
+                "BANDWIDTH": {
+                    "desc": [
+                        "Bytes/second (IEEE floating point format)"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            }
+        },
+        "res-bw": {
+            "desc": [
+                "Unidirectional Residual Bandwidth"
+            ],
+            "BANDWIDTH": {
+                "desc": [
+                    "Bytes/second (IEEE floating point format)"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "quit": {
+            "desc": [
+                "Exit current mode and down to previous mode"
+            ],
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "packet-loss": {
+            "desc": [
+                "Unidirectional Link Packet Loss"
+            ],
+            "PERCENTAGE": {
+                "desc": [
+                    "percentage of total traffic by 0.000003% step and less than 50.331642%"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "neighbor": {
+            "desc": [
+                "Configure remote ASBR information (Neighbor IP address and AS number)"
+            ],
+            "A.B.C.D": {
+                "desc": [
+                    "Remote IP address in dot decimal A.B.C.D"
+                ],
+                "as": {
+                    "desc": [
+                        "Remote AS number"
+                    ],
+                    "(1-4294967295)": {
+                        "desc": [
+                            "AS number in the range <1-4294967295>"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "metric": {
+            "desc": [
+                "Link metric for MPLS-TE purpose"
+            ],
+            "(0-4294967295)": {
+                "desc": [
+                    "Metric value in decimal"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "max-rsv-bw": {
+            "desc": [
+                "Maximum bandwidth that may be reserved"
+            ],
+            "BANDWIDTH": {
+                "desc": [
+                    "Bytes/second (IEEE floating point format)"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "max-bw": {
+            "desc": [
+                "Maximum bandwidth that can be used"
+            ],
+            "BANDWIDTH": {
+                "desc": [
+                    "Bytes/second (IEEE floating point format)"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "exit-link-params": {
+            "desc": [
+                "Exit from Link Params configuration node"
+            ],
+            "<cr>": {
+                "desc": [
+                    "change_node INTERFACE_NODE"
+                ]
+            }
+        },
+        "exit": {
+            "desc": [
+                "Exit current mode and down to previous mode"
+            ],
+            "<cr>": {
+                "desc": [
+                    "change_node INTERFACE_NODE"
+                ]
+            }
+        },
+        "end": {
+            "desc": [
+                "End current mode and change to enable mode"
+            ],
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "enable": {
+            "desc": [
+                "Activate link parameters on this interface"
+            ],
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "delay-variation": {
+            "desc": [
+                "Unidirectional Link Delay Variation"
+            ],
+            "(0-16777215)": {
+                "desc": [
+                    "delay variation in micro-second as decimal (0...16777215)"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "delay": {
+            "desc": [
+                "Unidirectional Average Link Delay"
+            ],
+            "(0-16777215)": {
+                "desc": [
+                    "Average delay in micro-second as decimal (0...16777215)"
+                ],
+                "min": {
+                    "desc": [
+                        "Minimum delay"
+                    ],
+                    "(0-16777215)": {
+                        "desc": [
+                            "Minimum delay in micro-second as decimal (0...16777215)"
+                        ],
+                        "max": {
+                            "desc": [
+                                "Maximum delay"
+                            ],
+                            "(0-16777215)": {
+                                "desc": [
+                                    "Maximum delay in micro-second as decimal (0...16777215)"
+                                ],
+                                "<cr>": {
+                                    "desc": [
+                                        "end_cmd"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                },
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "ava-bw": {
+            "desc": [
+                "Unidirectional Available Bandwidth"
+            ],
+            "BANDWIDTH": {
+                "desc": [
+                    "Bytes/second (IEEE floating point format)"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "admin-grp": {
+            "desc": [
+                "Administrative group membership"
+            ],
+            "BITPATTERN": {
+                "desc": [
+                    "32-bit Hexadecimal value (e.g. 0xa1)"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "no_output_file": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Direct vtysh output to file",
+                "Direct vtysh output to file"
+            ],
+            "FILE": {
+                "desc": [
+                    "Path to dump output to"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        }
+    }
+}

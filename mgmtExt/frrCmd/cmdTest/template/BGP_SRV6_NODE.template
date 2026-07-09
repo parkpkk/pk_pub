@@ -1,0 +1,5 @@
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE segment-routing srv6 BGP_SRV6_NODE quit
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE segment-routing srv6 BGP_SRV6_NODE no locator NAME
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE segment-routing srv6 BGP_SRV6_NODE locator NAME
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE segment-routing srv6 BGP_SRV6_NODE exit
+CONFIG_NODE router bgp [(1-4294967295) [<view|vrf> VIEWVRFNAME]] BGP_NODE segment-routing srv6 BGP_SRV6_NODE end

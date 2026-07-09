@@ -1,0 +1,815 @@
+{
+    "LDP_IPV4_NODE": {
+        "desc": [
+            "LDP_IPV4_NODE node related command"
+        ],
+        "output": {
+            "desc": [
+                "Direct vtysh output to file"
+            ],
+            "file": {
+                "desc": [
+                    "Direct vtysh output to file"
+                ],
+                "FILE": {
+                    "desc": [
+                        "Path to dump output to"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            }
+        },
+        "no": {
+            "desc": [
+                "Negate a command or set its defaults"
+            ],
+            "interface": {
+                "desc": [
+                    "Enable LDP on an interface and enter interface submode"
+                ],
+                "IFNAME": {
+                    "desc": [
+                        "Interface's name"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "neighbor": {
+                "desc": [
+                    "Configure neighbor parameters"
+                ],
+                "A.B.C.D": {
+                    "desc": [
+                        "IP address of neighbor"
+                    ],
+                    "targeted": {
+                        "desc": [
+                            "Establish targeted session"
+                        ],
+                        "<cr>": {
+                            "desc": [
+                                "end_cmd"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "list": {
+            "desc": [
+                "Print command list"
+            ],
+            "permutations": {
+                "desc": [
+                    "Print all possible command permutations"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "find": {
+            "desc": [
+                "Find CLI command matching a regular expression"
+            ],
+            "REGEX...": {
+                "desc": [
+                    "Search pattern (POSIX regex)"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "quit": {
+            "desc": [
+                "Exit current mode and down to previous mode"
+            ],
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "interface": {
+            "desc": [
+                "Enable LDP on an interface and enter interface submode"
+            ],
+            "IFNAME": {
+                "desc": [
+                    "Interface's name"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "change_node LDP_IPV4_IFACE_NODE"
+                    ]
+                }
+            }
+        },
+        "exit-address-family": {
+            "desc": [
+                "Exit from Address Family configuration mode"
+            ],
+            "<cr>": {
+                "desc": [
+                    "change_node LDP_NODE"
+                ]
+            }
+        },
+        "exit": {
+            "desc": [
+                "Exit current mode and down to previous mode"
+            ],
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "end": {
+            "desc": [
+                "End current mode and change to enable mode"
+            ],
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "ttl-security": {
+            "desc": [
+                "LDP ttl security check"
+            ],
+            "disable": {
+                "desc": [
+                    "Disable ttl security"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "session": {
+            "desc": [
+                "Configure session parameters"
+            ],
+            "holdtime": {
+                "desc": [
+                    "Configure session holdtime"
+                ],
+                "(15-65535)": {
+                    "desc": [
+                        "Time (seconds)"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            }
+        },
+        "neighbor": {
+            "desc": [
+                "Configure neighbor parameters"
+            ],
+            "A.B.C.D": {
+                "desc": [
+                    "IP address of neighbor"
+                ],
+                "targeted": {
+                    "desc": [
+                        "Establish targeted session"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            }
+        },
+        "discovery": {
+            "desc": [
+                "Configure discovery parameters"
+            ],
+            "transport-address": {
+                "desc": [
+                    "Specify transport address for TCP connection"
+                ],
+                "A.B.C.D": {
+                    "desc": [
+                        "IP address to be used as transport address"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            }
+        },
+        "no_ttl-security": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "LDP ttl security check"
+            ],
+            "disable": {
+                "desc": [
+                    "Disable ttl security"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            }
+        },
+        "no_session": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Configure session parameters"
+            ],
+            "holdtime": {
+                "desc": [
+                    "Configure session holdtime"
+                ],
+                "(15-65535)": {
+                    "desc": [
+                        "Time (seconds)"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            }
+        },
+        "no_discovery": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Configure discovery parameters"
+            ],
+            "transport-address": {
+                "desc": [
+                    "Specify transport address for TCP connection"
+                ],
+                "A.B.C.D": {
+                    "desc": [
+                        "IP address to be used as transport address"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            }
+        },
+        "discovery_targeted-hello": {
+            "desc": [
+                "Configure discovery parameters",
+                "LDP Targeted Hellos"
+            ],
+            "interval": {
+                "desc": [
+                    "Hello interval"
+                ],
+                "(1-65535)": {
+                    "desc": [
+                        "Time (seconds)"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "holdtime": {
+                "desc": [
+                    "Hello holdtime"
+                ],
+                "(1-65535)": {
+                    "desc": [
+                        "Time (seconds) - 65535 implies infinite"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            }
+        },
+        "discovery_hello": {
+            "desc": [
+                "Configure discovery parameters",
+                "LDP Link Hellos"
+            ],
+            "interval": {
+                "desc": [
+                    "Hello interval"
+                ],
+                "(1-65535)": {
+                    "desc": [
+                        "Time (seconds)"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "holdtime": {
+                "desc": [
+                    "Hello holdtime"
+                ],
+                "(1-65535)": {
+                    "desc": [
+                        "Time (seconds) - 65535 implies infinite"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            }
+        },
+        "no_output_file": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Direct vtysh output to file",
+                "Direct vtysh output to file"
+            ],
+            "FILE": {
+                "desc": [
+                    "Path to dump output to"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_discovery_targeted-hello": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Configure discovery parameters",
+                "LDP Targeted Hellos"
+            ],
+            "interval": {
+                "desc": [
+                    "Hello interval"
+                ],
+                "(1-65535)": {
+                    "desc": [
+                        "Time (seconds)"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "holdtime": {
+                "desc": [
+                    "Hello holdtime"
+                ],
+                "(1-65535)": {
+                    "desc": [
+                        "Time (seconds) - 65535 implies infinite"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            }
+        },
+        "no_discovery_hello": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Configure discovery parameters",
+                "LDP Link Hellos"
+            ],
+            "interval": {
+                "desc": [
+                    "Hello interval"
+                ],
+                "(1-65535)": {
+                    "desc": [
+                        "Time (seconds)"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "holdtime": {
+                "desc": [
+                    "Hello holdtime"
+                ],
+                "(1-65535)": {
+                    "desc": [
+                        "Time (seconds) - 65535 implies infinite"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            }
+        },
+        "label_remote_accept": {
+            "desc": [
+                "Configure label control and policies",
+                "Configure remote/peer label control and policies",
+                "Configure inbound label acceptance control"
+            ],
+            "from": {
+                "desc": [
+                    "Neighbor from whom to accept label advertisement"
+                ],
+                "ACCESSLIST_NAME": {
+                    "desc": [
+                        "IP access-list name"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "for": {
+                "desc": [
+                    "IP access-list for destination prefixes"
+                ],
+                "ACCESSLIST_NAME": {
+                    "desc": [
+                        "IP access-list name"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "label_local_allocate": {
+            "desc": [
+                "Configure label control and policies",
+                "Configure local label control and policies",
+                "Configure label allocation control"
+            ],
+            "host-routes": {
+                "desc": [
+                    "allocate local label for host routes only"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "for": {
+                "desc": [
+                    "IP access-list"
+                ],
+                "ACCESSLIST_NAME": {
+                    "desc": [
+                        "IP access-list name"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "label_local_advertise": {
+            "desc": [
+                "Configure label control and policies",
+                "Configure local label control and policies",
+                "Configure outbound label advertisement control"
+            ],
+            "to": {
+                "desc": [
+                    "IP Access-list specifying controls on LDP Peers"
+                ],
+                "ACCESSLIST_NAME": {
+                    "desc": [
+                        "IP access-list name"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "for": {
+                "desc": [
+                    "IP access-list for destination prefixes"
+                ],
+                "ACCESSLIST_NAME": {
+                    "desc": [
+                        "IP access-list name"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "discovery_targeted-hello_accept": {
+            "desc": [
+                "Configure discovery parameters",
+                "LDP Targeted Hellos",
+                "Accept and respond to targeted hellos"
+            ],
+            "from": {
+                "desc": [
+                    "Access list to specify acceptable targeted hello source"
+                ],
+                "ACCESSLIST_NAME": {
+                    "desc": [
+                        "IP access-list name"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_label_remote_accept": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Configure label control and policies",
+                "Configure remote/peer label control and policies",
+                "Configure inbound label acceptance control"
+            ],
+            "from": {
+                "desc": [
+                    "Neighbor from whom to accept label advertisement"
+                ],
+                "ACCESSLIST_NAME": {
+                    "desc": [
+                        "IP access-list name"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "for": {
+                "desc": [
+                    "IP access-list for destination prefixes"
+                ],
+                "ACCESSLIST_NAME": {
+                    "desc": [
+                        "IP access-list name"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_label_local_allocate": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Configure label control and policies",
+                "Configure local label control and policies",
+                "Configure label allocation control"
+            ],
+            "host-routes": {
+                "desc": [
+                    "allocate local label for host routes only"
+                ],
+                "<cr>": {
+                    "desc": [
+                        "end_cmd"
+                    ]
+                }
+            },
+            "for": {
+                "desc": [
+                    "IP access-list"
+                ],
+                "ACCESSLIST_NAME": {
+                    "desc": [
+                        "IP access-list name"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_label_local_advertise": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Configure label control and policies",
+                "Configure local label control and policies",
+                "Configure outbound label advertisement control"
+            ],
+            "to": {
+                "desc": [
+                    "IP Access-list specifying controls on LDP Peers"
+                ],
+                "ACCESSLIST_NAME": {
+                    "desc": [
+                        "IP access-list name"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "for": {
+                "desc": [
+                    "IP access-list for destination prefixes"
+                ],
+                "ACCESSLIST_NAME": {
+                    "desc": [
+                        "IP access-list name"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_discovery_targeted-hello_accept": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Configure discovery parameters",
+                "LDP Targeted Hellos",
+                "Accept and respond to targeted hellos"
+            ],
+            "from": {
+                "desc": [
+                    "Access list to specify acceptable targeted hello source"
+                ],
+                "ACCESSLIST_NAME": {
+                    "desc": [
+                        "IP access-list name"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "label_local_advertise_explicit-null": {
+            "desc": [
+                "Configure label control and policies",
+                "Configure local label control and policies",
+                "Configure outbound label advertisement control",
+                "Configure explicit-null advertisement"
+            ],
+            "for": {
+                "desc": [
+                    "IP access-list for destination prefixes"
+                ],
+                "ACCESSLIST_NAME": {
+                    "desc": [
+                        "IP access-list name"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        },
+        "no_label_local_advertise_explicit-null": {
+            "desc": [
+                "Negate a command or set its defaults",
+                "Configure label control and policies",
+                "Configure local label control and policies",
+                "Configure outbound label advertisement control",
+                "Configure explicit-null advertisement"
+            ],
+            "for": {
+                "desc": [
+                    "IP access-list for destination prefixes"
+                ],
+                "ACCESSLIST_NAME": {
+                    "desc": [
+                        "IP access-list name"
+                    ],
+                    "<cr>": {
+                        "desc": [
+                            "end_cmd"
+                        ]
+                    }
+                }
+            },
+            "<cr>": {
+                "desc": [
+                    "end_cmd"
+                ]
+            }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+CONFIG_NODE pseudowire IFNAME PW_NODE quit
+CONFIG_NODE pseudowire IFNAME PW_NODE exit
+CONFIG_NODE pseudowire IFNAME PW_NODE end
+CONFIG_NODE pseudowire IFNAME PW_NODE [no] neighbor <A.B.C.D|X:X::X:X>
+CONFIG_NODE pseudowire IFNAME PW_NODE [no] mpls label local (16-1048575) remote (16-1048575)
+CONFIG_NODE pseudowire IFNAME PW_NODE [no] control-word <exclude|include>
+CONFIG_NODE pseudowire IFNAME PW_NODE output file FILE
+CONFIG_NODE pseudowire IFNAME PW_NODE no output file [FILE]
+CONFIG_NODE pseudowire IFNAME PW_NODE list [permutations]
+CONFIG_NODE pseudowire IFNAME PW_NODE find REGEX...
