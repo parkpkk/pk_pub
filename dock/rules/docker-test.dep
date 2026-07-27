@@ -1,0 +1,23 @@
+# ==============================================================================
+# Metadata and file tracking for docker-test (for container rebuilds)
+# ==============================================================================
+
+# Set DPATH (Docker Path) variable for brevity targeting the test container workspace
+DPATH       := $($(DOCKER_TEST)_PATH)
+
+# Files that this image depends on.
+# If ANY file in this list changes, the image will be automatically rebuilt.
+DEP_FILES   := $(SONIC_COMMON_FILES_LIST) rules/docker-test.mk rules/docker-test.dep
+DEP_FILES   += $(SONIC_COMMON_BASE_FILES_LIST)
+
+# Automatically add ALL tracking files in the docker-test directory via git source tree
+DEP_FILES   += $(shell git ls-files $(DPATH))
+
+# Set up the official SONiC build caching variables using Content SHA hash validation
+$(DOCKER_TEST)_CACHE_MODE   := GIT_CONTENT_SHA
+$(DOCKER_TEST)_DEP_FLAGS    := $(SONIC_COMMON_FLAGS_LIST)
+$(DOCKER_TEST)_DEP_FILES    := $(DEP_FILES)
+
+# Link the symbol debug container image to the primary production image layer
+$(eval $(call add_dbg_docker,$(DOCKER_TEST),$(DOCKER_TEST_DBG)))
+
