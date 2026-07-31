@@ -1,0 +1,17 @@
+[Unit]
+Description=test container
+After=network.target
+Requires=docker.service
+
+[Service]
+ExecStartPre=/usr/bin/{{ docker_container_name }}.sh start
+ExecStart=/usr/bin/{{ docker_container_name }}.sh wait
+ExecStop=/usr/bin/{{ docker_container_name }}.sh stop
+Restart=always
+RestartSec=5s
+TimeoutStartSec=0
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target    
+
