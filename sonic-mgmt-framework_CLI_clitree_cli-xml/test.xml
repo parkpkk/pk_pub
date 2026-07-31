@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CLISH_MODULE
+	xmlns="http://www.dellemc.com/sonic/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xsi:schemaLocation="http://www.dellemc.com/sonic/XMLSchema
+	http://www.dellemc.com/sonic/XMLSchema/clish.xsd">
+
+	<PTYPE name="ETHERNET_PORT_0_64"
+		pattern="Ethernet([0-9]|[1-5][0-9]|6[0-4])"
+		help="Ethernet interface from Ethernet0 to Ethernet64"/>
+
+	<VIEW name="configure-view">
+		<COMMAND name="test" help="Configure TEST_NEW_CLI test">
+			<PARAM name="IP_PREFIX" help="IPv4 prefix (eg. A.B.C.D/M)" ptype="IP_ADDR_MASK">
+				<PARAM name="with" help="Specify interface" ptype="SUBCOMMAND" mode="subcommand" value="with">
+					<PARAM name="IFNAME" help="Interface name (eg. Ethernet4)" ptype="ETHERNET_PORT_0_64">
+					</PARAM>
+				</PARAM>
+			</PARAM>
+			<ACTION>
+				python3 $SONIC_CLI_ROOT/sonic-cli-test.py set_cli_test ${IP_PREFIX} ${IFNAME}
+			</ACTION>
+		</COMMAND>
+	</VIEW>
+	<VIEW name="enable-view">
+		<COMMAND name = "show test" help = "Show TEST_NEW_CLI test">
+			<ACTION>
+				python3 $SONIC_CLI_ROOT/sonic-cli-test.py get_cli_test
+			</ACTION>
+		</COMMAND>
+	</VIEW>
+</CLISH_MODULE>
